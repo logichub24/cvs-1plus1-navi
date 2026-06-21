@@ -1,0 +1,38 @@
+name: Crawl deals and sync stores
+
+on:
+  schedule:
+    # 03:00 KST = 18:00 UTC (전날)
+    - cron: '0 18 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm install
+
+      - name: 행사 정보 크롤링 (CU/GS25/세븐일레븐/이마트24)
+        run: npm run crawl
+
+      - name: 매장 위치 동기화
+        env:
+          SBIZ_API_KEY: ${{ secrets.SBIZ_API_KEY }}
+        run: npm run sync:stores
+
+      - name: 변경사항 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "편의점 행사/deals.json" "편의점 행사/stores.json"
+          git diff --cached --quiet || git commit -m "chore: 행사/매장 데이터 자동 갱신 $(date -u +%Y-%m-%d)"
+          git push

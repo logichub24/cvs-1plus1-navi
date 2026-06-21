@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cvs-1plus1-navi",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-Command", "Set-Location -LiteralPath 'D:\\C-APP'; npx.cmd serve -l 5500 '편의점 행사'"],
+      "port": 5500
+    }
+  ]
+}

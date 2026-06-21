@@ -1,0 +1,20 @@
+{
+  "name": "cvs-1plus1-navi",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "crawl": "node scripts/runAll.js",
+    "crawl:cu": "node scripts/crawlers/cu.js",
+    "crawl:gs25": "node scripts/crawlers/gs25.js",
+    "crawl:seven": "node scripts/crawlers/seven.js",
+    "crawl:emart24": "node scripts/crawlers/emart24.js",
+    "sync:stores": "node scripts/storeLocations.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "axios-cookiejar-support": "^5.0.3",
+    "cheerio": "^1.0.0",
+    "tough-cookie": "^5.0.0"
+  }
+}
