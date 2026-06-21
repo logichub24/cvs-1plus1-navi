@@ -1,7 +1,6 @@
 name: Crawl deals and sync stores
 
 on:
-  push:
   schedule:
     # 03:00 KST = 18:00 UTC (전날)
     - cron: '0 18 * * *'
