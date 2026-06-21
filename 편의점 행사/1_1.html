@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>편의점 1+1 내비</title>
+    <title>편의점 행사</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -89,7 +89,7 @@
         <div class="absolute top-0 left-0 w-full z-[100] pointer-events-none flex flex-col pt-3">
             <div class="px-3 pb-2">
                 <div class="bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-full shadow-sm border border-gray-100 pointer-events-auto inline-flex items-center gap-2">
-                    <h1 class="text-sm font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 tracking-tight leading-none m-0">편의점 1+1 내비</h1>
+                    <h1 class="text-sm font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 tracking-tight leading-none m-0">편의점 행사</h1>
                     <div class="w-px h-3 bg-gray-200"></div>
                     <p class="text-[10px] text-gray-500 font-bold leading-none m-0 pt-0.5">오늘 기준 행사</p>
                 </div>
@@ -827,7 +827,7 @@
         }
 
         function shareDeal(name, saving) {
-            const shareText = `🔥 편의점 꿀딜 발견!\n[${name}] 지금 사면 ${saving.toLocaleString()}원 절약할 수 있어요! (편의점 1+1 내비)`;
+            const shareText = `🔥 편의점 꿀딜 발견!\n[${name}] 지금 사면 ${saving.toLocaleString()}원 절약할 수 있어요! (편의점 행사)`;
             if (navigator.share) {
                 navigator.share({ title: '편의점 1+1 꿀딜', text: shareText }).catch(err => {});
             } else {
