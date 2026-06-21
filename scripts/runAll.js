@@ -8,6 +8,34 @@ const { crawlEmart24 } = require('./crawlers/emart24');
 
 const OUT_PATH = path.join(__dirname, '..', '편의점 행사', 'deals.json');
 
+// 크롤러는 카테고리를 안 주므로 상품명 키워드로 추정한다. 앱의 CATEGORIES 목록과 맞춰야 함.
+// 순서가 우선순위 — 위에서부터 먼저 매칭되는 카테고리로 분류한다.
+const CATEGORY_RULES = [
+  ['아이스크림', /아이스(크림|바)|메로나|설레임|스크류바|비비빅|빠삐코|월드콘|돼지콘|구구콘|하겐다즈|투게더|엑설런트|붕어싸만코|쌍쌍바/],
+  ['라면', /라면|우동|쌀국수|짜장|컵면|떡국|만둣국|짬뽕|냉면/],
+  ['간편식', /도시락|김밥|샌드위치|버거|햄버거|핫도그|만두|떡볶이|주먹밥|컵밥|덮밥|삼각|핫바|소시지|국밥|죽|스파게티|파스타|치킨|천하장사|어묵/],
+  [
+    '생활용품',
+    /휴지|롤휴지|물티슈|샴푸|린스|치약|칫솔|세제|섬유유연제|마스크|건전지|우산|수세미|면도기|반창고|생리대|라이너|오버나이트|탐폰|팬티라이너|기저귀|배변패드|위생|왁스|좋은\)|쏘피\)|\d+롤(?!케이크)|클린/,
+  ],
+  ['과자', /과자|칩|스낵|크래커|쿠키|초콜릿|초코파이|캔디|젤리|껌\)|비스킷|파이\)|뿌요|뻥튀기|약과/],
+  [
+    '음료',
+    /콜라|사이다|주스|에이드|음료|워터|생수|우유|커피|라떼|탄산|이온|두유|요구르트|요거트|쉐이크|스무디|식혜|차\)|티\)|에너지드링크|핫식스|몬스터|레드불|비타500|게토레이|파워에이드|토레타|데미소다|식초|액티비아|닥터유|컵커피|바리스타|스프라이트|환타|밀키스|암바사/,
+  ],
+];
+
+// 위 규칙으로 못 잡았을 때 마지막으로 시도하는 약한 신호: 음료/유제품 용량 표기(500ml, 1L 등)
+const WEAK_BEVERAGE_HINT = /\d+\s?(ml|L)\b/i;
+
+function guessCategory(name) {
+  for (const [category, pattern] of CATEGORY_RULES) {
+    if (pattern.test(name)) return category;
+  }
+  if (WEAK_BEVERAGE_HINT.test(name)) return '음료';
+  return '기타';
+}
+
 // 브랜드마다 표기가 조금씩 다른 상품명을 비교검색(MASTER_DB)용으로 묶기 위한 정규화
 function normalizeName(name) {
   return name
@@ -31,7 +59,7 @@ function buildMasterDB(brandResults) {
       byNormName.set(key, {
         id: key,
         name: item.name,
-        category: '미분류',
+        category: guessCategory(item.name),
         price: item.price,
         saving: item.promoType === '2+1' ? Math.round(item.price / 3) : item.price,
         events: {},
