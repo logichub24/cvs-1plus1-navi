@@ -323,6 +323,29 @@
             </div>
         </div>
 
+        <!-- 첫 실행 온보딩: 행사 데이터 특성 안내 -->
+        <div id="onboardingModal" class="absolute inset-0 bg-black/70 hidden flex-col items-center justify-center p-5 z-[7000]">
+            <div class="bg-white rounded-[2rem] w-full max-w-sm overflow-hidden shadow-2xl">
+                <div class="bg-gradient-to-br from-blue-600 to-indigo-600 p-6 text-center">
+                    <div class="text-4xl mb-2">🏪</div>
+                    <h3 class="text-white text-lg font-black">시작하기 전에 확인해주세요</h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div class="flex items-start gap-3">
+                        <span class="text-xl shrink-0">📋</span>
+                        <p class="text-sm text-gray-700 leading-relaxed"><b>1+1·2+1 행사는 본사 전산 기준 전국 공통 행사</b>입니다. 매장별 재고 상황에 따라 실제 적용 여부가 다를 수 있으니, 방문 전 해당 매장에 확인해주세요.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-xl shrink-0">🔄</span>
+                        <p class="text-sm text-gray-700 leading-relaxed">행사 정보와 매장 위치는 <b>매일 새벽 3시 자동으로 갱신</b>됩니다.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="closeOnboarding()" class="w-full py-3.5 bg-gray-900 text-white font-bold rounded-xl shadow-md hover:bg-gray-800 active:scale-95 transition">확인했습니다</button>
+                </div>
+            </div>
+        </div>
+
     </div> <!-- app-container -->
 
     <script>
@@ -402,6 +425,21 @@
             document.getElementById('map').addEventListener('mousedown', closeSheet);
             document.getElementById('map').addEventListener('touchstart', closeSheet);
             window.addEventListener('resize', () => { if(map) map.invalidateSize(); });
+            maybeShowOnboarding();
+        }
+
+        function maybeShowOnboarding() {
+            if (localStorage.getItem('cvs_onboarded')) return;
+            const modal = document.getElementById('onboardingModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeOnboarding() {
+            localStorage.setItem('cvs_onboarded', '1');
+            const modal = document.getElementById('onboardingModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
         }
 
         // 위경도 기준으로 가장 가까운 시/도의 매장 파일을 골라 불러온다. 이미 로드된 지역이면 아무것도 안 함.
