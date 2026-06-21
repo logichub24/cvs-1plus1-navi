@@ -559,7 +559,6 @@
                     const iconHtml = `
                         <div class="custom-marker ${BRAND_INFO[store.brand].marker}" style="width: 40px; height: 40px; font-size: 11px; z-index: 20;">
                             ${BRAND_INFO[store.brand].text}
-                            <span class="badge-count shadow-sm">${store.itemCount}</span>
                         </div>
                     `;
                     const icon = L.divIcon({ className: 'bg-transparent', html: iconHtml, iconSize: [40, 40], iconAnchor: [20, 20] });
