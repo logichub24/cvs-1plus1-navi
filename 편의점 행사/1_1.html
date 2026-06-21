@@ -142,9 +142,9 @@
             <i class="fa-solid fa-rotate-right text-blue-400"></i> 이 지역 재검색
         </button>
 
-        <!-- Ad Banner (Above Nav) -->
+        <!-- Ad Banner (Above Nav) - 토스인앱 환경이면 ads.js가 실제 배너로 교체, 아니면 더미 표시 유지 -->
         <div class="absolute bottom-[60px] left-0 w-full bg-white/90 backdrop-blur-sm border-t border-gray-100 p-1.5 z-[250] flex justify-center items-center pointer-events-none">
-            <div class="bg-gray-100 w-full max-w-sm h-10 flex items-center justify-center rounded-lg border border-gray-200 cursor-pointer pointer-events-auto" onclick="showToast('광고 페이지로 이동합니다.')">
+            <div id="adBannerSlot" class="bg-gray-100 w-full max-w-sm h-10 flex items-center justify-center rounded-lg border border-gray-200 cursor-pointer pointer-events-auto" onclick="showToast('광고 페이지로 이동합니다.')">
                 <span class="text-[10px] text-gray-400 font-bold">Google Ad: 동네 마트 초특가 할인 앱</span>
             </div>
         </div>
@@ -318,6 +318,9 @@
                             <li class="text-center text-xs text-gray-400 py-4">상품의 [+] 버튼을 눌러 담아보세요.</li>
                         </ul>
                     </div>
+                    <button id="rewardAdBtn" onclick="watchRewardAdForBonus()" class="hidden w-full py-2.5 mb-2 bg-amber-400 text-amber-900 font-bold rounded-xl shadow-sm shrink-0 hover:bg-amber-300 active:scale-95 transition text-sm">
+                        <i class="fa-solid fa-play mr-1"></i> 광고 보고 적립금 2배 받기
+                    </button>
                     <button onclick="closeSavings()" class="w-full py-3.5 bg-gray-900 text-white font-bold rounded-xl shadow-md shrink-0 hover:bg-gray-800 active:scale-95 transition">확인 완료</button>
                 </div>
             </div>
@@ -387,7 +390,8 @@
         const BRANCH_NAMES = ['중앙점', '본점', '사거리점', '역앞점', '프리미엄점'];
 
         let map, activeStore = null, activeCategory = 'ALL';
-        let totalSavings = 0, likedItems = new Set(), purchasedHistory = []; 
+        let totalSavings = 0, likedItems = new Set(), purchasedHistory = [];
+        window.purchasedHistory = purchasedHistory; // ads.js(보상형 광고)에서 최근 적립 내역을 참조하기 위해 노출 
         let storeMarkersData = [], mapMarkers = []; 
         let isUserPanning = false, currentRadius = 500, searchCircle = null, showOnly1Plus1 = false;
         let allVirtualStoresDB = [], REAL_STORES = [];
@@ -693,6 +697,7 @@
         // [개선 1 적용] 지도 오프셋 적용하여 마커와 바텀시트 공존
         function openStore(store) {
             activeStore = store;
+            if (typeof onStoreOpened === 'function') onStoreOpened();
             // 바텀시트가 55vh 이므로 중심축을 약간 남쪽(위도 마이너스)으로 보정
             map.flyTo([store.lat - 0.0015, store.lng], 17, { duration: 0.5 });
 
@@ -980,5 +985,6 @@
             toastTimeout = setTimeout(() => { t.classList.remove('opacity-100'); t.classList.add('opacity-0'); }, duration);
         }
     </script>
+    <script type="module" src="ads.js"></script>
 </body>
 </html>
