@@ -1,0 +1,121 @@
+[
+  {
+    "province": "서울특별시",
+    "file": "서울특별시.json",
+    "count": 8720,
+    "centerLat": 37.54519428361051,
+    "centerLng": 126.9908346303092
+  },
+  {
+    "province": "전북특별자치도",
+    "file": "전북특별자치도.json",
+    "count": 1632,
+    "centerLat": 35.82501976889368,
+    "centerLng": 127.00590463492331
+  },
+  {
+    "province": "전라남도",
+    "file": "전라남도.json",
+    "count": 1537,
+    "centerLat": 34.84319975700162,
+    "centerLng": 127.0778008524911
+  },
+  {
+    "province": "충청북도",
+    "file": "충청북도.json",
+    "count": 1878,
+    "centerLat": 36.76970517361605,
+    "centerLng": 127.62218767217662
+  },
+  {
+    "province": "경기도",
+    "file": "경기도.json",
+    "count": 13968,
+    "centerLat": 37.41100656712632,
+    "centerLng": 127.01670146980045
+  },
+  {
+    "province": "대구광역시",
+    "file": "대구광역시.json",
+    "count": 1884,
+    "centerLat": 35.85696284778297,
+    "centerLng": 128.57558293727402
+  },
+  {
+    "province": "강원특별자치도",
+    "file": "강원특별자치도.json",
+    "count": 2187,
+    "centerLat": 37.689998759208905,
+    "centerLng": 128.33563973337843
+  },
+  {
+    "province": "경상북도",
+    "file": "경상북도.json",
+    "count": 2579,
+    "centerLat": 36.12909752359248,
+    "centerLng": 128.81471367345833
+  },
+  {
+    "province": "제주특별자치도",
+    "file": "제주특별자치도.json",
+    "count": 1230,
+    "centerLat": 33.42133888168613,
+    "centerLng": 126.52105476121928
+  },
+  {
+    "province": "인천광역시",
+    "file": "인천광역시.json",
+    "count": 2817,
+    "centerLat": 37.488853102859466,
+    "centerLng": 126.65675725718425
+  },
+  {
+    "province": "경상남도",
+    "file": "경상남도.json",
+    "count": 3040,
+    "centerLat": 35.19372905769687,
+    "centerLng": 128.5785787230362
+  },
+  {
+    "province": "충청남도",
+    "file": "충청남도.json",
+    "count": 2612,
+    "centerLat": 36.68925175232979,
+    "centerLng": 126.90772180703905
+  },
+  {
+    "province": "대전광역시",
+    "file": "대전광역시.json",
+    "count": 1373,
+    "centerLat": 36.34864118462805,
+    "centerLng": 127.39018327561139
+  },
+  {
+    "province": "부산광역시",
+    "file": "부산광역시.json",
+    "count": 2531,
+    "centerLat": 35.16547390124131,
+    "centerLng": 129.06159632485802
+  },
+  {
+    "province": "광주광역시",
+    "file": "광주광역시.json",
+    "count": 1259,
+    "centerLat": 35.16469699233934,
+    "centerLng": 126.8693233146724
+  },
+  {
+    "province": "울산광역시",
+    "file": "울산광역시.json",
+    "count": 1003,
+    "centerLat": 35.536775513341105,
+    "centerLng": 129.31971418718393
+  },
+  {
+    "province": "세종특별자치시",
+    "file": "세종특별자치시.json",
+    "count": 279,
+    "centerLat": 36.539748382540466,
+    "centerLng": 127.2733304047798
+  }
+]

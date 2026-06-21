@@ -368,22 +368,27 @@
         let storeMarkersData = [], mapMarkers = []; 
         let isUserPanning = false, currentRadius = 500, searchCircle = null, showOnly1Plus1 = false;
         let allVirtualStoresDB = [], REAL_STORES = [];
+        let STORE_INDEX = [], loadedProvinceFile = null;
 
         document.addEventListener('DOMContentLoaded', () => {
             loadSavedData();
 
             // deals.json: 매일 새벽 3시 GitHub Actions가 4사 행사 페이지를 크롤링해 갱신하는 실데이터.
-            // stores.json: 소상공인시장진흥공단 상가업소정보 API로 동기화한 실제 매장 좌표.
-            // 둘 중 하나라도 못 받아오면 내부 데모 DB로 폴백한다.
+            // stores/index.json: 전국 시/도별로 쪼갠 매장 좌표 목록(소상공인시장진흥공단 API 동기화 결과)의 색인.
+            // 실제 매장 데이터는 사용자 위치에서 가장 가까운 시/도 파일만 불러온다(전국 통합 파일은 너무 큼).
             Promise.all([
                 fetch('deals.json').then(res => res.ok ? res.json() : null).catch(() => null),
-                fetch('stores.json').then(res => res.ok ? res.json() : null).catch(() => null),
-            ]).then(([deals, stores]) => {
+                fetch('stores/index.json').then(res => res.ok ? res.json() : null).catch(() => null),
+            ]).then(async ([deals, index]) => {
                 if (deals && deals.length > 0) MASTER_DB = deals;
                 else console.log("deals.json 없음 - 내부 데모 DB 사용");
 
-                if (stores && stores.length > 0) REAL_STORES = stores;
-                else console.log("stores.json 없음 - 가상 매장 사용");
+                if (index && index.length > 0) {
+                    STORE_INDEX = index;
+                    await loadStoresForLocation(37.498095, 127.027610); // 색인 로드 직후 기본 위치(서울) 기준 1차 로딩
+                } else {
+                    console.log("stores/index.json 없음 - 가상 매장 사용");
+                }
 
                 startApp();
             });
@@ -391,8 +396,7 @@
 
         function startApp() {
             updateDashboardCounts();
-            if (REAL_STORES.length > 0) buildStoresFromRealData();
-            else generateVirtualStoresDB();
+            if (REAL_STORES.length === 0) generateVirtualStoresDB();
             initMap();
             renderCategories();
             document.getElementById('map').addEventListener('mousedown', closeSheet);
@@ -400,7 +404,32 @@
             window.addEventListener('resize', () => { if(map) map.invalidateSize(); });
         }
 
-        // stores.json(실제 매장 좌표) + MASTER_DB(실제 행사 데이터)를 결합해 지도에 쓸 매장 목록을 만든다.
+        // 위경도 기준으로 가장 가까운 시/도의 매장 파일을 골라 불러온다. 이미 로드된 지역이면 아무것도 안 함.
+        // 반환값: 새로 로드해서 매장 목록이 바뀌었는지 여부
+        async function loadStoresForLocation(lat, lng) {
+            if (STORE_INDEX.length === 0) return false;
+
+            let nearest = null, bestDist = Infinity;
+            STORE_INDEX.forEach(p => {
+                const d = (p.centerLat - lat) ** 2 + (p.centerLng - lng) ** 2;
+                if (d < bestDist) { bestDist = d; nearest = p; }
+            });
+            if (!nearest || nearest.file === loadedProvinceFile) return false;
+
+            try {
+                const res = await fetch('stores/' + nearest.file);
+                if (!res.ok) throw new Error('store shard fetch failed');
+                REAL_STORES = await res.json();
+                loadedProvinceFile = nearest.file;
+                buildStoresFromRealData();
+                return true;
+            } catch (e) {
+                console.log(`${nearest.file} 로드 실패 - 매장 데이터 갱신 안 됨`);
+                return false;
+            }
+        }
+
+        // 매장 좌표(REAL_STORES) + 행사 데이터(MASTER_DB)를 결합해 지도에 쓸 매장 목록을 만든다.
         function buildStoresFromRealData() {
             allVirtualStoresDB = REAL_STORES.map(store => {
                 const storeDeals = MASTER_DB.filter(p => p.events[store.brand]);
@@ -486,12 +515,13 @@
 
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
-                    position => {
+                    async position => {
                         const lat = position.coords.latitude;
                         const lng = position.coords.longitude;
                         map.setView([lat, lng], 16);
                         searchCircle.setLatLng([lat, lng]);
-                        if (REAL_STORES.length === 0) generateVirtualStoresDB(lat, lng);
+                        const switched = await loadStoresForLocation(lat, lng);
+                        if (!switched && REAL_STORES.length === 0) generateVirtualStoresDB(lat, lng);
                         loadStoresInRadius();
                     },
                     error => { loadStoresInRadius(); },
@@ -506,8 +536,11 @@
         function findMyLocation() {
             if (navigator.geolocation) {
                 showToast("위치 탐색 중...", 1000);
-                navigator.geolocation.getCurrentPosition(position => {
-                    map.setView([position.coords.latitude, position.coords.longitude], 16);
+                navigator.geolocation.getCurrentPosition(async position => {
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+                    map.setView([lat, lng], 16);
+                    await loadStoresForLocation(lat, lng);
                     searchInCurrentArea();
                 });
             }
