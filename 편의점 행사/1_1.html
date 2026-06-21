@@ -569,10 +569,15 @@
             });
         }
 
-        function searchInCurrentArea() {
+        async function searchInCurrentArea() {
             const btn = document.getElementById('reSearchBtn');
             btn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-[10px]');
             btn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+
+            // 지도를 다른 지역으로 옮긴 뒤 재검색하면, 그 위치에서 가장 가까운 시/도 데이터를 다시 불러온다.
+            const center = map.getCenter();
+            await loadStoresForLocation(center.lat, center.lng);
+
             setTimeout(() => {
                 loadStoresInRadius();
                 showToast(`반경 ${currentRadius}m 내에서 ${storeMarkersData.length}개의 매장을 찾았습니다.`);
