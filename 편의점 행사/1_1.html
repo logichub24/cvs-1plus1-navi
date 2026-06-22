@@ -552,8 +552,11 @@
             map = L.map('map', { zoomControl: false }).setView(defaultCenter, 16);
 
             streetLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png');
-            satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-                attribution: 'Tiles &copy; Esri',
+            // 브이월드(국토지리정보원) 위성영상 - 국내 정사보정이 잘 되어 있어 Esri보다 건물이 덜 기울어져 보임
+            const VWORLD_KEY = '6888EEC4-8F4B-3D0D-87AE-7AE4C071E4CA';
+            satelliteLayer = L.tileLayer(`https://api.vworld.kr/req/wmts/1.0.0/${VWORLD_KEY}/Satellite/{z}/{y}/{x}.jpeg`, {
+                attribution: '&copy; VWorld',
+                maxZoom: 19,
             });
             // 위성 사진만 보면 도로명/지명이 안 보여서, 라벨 전용 타일을 위에 겹쳐 하이브리드 형태로 보여준다.
             // 위성 레이어보다 나중에 add해야 위에 그려짐.
