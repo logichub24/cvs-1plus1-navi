@@ -497,14 +497,43 @@
 
         // 위경도 기준으로 가장 가까운 시/도의 매장 파일을 골라 불러온다. 이미 로드된 지역이면 아무것도 안 함.
         // 반환값: 새로 로드해서 매장 목록이 바뀌었는지 여부
-        async function loadStoresForLocation(lat, lng) {
-            if (STORE_INDEX.length === 0) return false;
+        // 좌표 -> 실제 행정구역(시/도) 이름을 브이월드 역지오코딩으로 조회.
+        // 경기도처럼 서울을 감싸는 모양의 도(道)는 단순 중심점 거리 비교로는
+        // 잘못된 지역(예: 고양시 일산인데 서울/인천으로 오인)이 뽑히는 문제가 있어서
+        // 실제 행정구역 조회로 대체. 실패 시에만 중심점 거리 비교로 폴백.
+        // 브이월드 주소 API는 CORS 헤더가 없어 fetch가 막히므로 JSONP로 호출.
+        function getProvinceNameByCoords(lat, lng) {
+            return new Promise(resolve => {
+                const cbName = `vworldAddrCb${Date.now()}`;
+                const cleanup = () => { delete window[cbName]; script.remove(); };
+                const timer = setTimeout(() => { cleanup(); resolve(null); }, 5000);
+                window[cbName] = (json) => {
+                    clearTimeout(timer);
+                    cleanup();
+                    resolve(json?.response?.result?.[0]?.structure?.level1 || null);
+                };
+                const script = document.createElement('script');
+                script.src = `https://api.vworld.kr/req/address?service=address&request=getAddress&version=2.0&crs=epsg:4326&point=${lng},${lat}&type=parcel&key=${VWORLD_KEY}&format=json&callback=${cbName}`;
+                script.onerror = () => { clearTimeout(timer); cleanup(); resolve(null); };
+                document.body.appendChild(script);
+            });
+        }
 
+        function nearestProvinceByDistance(lat, lng) {
             let nearest = null, bestDist = Infinity;
             STORE_INDEX.forEach(p => {
                 const d = (p.centerLat - lat) ** 2 + (p.centerLng - lng) ** 2;
                 if (d < bestDist) { bestDist = d; nearest = p; }
             });
+            return nearest;
+        }
+
+        async function loadStoresForLocation(lat, lng) {
+            if (STORE_INDEX.length === 0) return false;
+
+            const provinceName = await getProvinceNameByCoords(lat, lng);
+            let nearest = provinceName ? STORE_INDEX.find(p => p.province === provinceName) : null;
+            if (!nearest) nearest = nearestProvinceByDistance(lat, lng);
             if (!nearest || nearest.file === loadedProvinceFile) return false;
 
             try {
@@ -583,6 +612,7 @@
         }
 
         let streetLayer, satelliteLayer, satelliteLabelLayer, isSatelliteView = false;
+        const VWORLD_KEY = '6888EEC4-8F4B-3D0D-87AE-7AE4C071E4CA';
 
         function initMap() {
             const defaultCenter = [37.498095, 127.027610];
@@ -590,7 +620,6 @@
 
             streetLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png');
             // 브이월드(국토지리정보원) 위성영상 - 국내 정사보정이 잘 되어 있어 Esri보다 건물이 덜 기울어져 보임
-            const VWORLD_KEY = '6888EEC4-8F4B-3D0D-87AE-7AE4C071E4CA';
             satelliteLayer = L.tileLayer(`https://api.vworld.kr/req/wmts/1.0.0/${VWORLD_KEY}/Satellite/{z}/{y}/{x}.jpeg`, {
                 attribution: '&copy; VWorld',
                 maxZoom: 19,
