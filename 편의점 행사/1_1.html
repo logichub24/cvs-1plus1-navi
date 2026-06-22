@@ -129,6 +129,11 @@
 
         <!-- 우측 맵 컨트롤 패널 정렬 -->
         <div class="absolute right-3 bottom-[120px] z-[400] flex flex-col gap-2 pointer-events-none items-end">
+            <!-- 지역/주소 검색 -->
+            <button onclick="openLocationSearch()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-gray-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition">
+                <i class="fa-solid fa-magnifying-glass text-lg"></i>
+            </button>
+
             <!-- 위성 보기 토글 -->
             <button id="satelliteToggleBtn" onclick="toggleSatelliteView()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-gray-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition">
                 <i class="fa-solid fa-satellite text-lg"></i>
@@ -393,6 +398,22 @@
             </div>
         </div>
 
+        <!-- 지역/주소 검색 -->
+        <div id="locationSearchModal" class="absolute inset-0 bg-black/70 hidden flex-col items-start justify-start p-0 z-[7000]">
+            <div class="bg-white w-full overflow-hidden shadow-2xl flex flex-col" style="height: 100%;">
+                <div class="p-4 border-b border-gray-100 flex items-center gap-2 shrink-0">
+                    <button onclick="closeLocationSearch()" class="text-gray-500 hover:text-gray-800 p-1 shrink-0"><i class="fa-solid fa-arrow-left text-lg"></i></button>
+                    <div class="relative flex-1">
+                        <input id="locationSearchInput" type="text" placeholder="지역명, 건물명, 주소 검색 (예: 강남역, 해운대구)"
+                            class="w-full bg-gray-100 rounded-full pl-4 pr-9 py-2.5 text-sm outline-none focus:ring-2 focus:ring-blue-200"
+                            oninput="handleLocationSearchInput()" onkeydown="if(event.key==='Enter') runLocationSearch();">
+                        <button onclick="runLocationSearch()" class="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-600"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div id="locationSearchResults" class="flex-1 overflow-y-auto"></div>
+            </div>
+        </div>
+
     </div> <!-- app-container -->
 
     <script>
@@ -501,22 +522,23 @@
         // 경기도처럼 서울을 감싸는 모양의 도(道)는 단순 중심점 거리 비교로는
         // 잘못된 지역(예: 고양시 일산인데 서울/인천으로 오인)이 뽑히는 문제가 있어서
         // 실제 행정구역 조회로 대체. 실패 시에만 중심점 거리 비교로 폴백.
-        // 브이월드 주소 API는 CORS 헤더가 없어 fetch가 막히므로 JSONP로 호출.
-        function getProvinceNameByCoords(lat, lng) {
+        // 브이월드 API는 CORS 헤더가 없어 fetch가 막히므로 JSONP(script 태그)로 호출하는 공용 헬퍼.
+        function vworldJsonp(url) {
             return new Promise(resolve => {
-                const cbName = `vworldAddrCb${Date.now()}`;
+                const cbName = `vworldCb${Date.now()}${Math.floor(Math.random() * 1e6)}`;
                 const cleanup = () => { delete window[cbName]; script.remove(); };
                 const timer = setTimeout(() => { cleanup(); resolve(null); }, 5000);
-                window[cbName] = (json) => {
-                    clearTimeout(timer);
-                    cleanup();
-                    resolve(json?.response?.result?.[0]?.structure?.level1 || null);
-                };
+                window[cbName] = (json) => { clearTimeout(timer); cleanup(); resolve(json); };
                 const script = document.createElement('script');
-                script.src = `https://api.vworld.kr/req/address?service=address&request=getAddress&version=2.0&crs=epsg:4326&point=${lng},${lat}&type=parcel&key=${VWORLD_KEY}&format=json&callback=${cbName}`;
+                script.src = `${url}&callback=${cbName}`;
                 script.onerror = () => { clearTimeout(timer); cleanup(); resolve(null); };
                 document.body.appendChild(script);
             });
+        }
+
+        async function getProvinceNameByCoords(lat, lng) {
+            const json = await vworldJsonp(`https://api.vworld.kr/req/address?service=address&request=getAddress&version=2.0&crs=epsg:4326&point=${lng},${lat}&type=parcel&key=${VWORLD_KEY}&format=json`);
+            return json?.response?.result?.[0]?.structure?.level1 || null;
         }
 
         function nearestProvinceByDistance(lat, lng) {
@@ -782,6 +804,82 @@
             localStorage.removeItem('cvs_onboarded');
             closeSettings();
             maybeShowOnboarding();
+        }
+
+        let locationSearchTimer = null;
+
+        function openLocationSearch() {
+            const modal = document.getElementById('locationSearchModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.getElementById('locationSearchResults').innerHTML = '';
+            setTimeout(() => document.getElementById('locationSearchInput').focus(), 100);
+        }
+
+        function closeLocationSearch() {
+            const modal = document.getElementById('locationSearchModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.getElementById('locationSearchInput').value = '';
+        }
+
+        function handleLocationSearchInput() {
+            clearTimeout(locationSearchTimer);
+            locationSearchTimer = setTimeout(runLocationSearch, 400);
+        }
+
+        function renderLocationSearchResults(items) {
+            const container = document.getElementById('locationSearchResults');
+            if (items.length === 0) {
+                container.innerHTML = `<p class="text-center text-sm text-gray-400 py-10">검색 결과가 없습니다.</p>`;
+                return;
+            }
+            container.innerHTML = items.map((item, i) => `
+                <button onclick="selectSearchResult(${i})" class="w-full text-left px-5 py-3.5 border-b border-gray-50 hover:bg-gray-50 active:bg-gray-100 transition flex items-start gap-3">
+                    <i class="fa-solid ${item.icon} text-gray-400 mt-0.5"></i>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-bold text-gray-900 truncate">${item.title}</p>
+                        <p class="text-xs text-gray-500 truncate mt-0.5">${item.subtitle}</p>
+                    </div>
+                </button>
+            `).join('');
+            window._locationSearchResultsData = items;
+        }
+
+        async function runLocationSearch() {
+            const query = document.getElementById('locationSearchInput').value.trim();
+            const container = document.getElementById('locationSearchResults');
+            if (!query) { container.innerHTML = ''; return; }
+            container.innerHTML = `<p class="text-center text-sm text-gray-400 py-10">검색 중...</p>`;
+
+            const placeJson = await vworldJsonp(`https://api.vworld.kr/req/search?service=search&request=search&version=2.0&query=${encodeURIComponent(query)}&type=place&format=json&key=${VWORLD_KEY}`);
+            const placeItems = (placeJson?.response?.status === 'OK' ? placeJson.response.result.items : []).map(p => ({
+                title: p.title.replace(/<[^>]+>/g, ''),
+                subtitle: p.address.road || p.address.parcel || p.category,
+                lat: parseFloat(p.point.y), lng: parseFloat(p.point.x),
+                icon: 'fa-location-dot',
+            }));
+
+            const addrJson = await vworldJsonp(`https://api.vworld.kr/req/search?service=search&request=search&version=2.0&query=${encodeURIComponent(query)}&type=address&category=road&format=json&key=${VWORLD_KEY}`);
+            const addrItems = (addrJson?.response?.status === 'OK' ? addrJson.response.result.items : []).slice(0, 5).map(a => ({
+                title: a.address.road || a.address.parcel,
+                subtitle: a.address.bldnm || '주소',
+                lat: parseFloat(a.point.y), lng: parseFloat(a.point.x),
+                icon: 'fa-map',
+            }));
+
+            renderLocationSearchResults([...placeItems, ...addrItems]);
+        }
+
+        async function selectSearchResult(index) {
+            const item = window._locationSearchResultsData[index];
+            if (!item) return;
+            closeLocationSearch();
+            showToast(`'${item.title}' 위치로 이동합니다.`);
+            map.setView([item.lat, item.lng], 16);
+            await loadStoresForLocation(item.lat, item.lng);
+            searchCircle.setLatLng([item.lat, item.lng]);
+            loadStoresInRadius();
         }
 
         function setActiveNav(tabId) {
