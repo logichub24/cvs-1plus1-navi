@@ -90,12 +90,15 @@
 
         <!-- 상단 미니 헤더 -->
         <div class="absolute top-0 left-0 w-full z-[100] pointer-events-none flex flex-col pt-3">
-            <div class="px-3 pb-2">
+            <div class="px-3 pb-2 flex items-center justify-between">
                 <div class="bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-full shadow-sm border border-gray-100 pointer-events-auto inline-flex items-center gap-2">
                     <h1 class="text-sm font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 tracking-tight leading-none m-0">편의점 행사</h1>
                     <div class="w-px h-3 bg-gray-200"></div>
                     <p class="text-[10px] text-gray-500 font-bold leading-none m-0 pt-0.5">오늘 기준 행사</p>
                 </div>
+                <button onclick="openSettings()" class="w-9 h-9 bg-white/95 backdrop-blur-md rounded-full shadow-sm border border-gray-100 flex items-center justify-center text-gray-500 pointer-events-auto hover:bg-gray-50 active:scale-95 transition shrink-0">
+                    <i class="fa-solid fa-gear text-sm"></i>
+                </button>
             </div>
 
             <!-- Scrollable Info Chips -->
@@ -357,6 +360,38 @@
             </div>
         </div>
 
+        <!-- 설정 -->
+        <div id="settingsModal" class="absolute inset-0 bg-black/70 hidden flex-col items-center justify-center p-5 z-[7000]">
+            <div class="bg-white rounded-[2rem] w-full max-w-sm overflow-hidden shadow-2xl">
+                <div class="p-5 border-b border-gray-100 flex items-center justify-between">
+                    <h3 class="font-black text-lg text-gray-900"><i class="fa-solid fa-gear text-gray-400 mr-1"></i> 설정</h3>
+                    <button onclick="closeSettings()" class="text-gray-400 hover:text-gray-700 p-1"><i class="fa-solid fa-xmark text-xl"></i></button>
+                </div>
+                <div class="p-5 space-y-5">
+                    <div>
+                        <p class="text-sm font-bold text-gray-800 mb-2">기본 검색 반경</p>
+                        <div class="grid grid-cols-4 gap-2" id="settingsRadiusGroup">
+                            <button onclick="setDefaultRadius(300)" data-radius="300" class="settings-radius-btn text-xs font-bold py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition">300m</button>
+                            <button onclick="setDefaultRadius(500)" data-radius="500" class="settings-radius-btn text-xs font-bold py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition">500m</button>
+                            <button onclick="setDefaultRadius(1000)" data-radius="1000" class="settings-radius-btn text-xs font-bold py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition">1km</button>
+                            <button onclick="setDefaultRadius(2000)" data-radius="2000" class="settings-radius-btn text-xs font-bold py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition">2km</button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-gray-800 mb-2">기본 지도 종류</p>
+                        <div class="grid grid-cols-2 gap-2" id="settingsMapTypeGroup">
+                            <button onclick="setDefaultMapType('street')" data-maptype="street" class="settings-maptype-btn text-xs font-bold py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition"><i class="fa-solid fa-map mr-1"></i> 일반</button>
+                            <button onclick="setDefaultMapType('satellite')" data-maptype="satellite" class="settings-maptype-btn text-xs font-bold py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition"><i class="fa-solid fa-satellite mr-1"></i> 위성</button>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-gray-400 leading-relaxed">설정한 값은 다음에 앱을 열 때부터 기본으로 적용됩니다.</p>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="closeSettings()" class="w-full py-3.5 bg-gray-900 text-white font-bold rounded-xl shadow-md hover:bg-gray-800 active:scale-95 transition">확인</button>
+                </div>
+            </div>
+        </div>
+
     </div> <!-- app-container -->
 
     <script>
@@ -401,7 +436,7 @@
         let totalSavings = 0, likedItems = new Set(), purchasedHistory = [];
         window.purchasedHistory = purchasedHistory; // ads.js(보상형 광고)에서 최근 적립 내역을 참조하기 위해 노출 
         let storeMarkersData = [], mapMarkers = []; 
-        let isUserPanning = false, currentRadius = 500, searchCircle = null, showOnly1Plus1 = false;
+        let isUserPanning = false, currentRadius = parseInt(localStorage.getItem('cvs_defaultRadius')) || 500, searchCircle = null, showOnly1Plus1 = false;
         let allVirtualStoresDB = [], REAL_STORES = [];
         let STORE_INDEX = [], loadedProvinceFile = null;
 
@@ -437,6 +472,7 @@
             updateDashboardCounts();
             if (REAL_STORES.length === 0) generateVirtualStoresDB();
             initMap();
+            applyStartupSettings();
             renderCategories();
             document.getElementById('map').addEventListener('mousedown', closeSheet);
             document.getElementById('map').addEventListener('touchstart', closeSheet);
@@ -669,21 +705,69 @@
             }, 300);
         }
 
-        function setRadius(r) {
-            currentRadius = r;
+        function highlightRadiusButton(r) {
             [300, 500, 1000, 2000].forEach(val => {
                 const btn = document.getElementById(`rad${val}`);
                 if(val === r) {
                     btn.classList.add('text-blue-600', 'bg-blue-50');
-                    btn.classList.remove('text-gray-500', 'bg-white');
+                    btn.classList.remove('text-gray-500');
                 } else {
                     btn.classList.remove('text-blue-600', 'bg-blue-50');
-                    btn.classList.add('text-gray-500', 'bg-white');
+                    btn.classList.add('text-gray-500');
                 }
             });
+        }
+
+        function setRadius(r) {
+            currentRadius = r;
+            highlightRadiusButton(r);
             searchCircle.setRadius(r);
             map.flyToBounds(searchCircle.getBounds(), {padding: [20, 20], duration: 0.5});
             setTimeout(() => { loadStoresInRadius(); showToast(`검색 반경이 ${r}m로 변경되었습니다.`); }, 600);
+        }
+
+        function applyStartupSettings() {
+            highlightRadiusButton(currentRadius);
+            const defaultMapType = localStorage.getItem('cvs_defaultMapType') || 'street';
+            if (defaultMapType === 'satellite') toggleSatelliteView();
+        }
+
+        function openSettings() {
+            document.getElementById('settingsModal').classList.remove('hidden');
+            document.getElementById('settingsModal').classList.add('flex');
+            const savedRadius = parseInt(localStorage.getItem('cvs_defaultRadius')) || 500;
+            const savedMapType = localStorage.getItem('cvs_defaultMapType') || 'street';
+            document.querySelectorAll('.settings-radius-btn').forEach(btn => {
+                const active = parseInt(btn.dataset.radius) === savedRadius;
+                btn.classList.toggle('border-blue-600', active);
+                btn.classList.toggle('text-blue-600', active);
+                btn.classList.toggle('bg-blue-50', active);
+                btn.classList.toggle('text-gray-600', !active);
+            });
+            document.querySelectorAll('.settings-maptype-btn').forEach(btn => {
+                const active = btn.dataset.maptype === savedMapType;
+                btn.classList.toggle('border-blue-600', active);
+                btn.classList.toggle('text-blue-600', active);
+                btn.classList.toggle('bg-blue-50', active);
+                btn.classList.toggle('text-gray-600', !active);
+            });
+        }
+
+        function closeSettings() {
+            document.getElementById('settingsModal').classList.add('hidden');
+            document.getElementById('settingsModal').classList.remove('flex');
+        }
+
+        function setDefaultRadius(r) {
+            localStorage.setItem('cvs_defaultRadius', r);
+            openSettings();
+            setRadius(r);
+        }
+
+        function setDefaultMapType(type) {
+            localStorage.setItem('cvs_defaultMapType', type);
+            openSettings();
+            if ((type === 'satellite') !== isSatelliteView) toggleSatelliteView();
         }
 
         function setActiveNav(tabId) {
