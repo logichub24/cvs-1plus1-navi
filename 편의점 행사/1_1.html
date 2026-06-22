@@ -545,7 +545,7 @@
             }
         }
 
-        let streetLayer, satelliteLayer, isSatelliteView = false;
+        let streetLayer, satelliteLayer, satelliteLabelLayer, isSatelliteView = false;
 
         function initMap() {
             const defaultCenter = [37.498095, 127.027610];
@@ -555,6 +555,9 @@
             satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
                 attribution: 'Tiles &copy; Esri',
             });
+            // 위성 사진만 보면 도로명/지명이 안 보여서, 라벨 전용 타일을 위에 겹쳐 하이브리드 형태로 보여준다.
+            // 위성 레이어보다 나중에 add해야 위에 그려짐.
+            satelliteLabelLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png');
             streetLayer.addTo(map);
 
             searchCircle = L.circle(defaultCenter, {
@@ -613,10 +616,12 @@
             if (isSatelliteView) {
                 map.removeLayer(streetLayer);
                 satelliteLayer.addTo(map);
+                satelliteLabelLayer.addTo(map); // 위성 위에 도로명/지명 라벨 겹치기
                 btn.classList.add('text-blue-600', 'bg-blue-50');
                 btn.classList.remove('text-gray-600');
             } else {
                 map.removeLayer(satelliteLayer);
+                map.removeLayer(satelliteLabelLayer);
                 streetLayer.addTo(map);
                 btn.classList.remove('text-blue-600', 'bg-blue-50');
                 btn.classList.add('text-gray-600');
