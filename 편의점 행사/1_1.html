@@ -296,7 +296,8 @@
                 <div class="flex justify-between items-center">
                     <span id="bsItemCount" class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-md">총 0개</span>
                     <div class="flex items-center gap-2 text-xs text-gray-500">
-                        <button id="filter1plus1Btn" onclick="toggle1plus1Filter()" class="text-[10px] font-bold px-2 py-1.5 rounded-md border border-gray-200 text-gray-500 bg-white transition shadow-sm active:scale-95">1+1만 보기</button>
+                        <button id="filter1plus1Btn" onclick="toggleDealTypeFilter('1+1')" class="text-[10px] font-bold px-2 py-1.5 rounded-md border border-gray-200 text-gray-500 bg-white transition shadow-sm active:scale-95">1+1만 보기</button>
+                        <button id="filter2plus1Btn" onclick="toggleDealTypeFilter('2+1')" class="text-[10px] font-bold px-2 py-1.5 rounded-md border border-gray-200 text-gray-500 bg-white transition shadow-sm active:scale-95">2+1만 보기</button>
                         <div class="bg-gray-50 rounded-lg px-2 py-1 border border-gray-100 flex items-center gap-1 shadow-sm">
                             <i class="fa-solid fa-sort"></i>
                             <select id="sortSelect" onchange="renderDeals()" class="bg-transparent border-none outline-none font-bold text-gray-700 cursor-pointer appearance-none pl-1">
@@ -436,7 +437,7 @@
         let totalSavings = 0, likedItems = new Set(), purchasedHistory = [];
         window.purchasedHistory = purchasedHistory; // ads.js(보상형 광고)에서 최근 적립 내역을 참조하기 위해 노출 
         let storeMarkersData = [], mapMarkers = []; 
-        let isUserPanning = false, currentRadius = 500, searchCircle = null, showOnly1Plus1 = false;
+        let isUserPanning = false, currentRadius = 500, searchCircle = null, dealTypeFilter = null;
         let allVirtualStoresDB = [], REAL_STORES = [];
         let STORE_INDEX = [], loadedProvinceFile = null;
 
@@ -832,16 +833,18 @@
             window.open(`https://map.kakao.com/link/map/${activeStore.name},${activeStore.lat},${activeStore.lng}`, '_blank');
         }
 
-        function toggle1plus1Filter() {
-            showOnly1Plus1 = !showOnly1Plus1;
-            const btn = document.getElementById('filter1plus1Btn');
-            if(showOnly1Plus1) {
-                btn.classList.add('bg-red-50', 'text-red-600', 'border-red-200');
-                btn.classList.remove('bg-white', 'text-gray-500', 'border-gray-200');
-            } else {
-                btn.classList.remove('bg-red-50', 'text-red-600', 'border-red-200');
-                btn.classList.add('bg-white', 'text-gray-500', 'border-gray-200');
-            }
+        function toggleDealTypeFilter(type) {
+            dealTypeFilter = (dealTypeFilter === type) ? null : type;
+            [['1+1', 'filter1plus1Btn'], ['2+1', 'filter2plus1Btn']].forEach(([t, id]) => {
+                const btn = document.getElementById(id);
+                if(dealTypeFilter === t) {
+                    btn.classList.add('bg-red-50', 'text-red-600', 'border-red-200');
+                    btn.classList.remove('bg-white', 'text-gray-500', 'border-gray-200');
+                } else {
+                    btn.classList.remove('bg-red-50', 'text-red-600', 'border-red-200');
+                    btn.classList.add('bg-white', 'text-gray-500', 'border-gray-200');
+                }
+            });
             renderDeals();
         }
 
@@ -949,7 +952,7 @@
             const sortVal = document.getElementById('sortSelect').value;
             
             let filtered = activeStore.deals.filter(p => activeCategory === 'ALL' || p.category === activeCategory);
-            if(showOnly1Plus1) filtered = filtered.filter(p => p.events[activeStore.brand] && p.events[activeStore.brand].type === '1+1');
+            if(dealTypeFilter) filtered = filtered.filter(p => p.events[activeStore.brand] && p.events[activeStore.brand].type === dealTypeFilter);
 
             if(sortVal === 'priceLow') filtered.sort((a,b) => a.price - b.price);
             else filtered.sort((a,b) => b.saving - a.saving);
