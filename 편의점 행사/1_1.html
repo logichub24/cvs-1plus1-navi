@@ -126,6 +126,11 @@
 
         <!-- 우측 맵 컨트롤 패널 정렬 -->
         <div class="absolute right-3 bottom-[120px] z-[400] flex flex-col gap-2 pointer-events-none items-end">
+            <!-- 위성 보기 토글 -->
+            <button id="satelliteToggleBtn" onclick="toggleSatelliteView()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-gray-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition">
+                <i class="fa-solid fa-satellite text-lg"></i>
+            </button>
+
             <!-- GPS Button -->
             <button onclick="findMyLocation()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-blue-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition">
                 <i class="fa-solid fa-location-crosshairs text-lg"></i>
@@ -540,10 +545,17 @@
             }
         }
 
+        let streetLayer, satelliteLayer, isSatelliteView = false;
+
         function initMap() {
             const defaultCenter = [37.498095, 127.027610];
             map = L.map('map', { zoomControl: false }).setView(defaultCenter, 16);
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(map);
+
+            streetLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png');
+            satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                attribution: 'Tiles &copy; Esri',
+            });
+            streetLayer.addTo(map);
 
             searchCircle = L.circle(defaultCenter, {
                 radius: currentRadius, color: '#3b82f6', fillColor: '#3b82f6',
@@ -592,6 +604,22 @@
                     await loadStoresForLocation(lat, lng);
                     searchInCurrentArea();
                 });
+            }
+        }
+
+        function toggleSatelliteView() {
+            isSatelliteView = !isSatelliteView;
+            const btn = document.getElementById('satelliteToggleBtn');
+            if (isSatelliteView) {
+                map.removeLayer(streetLayer);
+                satelliteLayer.addTo(map);
+                btn.classList.add('text-blue-600', 'bg-blue-50');
+                btn.classList.remove('text-gray-600');
+            } else {
+                map.removeLayer(satelliteLayer);
+                streetLayer.addTo(map);
+                btn.classList.remove('text-blue-600', 'bg-blue-50');
+                btn.classList.add('text-gray-600');
             }
         }
 
