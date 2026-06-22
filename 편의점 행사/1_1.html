@@ -369,22 +369,22 @@
                 </div>
                 <div class="p-5 space-y-5">
                     <div>
-                        <p class="text-sm font-bold text-gray-800 mb-2">기본 검색 반경</p>
-                        <div class="grid grid-cols-4 gap-2" id="settingsRadiusGroup">
-                            <button onclick="setDefaultRadius(300)" data-radius="300" class="settings-radius-btn text-xs font-bold py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition">300m</button>
-                            <button onclick="setDefaultRadius(500)" data-radius="500" class="settings-radius-btn text-xs font-bold py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition">500m</button>
-                            <button onclick="setDefaultRadius(1000)" data-radius="1000" class="settings-radius-btn text-xs font-bold py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition">1km</button>
-                            <button onclick="setDefaultRadius(2000)" data-radius="2000" class="settings-radius-btn text-xs font-bold py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition">2km</button>
+                        <p class="text-sm font-bold text-gray-800 mb-2">앱 정보</p>
+                        <div class="bg-gray-50 rounded-xl p-3.5 space-y-1.5">
+                            <div class="flex items-center justify-between text-xs"><span class="text-gray-500">버전</span><span class="font-bold text-gray-800">1.0.0</span></div>
+                            <div class="flex items-center justify-between text-xs"><span class="text-gray-500">행사·매장 데이터</span><span class="font-bold text-gray-800">매일 새벽 3시 자동 갱신</span></div>
                         </div>
                     </div>
                     <div>
-                        <p class="text-sm font-bold text-gray-800 mb-2">기본 지도 종류</p>
-                        <div class="grid grid-cols-2 gap-2" id="settingsMapTypeGroup">
-                            <button onclick="setDefaultMapType('street')" data-maptype="street" class="settings-maptype-btn text-xs font-bold py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition"><i class="fa-solid fa-map mr-1"></i> 일반</button>
-                            <button onclick="setDefaultMapType('satellite')" data-maptype="satellite" class="settings-maptype-btn text-xs font-bold py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition"><i class="fa-solid fa-satellite mr-1"></i> 위성</button>
+                        <p class="text-sm font-bold text-gray-800 mb-2">내 데이터</p>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="resetWishlist()" class="text-xs font-bold py-2.5 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 active:scale-95 transition">찜 목록 초기화</button>
+                            <button onclick="clearSavings()" class="text-xs font-bold py-2.5 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 active:scale-95 transition">적립금 내역 초기화</button>
                         </div>
                     </div>
-                    <p class="text-[11px] text-gray-400 leading-relaxed">설정한 값은 다음에 앱을 열 때부터 기본으로 적용됩니다.</p>
+                    <div>
+                        <button onclick="replayOnboarding()" class="w-full text-xs font-bold py-2.5 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 active:scale-95 transition">시작 안내 다시 보기</button>
+                    </div>
                 </div>
                 <div class="p-5 pt-0">
                     <button onclick="closeSettings()" class="w-full py-3.5 bg-gray-900 text-white font-bold rounded-xl shadow-md hover:bg-gray-800 active:scale-95 transition">확인</button>
@@ -436,7 +436,7 @@
         let totalSavings = 0, likedItems = new Set(), purchasedHistory = [];
         window.purchasedHistory = purchasedHistory; // ads.js(보상형 광고)에서 최근 적립 내역을 참조하기 위해 노출 
         let storeMarkersData = [], mapMarkers = []; 
-        let isUserPanning = false, currentRadius = parseInt(localStorage.getItem('cvs_defaultRadius')) || 500, searchCircle = null, showOnly1Plus1 = false;
+        let isUserPanning = false, currentRadius = 500, searchCircle = null, showOnly1Plus1 = false;
         let allVirtualStoresDB = [], REAL_STORES = [];
         let STORE_INDEX = [], loadedProvinceFile = null;
 
@@ -728,29 +728,11 @@
 
         function applyStartupSettings() {
             highlightRadiusButton(currentRadius);
-            const defaultMapType = localStorage.getItem('cvs_defaultMapType') || 'street';
-            if (defaultMapType === 'satellite') toggleSatelliteView();
         }
 
         function openSettings() {
             document.getElementById('settingsModal').classList.remove('hidden');
             document.getElementById('settingsModal').classList.add('flex');
-            const savedRadius = parseInt(localStorage.getItem('cvs_defaultRadius')) || 500;
-            const savedMapType = localStorage.getItem('cvs_defaultMapType') || 'street';
-            document.querySelectorAll('.settings-radius-btn').forEach(btn => {
-                const active = parseInt(btn.dataset.radius) === savedRadius;
-                btn.classList.toggle('border-blue-600', active);
-                btn.classList.toggle('text-blue-600', active);
-                btn.classList.toggle('bg-blue-50', active);
-                btn.classList.toggle('text-gray-600', !active);
-            });
-            document.querySelectorAll('.settings-maptype-btn').forEach(btn => {
-                const active = btn.dataset.maptype === savedMapType;
-                btn.classList.toggle('border-blue-600', active);
-                btn.classList.toggle('text-blue-600', active);
-                btn.classList.toggle('bg-blue-50', active);
-                btn.classList.toggle('text-gray-600', !active);
-            });
         }
 
         function closeSettings() {
@@ -758,16 +740,18 @@
             document.getElementById('settingsModal').classList.remove('flex');
         }
 
-        function setDefaultRadius(r) {
-            localStorage.setItem('cvs_defaultRadius', r);
-            openSettings();
-            setRadius(r);
+        function resetWishlist() {
+            // alert(), confirm() 금지 정책에 따라 즉시 삭제 및 토스트 알림으로 대체
+            likedItems.clear();
+            saveLocalData();
+            renderWishlist();
+            showToast('찜 목록을 초기화했습니다.');
         }
 
-        function setDefaultMapType(type) {
-            localStorage.setItem('cvs_defaultMapType', type);
-            openSettings();
-            if ((type === 'satellite') !== isSatelliteView) toggleSatelliteView();
+        function replayOnboarding() {
+            localStorage.removeItem('cvs_onboarded');
+            closeSettings();
+            maybeShowOnboarding();
         }
 
         function setActiveNav(tabId) {
