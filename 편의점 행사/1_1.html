@@ -701,10 +701,10 @@
             }
         }
 
-        function toggleSatelliteView() {
-            isSatelliteView = !isSatelliteView;
+        function applySatelliteView(on) {
+            isSatelliteView = on;
             const btn = document.getElementById('satelliteToggleBtn');
-            if (isSatelliteView) {
+            if (on) {
                 map.removeLayer(streetLayer);
                 satelliteLayer.addTo(map);
                 satelliteLabelLayer.addTo(map); // 위성 위에 도로명/지명 라벨 겹치기
@@ -717,6 +717,25 @@
                 btn.classList.remove('text-blue-600', 'bg-blue-50');
                 btn.classList.add('text-gray-600');
             }
+        }
+
+        // 위성 보기를 끄는 건 항상 무료. 켜는 건 토스 앱 안에서는 하루 한 번 광고를 봐야 풀리고,
+        // (광고 SDK가 없는) 일반 웹이나 광고가 아직 준비 안 됐을 때는 그냥 무료로 켜준다.
+        function toggleSatelliteView() {
+            if (isSatelliteView) { applySatelliteView(false); return; }
+
+            const today = new Date().toISOString().slice(0, 10);
+            if (localStorage.getItem('cvs_satelliteUnlockedDate') === today) {
+                applySatelliteView(true);
+                return;
+            }
+
+            const adRequested = typeof unlockSatelliteWithAd === 'function' && unlockSatelliteWithAd(() => {
+                localStorage.setItem('cvs_satelliteUnlockedDate', today);
+                applySatelliteView(true);
+                showToast('광고 시청 완료! 오늘 하루 위성 보기가 무제한으로 열렸습니다.');
+            });
+            if (!adRequested) applySatelliteView(true);
         }
 
         function loadStoresInRadius() {

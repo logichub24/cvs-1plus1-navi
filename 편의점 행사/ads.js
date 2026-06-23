@@ -59,18 +59,15 @@ window.onStoreOpened = function onStoreOpened() {
   });
 };
 
-// "내 지갑"의 [광고 보고 절약 포인트 2배 받기] 버튼
-window.watchRewardAdForBonus = function watchRewardAdForBonus() {
-  if (!rewardAdReady) return;
-  if (!window.purchasedHistory || window.purchasedHistory.length === 0) return;
+// 보상형 광고 하나로 여러 보상(절약 포인트 2배, 위성 보기 잠금해제 등)을 처리하는 공용 함수.
+// onEarned은 실제로 광고를 끝까지 본 경우(userEarnedReward)에만 호출됨.
+function requestRewardAd(onEarned) {
+  if (!rewardAdReady) return false;
 
   showFullScreenAd({
     options: { adGroupId: AD_CONFIG.rewarded },
     onEvent: (event) => {
-      if (event.type === 'userEarnedReward') {
-        const last = window.purchasedHistory[0];
-        window.addSavings(last.amount, `${last.name} (광고 보너스)`);
-      }
+      if (event.type === 'userEarnedReward') onEarned();
       if (event.type === 'dismissed' || event.type === 'failedToShow') {
         rewardAdReady = false;
         document.getElementById('rewardAdBtn')?.classList.add('hidden');
@@ -79,6 +76,22 @@ window.watchRewardAdForBonus = function watchRewardAdForBonus() {
     },
     onError: () => {},
   });
+  return true;
+}
+
+// "내 지갑"의 [광고 보고 절약 포인트 2배 받기] 버튼
+window.watchRewardAdForBonus = function watchRewardAdForBonus() {
+  if (!window.purchasedHistory || window.purchasedHistory.length === 0) return;
+  requestRewardAd(() => {
+    const last = window.purchasedHistory[0];
+    window.addSavings(last.amount, `${last.name} (광고 보너스)`);
+  });
+};
+
+// 위성 보기 잠금해제 - 토스 앱 안에서 광고가 준비됐을 때만 사용.
+// 준비 안 됐으면 false를 반환해서 호출 쪽(1_1.html)이 바로 토글하게 둠(웹 버전은 항상 무료).
+window.unlockSatelliteWithAd = function unlockSatelliteWithAd(onUnlocked) {
+  return requestRewardAd(onUnlocked);
 };
 
 function init() {
