@@ -59,7 +59,7 @@ window.onStoreOpened = function onStoreOpened() {
   });
 };
 
-// "내 지갑"의 [광고 보고 적립금 2배 받기] 버튼
+// "내 지갑"의 [광고 보고 절약 포인트 2배 받기] 버튼
 window.watchRewardAdForBonus = function watchRewardAdForBonus() {
   if (!rewardAdReady) return;
   if (!window.purchasedHistory || window.purchasedHistory.length === 0) return;
