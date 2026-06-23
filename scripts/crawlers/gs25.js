@@ -27,10 +27,10 @@ async function crawlGS25({ delayMs = 300 } = {}) {
   const all = [];
 
   for (const [promoType, code] of Object.entries(EVENT_TYPES)) {
-    const { data: pageHtml } = await client.get(PAGE_URL, { headers });
+    const { data: pageHtml, status } = await client.get(PAGE_URL, { headers });
     const csrfToken = extractCsrfToken(pageHtml);
     if (!csrfToken) {
-      console.error(`GS25: CSRF 토큰을 찾지 못해 ${promoType} 수집을 건너뜁니다.`);
+      console.error(`GS25: CSRF 토큰을 찾지 못해 ${promoType} 수집을 건너뜁니다. (status=${status}, html 앞부분: ${String(pageHtml).slice(0, 300).replace(/\s+/g, ' ')})`);
       continue;
     }
 

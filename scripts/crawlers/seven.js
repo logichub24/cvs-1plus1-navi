@@ -28,9 +28,12 @@ function parseItemsFromHtml(html) {
 
 async function crawlSeven({ delayMs = 300 } = {}) {
   const headers = { 'User-Agent': 'Mozilla/5.0' };
-  const { data: firstHtml } = await axios.get(FIRST_PAGE_URL, { headers, timeout: 15000 });
+  const { data: firstHtml, status } = await axios.get(FIRST_PAGE_URL, { headers, timeout: 15000 });
 
   const all = parseItemsFromHtml(firstHtml);
+  if (all.length === 0) {
+    console.error(`7-ELEVEN: 첫 페이지에서 0건 파싱됨 (status=${status}, html 앞부분: ${String(firstHtml).slice(0, 300).replace(/\s+/g, ' ')})`);
+  }
 
   const totalMatch = firstHtml.match(/intTotalCount\s*=\s*["'](\d+)["']/);
   const totalCount = totalMatch ? parseInt(totalMatch[1], 10) : all.length;

@@ -77,7 +77,29 @@ function buildMasterDB(brandResults) {
   return Array.from(byNormName.values());
 }
 
+// 기존 deals.json(브랜드별로 합쳐진 형태)에서 특정 브랜드의 항목만 다시 풀어낸다.
+// 크롤러가 그날 0건을 반환했을 때, 그 브랜드만 통째로 사라지는 대신
+// 전날 데이터를 그대로 유지하기 위한 폴백용.
+function extractBrandItemsFromOldDB(oldMasterDB, brand) {
+  return oldMasterDB
+    .filter((p) => p.events && p.events[brand])
+    .map((p) => ({
+      brand,
+      name: p.name,
+      price: p.price,
+      promoType: p.events[brand].type,
+      image: p.events[brand].image || '',
+    }));
+}
+
 async function run() {
+  let oldMasterDB = [];
+  try {
+    oldMasterDB = JSON.parse(fs.readFileSync(OUT_PATH, 'utf-8'));
+  } catch (e) {
+    // 첫 실행 등으로 기존 파일이 없으면 폴백 없이 진행
+  }
+
   const results = {};
   const crawlers = [
     ['CU', crawlCU],
@@ -91,8 +113,18 @@ async function run() {
       results[brand] = await crawlFn();
       console.error(`${brand}: ${results[brand].length}개 수집 완료`);
     } catch (err) {
-      console.error(`${brand} 크롤링 실패, 이전 데이터 유지:`, err.message);
+      console.error(`${brand} 크롤링 실패:`, err.message);
       results[brand] = [];
+    }
+
+    // 크롤러가 예외 없이 끝났어도 0건이면 사이트 구조 변경/차단 등으로 의심 -
+    // 그 브랜드만 전날 데이터로 대체해서 화면에서 통째로 사라지지 않게 한다.
+    if (results[brand].length === 0 && oldMasterDB.length > 0) {
+      const fallback = extractBrandItemsFromOldDB(oldMasterDB, brand);
+      if (fallback.length > 0) {
+        console.error(`${brand}: 0건 수집되어 전날 데이터 ${fallback.length}건으로 대체합니다. (크롤러 점검 필요)`);
+        results[brand] = fallback;
+      }
     }
   }
 
