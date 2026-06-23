@@ -5,7 +5,7 @@ export default defineConfig({
   brand: {
     displayName: '편의점 행사',
     primaryColor: '#2563eb',
-    icon: './편의점 행사/icon-512.png',
+    icon: 'https://static.toss.im/appsintoss/32449/88cb5d09-28bb-4f89-b645-e81c622d8a8f.png', // 콘솔에 등록한 로고와 정확히 일치해야 함
   },
   web: {
     host: 'localhost',
