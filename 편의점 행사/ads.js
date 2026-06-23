@@ -2,14 +2,13 @@
 // 일반 브라우저(GitHub Pages 등)에서는 isSupported()가 false라 전부 조용히 no-op되고,
 // 토스 앱 WebView 안에서 열렸을 때만 실제 광고가 붙는다.
 //
-// 실제 광고 그룹 ID는 앱인토스 콘솔에서 앱 등록 승인 후 발급받아 아래 AD_CONFIG에 채워 넣으면 됨.
-// 지금은 문서에 공개된 테스트 ID로 동작 확인용으로 연결해둔 상태.
+// 앱인토스 콘솔에서 발급받은 실제 광고 그룹 ID.
 import { TossAds, loadFullScreenAd, showFullScreenAd } from 'https://esm.sh/@apps-in-toss/web-bridge@2.9.2';
 
 const AD_CONFIG = {
-  banner: 'ait-ad-test-banner-id',
-  interstitial: 'ait-ad-test-interstitial-id',
-  rewarded: 'ait-ad-test-rewarded-id',
+  banner: 'ait.v2.live.45bb0aad48d04636',
+  interstitial: 'ait.v2.live.1c35b52379294244',
+  rewarded: 'ait.v2.live.710d4eb070854a59',
 };
 
 const INTERSTITIAL_EVERY_N_STORE_OPENS = 3;
