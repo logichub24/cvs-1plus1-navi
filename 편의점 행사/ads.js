@@ -96,6 +96,9 @@ window.unlockSatelliteWithAd = function unlockSatelliteWithAd(onUnlocked) {
 function init() {
   if (!TossAds.initialize.isSupported || !TossAds.initialize.isSupported()) return; // 토스 앱이 아니면 전부 스킵
 
+  // 토스 자체 헤더와 중복되는 우리 앱 타이틀 캡슐을 숨기기 위한 표시 (1_1.html의 CSS에서 사용)
+  document.body.classList.add('in-toss-app');
+
   TossAds.initialize({
     callbacks: {
       onInitialized: () => {
