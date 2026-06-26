@@ -5700,21 +5700,6 @@
     }
   },
   {
-    "id": "일화파이어망고패션캔500",
-    "name": "일화)파이어망고패션캔500",
-    "category": "기타",
-    "price": 2700,
-    "saving": 2700,
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801223014452.jpg"
-      }
-    }
-  },
-  {
     "id": "웅진프로타민고소한",
     "name": "웅진)프로타민고소한250ml",
     "category": "음료",
@@ -10123,7 +10108,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801037057867.png"
+        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801037057867_1.png"
       }
     }
   },
@@ -10138,7 +10123,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801037057843.png"
+        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801037057843_1.png"
       }
     }
   },
@@ -10813,7 +10798,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801037064346.png"
+        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801037064346_1.png"
       }
     }
   },
@@ -13852,7 +13837,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801037009026.png"
+        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801037009026_1.png"
       }
     }
   },
@@ -13867,7 +13852,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801037001730.png"
+        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801037001730_1.png"
       }
     }
   },
@@ -14977,7 +14962,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801037006193.png"
+        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801037006193_1.png"
       }
     }
   },
@@ -16256,21 +16241,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801069419619.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진하늘보리캔",
-    "name": "웅진)하늘보리캔340ml",
-    "category": "음료",
-    "price": 1500,
-    "saving": 500,
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "//tqklhszfkvzk6518638.edge.naverncp.com/product/8801382148203.jpg"
       }
     }
   },
