@@ -690,17 +690,31 @@
             setTimeout(() => { map.invalidateSize(); }, 300);
         }
 
+        async function goToLocation(lat, lng) {
+            map.setView([lat, lng], 16);
+            await loadStoresForLocation(lat, lng);
+            searchInCurrentArea();
+        }
+
         function findMyLocation() {
-            if (navigator.geolocation) {
-                showToast("위치 탐색 중...", 1000);
-                navigator.geolocation.getCurrentPosition(async position => {
-                    const lat = position.coords.latitude;
-                    const lng = position.coords.longitude;
-                    map.setView([lat, lng], 16);
-                    await loadStoresForLocation(lat, lng);
-                    searchInCurrentArea();
-                });
+            showToast("위치 탐색 중...", 1000);
+
+            // 토스 앱 안에서는 navigator.geolocation이 막혀있을 수 있어 SDK 전용 함수를 우선 사용
+            if (document.body.classList.contains('in-toss-app') && typeof tossGetCurrentLocation === 'function') {
+                tossGetCurrentLocation()
+                    .then(loc => goToLocation(loc.coords.latitude, loc.coords.longitude))
+                    .catch(() => showToast('위치 권한이 필요합니다. 설정에서 위치 권한을 허용해주세요.'));
+                return;
             }
+
+            if (!navigator.geolocation) {
+                showToast('이 브라우저에서는 위치 찾기를 지원하지 않습니다.');
+                return;
+            }
+            navigator.geolocation.getCurrentPosition(
+                position => goToLocation(position.coords.latitude, position.coords.longitude),
+                () => showToast('위치 권한이 필요합니다. 브라우저 설정에서 위치 권한을 허용해주세요.')
+            );
         }
 
         function applySatelliteView(on) {

@@ -3,7 +3,7 @@
 // 토스 앱 WebView 안에서 열렸을 때만 실제 광고가 붙는다.
 //
 // 앱인토스 콘솔에서 발급받은 실제 광고 그룹 ID.
-import { TossAds, loadFullScreenAd, showFullScreenAd, share } from 'https://esm.sh/@apps-in-toss/web-bridge@2.9.2';
+import { TossAds, loadFullScreenAd, showFullScreenAd, share, getCurrentLocation, Accuracy } from 'https://esm.sh/@apps-in-toss/web-bridge@2.9.2';
 
 const AD_CONFIG = {
   banner: 'ait.v2.live.45bb0aad48d04636',
@@ -97,6 +97,12 @@ window.unlockSatelliteWithAd = function unlockSatelliteWithAd(onUnlocked) {
 // document.body.classList.contains('in-toss-app')로 토스 환경인지 먼저 확인하고 호출할 것.
 window.tossShare = function tossShare(message) {
   return share({ message });
+};
+
+// 토스 앱 안에서는 navigator.geolocation이 막혀있을 수 있어 SDK 전용 위치 정보 함수를 써야 함.
+// 권한 거부/실패 시 reject되므로 호출 쪽에서 catch로 토스트 안내를 띄워야 함.
+window.tossGetCurrentLocation = function tossGetCurrentLocation() {
+  return getCurrentLocation({ accuracy: Accuracy.Balanced });
 };
 
 function init() {
