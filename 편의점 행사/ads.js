@@ -3,7 +3,7 @@
 // 토스 앱 WebView 안에서 열렸을 때만 실제 광고가 붙는다.
 //
 // 앱인토스 콘솔에서 발급받은 실제 광고 그룹 ID.
-import { TossAds, loadFullScreenAd, showFullScreenAd } from 'https://esm.sh/@apps-in-toss/web-bridge@2.9.2';
+import { TossAds, loadFullScreenAd, showFullScreenAd, share } from 'https://esm.sh/@apps-in-toss/web-bridge@2.9.2';
 
 const AD_CONFIG = {
   banner: 'ait.v2.live.45bb0aad48d04636',
@@ -91,6 +91,12 @@ window.watchRewardAdForBonus = function watchRewardAdForBonus() {
 // 준비 안 됐으면 false를 반환해서 호출 쪽(1_1.html)이 바로 토글하게 둠(웹 버전은 항상 무료).
 window.unlockSatelliteWithAd = function unlockSatelliteWithAd(onUnlocked) {
   return requestRewardAd(onUnlocked);
+};
+
+// 토스 앱 안에서는 navigator.share 대신 SDK 네이티브 공유 시트를 써야 함.
+// document.body.classList.contains('in-toss-app')로 토스 환경인지 먼저 확인하고 호출할 것.
+window.tossShare = function tossShare(message) {
+  return share({ message });
 };
 
 function init() {

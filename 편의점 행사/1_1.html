@@ -1086,8 +1086,10 @@
 
         function shareDeal(name, saving) {
             const shareText = `🔥 편의점 꿀딜 발견!\n[${name}] 지금 사면 ${saving.toLocaleString()}원 절약할 수 있어요! (편의점 행사)`;
-            if (navigator.share) {
-                navigator.share({ title: '편의점 1+1 꿀딜', text: shareText }).catch(err => {});
+            if (document.body.classList.contains('in-toss-app') && typeof tossShare === 'function') {
+                tossShare(shareText).catch(() => {});
+            } else if (navigator.share) {
+                navigator.share({ title: '편의점 행사', text: shareText }).catch(err => {});
             } else {
                 const ta = document.createElement('textarea'); ta.value = shareText; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
                 showToast('꿀딜 내용이 복사되었습니다!');
