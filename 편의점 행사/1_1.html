@@ -590,7 +590,7 @@
             // stores/index.json: 전국 시/도별로 쪼갠 매장 좌표 목록(소상공인시장진흥공단 API 동기화 결과)의 색인.
             // 실제 매장 데이터는 사용자 위치에서 가장 가까운 시/도 파일만 불러온다(전국 통합 파일은 너무 큼).
             Promise.all([
-                fetch(DATA_BASE_URL + 'deals.json').then(res => res.ok ? res.json() : null).catch(() => null),
+                fetch(DATA_BASE_URL + 'deals.json?v=' + (new Date().toISOString().slice(0,10).replace(/-/g,'')), {cache:'no-store'}).then(res => res.ok ? res.json() : null).catch(() => null),
                 fetch(DATA_BASE_URL + 'stores/index.json').then(res => res.ok ? res.json() : null).catch(() => null),
             ]).then(async ([deals, index]) => {
                 if (deals && deals.length > 0) MASTER_DB = deals;
