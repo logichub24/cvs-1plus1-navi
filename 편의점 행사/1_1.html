@@ -143,7 +143,11 @@
         </div>
 
         <!-- 우측 맵 컨트롤 패널 정렬 -->
-        <div class="absolute right-3 bottom-[120px] z-[400] flex flex-col gap-2 pointer-events-none items-end">
+        <div id="mapControlPanel" class="absolute right-3 bottom-[120px] z-[400] flex flex-col gap-2 pointer-events-none items-end">
+            <!-- 리스트/지도 뷰 토글 -->
+            <button id="listViewToggleBtn" onclick="toggleListView()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-gray-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition" title="리스트 뷰">
+                <i class="fa-solid fa-list text-lg"></i>
+            </button>
             <!-- 바코드 스캔 -->
             <button onclick="openBarcodeScanner()" class="w-[38px] h-[38px] bg-blue-600 rounded-full shadow-md border border-blue-500 flex items-center justify-center text-white pointer-events-auto hover:bg-blue-700 active:scale-95 transition" title="바코드 스캔">
                 <i class="fa-solid fa-barcode text-lg"></i>
@@ -361,6 +365,12 @@
                     <p class="text-white text-3xl font-black mt-1"><span id="totalSaved">0</span><span class="text-xl font-bold text-gray-400 ml-1">원</span></p>
                 </div>
                 <div class="p-5 bg-gray-50 flex flex-col">
+                    <!-- 이번 주 행사 캘린더 -->
+                    <div id="weekCalendarBox" class="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-3">
+                        <p class="text-xs font-black text-gray-500 mb-3 flex items-center gap-1.5"><i class="fa-solid fa-calendar-week text-blue-500"></i> 이번 주 행사 캘린더</p>
+                        <div id="weekCalendar" class="flex gap-1 justify-between"></div>
+                        <p class="text-[10px] text-gray-400 mt-2 text-center">편의점 행사는 매주 월~일 주기로 갱신됩니다</p>
+                    </div>
                     <div id="dailyChartBox" class="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-3 hidden">
                         <p class="text-xs font-black text-gray-500 mb-3">최근 7일 절약 현황</p>
                         <div id="dailyChart" class="flex items-end gap-1 h-16"></div>
@@ -504,6 +514,28 @@
             </div>
         </div>
 
+        <!-- 리스트 뷰 오버레이 (지도 탭에서 지도 없이 딜 목록만 보기) -->
+        <div id="listViewOverlay" class="absolute inset-0 bg-white z-[350] hidden flex-col" style="top:0;bottom:60px;">
+            <div class="px-4 pt-4 pb-2 border-b border-gray-100 shrink-0">
+                <div class="flex items-center justify-between mb-2">
+                    <div>
+                        <h3 class="font-black text-base text-gray-900"><i class="fa-solid fa-map-location-dot text-blue-500 mr-1"></i> 주변 딜 목록</h3>
+                        <p id="listViewSubtitle" class="text-[10px] text-gray-500 font-bold leading-tight">반경 내 매장 행사 상품</p>
+                    </div>
+                    <button onclick="toggleListView()" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 active:scale-95 transition"><i class="fa-solid fa-map text-sm"></i></button>
+                </div>
+                <!-- 브랜드 필터 칩 -->
+                <div class="flex gap-1.5 overflow-x-auto pb-1 no-scrollbar">
+                    <button id="lvAll" onclick="setListViewBrand(null)" class="px-3 py-1 rounded-full text-[11px] font-black shrink-0 bg-blue-600 text-white">전체</button>
+                    <button id="lvCU" onclick="setListViewBrand('CU')" class="px-3 py-1 rounded-full text-[11px] font-black shrink-0 bg-gray-100 text-gray-600">CU</button>
+                    <button id="lvGS25" onclick="setListViewBrand('GS25')" class="px-3 py-1 rounded-full text-[11px] font-black shrink-0 bg-gray-100 text-gray-600">GS25</button>
+                    <button id="lv7ELEVEN" onclick="setListViewBrand('7-ELEVEN')" class="px-3 py-1 rounded-full text-[11px] font-black shrink-0 bg-gray-100 text-gray-600">세븐일레븐</button>
+                    <button id="lvEMART24" onclick="setListViewBrand('EMART24')" class="px-3 py-1 rounded-full text-[11px] font-black shrink-0 bg-gray-100 text-gray-600">이마트24</button>
+                </div>
+            </div>
+            <div id="listViewBody" class="flex-1 overflow-y-auto px-3 py-2 space-y-2"></div>
+        </div>
+
         <!-- 전체 딜 목록 모달 -->
         <div id="allDealsModal" class="tab-modal">
             <div class="tab-modal-bg" onclick="goHome()"></div>
@@ -609,6 +641,7 @@
         });
 
         function startApp() {
+            applyDaysLeft();
             updateDashboardCounts();
             buildBarcodeIndex();
             if (REAL_STORES.length === 0) generateVirtualStoresDB();
@@ -1153,6 +1186,8 @@
                     statusBadge = `<span class="bg-emerald-100 text-emerald-600 border border-emerald-200 text-[11px] font-black px-2 py-0.5 rounded shadow-sm whitespace-nowrap">✨ 새행사</span>`;
                 } else if (evnt.daysLeft === 0) {
                     statusBadge = `<span class="bg-rose-100 text-rose-600 border border-rose-200 text-[11px] font-black px-2 py-0.5 rounded shadow-sm whitespace-nowrap animate-pulse">🚨 오늘마감</span>`;
+                } else if (typeof evnt.daysLeft === 'number' && evnt.daysLeft <= 2) {
+                    statusBadge = `<span class="bg-orange-100 text-orange-600 border border-orange-200 text-[11px] font-black px-2 py-0.5 rounded shadow-sm whitespace-nowrap">⏰ D-${evnt.daysLeft}</span>`;
                 }
             }
 
@@ -1280,7 +1315,16 @@
                 list.innerHTML = `<div class="p-10 text-center text-gray-400 font-medium flex flex-col items-center mt-10"><i class="fa-regular fa-heart text-5xl mb-3 text-gray-200"></i>찜한 상품이 없습니다.</div>`;
             } else {
                 const likedProducts = MASTER_DB.filter(p => likedItems.has(p.id));
-                list.innerHTML = likedProducts.map(p => createProductHTML(p, 'wishlist')).join('');
+                const ending = likedProducts.filter(p => Object.values(p.events).some(e => typeof e.daysLeft === 'number' && e.daysLeft <= 2));
+                const normal = likedProducts.filter(p => !ending.includes(p));
+                let html = '';
+                if (ending.length > 0) {
+                    html += `<div class="px-1 pt-1 pb-0.5"><span class="text-[11px] font-black text-orange-600 flex items-center gap-1"><i class="fa-solid fa-fire"></i> 마감 임박 (D-2 이하)</span></div>`;
+                    html += ending.map(p => createProductHTML(p, 'wishlist')).join('');
+                    if (normal.length > 0) html += `<div class="px-1 pt-2 pb-0.5"><span class="text-[11px] font-black text-gray-500">나머지 찜 목록</span></div>`;
+                }
+                html += normal.map(p => createProductHTML(p, 'wishlist')).join('');
+                list.innerHTML = html;
             }
             renderRecentlyViewed();
         }
@@ -1329,6 +1373,7 @@
             setActiveNav('savings');
             renderSavingsHistory();
             renderDailySavingsChart();
+            renderWeekCalendar();
         }
         function closeSavings() { 
             document.getElementById('savingsModal').classList.add('hidden'); 
@@ -1388,6 +1433,46 @@
         // ── 바코드 스캐너 ────────────────────────────────────────────────
         let BARCODE_INDEX = new Map();
         let barcodeDetector = null, barcodeStream = null, barcodeRafId = null;
+
+        function renderWeekCalendar() {
+            const cal = document.getElementById('weekCalendar');
+            if (!cal) return;
+            const today = new Date();
+            const dow = today.getDay(); // 0=일
+            // 이번 주 월요일부터 일요일까지
+            const monday = new Date(today);
+            monday.setDate(today.getDate() - (dow === 0 ? 6 : dow - 1));
+            const DAY_LABELS = ['월','화','수','목','금','토','일'];
+            const newCount = MASTER_DB.filter(p => Object.values(p.events).some(e => e.isNew)).length;
+            const endingCount = MASTER_DB.filter(p => Object.values(p.events).some(e => typeof e.daysLeft === 'number' && e.daysLeft === 0)).length;
+            cal.innerHTML = DAY_LABELS.map((label, i) => {
+                const d = new Date(monday);
+                d.setDate(monday.getDate() + i);
+                const isToday = d.toDateString() === today.toDateString();
+                const isMonday = i === 0;
+                const isSunday = i === 6;
+                let badge = '';
+                if (isMonday) badge = `<span class="text-[8px] text-blue-600 font-black leading-none mt-0.5 block">새행사<br>${newCount}개</span>`;
+                if (isSunday) badge = `<span class="text-[8px] text-rose-500 font-black leading-none mt-0.5 block">마감<br>${endingCount || MASTER_DB.length}개</span>`;
+                return `
+                <div class="flex-1 flex flex-col items-center py-1.5 rounded-xl ${isToday ? 'bg-blue-600 text-white' : 'bg-gray-50 text-gray-600'} min-w-0">
+                    <span class="text-[9px] font-bold">${label}</span>
+                    <span class="text-xs font-black mt-0.5">${d.getDate()}</span>
+                    ${badge}
+                </div>`;
+            }).join('');
+        }
+
+        function applyDaysLeft() {
+            // 편의점 행사는 통상 월~일 주기. 실제 종료일 데이터가 없는 경우 이번 주 일요일까지 남은 일수로 추정.
+            const dow = new Date().getDay(); // 0=일, 1=월, ..., 6=토
+            const daysToSunday = dow === 0 ? 0 : 7 - dow;
+            MASTER_DB.forEach(p => {
+                Object.values(p.events).forEach(e => {
+                    if (e.daysLeft === null || e.daysLeft === undefined) e.daysLeft = daysToSunday;
+                });
+            });
+        }
 
         function buildBarcodeIndex() {
             BARCODE_INDEX.clear();
@@ -1573,6 +1658,76 @@
         }
 
         // 브랜드 검색 필터 토글
+        let isListView = false, listViewBrand = null;
+
+        function toggleListView() {
+            isListView = !isListView;
+            const overlay = document.getElementById('listViewOverlay');
+            const btn = document.getElementById('listViewToggleBtn');
+            const panel = document.getElementById('mapControlPanel');
+            if (isListView) {
+                overlay.classList.remove('hidden');
+                overlay.classList.add('flex');
+                btn.classList.add('text-blue-600', 'bg-blue-50');
+                btn.classList.remove('text-gray-600');
+                // 리스트 뷰 토글 버튼만 남기고 나머지 컨트롤 숨기기
+                Array.from(panel.children).slice(1).forEach(el => el.classList.add('invisible'));
+                renderListView();
+            } else {
+                overlay.classList.add('hidden');
+                overlay.classList.remove('flex');
+                btn.classList.remove('text-blue-600', 'bg-blue-50');
+                btn.classList.add('text-gray-600');
+                Array.from(panel.children).forEach(el => el.classList.remove('invisible'));
+            }
+        }
+
+        function setListViewBrand(brand) {
+            listViewBrand = brand;
+            ['All','CU','GS25','7ELEVEN','EMART24'].forEach(b => {
+                const el = document.getElementById('lv' + b);
+                if (el) el.className = el.className.replace(/bg-blue-600 text-white|bg-gray-100 text-gray-600/g, '');
+            });
+            const activeId = brand ? 'lv' + brand.replace('-','') : 'lvAll';
+            const activeEl = document.getElementById(activeId);
+            if (activeEl) {
+                activeEl.classList.add('bg-blue-600', 'text-white');
+                activeEl.classList.remove('bg-gray-100', 'text-gray-600');
+            }
+            ['lvAll','lvCU','lvGS25','lv7ELEVEN','lvEMART24'].filter(id => id !== activeId).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) { el.classList.add('bg-gray-100','text-gray-600'); el.classList.remove('bg-blue-600','text-white'); }
+            });
+            renderListView();
+        }
+
+        function renderListView() {
+            const body = document.getElementById('listViewBody');
+            const subtitle = document.getElementById('listViewSubtitle');
+
+            // 반경 내 매장이 있으면 해당 브랜드 딜만, 없으면 전체 MASTER_DB
+            const nearbyBrands = new Set(storeMarkersData.map(s => s.brand));
+            const useNearby = storeMarkersData.length > 0;
+
+            let products = MASTER_DB.filter(p => {
+                const brands = Object.keys(p.events);
+                if (listViewBrand) return brands.includes(listViewBrand);
+                if (useNearby) return brands.some(b => nearbyBrands.has(b));
+                return true;
+            });
+
+            subtitle.textContent = useNearby
+                ? `반경 ${currentRadius >= 1000 ? currentRadius/1000+'km' : currentRadius+'m'} 내 ${nearbyBrands.size}개 매장 · ${products.length}개 상품`
+                : `전체 ${products.length}개 상품`;
+
+            if (products.length === 0) {
+                body.innerHTML = `<div class="text-center text-gray-400 py-16 flex flex-col items-center gap-2"><i class="fa-solid fa-store-slash text-4xl text-gray-300"></i><p class="text-sm font-bold">주변에 매장이 없습니다</p><p class="text-xs">지도를 이동하거나 반경을 넓혀보세요</p></div>`;
+                return;
+            }
+
+            body.innerHTML = products.map(p => createProductHTML(p, 'search', listViewBrand)).join('');
+        }
+
         function toggleBrandSearchFilter(brand) {
             searchBrandFilter = (searchBrandFilter === brand) ? null : brand;
             ['CU', 'GS25', '7-ELEVEN', 'EMART24'].forEach(b => {
