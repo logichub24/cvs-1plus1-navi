@@ -46,6 +46,19 @@ function normalizeName(name) {
     .trim();
 }
 
+// 이미지 URL에서 EAN-13 바코드 추출
+// 세븐일레븐은 경로가 /upload/product/XXXXXXX/YYYYYY.jpg 형태로 분리되어 있어 별도 처리
+function extractBarcode(imageUrl) {
+  if (!imageUrl) return null;
+  const sevenMatch = imageUrl.match(/\/upload\/product\/(\d+)\/(\d+)/);
+  if (sevenMatch) {
+    const combined = sevenMatch[1] + sevenMatch[2];
+    if (combined.length === 13) return combined;
+  }
+  const ean13 = imageUrl.match(/(?<!\d)(\d{13})(?!\d)/);
+  return ean13 ? ean13[1] : null;
+}
+
 function buildMasterDB(brandResults) {
   // brandResults: { CU: [...], GS25: [...], '7-ELEVEN': [...], EMART24: [...] }
   const byNormName = new Map();
@@ -62,6 +75,7 @@ function buildMasterDB(brandResults) {
         category: guessCategory(item.name),
         price: item.price,
         saving: item.promoType === '2+1' ? Math.round(item.price / 3) : item.price,
+        barcode: null,
         events: {},
       });
     }
@@ -72,6 +86,10 @@ function buildMasterDB(brandResults) {
       daysLeft: null,
       image: item.image || '',
     };
+    // 바코드가 아직 없으면 이 브랜드 이미지 URL에서 추출 시도
+    if (!product.barcode) {
+      product.barcode = extractBarcode(item.image);
+    }
   });
 
   return Array.from(byNormName.values());

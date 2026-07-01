@@ -84,6 +84,11 @@
             box-shadow: 0 -10px 25px rgba(0,0,0,0.2);
         }
         .tab-modal.active .tab-modal-content { transform: translateY(0); }
+        @keyframes scanAnim {
+            0%   { top: 10%; }
+            50%  { top: 85%; }
+            100% { top: 10%; }
+        }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800 selection:bg-blue-100">
@@ -139,6 +144,10 @@
 
         <!-- 우측 맵 컨트롤 패널 정렬 -->
         <div class="absolute right-3 bottom-[120px] z-[400] flex flex-col gap-2 pointer-events-none items-end">
+            <!-- 바코드 스캔 -->
+            <button onclick="openBarcodeScanner()" class="w-[38px] h-[38px] bg-blue-600 rounded-full shadow-md border border-blue-500 flex items-center justify-center text-white pointer-events-auto hover:bg-blue-700 active:scale-95 transition" title="바코드 스캔">
+                <i class="fa-solid fa-barcode text-lg"></i>
+            </button>
             <!-- 지역/주소 검색 -->
             <button onclick="openLocationSearch()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-gray-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition">
                 <i class="fa-solid fa-magnifying-glass text-lg"></i>
@@ -444,6 +453,57 @@
             </div>
         </div>
 
+        <!-- 바코드 스캐너 모달 -->
+        <div id="barcodeScannerModal" class="absolute inset-0 bg-black hidden flex-col z-[8000]">
+            <!-- 카메라 뷰 -->
+            <div class="relative flex-1 overflow-hidden">
+                <video id="barcodeVideo" class="w-full h-full object-cover" autoplay playsinline muted></video>
+                <!-- 스캔 가이드 박스 -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="relative w-64 h-40">
+                        <div class="absolute inset-0 border-2 border-white/30 rounded-lg"></div>
+                        <div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-blue-400 rounded-tl-lg"></div>
+                        <div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-blue-400 rounded-tr-lg"></div>
+                        <div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-blue-400 rounded-bl-lg"></div>
+                        <div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-blue-400 rounded-br-lg"></div>
+                        <div id="scanLine" class="absolute left-2 right-2 h-0.5 bg-blue-400 top-1/2 opacity-80" style="animation: scanAnim 2s linear infinite;"></div>
+                    </div>
+                </div>
+                <p class="absolute bottom-6 left-0 right-0 text-center text-white/80 text-sm font-bold">바코드를 네모 안에 맞춰주세요</p>
+                <!-- 닫기 버튼 -->
+                <button onclick="closeBarcodeScanner()" class="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <!-- 직접 입력 폴백 -->
+            <div class="bg-gray-900 px-5 py-4 shrink-0">
+                <p class="text-gray-400 text-xs font-bold mb-2 text-center">스캔이 안 될 경우 번호를 직접 입력</p>
+                <div class="flex gap-2">
+                    <input id="barcodeManualInput" type="number" placeholder="바코드 번호 13자리"
+                        class="flex-1 bg-gray-800 text-white rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-blue-500 font-mono"
+                        oninput="if(this.value.length===13) lookupBarcode(this.value)">
+                    <button onclick="lookupBarcode(document.getElementById('barcodeManualInput').value)"
+                        class="bg-blue-600 text-white px-4 py-3 rounded-xl font-bold text-sm active:scale-95 transition">조회</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 바코드 조회 결과 모달 -->
+        <div id="barcodeResultModal" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center p-5 z-[8500]">
+            <div class="bg-white rounded-[2rem] w-full max-w-sm overflow-hidden shadow-2xl">
+                <div id="barcodeResultHeader" class="p-5 text-center">
+                    <div class="text-4xl mb-2" id="barcodeResultIcon">🔍</div>
+                    <h3 id="barcodeResultTitle" class="font-black text-lg text-gray-900"></h3>
+                    <p id="barcodeResultSub" class="text-xs text-gray-500 mt-1"></p>
+                </div>
+                <div id="barcodeResultBody" class="px-4 pb-2"></div>
+                <div class="p-4 flex gap-2">
+                    <button onclick="closeBarcodeResult()" class="flex-1 py-3 bg-gray-100 text-gray-700 font-bold rounded-xl active:scale-95 transition">닫기</button>
+                    <button id="barcodeScanAgainBtn" onclick="closeBarcodeResult(); openBarcodeScanner();" class="flex-1 py-3 bg-blue-600 text-white font-bold rounded-xl active:scale-95 transition">다시 스캔</button>
+                </div>
+            </div>
+        </div>
+
         <!-- 전체 딜 목록 모달 -->
         <div id="allDealsModal" class="tab-modal">
             <div class="tab-modal-bg" onclick="goHome()"></div>
@@ -550,6 +610,7 @@
 
         function startApp() {
             updateDashboardCounts();
+            buildBarcodeIndex();
             if (REAL_STORES.length === 0) generateVirtualStoresDB();
             initMap();
             applyStartupSettings();
@@ -1322,6 +1383,109 @@
             const badge = document.getElementById('wishBadge');
             if(likedItems.size > 0) { badge.innerText = likedItems.size; badge.classList.remove('hidden'); } 
             else { badge.classList.add('hidden'); }
+        }
+
+        // ── 바코드 스캐너 ────────────────────────────────────────────────
+        let BARCODE_INDEX = new Map();
+        let barcodeDetector = null, barcodeStream = null, barcodeRafId = null;
+
+        function buildBarcodeIndex() {
+            BARCODE_INDEX.clear();
+            MASTER_DB.forEach(p => { if (p.barcode) BARCODE_INDEX.set(p.barcode, p); });
+            console.log('BARCODE_INDEX:', BARCODE_INDEX.size + '건');
+        }
+
+        async function openBarcodeScanner() {
+            const modal = document.getElementById('barcodeScannerModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.getElementById('barcodeManualInput').value = '';
+
+            // BarcodeDetector 미지원 브라우저는 수동 입력만 안내
+            if (!('BarcodeDetector' in window)) {
+                document.querySelector('#barcodeScannerModal video').classList.add('hidden');
+                document.querySelector('#barcodeScannerModal .absolute.inset-0.flex').classList.add('hidden');
+                showToast('이 브라우저는 카메라 스캔을 지원하지 않습니다. 번호를 직접 입력해주세요.');
+                return;
+            }
+
+            try {
+                barcodeStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+                const video = document.getElementById('barcodeVideo');
+                video.srcObject = barcodeStream;
+                barcodeDetector = new BarcodeDetector({ formats: ['ean_13', 'ean_8', 'upc_a'] });
+                detectBarcode();
+            } catch (e) {
+                showToast('카메라 권한이 필요합니다. 번호를 직접 입력해주세요.');
+            }
+        }
+
+        function detectBarcode() {
+            const video = document.getElementById('barcodeVideo');
+            if (!video.srcObject) return;
+            barcodeRafId = requestAnimationFrame(async () => {
+                if (video.readyState === video.HAVE_ENOUGH_DATA && barcodeDetector) {
+                    const codes = await barcodeDetector.detect(video).catch(() => []);
+                    if (codes.length > 0) {
+                        const code = codes[0].rawValue;
+                        stopBarcodeCamera();
+                        closeBarcodeScanner();
+                        lookupBarcode(code);
+                        return;
+                    }
+                }
+                detectBarcode();
+            });
+        }
+
+        function stopBarcodeCamera() {
+            if (barcodeRafId) { cancelAnimationFrame(barcodeRafId); barcodeRafId = null; }
+            if (barcodeStream) { barcodeStream.getTracks().forEach(t => t.stop()); barcodeStream = null; }
+            const video = document.getElementById('barcodeVideo');
+            video.srcObject = null;
+        }
+
+        function closeBarcodeScanner() {
+            stopBarcodeCamera();
+            const modal = document.getElementById('barcodeScannerModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function lookupBarcode(code) {
+            const barcode = String(code).trim().replace(/\D/g, '');
+            if (!barcode) { showToast('바코드 번호를 입력해주세요.'); return; }
+
+            const product = BARCODE_INDEX.get(barcode);
+            const header = document.getElementById('barcodeResultHeader');
+            const title = document.getElementById('barcodeResultTitle');
+            const sub = document.getElementById('barcodeResultSub');
+            const body = document.getElementById('barcodeResultBody');
+            const icon = document.getElementById('barcodeResultIcon');
+
+            if (product) {
+                icon.textContent = '🎉';
+                title.textContent = '행사 상품 발견!';
+                sub.textContent = `바코드: ${barcode}`;
+                header.className = 'p-5 text-center bg-emerald-50';
+                body.innerHTML = createProductHTML(product, 'search');
+            } else {
+                icon.textContent = '😢';
+                title.textContent = '행사 상품이 아닙니다';
+                sub.textContent = `바코드: ${barcode} — 현재 1+1·2+1 행사 없음`;
+                header.className = 'p-5 text-center';
+                body.innerHTML = `<p class="text-center text-xs text-gray-400 pb-4">이 상품은 오늘 편의점 4사 행사 목록에 없습니다.</p>`;
+            }
+
+            const result = document.getElementById('barcodeResultModal');
+            result.classList.remove('hidden');
+            result.classList.add('flex');
+        }
+
+        function closeBarcodeResult() {
+            const modal = document.getElementById('barcodeResultModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
         }
 
         // ── 신규 기능 함수들 ──────────────────────────────────────────────
