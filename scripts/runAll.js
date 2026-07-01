@@ -92,10 +92,40 @@ function extractBrandItemsFromOldDB(oldMasterDB, brand) {
     }));
 }
 
+// 재시도 로직: 실패 시 delayMs 간격으로 최대 maxRetries회 재시도
+async function withRetry(fn, label, maxRetries = 3, delayMs = 3000) {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      const result = await fn();
+      if (attempt > 1) console.error(`${label}: ${attempt}번째 시도에서 성공`);
+      return result;
+    } catch (err) {
+      console.error(`${label}: 시도 ${attempt}/${maxRetries} 실패 - ${err.message}`);
+      if (attempt < maxRetries) await new Promise((r) => setTimeout(r, delayMs));
+    }
+  }
+  throw new Error(`${label}: ${maxRetries}회 시도 모두 실패`);
+}
+
+// isNew 계산: 이전 deals.json에 없던 상품 ID를 신규로 마킹
+function markIsNew(masterDB, oldMasterDB) {
+  if (oldMasterDB.length === 0) return; // 첫 실행은 전부 기존 상품으로 간주
+  const oldIds = new Set(oldMasterDB.map((p) => p.id));
+  let newCount = 0;
+  masterDB.forEach((p) => {
+    if (!oldIds.has(p.id)) {
+      Object.values(p.events).forEach((e) => { e.isNew = true; });
+      newCount++;
+    }
+  });
+  console.error(`isNew 계산 완료: 신규 상품 ${newCount}건`);
+}
+
 async function run() {
   let oldMasterDB = [];
   try {
     oldMasterDB = JSON.parse(fs.readFileSync(OUT_PATH, 'utf-8'));
+    console.error(`기존 deals.json 로드: ${oldMasterDB.length}건`);
   } catch (e) {
     // 첫 실행 등으로 기존 파일이 없으면 폴백 없이 진행
   }
@@ -110,14 +140,14 @@ async function run() {
 
   for (const [brand, crawlFn] of crawlers) {
     try {
-      results[brand] = await crawlFn();
+      results[brand] = await withRetry(() => crawlFn(), brand);
       console.error(`${brand}: ${results[brand].length}개 수집 완료`);
     } catch (err) {
-      console.error(`${brand} 크롤링 실패:`, err.message);
+      console.error(`${brand} 크롤링 최종 실패:`, err.message);
       results[brand] = [];
     }
 
-    // 크롤러가 예외 없이 끝났어도 0건이면 사이트 구조 변경/차단 등으로 의심 -
+    // 재시도 후에도 0건이면 사이트 구조 변경/차단 등으로 의심 -
     // 그 브랜드만 전날 데이터로 대체해서 화면에서 통째로 사라지지 않게 한다.
     if (results[brand].length === 0 && oldMasterDB.length > 0) {
       const fallback = extractBrandItemsFromOldDB(oldMasterDB, brand);
@@ -125,6 +155,12 @@ async function run() {
         console.error(`${brand}: 0건 수집되어 전날 데이터 ${fallback.length}건으로 대체합니다. (크롤러 점검 필요)`);
         results[brand] = fallback;
       }
+    }
+
+    // 수집량 급감 감지: 전날 대비 30% 이하면 경고
+    const oldCount = oldMasterDB.filter((p) => p.events && p.events[brand]).length;
+    if (oldCount > 0 && results[brand].length < oldCount * 0.3) {
+      console.error(`⚠️  ${brand}: 수집량 급감 감지 (전날 ${oldCount}건 → 오늘 ${results[brand].length}건). 크롤러 점검 권장.`);
     }
   }
 
@@ -135,6 +171,7 @@ async function run() {
   }
 
   const masterDB = buildMasterDB(results);
+  markIsNew(masterDB, oldMasterDB);  // 신규 상품 isNew 마킹
   fs.writeFileSync(OUT_PATH, JSON.stringify(masterDB, null, 2), 'utf-8');
   console.error(`deals.json 작성 완료: 상품 ${masterDB.length}건 (${OUT_PATH})`);
 }
