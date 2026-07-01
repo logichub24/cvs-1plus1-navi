@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
     <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -112,11 +113,18 @@
                         <span class="text-[8px] text-blue-600 font-bold leading-none mt-1">15,900원 절약</span>
                     </div>
                 </button>
-                <button onclick="showToast('오늘 갓 추가된 행사입니다.')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
+                <button onclick="openTabModal('allDealsModal', 'alldeals')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
                     <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-[10px]">✨</div>
                     <div class="text-left flex flex-col">
                         <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5">오늘 새 행사</span>
                         <span id="newDealCount" class="text-[8px] text-emerald-600 font-bold leading-none mt-1">0개</span>
+                    </div>
+                </button>
+                <button onclick="openTabModal('allDealsModal', 'alldeals')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
+                    <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-[10px]">📋</div>
+                    <div class="text-left flex flex-col">
+                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5">전체 딜 목록</span>
+                        <span id="allDealCount" class="text-[8px] text-blue-600 font-bold leading-none mt-1">0개</span>
                     </div>
                 </button>
                 <button onclick="showToast('오늘 마감되는 행사입니다.')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
@@ -212,6 +220,13 @@
                         <input type="text" id="searchInput" oninput="performSearch()" placeholder="비교할 상품명 입력 (예: 콜라)" class="w-full bg-indigo-50 text-gray-900 rounded-full py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 font-bold placeholder-indigo-300">
                     </div>
                 </div>
+                <div class="flex gap-2 px-4 py-2 border-b border-gray-100 overflow-x-auto hide-scrollbar shrink-0">
+                    <span class="text-[10px] font-bold text-gray-400 self-center shrink-0">브랜드:</span>
+                    <button onclick="toggleBrandSearchFilter('CU')" id="bsf-CU" class="text-[11px] font-bold px-3 py-1 rounded-full border border-gray-200 text-gray-600 bg-white whitespace-nowrap shrink-0 active:scale-95 transition">CU</button>
+                    <button onclick="toggleBrandSearchFilter('GS25')" id="bsf-GS25" class="text-[11px] font-bold px-3 py-1 rounded-full border border-gray-200 text-gray-600 bg-white whitespace-nowrap shrink-0 active:scale-95 transition">GS25</button>
+                    <button onclick="toggleBrandSearchFilter('7-ELEVEN')" id="bsf-7-ELEVEN" class="text-[11px] font-bold px-3 py-1 rounded-full border border-gray-200 text-gray-600 bg-white whitespace-nowrap shrink-0 active:scale-95 transition">세븐일레븐</button>
+                    <button onclick="toggleBrandSearchFilter('EMART24')" id="bsf-EMART24" class="text-[11px] font-bold px-3 py-1 rounded-full border border-gray-200 text-gray-600 bg-white whitespace-nowrap shrink-0 active:scale-95 transition">이마트24</button>
+                </div>
                 <div class="flex-1 overflow-y-auto pb-4">
                     <div id="searchEmptyState" class="p-6 flex flex-col items-center">
                         <div class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-xl mb-4 text-xs font-black w-full text-center">💡 4사 편의점의 행사 여부를 한눈에 비교하세요!</div>
@@ -232,12 +247,21 @@
             <div class="tab-modal-content">
                 <div class="p-4 border-b border-gray-100 flex items-center gap-3 bg-white sticky top-0 z-20 shrink-0 rounded-t-[24px]">
                     <button onclick="goHome()" class="text-gray-500 hover:text-gray-800 p-2"><i class="fa-solid fa-arrow-left text-xl"></i></button>
-                    <div>
+                    <div class="flex-1">
                         <h3 class="font-black text-lg text-gray-900"><i class="fa-solid fa-heart text-rose-500 mr-1"></i> 내가 찜한 상품</h3>
                         <p class="text-[10px] text-gray-500 font-bold leading-tight">행사 여부를 브랜드를 넘어 모아봅니다.</p>
                     </div>
+                    <button onclick="shareWishlist()" class="w-9 h-9 rounded-full bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-500 hover:bg-rose-100 active:scale-95 transition shrink-0" title="찜 목록 공유">
+                        <i class="fa-solid fa-share-nodes text-sm"></i>
+                    </button>
                 </div>
-                <div class="flex-1 overflow-y-auto p-2 pb-4 space-y-2" id="wishlistList"></div>
+                <div class="flex-1 overflow-y-auto pb-4">
+                    <div id="wishlistList" class="p-2 space-y-2"></div>
+                    <div id="recentlyViewedSection" class="hidden px-2 pb-2">
+                        <p class="text-xs font-black text-gray-400 px-1 pt-3 pb-2 border-t border-gray-100">최근 본 상품</p>
+                        <div id="recentlyViewedList" class="space-y-2"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -327,8 +351,12 @@
                     <h3 class="text-gray-300 text-sm font-bold">나의 누적 편의점 절약액</h3>
                     <p class="text-white text-3xl font-black mt-1"><span id="totalSaved">0</span><span class="text-xl font-bold text-gray-400 ml-1">원</span></p>
                 </div>
-                <div class="p-5 bg-gray-50 flex flex-col h-[320px]">
-                    <div class="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-4 flex-1 overflow-hidden flex flex-col">
+                <div class="p-5 bg-gray-50 flex flex-col">
+                    <div id="dailyChartBox" class="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-3 hidden">
+                        <p class="text-xs font-black text-gray-500 mb-3">최근 7일 절약 현황</p>
+                        <div id="dailyChart" class="flex items-end gap-1 h-16"></div>
+                    </div>
+                    <div class="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-4 h-[200px] overflow-hidden flex flex-col">
                         <h4 class="text-sm font-bold text-gray-800 border-b pb-2 mb-3 flex justify-between items-center">
                             <span>최근 담은 내역</span>
                             <button onclick="clearSavings()" class="text-[10px] bg-gray-100 text-gray-500 px-2 py-1 rounded hover:bg-red-50 hover:text-red-500 transition font-bold">내역 초기화</button>
@@ -416,6 +444,32 @@
             </div>
         </div>
 
+        <!-- 전체 딜 목록 모달 -->
+        <div id="allDealsModal" class="tab-modal">
+            <div class="tab-modal-bg" onclick="goHome()"></div>
+            <div class="tab-modal-content">
+                <div class="p-4 border-b border-gray-100 flex items-center gap-3 bg-white sticky top-0 z-20 shrink-0 rounded-t-[24px]">
+                    <button onclick="goHome()" class="text-gray-500 hover:text-gray-800 p-2"><i class="fa-solid fa-arrow-left text-xl"></i></button>
+                    <div class="flex-1">
+                        <h3 class="font-black text-lg text-gray-900"><i class="fa-solid fa-list text-blue-500 mr-1"></i> 전체 딜 목록</h3>
+                        <p class="text-[10px] text-gray-500 font-bold leading-tight">4사 행사 상품을 브랜드/유형별로 필터</p>
+                    </div>
+                </div>
+                <div class="flex gap-2 px-3 py-2 border-b border-gray-100 overflow-x-auto hide-scrollbar shrink-0 bg-white">
+                    <button onclick="setAllDealsFilter('brand', null)" id="adf-brand-all" class="text-[11px] font-bold px-3 py-1.5 rounded-full border border-gray-800 bg-gray-900 text-white whitespace-nowrap shrink-0">전체</button>
+                    <button onclick="setAllDealsFilter('brand', 'CU')" id="adf-brand-CU" class="text-[11px] font-bold px-3 py-1.5 rounded-full border border-gray-200 text-gray-600 bg-white whitespace-nowrap shrink-0">CU</button>
+                    <button onclick="setAllDealsFilter('brand', 'GS25')" id="adf-brand-GS25" class="text-[11px] font-bold px-3 py-1.5 rounded-full border border-gray-200 text-gray-600 bg-white whitespace-nowrap shrink-0">GS25</button>
+                    <button onclick="setAllDealsFilter('brand', '7-ELEVEN')" id="adf-brand-7-ELEVEN" class="text-[11px] font-bold px-3 py-1.5 rounded-full border border-gray-200 text-gray-600 bg-white whitespace-nowrap shrink-0">세븐일레븐</button>
+                    <button onclick="setAllDealsFilter('brand', 'EMART24')" id="adf-brand-EMART24" class="text-[11px] font-bold px-3 py-1.5 rounded-full border border-gray-200 text-gray-600 bg-white whitespace-nowrap shrink-0">이마트24</button>
+                    <div class="w-px bg-gray-200 shrink-0 mx-1"></div>
+                    <button onclick="setAllDealsFilter('type', null)" id="adf-type-all" class="text-[11px] font-bold px-3 py-1.5 rounded-full border border-gray-800 bg-gray-900 text-white whitespace-nowrap shrink-0">전체</button>
+                    <button onclick="setAllDealsFilter('type', '1+1')" id="adf-type-1+1" class="text-[11px] font-bold px-3 py-1.5 rounded-full border border-gray-200 text-gray-600 bg-white whitespace-nowrap shrink-0">1+1</button>
+                    <button onclick="setAllDealsFilter('type', '2+1')" id="adf-type-2+1" class="text-[11px] font-bold px-3 py-1.5 rounded-full border border-gray-200 text-gray-600 bg-white whitespace-nowrap shrink-0">2+1</button>
+                </div>
+                <div class="flex-1 overflow-y-auto p-2 pb-4 space-y-2" id="allDealsList"></div>
+            </div>
+        </div>
+
     </div> <!-- app-container -->
 
     <script>
@@ -461,6 +515,7 @@
         window.purchasedHistory = purchasedHistory; // ads.js(보상형 광고)에서 최근 적립 내역을 참조하기 위해 노출 
         let storeMarkersData = [], mapMarkers = []; 
         let isUserPanning = false, currentRadius = 500, searchCircle = null, dealTypeFilter = null;
+        let searchBrandFilter = null, recentlyViewed = [];
         let allVirtualStoresDB = [], REAL_STORES = [];
         let STORE_INDEX = [], loadedProvinceFile = null;
 
@@ -480,6 +535,7 @@
             ]).then(async ([deals, index]) => {
                 if (deals && deals.length > 0) MASTER_DB = deals;
                 else console.log("deals.json 없음 - 내부 데모 DB 사용");
+                computeIsNew();
 
                 if (index && index.length > 0) {
                     STORE_INDEX = index;
@@ -589,7 +645,9 @@
                 if(savedHistory) purchasedHistory = JSON.parse(savedHistory);
                 const savedLikes = localStorage.getItem('cvs_likes');
                 if(savedLikes) likedItems = new Set(JSON.parse(savedLikes));
-                
+                const savedRecently = localStorage.getItem('cvs_recentlyViewed');
+                if(savedRecently) recentlyViewed = JSON.parse(savedRecently);
+
                 document.getElementById('totalSaved').textContent = totalSavings.toLocaleString();
                 updateBadgeUI();
             } catch(e) {}
@@ -616,6 +674,7 @@
             });
             document.getElementById('newDealCount').innerText = `${newCount}개`;
             document.getElementById('endingDealCount').innerText = `${endingCount}개`;
+            document.getElementById('allDealCount').innerText = `${MASTER_DB.length}개`;
         }
 
         function generateVirtualStoresDB(baseLat = 37.498095, baseLng = 127.027610) {
@@ -945,7 +1004,7 @@
         }
 
         function hideAllTabModals() {
-            ['searchModal', 'wishlistModal', 'nearbyRankingModal', 'top10Modal'].forEach(id => {
+            ['searchModal', 'wishlistModal', 'nearbyRankingModal', 'top10Modal', 'allDealsModal'].forEach(id => {
                 document.getElementById(id).classList.remove('active');
             });
         }
@@ -955,11 +1014,12 @@
             hideAllTabModals();
             document.getElementById(id).classList.add('active');
             setActiveNav(navId);
-            
+
             if(id === 'searchModal') setTimeout(() => document.getElementById('searchInput').focus(), 100);
             else if(id === 'wishlistModal') renderWishlist();
             else if(id === 'nearbyRankingModal') renderNearbyRanking();
             else if(id === 'top10Modal') renderTop10();
+            else if(id === 'allDealsModal') renderAllDeals();
         }
 
         function goHome() {
@@ -1025,6 +1085,7 @@
 
             let statusBadge = '';
             let evnt = specificBrand ? product.events[specificBrand] : Object.values(product.events)[0];
+            const imgUrl = evnt?.image || Object.values(product.events).find(e => e?.image)?.image || '';
             
             if (evnt) {
                 if (evnt.isNew) {
@@ -1073,7 +1134,10 @@
             <div class="bg-white rounded-2xl p-3 flex flex-col shadow-sm border border-gray-100 relative mb-2">
                 <div class="flex items-stretch">
                     <div class="w-16 h-16 rounded-xl bg-gray-50 overflow-hidden shrink-0 border border-gray-100 flex items-center justify-center text-3xl shadow-inner relative">
-                        ${fallbackEmoji}
+                        ${imgUrl
+                            ? `<img src="${imgUrl}" alt="" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">\
+<span style="display:none" class="w-full h-full flex items-center justify-center text-3xl">${fallbackEmoji}</span>`
+                            : fallbackEmoji}
                     </div>
                     
                     <div class="flex-1 ml-3 flex flex-col justify-center overflow-hidden">
@@ -1088,7 +1152,7 @@
                     <div class="flex flex-col justify-between items-end ml-2 shrink-0 w-8">
                         <button onclick="toggleLike('${product.id}')" class="p-1 -mr-1 mb-1"><i class="${heartCls} text-xl transition-colors"></i></button>
                         ${statusBadge}
-                        <button onclick="addSavings(${product.saving}, '${product.name}')" class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center shadow-md hover:bg-gray-800 active:scale-95 transition mt-auto">
+                        <button onclick="addSavings(${product.saving}, '${product.name}', '${product.id}')" class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center shadow-md hover:bg-gray-800 active:scale-95 transition mt-auto">
                             <i class="fa-solid fa-plus text-xs"></i>
                         </button>
                     </div>
@@ -1140,11 +1204,12 @@
             if (!query) { empty.classList.remove('hidden'); list.classList.add('hidden'); return; }
             empty.classList.add('hidden'); list.classList.remove('hidden');
 
-            const matches = MASTER_DB.filter(p => p.name.toLowerCase().includes(query));
+            let matches = MASTER_DB.filter(p => p.name.toLowerCase().includes(query));
+            if (searchBrandFilter) matches = matches.filter(p => p.events[searchBrandFilter]);
             if (matches.length === 0) {
                 list.innerHTML = `<div class="p-8 text-center text-gray-500 font-bold mt-10">결과가 없습니다.</div>`;
             } else {
-                list.innerHTML = `<div class="px-2 py-1 flex justify-between items-center"><span class="text-xs font-bold text-gray-500">통합 검색 결과 ${matches.length}건</span></div>` + matches.map(p => createProductHTML(p, 'search')).join('');
+                list.innerHTML = `<div class="px-2 py-1 flex justify-between items-center"><span class="text-xs font-bold text-gray-500">통합 검색 결과 ${matches.length}건</span></div>` + matches.map(p => createProductHTML(p, 'search', searchBrandFilter)).join('');
             }
         }
 
@@ -1152,10 +1217,11 @@
             const list = document.getElementById('wishlistList');
             if(likedItems.size === 0) {
                 list.innerHTML = `<div class="p-10 text-center text-gray-400 font-medium flex flex-col items-center mt-10"><i class="fa-regular fa-heart text-5xl mb-3 text-gray-200"></i>찜한 상품이 없습니다.</div>`;
-                return;
+            } else {
+                const likedProducts = MASTER_DB.filter(p => likedItems.has(p.id));
+                list.innerHTML = likedProducts.map(p => createProductHTML(p, 'wishlist')).join('');
             }
-            const likedProducts = MASTER_DB.filter(p => likedItems.has(p.id));
-            list.innerHTML = likedProducts.map(p => createProductHTML(p, 'wishlist')).join('');
+            renderRecentlyViewed();
         }
 
         function renderTop10() {
@@ -1195,12 +1261,13 @@
             }).join('');
         }
 
-        function openSavings() { 
+        function openSavings() {
             hideAllTabModals();
-            document.getElementById('savingsModal').classList.remove('hidden'); 
-            document.getElementById('savingsModal').classList.add('flex'); 
+            document.getElementById('savingsModal').classList.remove('hidden');
+            document.getElementById('savingsModal').classList.add('flex');
             setActiveNav('savings');
-            renderSavingsHistory(); 
+            renderSavingsHistory();
+            renderDailySavingsChart();
         }
         function closeSavings() { 
             document.getElementById('savingsModal').classList.add('hidden'); 
@@ -1208,11 +1275,13 @@
             goHome();
         }
 
-        function addSavings(amount, name) {
+        function addSavings(amount, name, id) {
             totalSavings += amount;
             document.getElementById('totalSaved').textContent = totalSavings.toLocaleString();
             purchasedHistory.unshift({name, amount});
-            saveLocalData(); 
+            if (id) addToRecentlyViewed(id);
+            recordDailySavings(amount);
+            saveLocalData();
             showToast(`${amount.toLocaleString()}원을 절약했습니다!`);
             renderSavingsHistory();
         }
@@ -1237,9 +1306,10 @@
 
         function toggleLike(id) {
             const product = MASTER_DB.find(p => p.id === id);
-            if(likedItems.has(id)) { likedItems.delete(id); showToast(`[${product.name}] 찜 해제`); } 
+            addToRecentlyViewed(id);
+            if(likedItems.has(id)) { likedItems.delete(id); showToast(`[${product.name}] 찜 해제`); }
             else { likedItems.add(id); showToast(`[${product.name}] 찜 완료!`); }
-            saveLocalData(); 
+            saveLocalData();
             updateBadgeUI();
 
             if(activeStore) renderDeals();
@@ -1253,6 +1323,149 @@
             if(likedItems.size > 0) { badge.innerText = likedItems.size; badge.classList.remove('hidden'); } 
             else { badge.classList.add('hidden'); }
         }
+
+        // ── 신규 기능 함수들 ──────────────────────────────────────────────
+
+        // isNew 자동 계산: 이전에 없던 상품 ID를 localStorage에서 비교해 isNew 마킹
+        function computeIsNew() {
+            try {
+                const knownKey = 'cvs_knownProductIds';
+                const known = new Set(JSON.parse(localStorage.getItem(knownKey) || '[]'));
+                if (known.size > 0) {
+                    MASTER_DB.forEach(p => {
+                        if (!known.has(p.id)) Object.values(p.events).forEach(e => { e.isNew = true; });
+                    });
+                }
+                localStorage.setItem(knownKey, JSON.stringify(MASTER_DB.map(p => p.id)));
+            } catch(e) {}
+        }
+
+        // 최근 본 상품 추적
+        function addToRecentlyViewed(id) {
+            recentlyViewed = [id, ...recentlyViewed.filter(x => x !== id)].slice(0, 20);
+            try { localStorage.setItem('cvs_recentlyViewed', JSON.stringify(recentlyViewed)); } catch(e) {}
+        }
+
+        // 최근 본 상품 렌더링 (찜목록 하단)
+        function renderRecentlyViewed() {
+            const section = document.getElementById('recentlyViewedSection');
+            const list = document.getElementById('recentlyViewedList');
+            const items = recentlyViewed.map(id => MASTER_DB.find(p => p.id === id)).filter(Boolean).slice(0, 5);
+            if (items.length === 0) { section.classList.add('hidden'); return; }
+            section.classList.remove('hidden');
+            list.innerHTML = items.map(p => createProductHTML(p, 'wishlist')).join('');
+        }
+
+        // 찜 목록 공유
+        function shareWishlist() {
+            const liked = MASTER_DB.filter(p => likedItems.has(p.id));
+            if (liked.length === 0) { showToast('찜한 상품이 없습니다.'); return; }
+            const text = `🛍️ 내 편의점 찜 목록 (${liked.length}개)\n` +
+                liked.slice(0, 10).map(p => `• ${p.name} — 절약 ${p.saving.toLocaleString()}원`).join('\n') +
+                '\n\n편의점 행사 앱에서 확인하세요!';
+            if (document.body.classList.contains('in-toss-app') && typeof tossShare === 'function') {
+                tossShare(text).catch(() => {});
+            } else if (navigator.share) {
+                navigator.share({ title: '내 찜 목록', text }).catch(() => {});
+            } else {
+                const ta = document.createElement('textarea'); ta.value = text;
+                document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+                showToast('찜 목록이 클립보드에 복사되었습니다!');
+            }
+        }
+
+        // 일별 절약 기록
+        function recordDailySavings(amount) {
+            try {
+                const today = new Date().toISOString().slice(0, 10);
+                const stats = JSON.parse(localStorage.getItem('cvs_dailySavings') || '{}');
+                stats[today] = (stats[today] || 0) + amount;
+                const trimmed = {};
+                Object.keys(stats).sort().slice(-7).forEach(k => trimmed[k] = stats[k]);
+                localStorage.setItem('cvs_dailySavings', JSON.stringify(trimmed));
+            } catch(e) {}
+        }
+
+        // 절약 차트 렌더링
+        function renderDailySavingsChart() {
+            const box = document.getElementById('dailyChartBox');
+            const chartEl = document.getElementById('dailyChart');
+            try {
+                const stats = JSON.parse(localStorage.getItem('cvs_dailySavings') || '{}');
+                const entries = Object.entries(stats).sort((a, b) => a[0].localeCompare(b[0])).slice(-7);
+                if (entries.length === 0) { box.classList.add('hidden'); return; }
+                box.classList.remove('hidden');
+                const max = Math.max(...entries.map(([, v]) => v), 1);
+                chartEl.innerHTML = entries.map(([date, val]) => {
+                    const h = Math.max(4, Math.round((val / max) * 56));
+                    const label = date.slice(5); // MM-DD
+                    return `<div class="flex flex-col items-center flex-1 gap-1">
+                        <span class="text-[8px] font-bold text-blue-600">${val >= 1000 ? (val/1000).toFixed(1)+'k' : val}</span>
+                        <div class="w-full rounded-t-sm bg-blue-400" style="height:${h}px"></div>
+                        <span class="text-[8px] text-gray-400 font-medium">${label}</span>
+                    </div>`;
+                }).join('');
+            } catch(e) { box.classList.add('hidden'); }
+        }
+
+        // 브랜드 검색 필터 토글
+        function toggleBrandSearchFilter(brand) {
+            searchBrandFilter = (searchBrandFilter === brand) ? null : brand;
+            ['CU', 'GS25', '7-ELEVEN', 'EMART24'].forEach(b => {
+                const btn = document.getElementById(`bsf-${b}`);
+                if (!btn) return;
+                if (searchBrandFilter === b) {
+                    btn.classList.add('bg-indigo-600', 'text-white', 'border-indigo-600');
+                    btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
+                } else {
+                    btn.classList.remove('bg-indigo-600', 'text-white', 'border-indigo-600');
+                    btn.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
+                }
+            });
+            performSearch();
+        }
+
+        // 전체 딜 목록 필터 상태
+        let allDealsFilterBrand = null, allDealsFilterType = null;
+
+        function setAllDealsFilter(key, value) {
+            if (key === 'brand') allDealsFilterBrand = value;
+            else allDealsFilterType = value;
+
+            // 브랜드 칩 스타일
+            ['all','CU','GS25','7-ELEVEN','EMART24'].forEach(b => {
+                const btn = document.getElementById(`adf-brand-${b}`);
+                if (!btn) return;
+                const active = (b === 'all' && !allDealsFilterBrand) || allDealsFilterBrand === b;
+                btn.classList.toggle('bg-gray-900', active); btn.classList.toggle('text-white', active); btn.classList.toggle('border-gray-800', active);
+                btn.classList.toggle('bg-white', !active); btn.classList.toggle('text-gray-600', !active); btn.classList.toggle('border-gray-200', !active);
+            });
+            // 유형 칩 스타일
+            ['all','1+1','2+1'].forEach(t => {
+                const btn = document.getElementById(`adf-type-${t}`);
+                if (!btn) return;
+                const active = (t === 'all' && !allDealsFilterType) || allDealsFilterType === t;
+                btn.classList.toggle('bg-gray-900', active); btn.classList.toggle('text-white', active); btn.classList.toggle('border-gray-800', active);
+                btn.classList.toggle('bg-white', !active); btn.classList.toggle('text-gray-600', !active); btn.classList.toggle('border-gray-200', !active);
+            });
+            renderAllDeals();
+        }
+
+        // 전체 딜 목록 렌더링
+        function renderAllDeals() {
+            const list = document.getElementById('allDealsList');
+            let items = [...MASTER_DB].sort((a, b) => b.saving - a.saving);
+            if (allDealsFilterBrand) items = items.filter(p => p.events[allDealsFilterBrand]);
+            if (allDealsFilterType) items = items.filter(p => Object.values(p.events).some(e => e.type === allDealsFilterType));
+            document.getElementById('allDealCount').innerText = `${items.length}개`;
+            if (items.length === 0) {
+                list.innerHTML = `<div class="p-8 text-center text-gray-400 font-medium">해당 조건의 상품이 없습니다.</div>`;
+                return;
+            }
+            list.innerHTML = items.map(p => createProductHTML(p, 'search', allDealsFilterBrand)).join('');
+        }
+
+        // ──────────────────────────────────────────────────────────────────
 
         let toastTimeout;
         function showToast(msg, duration=2000) {
