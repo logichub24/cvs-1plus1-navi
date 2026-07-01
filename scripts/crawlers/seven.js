@@ -20,7 +20,8 @@ function parseItemsFromHtml(html) {
     if (!name) return;
     const price = parsePrice($el.find('.infowrap .price span').text());
     const is2plus1 = $el.find('.ico_tag_07').length > 0;
-    const image = $el.find('.pic_product img').attr('src') || '';
+    const rawImg = $el.find('.pic_product img').attr('src') || '';
+    const image = rawImg.startsWith('/') && !rawImg.startsWith('//') ? BASE + rawImg : rawImg;
     items.push({ brand: '7-ELEVEN', name, price, promoType: is2plus1 ? '2+1' : '1+1', image });
   });
   return items;

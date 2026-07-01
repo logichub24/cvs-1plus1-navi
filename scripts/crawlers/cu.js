@@ -30,7 +30,8 @@ async function fetchPage(pageIndex) {
     const price = parsePrice($el.find('.prod_text .price strong').text());
     const badge = $el.find('.badge span').text().trim();
     const promoType = badge.includes('2+1') ? '2+1' : '1+1';
-    const image = $el.find('.prod_img img').attr('src') || '';
+    const rawImg = $el.find('.prod_img img').attr('src') || '';
+    const image = rawImg.startsWith('//') ? 'https:' + rawImg : rawImg;
     items.push({ brand: 'CU', name, price, promoType, image });
   });
   return items;
