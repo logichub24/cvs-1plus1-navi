@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const BASE = 'http://www.7-eleven.co.kr';
+const BASE = 'https://www.7-eleven.co.kr';
 const FIRST_PAGE_URL = `${BASE}/product/presentList.asp`;
 const MORE_URL = `${BASE}/product/listMoreAjax.asp`;
 const PAGE_SIZE = 13;
