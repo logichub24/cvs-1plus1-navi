@@ -1707,7 +1707,7 @@
                 btn.classList.toggle('text-white', isActive);
                 btn.classList.toggle('bg-white/95', !isActive);
             });
-            if (typeof loadNearbyStores === 'function') loadNearbyStores();
+            if (typeof loadStoresInRadius === 'function') loadStoresInRadius();
         }
 
         function toggleListView() {
