@@ -144,6 +144,14 @@
 
         <!-- 우측 맵 컨트롤 패널 정렬 -->
         <div id="mapControlPanel" class="absolute right-3 bottom-[120px] z-[400] flex flex-col gap-2 pointer-events-none items-end">
+            <!-- 브랜드 필터 -->
+            <div id="mapBrandFilterPanel" class="flex flex-col gap-1 pointer-events-auto">
+                <button onclick="setMapBrandFilter(null)" id="mapFilter_all" class="w-[38px] h-[38px] bg-gray-800 text-white rounded-full shadow-md text-[9px] font-black flex items-center justify-center active:scale-95 transition border-2 border-transparent" title="전체">전체</button>
+                <button onclick="setMapBrandFilter('CU')" id="mapFilter_CU" class="w-[38px] h-[38px] bg-white/95 rounded-full shadow-md text-[9px] font-black flex items-center justify-center active:scale-95 transition border-2 border-transparent text-purple-700" title="CU">CU</button>
+                <button onclick="setMapBrandFilter('GS25')" id="mapFilter_GS25" class="w-[38px] h-[38px] bg-white/95 rounded-full shadow-md text-[9px] font-black flex items-center justify-center active:scale-95 transition border-2 border-transparent text-teal-600" title="GS25">GS25</button>
+                <button onclick="setMapBrandFilter('7-ELEVEN')" id="mapFilter_7EL" class="w-[38px] h-[38px] bg-white/95 rounded-full shadow-md text-[9px] font-black flex items-center justify-center active:scale-95 transition border-2 border-transparent text-green-700" title="7-ELEVEN">7-EL</button>
+                <button onclick="setMapBrandFilter('EMART24')" id="mapFilter_EM" class="w-[38px] h-[38px] bg-white/95 rounded-full shadow-md text-[9px] font-black flex items-center justify-center active:scale-95 transition border-2 border-transparent text-yellow-600" title="이마트24">EM24</button>
+            </div>
             <!-- 리스트/지도 뷰 토글 -->
             <button id="listViewToggleBtn" onclick="toggleListView()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-gray-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition" title="리스트 뷰">
                 <i class="fa-solid fa-list text-lg"></i>
@@ -592,7 +600,7 @@
             }
         ];
 
-        const CATEGORIES = ['ALL', '음료', '과자', '라면', '간편식', '생활용품', '아이스크림', '기타'];
+        const CATEGORIES = ['ALL', '음료', '간편식', '스낵·과자', '유제품', '생활용품', '라면', '주류', '아이스크림', '기타'];
         const BRAND_INFO = {
             'CU': { text: 'CU', bg: 'bg-purple-100', color: 'text-purple-700', marker: 'marker-cu' },
             'GS25': { text: 'GS25', bg: 'bg-teal-100', color: 'text-teal-700', marker: 'marker-gs25' },
@@ -605,9 +613,9 @@
         let map, activeStore = null, activeCategory = 'ALL';
         let totalSavings = 0, likedItems = new Set(), purchasedHistory = [];
         window.purchasedHistory = purchasedHistory; // ads.js(보상형 광고)에서 최근 적립 내역을 참조하기 위해 노출 
-        let storeMarkersData = [], mapMarkers = []; 
+        let storeMarkersData = [], mapMarkers = [];
         let isUserPanning = false, currentRadius = 500, searchCircle = null, dealTypeFilter = null;
-        let searchBrandFilter = null, recentlyViewed = [];
+        let searchBrandFilter = null, recentlyViewed = [], mapBrandFilter = null;
         let allVirtualStoresDB = [], REAL_STORES = [];
         let STORE_INDEX = [], loadedProvinceFile = null;
 
@@ -914,9 +922,10 @@
             const center = map.getCenter();
             
             allVirtualStoresDB.forEach(store => {
+                if (mapBrandFilter && store.brand !== mapBrandFilter) return;
                 const dist = map.distance(center, [store.lat, store.lng]);
                 if (dist <= currentRadius) {
-                    storeMarkersData.push(store); 
+                    storeMarkersData.push(store);
                     const iconHtml = `
                         <div class="custom-marker ${BRAND_INFO[store.brand].marker}" style="width: 40px; height: 40px; font-size: 11px; z-index: 20;">
                             ${BRAND_INFO[store.brand].text}
@@ -1292,6 +1301,23 @@
 
         function quickSearch(kw) { document.getElementById('searchInput').value = kw; performSearch(); }
         
+        // 초성 변환 테이블
+        const CHOSUNG = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'];
+        function toChosung(str) {
+            return [...str].map(ch => {
+                const code = ch.charCodeAt(0) - 0xAC00;
+                if (code < 0 || code > 11171) return ch;
+                return CHOSUNG[Math.floor(code / 588)];
+            }).join('');
+        }
+        function matchSearch(name, query) {
+            const n = name.toLowerCase();
+            if (n.includes(query)) return true;
+            // 초성 검색
+            if (/^[ㄱ-ㅎ]+$/.test(query)) return toChosung(name).includes(query);
+            return false;
+        }
+
         function performSearch() {
             const query = document.getElementById('searchInput').value.trim().toLowerCase();
             const empty = document.getElementById('searchEmptyState');
@@ -1300,7 +1326,7 @@
             if (!query) { empty.classList.remove('hidden'); list.classList.add('hidden'); return; }
             empty.classList.add('hidden'); list.classList.remove('hidden');
 
-            let matches = MASTER_DB.filter(p => p.name.toLowerCase().includes(query));
+            let matches = MASTER_DB.filter(p => matchSearch(p.name, query));
             if (searchBrandFilter) matches = matches.filter(p => p.events[searchBrandFilter]);
             if (matches.length === 0) {
                 list.innerHTML = `<div class="p-8 text-center text-gray-500 font-bold mt-10">결과가 없습니다.</div>`;
@@ -1609,9 +1635,18 @@
         function shareWishlist() {
             const liked = MASTER_DB.filter(p => likedItems.has(p.id));
             if (liked.length === 0) { showToast('찜한 상품이 없습니다.'); return; }
-            const text = `🛍️ 내 편의점 찜 목록 (${liked.length}개)\n` +
-                liked.slice(0, 10).map(p => `• ${p.name} — 절약 ${p.saving.toLocaleString()}원`).join('\n') +
-                '\n\n편의점 행사 앱에서 확인하세요!';
+            const totalSaving = liked.reduce((s, p) => s + (p.saving || 0), 0);
+            const lines = liked.slice(0, 10).map(p => {
+                const brands = Object.keys(p.events || {}).join('/');
+                const types = [...new Set(Object.values(p.events || {}).map(e => e.type))].join('·');
+                const dday = Object.values(p.events || {}).map(e => e.daysLeft).find(d => d !== null && d !== undefined);
+                const ddayStr = typeof dday === 'number' ? ` ⏰D-${dday}` : '';
+                return `• [${brands}] ${p.name} (${types})${ddayStr} — 절약 ${p.saving.toLocaleString()}원`;
+            });
+            const text = `🛍️ 편의점 행사 찜 목록 (${liked.length}개 / 최대 절약 ${totalSaving.toLocaleString()}원)\n` +
+                lines.join('\n') +
+                (liked.length > 10 ? `\n외 ${liked.length - 10}개` : '') +
+                '\n\n📱 편의점 행사 앱에서 확인하세요!';
             if (document.body.classList.contains('in-toss-app') && typeof tossShare === 'function') {
                 tossShare(text).catch(() => {});
             } else if (navigator.share) {
@@ -1659,6 +1694,21 @@
 
         // 브랜드 검색 필터 토글
         let isListView = false, listViewBrand = null;
+
+        function setMapBrandFilter(brand) {
+            mapBrandFilter = brand;
+            // 버튼 활성 상태 업데이트
+            const map_ = { null: 'all', 'CU': 'CU', 'GS25': 'GS25', '7-ELEVEN': '7EL', 'EMART24': 'EM' };
+            ['all','CU','GS25','7EL','EM'].forEach(k => {
+                const btn = document.getElementById('mapFilter_' + k);
+                if (!btn) return;
+                const isActive = (brand === null && k === 'all') || (brand && map_[brand] === k);
+                btn.classList.toggle('bg-gray-800', isActive);
+                btn.classList.toggle('text-white', isActive);
+                btn.classList.toggle('bg-white/95', !isActive);
+            });
+            if (typeof loadNearbyStores === 'function') loadNearbyStores();
+        }
 
         function toggleListView() {
             isListView = !isListView;
