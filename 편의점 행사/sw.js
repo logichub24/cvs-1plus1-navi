@@ -1,4 +1,4 @@
-const CACHE = 'cvs-v1';
+const CACHE = 'cvs-v3';
 const PRECACHE = [
   './',
   './1_1.html',
