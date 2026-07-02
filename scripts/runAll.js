@@ -190,6 +190,16 @@ async function run() {
 
   const masterDB = buildMasterDB(results);
   markIsNew(masterDB, oldMasterDB);  // 신규 상품 isNew 마킹
+
+  // 세븐일레븐 이미지 없는 상품 → 타 브랜드 이미지로 폴백
+  let sevenImgFixed = 0;
+  masterDB.forEach((p) => {
+    if (p.events['7-ELEVEN'] && !p.events['7-ELEVEN'].image) {
+      const fallbackImg = ['CU', 'GS25', 'EMART24'].map((b) => p.events[b]?.image).find((img) => img);
+      if (fallbackImg) { p.events['7-ELEVEN'].image = fallbackImg; sevenImgFixed++; }
+    }
+  });
+  if (sevenImgFixed > 0) console.error(`세븐일레븐 이미지 폴백 적용: ${sevenImgFixed}건`);
   fs.writeFileSync(OUT_PATH, JSON.stringify(masterDB, null, 2), 'utf-8');
   console.error(`deals.json 작성 완료: 상품 ${masterDB.length}건 (${OUT_PATH})`);
 }
