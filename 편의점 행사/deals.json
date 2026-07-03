@@ -11856,8 +11856,8 @@
     }
   },
   {
-    "id": "마스터라떼캔",
-    "name": "마스터)라떼캔240ml",
+    "id": "맥스웰라떼캔",
+    "name": "맥스웰)라떼캔240ml",
     "category": "음료",
     "price": 1600,
     "saving": 533,
@@ -11865,15 +11865,15 @@
     "events": {
       "CU": {
         "type": "2+1",
-        "isNew": false,
+        "isNew": true,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037091397.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037091397_1.png"
       }
     }
   },
   {
-    "id": "마스터스윗아메캔",
-    "name": "마스터)스윗아메캔240ml",
+    "id": "맥스웰스윗아메캔",
+    "name": "맥스웰)스윗아메캔240ml",
     "category": "기타",
     "price": 1600,
     "saving": 533,
@@ -11881,9 +11881,9 @@
     "events": {
       "CU": {
         "type": "2+1",
-        "isNew": false,
+        "isNew": true,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037091410.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037091410_1.png"
       }
     }
   },
@@ -62920,6 +62920,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8993083943239.JPG"
+      }
+    }
+  },
+  {
+    "id": "동화편안활스트롱",
+    "name": "동화)편안활스트롱15g",
+    "category": "기타",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8806016186446",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806016186446.JPG"
       }
     }
   },
