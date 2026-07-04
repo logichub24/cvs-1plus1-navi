@@ -11865,7 +11865,7 @@
     "events": {
       "CU": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037091397_1.png"
       }
@@ -11881,7 +11881,7 @@
     "events": {
       "CU": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037091410_1.png"
       }
@@ -62933,7 +62933,7 @@
     "events": {
       "EMART24": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806016186446.JPG"
       }
