@@ -373,19 +373,20 @@
                     <h3 class="text-gray-300 text-sm font-bold">나의 누적 편의점 절약액</h3>
                     <p class="text-white text-3xl font-black mt-1"><span id="totalSaved">0</span><span class="text-xl font-bold text-gray-400 ml-1">원</span></p>
                 </div>
-                <div class="p-5 bg-gray-50 flex flex-col">
+                <div class="overflow-y-auto hide-scrollbar flex flex-col bg-gray-50" style="max-height:60vh">
+                    <div class="p-5 flex flex-col gap-3">
                     <!-- 이번 주 행사 캘린더 -->
-                    <div id="weekCalendarBox" class="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-3">
+                    <div id="weekCalendarBox" class="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
                         <p class="text-xs font-black text-gray-500 mb-3 flex items-center gap-1.5"><i class="fa-solid fa-calendar-week text-blue-500"></i> 이번 주 행사 캘린더</p>
                         <div id="weekCalendar" class="flex gap-1 justify-between"></div>
                         <p class="text-[10px] text-gray-400 mt-2 text-center">편의점 행사는 매주 월~일 주기로 갱신됩니다</p>
                     </div>
-                    <div id="dailyChartBox" class="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-3 hidden">
+                    <div id="dailyChartBox" class="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hidden">
                         <p class="text-xs font-black text-gray-500 mb-3">최근 7일 절약 현황</p>
                         <div id="dailyChart" class="flex items-end gap-1 h-16"></div>
                     </div>
-                    <div class="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-4 h-[200px] overflow-hidden flex flex-col">
-                        <h4 class="text-sm font-bold text-gray-800 border-b pb-2 mb-3 flex justify-between items-center">
+                    <div class="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col" style="max-height:180px">
+                        <h4 class="text-sm font-bold text-gray-800 border-b pb-2 mb-3 flex justify-between items-center shrink-0">
                             <span>최근 담은 내역</span>
                             <button onclick="clearSavings()" class="text-[10px] bg-gray-100 text-gray-500 px-2 py-1 rounded hover:bg-red-50 hover:text-red-500 transition font-bold">내역 초기화</button>
                         </h4>
@@ -393,10 +394,11 @@
                             <li class="text-center text-xs text-gray-400 py-4">상품의 [+] 버튼을 눌러 담아보세요.</li>
                         </ul>
                     </div>
-                    <button id="rewardAdBtn" onclick="watchRewardAdForBonus()" class="hidden w-full py-2.5 mb-2 bg-amber-400 text-amber-900 font-bold rounded-xl shadow-sm shrink-0 hover:bg-amber-300 active:scale-95 transition text-sm">
+                    <button id="rewardAdBtn" onclick="watchRewardAdForBonus()" class="hidden w-full py-2.5 bg-amber-400 text-amber-900 font-bold rounded-xl shadow-sm shrink-0 hover:bg-amber-300 active:scale-95 transition text-sm">
                         <i class="fa-solid fa-play mr-1"></i> 광고 보고 절약 포인트 2배 받기
                     </button>
                     <button onclick="closeSavings()" class="w-full py-3.5 bg-gray-900 text-white font-bold rounded-xl shadow-md shrink-0 hover:bg-gray-800 active:scale-95 transition">확인 완료</button>
+                    </div>
                 </div>
             </div>
         </div>
