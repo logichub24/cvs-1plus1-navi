@@ -12,15 +12,12 @@ const AD_CONFIG = {
 // ── 전면광고 전략 ───────────────────────────────────────────────────
 // 1. 길찾기 실행 전  → 100%
 // 2. 앱 종료(pagehide) → 100% (WebView 구조상 실제 발동 불확실)
-// 3. 브랜드 변경 시  → 30%, 하루 최대 2회
+// 3. 브랜드 변경 시  → 25%, 횟수 제한 없음
 
 let interstitialReady = false;
 let rewardAdReady = false;
 
-const AD_BRAND_DAILY_MAX = 2;
-const AD_BRAND_PROBABILITY = 0.3;
-let brandAdTodayCount = 0;
-let brandAdLastDate = '';
+const AD_BRAND_PROBABILITY = 0.25;
 
 function todayStr() {
   return new Date().toISOString().slice(0, 10);
@@ -98,23 +95,10 @@ window.addEventListener('pagehide', () => {
 
 // ── 전면광고 트리거 3: 브랜드 변경 ────────────────────────────────
 window.onBrandChanged = function onBrandChanged() {
-  const today = todayStr();
-  if (brandAdLastDate !== today) { brandAdTodayCount = 0; brandAdLastDate = today; }
-  if (brandAdTodayCount >= AD_BRAND_DAILY_MAX) return;
   if (Math.random() >= AD_BRAND_PROBABILITY) return;
-  brandAdTodayCount++;
   showInterstitial(null);
 };
 
-// ── 리워드 1: 절약 포인트 2배 ─────────────────────────────────────
-window.watchRewardAdForBonus = function watchRewardAdForBonus() {
-  if (!window.purchasedHistory || window.purchasedHistory.length === 0) return;
-  const succeeded = requestRewardAd(() => {
-    const last = window.purchasedHistory[0];
-    window.addSavings(last.amount, `${last.name} (광고 보너스)`);
-  });
-  if (!succeeded) window.showToast?.('광고를 불러오는 중입니다. 잠시 후 다시 시도해주세요.');
-};
 
 // ── 리워드 2: 찜 목록 무제한 (오늘 하루) ──────────────────────────
 window.watchRewardAdForWish = function watchRewardAdForWish() {
