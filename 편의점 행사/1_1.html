@@ -1554,10 +1554,10 @@
             if(document.getElementById('wishlistModal').classList.contains('active')) renderWishlist();
         }
 
-        let _pendingLikeId = null;
+        window._pendingLikeId = null;
 
         function showWishLimitPrompt(id) {
-            _pendingLikeId = id;
+            window._pendingLikeId = id;
             const modal = document.getElementById('wishLimitModal');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
