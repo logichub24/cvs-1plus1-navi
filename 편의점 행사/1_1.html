@@ -1134,7 +1134,6 @@
         // [개선 1 적용] 지도 오프셋 적용하여 마커와 바텀시트 공존
         function openStore(store) {
             activeStore = store;
-            if (typeof onStoreOpened === 'function') onStoreOpened();
             // 바텀시트가 55vh 이므로 중심축을 약간 남쪽(위도 마이너스)으로 보정
             map.flyTo([store.lat - 0.0015, store.lng], 17, { duration: 0.5 });
 
@@ -1155,7 +1154,9 @@
 
         function openDirections() {
             if(!activeStore) return;
-            window.open(`https://map.kakao.com/link/map/${activeStore.name},${activeStore.lat},${activeStore.lng}`, '_blank');
+            const url = `https://map.kakao.com/link/map/${activeStore.name},${activeStore.lat},${activeStore.lng}`;
+            if (typeof onNavigateToMap === 'function') { onNavigateToMap(url); return; }
+            window.open(url, '_blank');
         }
 
         function toggleDealTypeFilter(type) {
@@ -1798,8 +1799,10 @@
         let allDealsFilterBrand = null, allDealsFilterType = null;
 
         function setAllDealsFilter(key, value) {
-            if (key === 'brand') allDealsFilterBrand = value;
-            else allDealsFilterType = value;
+            if (key === 'brand') {
+                if (value !== null && value !== allDealsFilterBrand && typeof onBrandChanged === 'function') onBrandChanged();
+                allDealsFilterBrand = value;
+            } else allDealsFilterType = value;
 
             // 브랜드 칩 스타일
             ['all','CU','GS25','7-ELEVEN','EMART24'].forEach(b => {

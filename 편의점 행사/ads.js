@@ -11,10 +11,24 @@ const AD_CONFIG = {
   rewarded: 'ait.v2.live.710d4eb070854a59',
 };
 
-const INTERSTITIAL_EVERY_N_STORE_OPENS = 3;
-let storeOpenCount = 0;
+// ── 전면광고 노출 전략 ──────────────────────────────────────────────
+// 1. 길찾기 실행 전  → 100% 노출 (사용자가 이미 이동 결심한 시점)
+// 2. 앱 종료 시     → 100% 노출 (사용 완료 시점)
+// 3. 브랜드 변경 시 → 30% 확률, 하루 최대 2회 (반복 사용 방해 최소화)
+// ✗ 제거: 매장 N번 열기마다 → 탐색 흐름 방해로 이탈률 원인
+
 let interstitialReady = false;
 let rewardAdReady = false;
+
+// 브랜드 변경 광고 빈도 제어
+const AD_BRAND_DAILY_MAX = 2;
+const AD_BRAND_PROBABILITY = 0.3;
+let brandAdTodayCount = 0;
+let brandAdLastDate = '';
+
+function todayStr() {
+  return new Date().toISOString().slice(0, 10);
+}
 
 function loadInterstitial() {
   if (!loadFullScreenAd.isSupported || !loadFullScreenAd.isSupported()) return;
@@ -40,29 +54,57 @@ function loadRewardAd() {
   });
 }
 
-// 매장 바텀시트를 N번째 열 때 전면 광고 노출 (너무 자주 끼우면 이탈률 올라가므로 빈도 제한)
-window.onStoreOpened = function onStoreOpened() {
-  storeOpenCount++;
-  if (storeOpenCount % INTERSTITIAL_EVERY_N_STORE_OPENS !== 0) return;
-  if (!interstitialReady) return;
-
+// 전면광고 노출 공통 함수. onAfter는 광고가 닫힌 뒤(또는 광고 없을 때) 즉시 실행할 콜백.
+function showInterstitial(onAfter) {
+  if (!interstitialReady) {
+    if (onAfter) onAfter();
+    return;
+  }
   showFullScreenAd({
     options: { adGroupId: AD_CONFIG.interstitial },
     onEvent: (event) => {
       if (event.type === 'dismissed' || event.type === 'failedToShow') {
         interstitialReady = false;
-        loadInterstitial(); // 다음 노출을 위해 재로드
+        loadInterstitial();
+        if (onAfter) onAfter();
       }
     },
-    onError: () => {},
+    onError: () => { if (onAfter) onAfter(); },
   });
+}
+
+// ── 광고 트리거 1: 길찾기 실행 전 ──────────────────────────────────
+// 1_1.html의 openDirections()가 직접 window.open 하는 대신 이 함수를 호출.
+// 광고 닫히면 실제 지도 앱이 열린다.
+window.onNavigateToMap = function onNavigateToMap(url) {
+  showInterstitial(() => { window.open(url, '_blank'); });
 };
 
-// 보상형 광고 하나로 여러 보상(절약 포인트 2배, 위성 보기 잠금해제 등)을 처리하는 공용 함수.
-// onEarned은 실제로 광고를 끝까지 본 경우(userEarnedReward)에만 호출됨.
+// ── 광고 트리거 2: 앱 종료 (뒤로가기) ─────────────────────────────
+// 토스 앱의 네이티브 뒤로가기는 popstate 또는 visibilitychange로 잡기 어려우므로
+// pagehide + visibilitychange 조합으로 최선을 다해 탐지한다.
+// 광고가 준비된 경우에만 노출 (종료를 막으면 UX 해침).
+let exitAdShown = false;
+window.addEventListener('pagehide', () => {
+  if (exitAdShown) return;
+  exitAdShown = true;
+  showInterstitial(null); // onAfter 없음 — 앱 종료 흐름을 막지 않음
+});
+
+// ── 광고 트리거 3: 브랜드 변경 ────────────────────────────────────
+// 하루 최대 AD_BRAND_DAILY_MAX회, AD_BRAND_PROBABILITY 확률로 노출.
+window.onBrandChanged = function onBrandChanged() {
+  const today = todayStr();
+  if (brandAdLastDate !== today) { brandAdTodayCount = 0; brandAdLastDate = today; }
+  if (brandAdTodayCount >= AD_BRAND_DAILY_MAX) return;
+  if (Math.random() >= AD_BRAND_PROBABILITY) return;
+  brandAdTodayCount++;
+  showInterstitial(null);
+};
+
+// ── 보상형 광고 ────────────────────────────────────────────────────
 function requestRewardAd(onEarned) {
   if (!rewardAdReady) return false;
-
   showFullScreenAd({
     options: { adGroupId: AD_CONFIG.rewarded },
     onEvent: (event) => {
@@ -87,28 +129,23 @@ window.watchRewardAdForBonus = function watchRewardAdForBonus() {
   });
 };
 
-// 위성 보기 잠금해제 - 토스 앱 안에서 광고가 준비됐을 때만 사용.
-// 준비 안 됐으면 false를 반환해서 호출 쪽(1_1.html)이 바로 토글하게 둠(웹 버전은 항상 무료).
+// 위성 보기 잠금해제 — 토스 앱 안에서 광고가 준비됐을 때만 사용.
 window.unlockSatelliteWithAd = function unlockSatelliteWithAd(onUnlocked) {
   return requestRewardAd(onUnlocked);
 };
 
-// 토스 앱 안에서는 navigator.share 대신 SDK 네이티브 공유 시트를 써야 함.
-// document.body.classList.contains('in-toss-app')로 토스 환경인지 먼저 확인하고 호출할 것.
+// ── 토스 SDK 유틸 ─────────────────────────────────────────────────
 window.tossShare = function tossShare(message) {
   return share({ message });
 };
 
-// 토스 앱 안에서는 navigator.geolocation이 막혀있을 수 있어 SDK 전용 위치 정보 함수를 써야 함.
-// 권한 거부/실패 시 reject되므로 호출 쪽에서 catch로 토스트 안내를 띄워야 함.
 window.tossGetCurrentLocation = function tossGetCurrentLocation() {
   return getCurrentLocation({ accuracy: Accuracy.Balanced });
 };
 
 function init() {
-  if (!TossAds.initialize.isSupported || !TossAds.initialize.isSupported()) return; // 토스 앱이 아니면 전부 스킵
+  if (!TossAds.initialize.isSupported || !TossAds.initialize.isSupported()) return;
 
-  // 토스 자체 헤더와 중복되는 우리 앱 타이틀 캡슐을 숨기기 위한 표시 (1_1.html의 CSS에서 사용)
   document.body.classList.add('in-toss-app');
 
   TossAds.initialize({
@@ -121,6 +158,6 @@ function init() {
       },
     },
   });
-};
+}
 
 document.addEventListener('DOMContentLoaded', init);
