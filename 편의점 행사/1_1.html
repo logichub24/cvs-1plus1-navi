@@ -175,12 +175,13 @@
                 <i class="fa-solid fa-location-crosshairs text-lg"></i>
             </button>
             
-            <!-- Radius Selector (2×2 그리드) -->
+            <!-- Radius Selector (2×2 그리드 + 5km 리워드) -->
             <div class="bg-white/95 backdrop-blur-md rounded-2xl shadow-md border border-gray-100 grid grid-cols-2 overflow-hidden pointer-events-auto w-[76px]">
                 <button onclick="setRadius(300)" id="rad300" class="text-[9px] font-black py-2 w-full border-b border-r border-gray-100 text-gray-500 hover:bg-gray-50 transition">300m</button>
                 <button onclick="setRadius(500)" id="rad500" class="text-[9px] font-black py-2 w-full border-b border-gray-100 text-blue-600 bg-blue-50 transition">500m</button>
-                <button onclick="setRadius(1000)" id="rad1000" class="text-[9px] font-black py-2 w-full border-r border-gray-100 text-gray-500 hover:bg-gray-50 transition">1km</button>
-                <button onclick="setRadius(2000)" id="rad2000" class="text-[9px] font-black py-2 w-full text-gray-500 hover:bg-gray-50 transition">2km</button>
+                <button onclick="setRadius(1000)" id="rad1000" class="text-[9px] font-black py-2 w-full border-b border-r border-gray-100 text-gray-500 hover:bg-gray-50 transition">1km</button>
+                <button onclick="setRadius(2000)" id="rad2000" class="text-[9px] font-black py-2 w-full border-b border-gray-100 text-gray-500 hover:bg-gray-50 transition">2km</button>
+                <button onclick="requestRadius5km()" id="rad5000" class="text-[9px] font-black py-2 w-full col-span-2 text-amber-600 hover:bg-amber-50 transition flex items-center justify-center gap-1"><i class="fa-solid fa-play text-[8px]"></i>5km</button>
             </div>
         </div>
 
@@ -522,6 +523,23 @@
                 </div>
                 <div class="px-6 pb-6">
                     <button onclick="closeMonthlyReport()" class="w-full py-3.5 bg-gray-900 text-white font-bold rounded-xl shadow-md hover:bg-gray-800 active:scale-95 transition">확인 완료</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 찜 한도 초과 리워드 팝업 -->
+        <div id="wishLimitModal" class="absolute inset-0 bg-black/70 hidden flex-col items-center justify-center p-5 z-[7500]">
+            <div class="bg-white rounded-[2rem] w-full max-w-sm overflow-hidden shadow-2xl">
+                <div class="bg-gradient-to-br from-rose-500 to-pink-600 p-6 text-center">
+                    <div class="text-4xl mb-2">💝</div>
+                    <h3 class="text-white text-lg font-black">찜 목록이 가득 찼어요!</h3>
+                    <p class="text-rose-100 text-sm mt-1">무료 한도 <span class="font-black">10개</span>를 모두 채웠습니다</p>
+                </div>
+                <div class="p-6 space-y-3">
+                    <button id="wishUnlockAdBtn" onclick="watchRewardAdForWish()" class="w-full py-3 bg-amber-400 text-amber-900 font-black rounded-xl shadow-sm hover:bg-amber-300 active:scale-95 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-play"></i> 광고 보고 오늘 하루 무제한 찜하기
+                    </button>
+                    <button onclick="closeWishLimitModal()" class="w-full py-3 bg-gray-100 text-gray-600 font-bold rounded-xl hover:bg-gray-200 active:scale-95 transition text-sm">취소</button>
                 </div>
             </div>
         </div>
@@ -977,23 +995,8 @@
             }
         }
 
-        // 위성 보기를 끄는 건 항상 무료. 켜는 건 토스 앱 안에서는 하루 한 번 광고를 봐야 풀리고,
-        // (광고 SDK가 없는) 일반 웹이나 광고가 아직 준비 안 됐을 때는 그냥 무료로 켜준다.
         function toggleSatelliteView() {
-            if (isSatelliteView) { applySatelliteView(false); return; }
-
-            const today = new Date().toISOString().slice(0, 10);
-            if (localStorage.getItem('cvs_satelliteUnlockedDate') === today) {
-                applySatelliteView(true);
-                return;
-            }
-
-            const adRequested = typeof unlockSatelliteWithAd === 'function' && unlockSatelliteWithAd(() => {
-                localStorage.setItem('cvs_satelliteUnlockedDate', today);
-                applySatelliteView(true);
-                showToast('광고 시청 완료! 오늘 하루 위성 보기가 무제한으로 열렸습니다.');
-            });
-            if (!adRequested) applySatelliteView(true);
+            applySatelliteView(!isSatelliteView);
         }
 
         function loadStoresInRadius() {
@@ -1036,11 +1039,12 @@
         }
 
         function highlightRadiusButton(r) {
-            [300, 500, 1000, 2000].forEach(val => {
+            [300, 500, 1000, 2000, 5000].forEach(val => {
                 const btn = document.getElementById(`rad${val}`);
+                if (!btn) return;
                 if(val === r) {
                     btn.classList.add('text-blue-600', 'bg-blue-50');
-                    btn.classList.remove('text-gray-500');
+                    btn.classList.remove('text-gray-500', 'text-amber-600');
                 } else {
                     btn.classList.remove('text-blue-600', 'bg-blue-50');
                     btn.classList.add('text-gray-500');
@@ -1053,7 +1057,18 @@
             highlightRadiusButton(r);
             searchCircle.setRadius(r);
             map.flyToBounds(searchCircle.getBounds(), {padding: [20, 20], duration: 0.5});
-            setTimeout(() => { loadStoresInRadius(); showToast(`검색 반경이 ${r}m로 변경되었습니다.`); }, 600);
+            const label = r >= 1000 ? `${r/1000}km` : `${r}m`;
+            setTimeout(() => { loadStoresInRadius(); showToast(`검색 반경이 ${label}로 변경되었습니다.`); }, 600);
+        }
+
+        // 5km 반경 — 리워드 광고 시청 후 1회 허용
+        function requestRadius5km() {
+            if (typeof window.watchRewardAdForRadius === 'function') {
+                window.watchRewardAdForRadius();
+            } else {
+                // 광고 SDK 없는 환경(웹 미리보기 등)은 바로 허용
+                setRadius(5000);
+            }
         }
 
         function applyStartupSettings() {
@@ -1514,11 +1529,23 @@
             ul.innerHTML = purchasedHistory.map(item => `<li class="flex justify-between items-center text-sm border-b border-gray-50 pb-2"><span class="text-gray-700 font-bold truncate pr-2">${item.name}</span><span class="text-blue-600 font-black shrink-0">+${item.amount.toLocaleString()}원</span></li>`).join('');
         }
 
+        const WISH_FREE_LIMIT = 10;
+
         function toggleLike(id) {
             const product = MASTER_DB.find(p => p.id === id);
             addToRecentlyViewed(id);
-            if(likedItems.has(id)) { likedItems.delete(id); showToast(`[${product.name}] 찜 해제`); }
-            else { likedItems.add(id); showToast(`[${product.name}] 찜 완료!`); }
+            if (likedItems.has(id)) {
+                likedItems.delete(id);
+                showToast(`[${product.name}] 찜 해제`);
+            } else {
+                const unlocked = localStorage.getItem('cvs_wishUnlocked') === new Date().toISOString().slice(0,10);
+                if (!unlocked && likedItems.size >= WISH_FREE_LIMIT) {
+                    showWishLimitPrompt(id);
+                    return;
+                }
+                likedItems.add(id);
+                showToast(`[${product.name}] 찜 완료!`);
+            }
             saveLocalData();
             updateBadgeUI();
 
@@ -1528,9 +1555,25 @@
             if(document.getElementById('wishlistModal').classList.contains('active')) renderWishlist();
         }
 
+        let _pendingLikeId = null;
+
+        function showWishLimitPrompt(id) {
+            _pendingLikeId = id;
+            const modal = document.getElementById('wishLimitModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeWishLimitModal() {
+            _pendingLikeId = null;
+            const modal = document.getElementById('wishLimitModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
         function updateBadgeUI() {
             const badge = document.getElementById('wishBadge');
-            if(likedItems.size > 0) { badge.innerText = likedItems.size; badge.classList.remove('hidden'); } 
+            if(likedItems.size > 0) { badge.innerText = likedItems.size; badge.classList.remove('hidden'); }
             else { badge.classList.add('hidden'); }
         }
 

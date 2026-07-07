@@ -1,26 +1,22 @@
 // 토스인앱(Apps in Toss) 광고 SDK 연동.
 // 일반 브라우저(GitHub Pages 등)에서는 isSupported()가 false라 전부 조용히 no-op되고,
 // 토스 앱 WebView 안에서 열렸을 때만 실제 광고가 붙는다.
-//
-// 앱인토스 콘솔에서 발급받은 실제 광고 그룹 ID.
 import { TossAds, loadFullScreenAd, showFullScreenAd, share, getCurrentLocation, Accuracy } from 'https://esm.sh/@apps-in-toss/web-bridge@2.9.2';
 
 const AD_CONFIG = {
-  banner: 'ait.v2.live.45bb0aad48d04636',
+  banner:       'ait.v2.live.45bb0aad48d04636',
   interstitial: 'ait.v2.live.1c35b52379294244',
-  rewarded: 'ait.v2.live.710d4eb070854a59',
+  rewarded:     'ait.v2.live.710d4eb070854a59',
 };
 
-// ── 전면광고 노출 전략 ──────────────────────────────────────────────
-// 1. 길찾기 실행 전  → 100% 노출 (사용자가 이미 이동 결심한 시점)
-// 2. 앱 종료 시     → 100% 노출 (사용 완료 시점)
-// 3. 브랜드 변경 시 → 30% 확률, 하루 최대 2회 (반복 사용 방해 최소화)
-// ✗ 제거: 매장 N번 열기마다 → 탐색 흐름 방해로 이탈률 원인
+// ── 전면광고 전략 ───────────────────────────────────────────────────
+// 1. 길찾기 실행 전  → 100%
+// 2. 앱 종료(pagehide) → 100% (WebView 구조상 실제 발동 불확실)
+// 3. 브랜드 변경 시  → 30%, 하루 최대 2회
 
 let interstitialReady = false;
 let rewardAdReady = false;
 
-// 브랜드 변경 광고 빈도 제어
 const AD_BRAND_DAILY_MAX = 2;
 const AD_BRAND_PROBABILITY = 0.3;
 let brandAdTodayCount = 0;
@@ -46,20 +42,16 @@ function loadRewardAd() {
     onEvent: (event) => {
       if (event.type === 'loaded') {
         rewardAdReady = true;
-        const btn = document.getElementById('rewardAdBtn');
-        if (btn) btn.classList.remove('hidden');
+        document.getElementById('rewardAdBtn')?.classList.remove('hidden');
+        document.getElementById('wishUnlockAdBtn')?.classList.remove('hidden');
       }
     },
     onError: () => { rewardAdReady = false; },
   });
 }
 
-// 전면광고 노출 공통 함수. onAfter는 광고가 닫힌 뒤(또는 광고 없을 때) 즉시 실행할 콜백.
 function showInterstitial(onAfter) {
-  if (!interstitialReady) {
-    if (onAfter) onAfter();
-    return;
-  }
+  if (!interstitialReady) { if (onAfter) onAfter(); return; }
   showFullScreenAd({
     options: { adGroupId: AD_CONFIG.interstitial },
     onEvent: (event) => {
@@ -73,26 +65,38 @@ function showInterstitial(onAfter) {
   });
 }
 
-// ── 광고 트리거 1: 길찾기 실행 전 ──────────────────────────────────
-// 1_1.html의 openDirections()가 직접 window.open 하는 대신 이 함수를 호출.
-// 광고 닫히면 실제 지도 앱이 열린다.
+// 리워드 광고 공통. onEarned = 끝까지 시청 시 콜백. 광고 없으면 false 반환.
+function requestRewardAd(onEarned, onDismiss) {
+  if (!rewardAdReady) return false;
+  showFullScreenAd({
+    options: { adGroupId: AD_CONFIG.rewarded },
+    onEvent: (event) => {
+      if (event.type === 'userEarnedReward') onEarned();
+      if (event.type === 'dismissed' || event.type === 'failedToShow') {
+        rewardAdReady = false;
+        loadRewardAd();
+        if (onDismiss) onDismiss();
+      }
+    },
+    onError: () => { if (onDismiss) onDismiss(); },
+  });
+  return true;
+}
+
+// ── 전면광고 트리거 1: 길찾기 ──────────────────────────────────────
 window.onNavigateToMap = function onNavigateToMap(url) {
   showInterstitial(() => { window.open(url, '_blank'); });
 };
 
-// ── 광고 트리거 2: 앱 종료 (뒤로가기) ─────────────────────────────
-// 토스 앱의 네이티브 뒤로가기는 popstate 또는 visibilitychange로 잡기 어려우므로
-// pagehide + visibilitychange 조합으로 최선을 다해 탐지한다.
-// 광고가 준비된 경우에만 노출 (종료를 막으면 UX 해침).
+// ── 전면광고 트리거 2: 앱 종료 ─────────────────────────────────────
 let exitAdShown = false;
 window.addEventListener('pagehide', () => {
   if (exitAdShown) return;
   exitAdShown = true;
-  showInterstitial(null); // onAfter 없음 — 앱 종료 흐름을 막지 않음
+  showInterstitial(null);
 });
 
-// ── 광고 트리거 3: 브랜드 변경 ────────────────────────────────────
-// 하루 최대 AD_BRAND_DAILY_MAX회, AD_BRAND_PROBABILITY 확률로 노출.
+// ── 전면광고 트리거 3: 브랜드 변경 ────────────────────────────────
 window.onBrandChanged = function onBrandChanged() {
   const today = todayStr();
   if (brandAdLastDate !== today) { brandAdTodayCount = 0; brandAdLastDate = today; }
@@ -102,36 +106,57 @@ window.onBrandChanged = function onBrandChanged() {
   showInterstitial(null);
 };
 
-// ── 보상형 광고 ────────────────────────────────────────────────────
-function requestRewardAd(onEarned) {
-  if (!rewardAdReady) return false;
-  showFullScreenAd({
-    options: { adGroupId: AD_CONFIG.rewarded },
-    onEvent: (event) => {
-      if (event.type === 'userEarnedReward') onEarned();
-      if (event.type === 'dismissed' || event.type === 'failedToShow') {
-        rewardAdReady = false;
-        document.getElementById('rewardAdBtn')?.classList.add('hidden');
-        loadRewardAd();
-      }
-    },
-    onError: () => {},
-  });
-  return true;
-}
-
-// "내 지갑"의 [광고 보고 절약 포인트 2배 받기] 버튼
+// ── 리워드 1: 절약 포인트 2배 ─────────────────────────────────────
 window.watchRewardAdForBonus = function watchRewardAdForBonus() {
   if (!window.purchasedHistory || window.purchasedHistory.length === 0) return;
-  requestRewardAd(() => {
+  const succeeded = requestRewardAd(() => {
     const last = window.purchasedHistory[0];
     window.addSavings(last.amount, `${last.name} (광고 보너스)`);
   });
+  if (!succeeded) window.showToast?.('광고를 불러오는 중입니다. 잠시 후 다시 시도해주세요.');
 };
 
-// 위성 보기 잠금해제 — 토스 앱 안에서 광고가 준비됐을 때만 사용.
-window.unlockSatelliteWithAd = function unlockSatelliteWithAd(onUnlocked) {
-  return requestRewardAd(onUnlocked);
+// ── 리워드 2: 찜 목록 무제한 (오늘 하루) ──────────────────────────
+window.watchRewardAdForWish = function watchRewardAdForWish() {
+  const succeeded = requestRewardAd(
+    () => {
+      localStorage.setItem('cvs_wishUnlocked', todayStr());
+      window.closeWishLimitModal?.();
+      // 대기 중이던 찜 아이템 처리
+      if (window._pendingLikeId) {
+        const id = window._pendingLikeId;
+        window._pendingLikeId = null;
+        window.toggleLike?.(id);
+      }
+      window.showToast?.('광고 시청 완료! 오늘 하루 찜 목록을 무제한으로 사용할 수 있어요 💝');
+    },
+    () => { window.closeWishLimitModal?.(); }
+  );
+  if (!succeeded) {
+    // 광고 미준비 시 무료 허용 (웹 환경)
+    localStorage.setItem('cvs_wishUnlocked', todayStr());
+    window.closeWishLimitModal?.();
+    if (window._pendingLikeId) {
+      const id = window._pendingLikeId;
+      window._pendingLikeId = null;
+      window.toggleLike?.(id);
+    }
+  }
+};
+
+// ── 리워드 3: 5km 반경 검색 ───────────────────────────────────────
+window.watchRewardAdForRadius = function watchRewardAdForRadius() {
+  const succeeded = requestRewardAd(
+    () => {
+      window.setRadius?.(5000);
+      window.showToast?.('광고 시청 완료! 반경 5km 검색이 열렸습니다 🗺️');
+    },
+    () => { window.showToast?.('광고를 끝까지 시청해야 5km 검색이 열립니다.'); }
+  );
+  if (!succeeded) {
+    // 광고 미준비 시 무료 허용 (웹 환경)
+    window.setRadius?.(5000);
+  }
 };
 
 // ── 토스 SDK 유틸 ─────────────────────────────────────────────────
@@ -145,9 +170,7 @@ window.tossGetCurrentLocation = function tossGetCurrentLocation() {
 
 function init() {
   if (!TossAds.initialize.isSupported || !TossAds.initialize.isSupported()) return;
-
   document.body.classList.add('in-toss-app');
-
   TossAds.initialize({
     callbacks: {
       onInitialized: () => {
