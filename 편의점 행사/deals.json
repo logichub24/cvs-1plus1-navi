@@ -2395,7 +2395,7 @@
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809274513887.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809274513887_1.png"
       }
     }
   },
@@ -10011,7 +10011,7 @@
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801121051412.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801121051412.png"
       }
     }
   },
@@ -10027,7 +10027,7 @@
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801121051429.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801121051429.png"
       }
     }
   },
@@ -60143,7 +60143,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801753110976.JPG"
       }
