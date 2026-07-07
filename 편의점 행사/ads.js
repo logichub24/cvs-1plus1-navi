@@ -82,7 +82,7 @@ function requestRewardAd(onEarned, onDismiss) {
 
 // ── 전면광고 트리거 1: 길찾기 ──────────────────────────────────────
 window.onNavigateToMap = function onNavigateToMap(url) {
-  showInterstitial(() => { window.open(url, '_blank'); });
+  showInterstitial(() => { location.href = url; });
 };
 
 // ── 전면광고 트리거 2: 앱 종료 ─────────────────────────────────────
