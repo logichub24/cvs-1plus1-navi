@@ -128,18 +128,19 @@
                     </div>
                 </button>
             </div>
+
+            <!-- 3번째 줄: 브랜드 필터 (가로 나열) -->
+            <div class="flex overflow-x-auto hide-scrollbar px-3 gap-2 pointer-events-auto pb-2">
+                <button onclick="setMapBrandFilter(null)" id="mapFilter_all" class="px-3.5 py-1.5 bg-gray-800 text-white rounded-full shadow-sm text-[11px] font-black flex items-center justify-center active:scale-95 transition border border-transparent shrink-0" title="전체">전체</button>
+                <button onclick="setMapBrandFilter('CU')" id="mapFilter_CU" class="px-3.5 py-1.5 bg-white/95 rounded-full shadow-sm text-[11px] font-black flex items-center justify-center active:scale-95 transition border border-gray-100 text-purple-700 shrink-0" title="CU">CU</button>
+                <button onclick="setMapBrandFilter('GS25')" id="mapFilter_GS25" class="px-3.5 py-1.5 bg-white/95 rounded-full shadow-sm text-[11px] font-black flex items-center justify-center active:scale-95 transition border border-gray-100 text-teal-600 shrink-0" title="GS25">GS25</button>
+                <button onclick="setMapBrandFilter('7-ELEVEN')" id="mapFilter_7EL" class="px-3.5 py-1.5 bg-white/95 rounded-full shadow-sm text-[11px] font-black flex items-center justify-center active:scale-95 transition border border-gray-100 text-green-700 shrink-0" title="7-ELEVEN">세븐일레븐</button>
+                <button onclick="setMapBrandFilter('EMART24')" id="mapFilter_EM" class="px-3.5 py-1.5 bg-white/95 rounded-full shadow-sm text-[11px] font-black flex items-center justify-center active:scale-95 transition border border-gray-100 text-yellow-600 shrink-0" title="이마트24">이마트24</button>
+            </div>
         </div>
 
         <!-- 우측 맵 컨트롤 패널 정렬 -->
         <div id="mapControlPanel" class="absolute right-3 bottom-[120px] z-[400] flex flex-col gap-2 pointer-events-none items-end">
-            <!-- 브랜드 필터 -->
-            <div id="mapBrandFilterPanel" class="flex flex-col gap-1 pointer-events-auto">
-                <button onclick="setMapBrandFilter(null)" id="mapFilter_all" class="w-[38px] h-[38px] bg-gray-800 text-white rounded-full shadow-md text-[9px] font-black flex items-center justify-center active:scale-95 transition border-2 border-transparent" title="전체">전체</button>
-                <button onclick="setMapBrandFilter('CU')" id="mapFilter_CU" class="w-[38px] h-[38px] bg-white/95 rounded-full shadow-md text-[9px] font-black flex items-center justify-center active:scale-95 transition border-2 border-transparent text-purple-700" title="CU">CU</button>
-                <button onclick="setMapBrandFilter('GS25')" id="mapFilter_GS25" class="w-[38px] h-[38px] bg-white/95 rounded-full shadow-md text-[9px] font-black flex items-center justify-center active:scale-95 transition border-2 border-transparent text-teal-600" title="GS25">GS25</button>
-                <button onclick="setMapBrandFilter('7-ELEVEN')" id="mapFilter_7EL" class="w-[38px] h-[38px] bg-white/95 rounded-full shadow-md text-[9px] font-black flex items-center justify-center active:scale-95 transition border-2 border-transparent text-green-700" title="7-ELEVEN">7-EL</button>
-                <button onclick="setMapBrandFilter('EMART24')" id="mapFilter_EM" class="w-[38px] h-[38px] bg-white/95 rounded-full shadow-md text-[9px] font-black flex items-center justify-center active:scale-95 transition border-2 border-transparent text-yellow-600" title="이마트24">EM24</button>
-            </div>
             <!-- 리스트/지도 뷰 토글 -->
             <button id="listViewToggleBtn" onclick="toggleListView()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-gray-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition" title="리스트 뷰">
                 <i class="fa-solid fa-list text-lg"></i>
