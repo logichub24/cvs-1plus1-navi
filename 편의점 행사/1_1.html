@@ -111,11 +111,11 @@
 
             <!-- Scrollable Info Chips -->
             <div class="flex overflow-x-auto hide-scrollbar px-3 gap-2 pointer-events-auto pb-2">
-                <!-- 칩 1: 찜 상품 절약금액 -->
+                <!-- 칩 1: 오늘 최대 절약 상품 -->
                 <button onclick="openTabModal('top10Modal', 'top10')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
                     <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-[10px]">🥇</div>
                     <div class="text-left flex flex-col">
-                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5" id="topDealName">베스트 행사</span>
+                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5" id="topDealName">최대 절약 상품</span>
                         <span class="text-[8px] text-blue-600 font-bold leading-none mt-1" id="topDealSaving">로딩 중...</span>
                     </div>
                 </button>
@@ -125,14 +125,6 @@
                     <div class="text-left flex flex-col">
                         <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5">오늘 마감</span>
                         <span id="endingDealCount" class="text-[8px] text-rose-600 font-bold leading-none mt-1">0개</span>
-                    </div>
-                </button>
-                <!-- 칩 3: 주변 최대 절약 가능 금액 -->
-                <button onclick="openTabModal('nearbyRankingModal', 'nearby')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
-                    <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-[10px]">💰</div>
-                    <div class="text-left flex flex-col">
-                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5">주변 절약 가능</span>
-                        <span id="nearbySavingAmount" class="text-[8px] text-emerald-600 font-bold leading-none mt-1">계산 중...</span>
                     </div>
                 </button>
             </div>
