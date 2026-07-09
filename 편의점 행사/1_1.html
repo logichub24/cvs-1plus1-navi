@@ -549,6 +549,15 @@
         </div>
 
         <!-- 인앱 D-day 배너 -->
+        <!-- 찜한 상품에 새 행사가 시작되면 뜨는 개인화 배너 -->
+        <div id="likeChangeBanner" class="absolute top-[56px] left-0 w-full z-[301] px-3 hidden">
+            <button onclick="openLikeChangeList()" class="w-full text-left bg-rose-50 border border-rose-200 rounded-2xl px-4 py-2.5 flex items-center gap-2 shadow-sm active:scale-[0.99] transition">
+                <span class="text-lg">💝</span>
+                <p class="text-xs font-bold text-rose-700 flex-1" id="likeChangeBannerText"></p>
+                <span onclick="event.stopPropagation(); document.getElementById('likeChangeBanner').classList.add('hidden')" class="text-rose-300 hover:text-rose-500 shrink-0"><i class="fa-solid fa-xmark text-sm"></i></span>
+            </button>
+        </div>
+
         <div id="ddayBanner" class="absolute top-[56px] left-0 w-full z-[300] px-3 hidden">
             <div class="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-2.5 flex items-center gap-2 shadow-sm">
                 <span class="text-lg">⏰</span>
@@ -2068,6 +2077,68 @@
 
         // ── D-day 인앱 배너 ────────────────────────────────────────────────
         // 편의점 행사는 월~일 주기. 금/토/일에 마감 임박 배너 표시.
+        // ── 찜 상품 행사 변동 감지 (개인화) ────────────────────────────────
+        // 지난 방문 때 찜 상품의 행사 상태(브랜드+행사유형)를 스냅샷으로 저장해두고,
+        // 이번 방문에 새 브랜드/행사가 붙었으면 "새 행사 시작"으로 감지한다. 백엔드 없이 localStorage만 사용.
+        let likeChangeItems = [];
+        function likeSignature(p) {
+            // "CU:1+1|GS25:2+1" 형태로 정렬해 비교용 시그니처 생성
+            return Object.entries(p.events || {})
+                .map(([brand, e]) => `${brand}:${e.type}`)
+                .sort()
+                .join('|');
+        }
+
+        function checkLikedChanges() {
+            try {
+                const snapKey = 'cvs_likeSnapshot';
+                const snap = JSON.parse(localStorage.getItem(snapKey) || '{}');
+                const nextSnap = {};
+                likeChangeItems = [];
+                MASTER_DB.forEach(p => {
+                    if (!likedItems.has(p.id)) return;
+                    const sig = likeSignature(p);
+                    nextSnap[p.id] = sig;
+                    const prev = snap[p.id];
+                    // 스냅샷이 있고, 이전에 없던 브랜드:행사 조합이 새로 생겼으면 변동으로 간주
+                    if (prev !== undefined && sig !== prev) {
+                        const prevSet = new Set(prev.split('|').filter(Boolean));
+                        const added = sig.split('|').filter(x => x && !prevSet.has(x));
+                        if (added.length > 0) likeChangeItems.push({ product: p, added });
+                    }
+                });
+                localStorage.setItem(snapKey, JSON.stringify(nextSnap));
+
+                if (likeChangeItems.length > 0) {
+                    const first = likeChangeItems[0].product.name;
+                    const shortName = first.length > 12 ? first.slice(0, 12) + '…' : first;
+                    const banner = document.getElementById('likeChangeBanner');
+                    const text = document.getElementById('likeChangeBannerText');
+                    text.textContent = likeChangeItems.length === 1
+                        ? `찜한 '${shortName}'에 새 행사가 시작됐어요! 확인하기`
+                        : `찜한 '${shortName}' 외 ${likeChangeItems.length - 1}개에 새 행사가 시작됐어요!`;
+                    banner.classList.remove('hidden');
+                    // D-day 배너와 겹치지 않게 아래로 내림
+                    document.getElementById('ddayBanner').classList.add('mt-[52px]');
+                    // 알림 권한이 있으면 즉시 로컬 알림도 발송
+                    if ('Notification' in window && Notification.permission === 'granted') {
+                        try {
+                            new Notification('찜한 상품에 새 행사가 시작됐어요! 💝', {
+                                body: likeChangeItems.length === 1 ? `${first} — 지금 확인해보세요` : `${shortName} 외 ${likeChangeItems.length - 1}개 상품`,
+                                icon: 'thumbnail.png',
+                            });
+                        } catch(e) {}
+                    }
+                }
+            } catch(e) {}
+        }
+
+        // 배너 클릭 시 해당 찜 상품들을 찜목록 모달로 보여줌
+        function openLikeChangeList() {
+            document.getElementById('likeChangeBanner').classList.add('hidden');
+            openTabModal('wishlistModal', 'wishlist');
+        }
+
         function maybeShowDdayBanner() {
             const dow = new Date().getDay(); // 0=일,5=금,6=토
             const daysToSunday = dow === 0 ? 0 : 7 - dow;
@@ -2234,6 +2305,7 @@
         function initRetentionFeatures() {
             loadNotifSettings();
             updateTopDealChip();
+            checkLikedChanges();
             maybeShowDdayBanner();
             // 월간 리포트는 첫 실행 다음날 이후 월 변경 시 표시 (온보딩 직후 방해 안 함)
             if (localStorage.getItem('cvs_onboarded')) {
