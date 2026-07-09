@@ -194,14 +194,14 @@
         <div id="nearbyPreviewSheet" class="absolute left-0 w-full z-[300] transition-transform duration-500 ease-out"
              style="bottom:116px; transform:translateY(120%); pointer-events:none;">
             <div class="mx-3 bg-white rounded-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden">
-                <div class="flex items-center justify-between px-4 pt-3 pb-1.5">
+                <div class="flex items-center gap-2 px-3 pt-3 pb-1.5">
+                    <button onclick="closeNearbyPreview()" class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-gray-700 active:scale-90 transition rounded-full shrink-0">
+                        <i class="fa-solid fa-xmark text-sm"></i>
+                    </button>
                     <p class="text-[12px] font-black text-gray-900">
                         <i class="fa-solid fa-location-dot text-blue-500 mr-1"></i>
                         <span id="nearbyPreviewTitle">내 주변 행사</span>
                     </p>
-                    <button onclick="closeNearbyPreview()" class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-gray-700 active:scale-90 transition rounded-full">
-                        <i class="fa-solid fa-xmark text-sm"></i>
-                    </button>
                 </div>
                 <div id="nearbyPreviewList" class="flex gap-2.5 overflow-x-auto px-4 pb-3 pt-1 hide-scrollbar" style="pointer-events:auto;"></div>
             </div>
