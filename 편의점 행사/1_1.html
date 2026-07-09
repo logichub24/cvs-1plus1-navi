@@ -180,7 +180,7 @@
         </button>
 
         <!-- 주변 행사 미리보기 시트 (첫 위치 확정 후 1회 슬라이드업) -->
-        <div id="nearbyPreviewSheet" class="absolute left-0 w-full z-[300] transition-transform duration-500 ease-out"
+        <div id="nearbyPreviewSheet" class="absolute left-0 w-full z-[300] transition-transform duration-500 ease-out hidden"
              style="bottom:116px; transform:translateY(120%); pointer-events:none;">
             <div class="mx-3 bg-white rounded-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden">
                 <div class="flex items-center gap-2 px-3 pt-3 pb-1.5">
@@ -1107,8 +1107,12 @@
             }).join('');
 
             const sheet = document.getElementById('nearbyPreviewSheet');
-            sheet.style.transform = 'translateY(0)';
-            sheet.style.pointerEvents = 'auto';
+            sheet.classList.remove('hidden');
+            // display 반영 후 다음 프레임에 슬라이드업 (내용 채워진 상태에서만 표시)
+            requestAnimationFrame(() => {
+                sheet.style.transform = 'translateY(0)';
+                sheet.style.pointerEvents = 'auto';
+            });
 
             nearbyPreviewTimer = setTimeout(closeNearbyPreview, 8000);
         }
@@ -1118,6 +1122,8 @@
             const sheet = document.getElementById('nearbyPreviewSheet');
             sheet.style.transform = 'translateY(120%)';
             sheet.style.pointerEvents = 'none';
+            // 슬라이드다운 애니메이션 종료 후 완전히 숨김(빈 헤더 잔상 방지)
+            setTimeout(() => sheet.classList.add('hidden'), 520);
         }
 
         async function searchInCurrentArea() {
