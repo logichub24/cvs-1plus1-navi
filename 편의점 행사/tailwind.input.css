@@ -1,0 +1,4 @@
+/* Tailwind 미리 컴파일용 입력 파일. build-toss.js가 이 파일로 styles.css를 생성한다. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -10,6 +10,7 @@
     "crawl:seven": "node scripts/crawlers/seven.js",
     "crawl:emart24": "node scripts/crawlers/emart24.js",
     "sync:stores": "node scripts/storeLocations.js",
+    "build:css": "tailwindcss -i \"편의점 행사/tailwind.input.css\" -o \"편의점 행사/styles.css\" --content \"편의점 행사/1_1.html\" --minify",
     "build:toss": "node scripts/build-toss.js"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "tough-cookie": "^5.0.0"
   },
   "devDependencies": {
-    "@apps-in-toss/web-framework": "^2.9.2"
+    "@apps-in-toss/web-framework": "^2.9.2",
+    "tailwindcss": "^3.4.19"
   }
 }

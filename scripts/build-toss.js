@@ -15,6 +15,17 @@ fs.mkdirSync(DIST_DIR, { recursive: true });
 
 fs.copyFileSync(path.join(SRC_DIR, '1_1.html'), path.join(DIST_DIR, 'index.html'));
 
+// Tailwind를 미리 컴파일해 styles.css 생성. Play CDN(런타임 컴파일) 대신 정적 CSS를 써서 로딩·FPS 개선.
+// HTML의 실제 사용 클래스만 스캔하므로, 클래스가 바뀌면 빌드 때마다 자동으로 최신화된다(스타일 깨짐 방지).
+const tailwind = path.join(__dirname, '..', 'node_modules', '.bin', 'tailwindcss');
+const twInput = path.join(SRC_DIR, 'tailwind.input.css');
+const twOutput = path.join(SRC_DIR, 'styles.css');
+execSync(
+  `"${tailwind}" -i "${twInput}" -o "${twOutput}" --content "${path.join(SRC_DIR, '1_1.html')}" --minify`,
+  { stdio: 'inherit' }
+);
+fs.copyFileSync(twOutput, path.join(DIST_DIR, 'styles.css'));
+
 // ads.js는 @apps-in-toss/web-bridge를 esm.sh CDN이 아닌 로컬 패키지로 번들링한다.
 // WebView 환경에서 외부 CDN 접근이 차단될 수 있어 번들로 내장해야 광고 SDK가 동작한다.
 const adsSrc = path.join(SRC_DIR, 'ads.js');
