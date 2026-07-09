@@ -111,32 +111,28 @@
 
             <!-- Scrollable Info Chips -->
             <div class="flex overflow-x-auto hide-scrollbar px-3 gap-2 pointer-events-auto pb-2">
+                <!-- 칩 1: 찜 상품 절약금액 -->
                 <button onclick="openTabModal('top10Modal', 'top10')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
                     <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-[10px]">🥇</div>
                     <div class="text-left flex flex-col">
-                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5">하겐다즈 파인트</span>
-                        <span class="text-[8px] text-blue-600 font-bold leading-none mt-1">15,900원 절약</span>
+                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5" id="topDealName">베스트 행사</span>
+                        <span class="text-[8px] text-blue-600 font-bold leading-none mt-1" id="topDealSaving">로딩 중...</span>
                     </div>
                 </button>
+                <!-- 칩 2: 오늘 마감 -->
                 <button onclick="openTabModal('allDealsModal', 'alldeals')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
-                    <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-[10px]">✨</div>
-                    <div class="text-left flex flex-col">
-                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5">오늘 새 행사</span>
-                        <span id="newDealCount" class="text-[8px] text-emerald-600 font-bold leading-none mt-1">0개</span>
-                    </div>
-                </button>
-                <button onclick="openTabModal('allDealsModal', 'alldeals')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
-                    <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-[10px]">📋</div>
-                    <div class="text-left flex flex-col">
-                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5">전체 딜 목록</span>
-                        <span id="allDealCount" class="text-[8px] text-blue-600 font-bold leading-none mt-1">0개</span>
-                    </div>
-                </button>
-                <button onclick="showToast('오늘 마감되는 행사입니다.')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
                     <div class="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center text-[10px]">🚨</div>
                     <div class="text-left flex flex-col">
-                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5">오늘 종료</span>
+                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5">오늘 마감</span>
                         <span id="endingDealCount" class="text-[8px] text-rose-600 font-bold leading-none mt-1">0개</span>
+                    </div>
+                </button>
+                <!-- 칩 3: 주변 최대 절약 가능 금액 -->
+                <button onclick="openTabModal('nearbyRankingModal', 'nearby')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
+                    <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-[10px]">💰</div>
+                    <div class="text-left flex flex-col">
+                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5">주변 절약 가능</span>
+                        <span id="nearbySavingAmount" class="text-[8px] text-emerald-600 font-bold leading-none mt-1">계산 중...</span>
                     </div>
                 </button>
             </div>
@@ -880,19 +876,40 @@
         }
 
         function updateDashboardCounts() {
-            let newCount = 0, endingCount = 0;
+            let endingCount = 0;
+            let bestDeal = null, bestPrice = 0;
             MASTER_DB.forEach(p => {
-                let hasNew = false, hasEnding = false;
+                let hasEnding = false;
                 Object.values(p.events).forEach(e => {
-                    if (e.isNew) hasNew = true;
                     if (e.daysLeft === 0) hasEnding = true;
                 });
-                if (hasNew) newCount++;
                 if (hasEnding) endingCount++;
+                // 가장 비싼 상품 = 절약금액 가장 큰 상품 (1+1 기준 상품가격만큼 절약)
+                if (p.price > bestPrice) { bestPrice = p.price; bestDeal = p; }
             });
-            document.getElementById('newDealCount').innerText = `${newCount}개`;
             document.getElementById('endingDealCount').innerText = `${endingCount}개`;
-            document.getElementById('allDealCount').innerText = `${MASTER_DB.length}개`;
+
+            // 칩 1: 베스트 절약 상품
+            if (bestDeal) {
+                document.getElementById('topDealName').textContent =
+                    bestDeal.name.length > 9 ? bestDeal.name.slice(0, 9) + '…' : bestDeal.name;
+                document.getElementById('topDealSaving').textContent =
+                    `${bestDeal.price.toLocaleString()}원 절약`;
+            }
+        }
+
+        function updateNearbySaving() {
+            const el = document.getElementById('nearbySavingAmount');
+            if (storeMarkersData.length === 0) {
+                el.textContent = '매장 없음';
+                return;
+            }
+            // 반경 내 행사 상품 수 (중복 제거)
+            const seen = new Set();
+            storeMarkersData.forEach(store => {
+                store.deals.forEach(d => seen.add(d.id || d.name));
+            });
+            el.textContent = `${seen.size.toLocaleString()}개`;
         }
 
         function generateVirtualStoresDB(baseLat = 37.498095, baseLng = 127.027610) {
@@ -1038,6 +1055,7 @@
                     mapMarkers.push(marker);
                 }
             });
+            updateNearbySaving();
             // 첫 로딩 시에만 주변 행사 미리보기 표시
             setTimeout(showNearbyPreview, 800);
         }
