@@ -14866,8 +14866,8 @@
     }
   },
   {
-    "id": "뽀짜툰장유리너리",
-    "name": "뽀짜툰)장&유리너리",
+    "id": "플래니장유리너리",
+    "name": "플래니)장&유리너리",
     "category": "기타",
     "price": 2000,
     "saving": 667,
@@ -14875,9 +14875,9 @@
     "events": {
       "CU": {
         "type": "2+1",
-        "isNew": false,
+        "isNew": true,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801047645207.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801047645207.png"
       }
     }
   },
