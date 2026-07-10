@@ -174,6 +174,12 @@
             </div>
         </div>
 
+        <!-- 날씨 칩 (상태 따라 아이콘 변경, 탭하면 날씨 추천 다시 보기) -->
+        <button id="weatherChip" onclick="reopenWeatherPreview()" class="hidden absolute top-[158px] left-3 z-[300] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 pl-2 pr-3 py-1.5 items-center gap-1.5 pointer-events-auto active:scale-95 transition">
+            <span id="weatherChipIcon" class="text-base leading-none">☀️</span>
+            <span id="weatherChipText" class="text-[11px] font-black text-gray-700 leading-none">--℃</span>
+        </button>
+
         <!-- Re-search Area Button -->
         <button id="reSearchBtn" onclick="searchInCurrentArea()" class="absolute bottom-[110px] left-1/2 transform -translate-x-1/2 z-[500] bg-gray-900 text-white px-4 py-2.5 rounded-full text-[12px] font-bold shadow-[0_4px_15px_rgba(0,0,0,0.3)] flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-[10px]">
             <i class="fa-solid fa-rotate-right text-blue-400"></i> 이 지역 재검색
@@ -973,14 +979,16 @@
                         const lng = position.coords.longitude;
                         map.setView([lat, lng], 16);
                         searchCircle.setLatLng([lat, lng]);
+                        updateWeather(lat, lng);
                         const switched = await loadStoresForLocation(lat, lng);
                         if (!switched && REAL_STORES.length === 0) generateVirtualStoresDB(lat, lng);
                         loadStoresInRadius();
                     },
-                    error => { loadStoresInRadius(); },
+                    error => { updateWeather(defaultCenter[0], defaultCenter[1]); loadStoresInRadius(); },
                     { timeout: 5000 }
                 );
             } else {
+                updateWeather(defaultCenter[0], defaultCenter[1]);
                 loadStoresInRadius();
             }
             setTimeout(() => { map.invalidateSize(); }, 300);
@@ -1062,6 +1070,57 @@
             setTimeout(showNearbyPreview, 800);
         }
 
+        // ── 날씨 기반 추천 (Open-Meteo, 키 불필요) ──────────────────────────
+        let currentWeather = null; // { temp, code, precip }
+
+        function weatherIcon(w) {
+            if (!w) return '☀️';
+            const c = w.code;
+            if ((c >= 71 && c <= 77) || c === 85 || c === 86) return '🌨️'; // 눈
+            if ((c >= 51 && c <= 67) || (c >= 80 && c <= 82) || c === 95 || c === 99 || w.precip > 0) return '🌧️'; // 비
+            if (c === 45 || c === 48) return '🌫️'; // 안개
+            if (c >= 2 && c <= 3) return '⛅';
+            if (c === 1) return '🌤️';
+            if (w.temp >= 28) return '☀️';
+            if (w.temp <= 3) return '❄️';
+            return '☀️';
+        }
+
+        // 날씨 상태 → 추천 상품명 키워드. 카테고리가 절반 미분류라 상품명으로 매칭한다.
+        function weatherKeywords(w) {
+            if (!w) return null;
+            const c = w.code;
+            const snow = (c >= 71 && c <= 77) || c === 85 || c === 86;
+            const rain = (c >= 51 && c <= 67) || (c >= 80 && c <= 82) || c === 95 || c === 99 || w.precip > 0;
+            if (snow) return { re: /핫팩|커피|아메리카노|라떼|따뜻|호빵|찐빵|어묵|오뎅|컵라면|라면|죽|국밥|핫초코/, msg: '눈 오는 날, 따뜻한 상품 어때요' };
+            if (rain) return { re: /우산|커피|아메리카노|라떼|컵라면|라면|우동|따뜻|어묵|오뎅|호빵/, msg: '비 오는 날, 이런 상품 어때요' };
+            if (w.temp >= 25) return { re: /아이스|빙수|콘|메로나|설레임|스크류|월드콘|구구|돼지바|바밤바|탄산|콜라|사이다|스프라이트|환타|밀키스|생수|워터|얼음|이온|게토레이|파워에이드|토레타|에이드/, msg: '시원한 상품이 잘 어울려요' };
+            if (w.temp <= 10) return { re: /컵라면|라면|우동|호빵|찐빵|죽|국밥|어묵|오뎅|핫초코|따뜻|커피|아메리카노/, msg: '따뜻한 상품을 추천해요' };
+            return null; // 선선 — 특정 필터 없이 일반 추천
+        }
+
+        async function updateWeather(lat, lng) {
+            try {
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,weather_code,precipitation`;
+                const res = await fetch(url);
+                if (!res.ok) return;
+                const j = await res.json();
+                if (!j.current) return;
+                currentWeather = { temp: Math.round(j.current.temperature_2m), code: j.current.weather_code, precip: j.current.precipitation };
+                const chip = document.getElementById('weatherChip');
+                document.getElementById('weatherChipIcon').textContent = weatherIcon(currentWeather);
+                document.getElementById('weatherChipText').textContent = `${currentWeather.temp}℃`;
+                chip.classList.remove('hidden');
+                chip.classList.add('flex');
+            } catch (e) {}
+        }
+
+        // 날씨 칩 탭 → 추천 시트 다시 열기
+        function reopenWeatherPreview() {
+            nearbyPreviewShown = false;
+            showNearbyPreview();
+        }
+
         function showNearbyPreview() {
             if (nearbyPreviewShown || storeMarkersData.length === 0) return;
             nearbyPreviewShown = true;
@@ -1073,14 +1132,27 @@
                     allDeals.push({ deal, store });
                 });
             });
-            const picks = allDeals.sort(() => Math.random() - 0.5).slice(0, 5);
+            // 날씨가 있으면 관련 상품을 앞으로 당겨 추천, 없으면 기존처럼 무작위
+            const wk = weatherKeywords(currentWeather);
+            let picks;
+            if (wk) {
+                const matched = allDeals.filter(x => wk.re.test(x.deal.name)).sort(() => Math.random() - 0.5);
+                const rest = allDeals.filter(x => !wk.re.test(x.deal.name)).sort(() => Math.random() - 0.5);
+                picks = [...matched, ...rest].slice(0, 5);
+            } else {
+                picks = allDeals.sort(() => Math.random() - 0.5).slice(0, 5);
+            }
 
             const BRAND_COLORS = { 'CU': '#652C91', 'GS25': '#00B69B', '7-ELEVEN': '#008061', 'EMART24': '#FFB71B' };
             const BRAND_TEXT_COLORS = { 'CU': 'white', 'GS25': 'white', '7-ELEVEN': 'white', 'EMART24': '#333' };
             const EMOJI_FALLBACK = { '음료': '🥤', '과자': '🍿', '아이스크림': '🍦', '라면': '🍜', '생활용품': '🧴', '유제품': '🥛', '빵': '🍞' };
 
             document.getElementById('nearbyPreviewTitle').textContent =
-                `내 주변 ${storeMarkersData.length}개 매장 행사`;
+                (currentWeather && wk)
+                    ? `${weatherIcon(currentWeather)} ${currentWeather.temp}℃ · ${wk.msg}`
+                    : currentWeather
+                        ? `${weatherIcon(currentWeather)} ${currentWeather.temp}℃ · 내 주변 ${storeMarkersData.length}개 매장 행사`
+                        : `내 주변 ${storeMarkersData.length}개 매장 행사`;
 
             document.getElementById('nearbyPreviewList').innerHTML = picks.map(({ deal, store }) => {
                 const evnt = deal.events[store.brand];
