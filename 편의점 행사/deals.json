@@ -13307,7 +13307,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115134220.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115134220_1.png"
       },
       "GS25": {
         "type": "2+1",
@@ -13341,7 +13341,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115134213.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115134213_1.png"
       },
       "GS25": {
         "type": "2+1",
@@ -13375,7 +13375,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115135708.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115135708_1.png"
       },
       "GS25": {
         "type": "2+1",
@@ -14537,7 +14537,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115137290.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115137290_1.png"
       },
       "GS25": {
         "type": "2+1",
@@ -14875,7 +14875,7 @@
     "events": {
       "CU": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801047645207.png"
       }
@@ -54694,6 +54694,2134 @@
     }
   },
   {
+    "id": "하이트제로무알콜캔",
+    "name": "하이트)제로(무알콜)캔500ml",
+    "category": "주류",
+    "price": 2800,
+    "saving": 2800,
+    "barcode": "8801001236434",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001236434.JPG"
+      }
+    }
+  },
+  {
+    "id": "하이트테라제로캔",
+    "name": "하이트)테라제로캔350ml",
+    "category": "주류",
+    "price": 2400,
+    "saving": 2400,
+    "barcode": "8801001237882",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001237882.JPG"
+      }
+    }
+  },
+  {
+    "id": "하이트블랙보리펫",
+    "name": "하이트)블랙보리펫520ml",
+    "category": "주류",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801001238049",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001238049.JPG"
+      }
+    }
+  },
+  {
+    "id": "하이트블랙보리라이트펫",
+    "name": "하이트)블랙보리라이트펫520ml",
+    "category": "주류",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801001238179",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001238179.JPG"
+      }
+    }
+  },
+  {
+    "id": "하이트블랙보리누룽지펫",
+    "name": "하이트)블랙보리누룽지펫520ml",
+    "category": "주류",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801001238391",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001238391.JPG"
+      }
+    }
+  },
+  {
+    "id": "hk헛개수펫",
+    "name": "HK)헛개수펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801007171210",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007171210.JPG"
+      }
+    }
+  },
+  {
+    "id": "삼양사상쾌환부스터병",
+    "name": "삼양사)상쾌환부스터병100ml",
+    "category": "기타",
+    "price": 5000,
+    "saving": 5000,
+    "barcode": "8801013777260",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801013777260.JPG"
+      }
+    }
+  },
+  {
+    "id": "삼양사상쾌환부스터제로병",
+    "name": "삼양사)상쾌환부스터제로병100ml",
+    "category": "기타",
+    "price": 5000,
+    "saving": 5000,
+    "barcode": "8801013777468",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801013777468.JPG"
+      }
+    }
+  },
+  {
+    "id": "오뚜기컵밥전주식콩나물국밥",
+    "name": "오뚜기)컵밥전주식콩나물국밥",
+    "category": "간편식",
+    "price": 5400,
+    "saving": 5400,
+    "barcode": "8801045349473",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045349473.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원보성홍차복숭아제로아이스티펫",
+    "name": "동원)보성홍차복숭아제로아이스티펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801047284482",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047284482.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원보성홍차레몬제로아이스티펫",
+    "name": "동원)보성홍차레몬제로아이스티펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801047284499",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047284499.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원보성홍차애플제로아이스티펫",
+    "name": "동원)보성홍차애플제로아이스티펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801047284550",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047284550.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원보성홍차샤인머스캣제로아이스티펫",
+    "name": "동원)보성홍차샤인머스캣제로아이스티펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801047284598",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047284598.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원비타c자몽에이드제로펫",
+    "name": "동원)비타C자몽에이드제로펫500ml",
+    "category": "음료",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801047284642",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047284642.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원샘물펫qr",
+    "name": "동원)샘물펫500ml(QR)",
+    "category": "기타",
+    "price": 1000,
+    "saving": 1000,
+    "barcode": "8801047287957",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047287964.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원샘물펫",
+    "name": "동원)샘물펫500ml",
+    "category": "기타",
+    "price": 1000,
+    "saving": 1000,
+    "barcode": "8801047288114",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047288213.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원오미자차펫",
+    "name": "동원)오미자차펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801047289685",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047289685.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원보성말차펫",
+    "name": "동원)보성말차펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801047289852",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047289852.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원양반매실차펫",
+    "name": "동원)양반매실차펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801047291282",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047291282.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원보성홍차한라봉제로아이스티펫",
+    "name": "동원)보성홍차한라봉제로아이스티펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801047496083",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047496083.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데2복숭아제로펫",
+    "name": "롯데)2%복숭아제로펫500ml",
+    "category": "기타",
+    "price": 2000,
+    "saving": 2000,
+    "barcode": "8801056002725",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056002725.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데밀키스캔",
+    "name": "롯데)밀키스캔340ml",
+    "category": "음료",
+    "price": 1800,
+    "saving": 1800,
+    "barcode": "8801056043551",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056043551.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데핫식스더킹파워캔",
+    "name": "롯데)핫식스더킹파워캔355ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056098834",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056098834.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데핫식스더킹포스캔",
+    "name": "롯데)핫식스더킹포스캔355ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056171032",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056171032.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데펩시콜라제로펫",
+    "name": "롯데)펩시콜라제로펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056175955",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056175955.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데칠성사이다제로펫1",
+    "name": "롯데)칠성사이다제로펫1.5L",
+    "category": "음료",
+    "price": 4200,
+    "saving": 4200,
+    "barcode": "8801056177553",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056177553.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데칠성사이다제로펫",
+    "name": "롯데)칠성사이다제로펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056177584",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056177584.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데핫식스더킹러쉬캔",
+    "name": "롯데)핫식스더킹러쉬캔355ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056178925",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056178925.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데펩시콜라펫",
+    "name": "롯데)펩시콜라펫600ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056193010",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056193010.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데펩시콜라제로펫1",
+    "name": "롯데)펩시콜라제로펫1.5L",
+    "category": "음료",
+    "price": 4200,
+    "saving": 4200,
+    "barcode": "8801056226459",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056226459.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데핫식스더킹제로캔",
+    "name": "롯데)핫식스더킹제로캔355ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056228255",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056228255.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데탐스제로파인애플캔",
+    "name": "롯데)탐스제로파인애플캔355ml",
+    "category": "기타",
+    "price": 1500,
+    "saving": 1500,
+    "barcode": "8801056231682",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056231682.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데핫식스더킹크러쉬피치캔",
+    "name": "롯데)핫식스더킹크러쉬피치캔355ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056234423",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056234423.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데핫식스더킹퍼플그레이프캔",
+    "name": "롯데)핫식스더킹퍼플그레이프캔355ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056240998",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056240998.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데펩시콜라제로카페인펫",
+    "name": "롯데)펩시콜라제로카페인펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056245085",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056245085.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데핫식스더킹애플캔",
+    "name": "롯데)핫식스더킹애플캔355ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056249212",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056249212.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데2레몬라임펫",
+    "name": "롯데)2%레몬라임펫500ml",
+    "category": "기타",
+    "price": 2000,
+    "saving": 2000,
+    "barcode": "8801056251062",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056251062.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데핫식스더킹아이스피치제로캔",
+    "name": "롯데)핫식스더킹아이스피치제로캔355ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056251253",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056251253.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데칠성사이다제로라임펫",
+    "name": "롯데)칠성사이다제로라임펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056251727",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056251727.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데더하다파로귀리펫",
+    "name": "롯데)더하다파로귀리펫500ml",
+    "category": "유제품",
+    "price": 2000,
+    "saving": 2000,
+    "barcode": "8801056252731",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056252731.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데핫식스더킹파인버스트캔",
+    "name": "롯데)핫식스더킹파인버스트캔355ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056910693",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056910693.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데해피즈레몬라임캔",
+    "name": "롯데)해피즈레몬라임캔355ml",
+    "category": "기타",
+    "price": 3000,
+    "saving": 3000,
+    "barcode": "8801056910716",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056910716.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데해피즈트로피칼캔",
+    "name": "롯데)해피즈트로피칼캔355ml",
+    "category": "기타",
+    "price": 3000,
+    "saving": 3000,
+    "barcode": "8801056910723",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056910723.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데해피즈팝핑체리캔",
+    "name": "롯데)해피즈팝핑체리캔355ml",
+    "category": "기타",
+    "price": 3000,
+    "saving": 3000,
+    "barcode": "8801056910730",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056910730.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데펩시제로피치펫",
+    "name": "롯데)펩시제로피치펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056911027",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056911027.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데핫식스글로우피치살구캔",
+    "name": "롯데)핫식스글로우피치살구캔355ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056911072",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056911072.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데핫식스글로우사과포멜로캔",
+    "name": "롯데)핫식스글로우사과포멜로캔355ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056911171",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056911171.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데칠성사이다제로유자펫",
+    "name": "롯데)칠성사이다제로유자펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056911270",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056911270.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데립톤스파클링제로캔",
+    "name": "롯데)립톤스파클링제로캔355ml",
+    "category": "기타",
+    "price": 1800,
+    "saving": 1800,
+    "barcode": "8801056911379",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056911379.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데펩시엑스트라피즈펫",
+    "name": "롯데)펩시엑스트라피즈펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056911782",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056911782.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카파워에이드제로라임펫",
+    "name": "코카)파워에이드제로라임펫600ml",
+    "category": "음료",
+    "price": 2400,
+    "saving": 2400,
+    "barcode": "8801094000288",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094000288.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카콜라제로제로펫",
+    "name": "코카)콜라제로제로펫500ml",
+    "category": "음료",
+    "price": 2400,
+    "saving": 2400,
+    "barcode": "8801094000554",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094000554.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카스프라이트제로위드티펫",
+    "name": "코카)스프라이트제로위드티펫500ml",
+    "category": "음료",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801094001704",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094001704.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카콜라제로레몬펫",
+    "name": "코카)콜라제로레몬펫500ml",
+    "category": "음료",
+    "price": 2400,
+    "saving": 2400,
+    "barcode": "8801094062675",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094062675.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카콜라체리제로펫",
+    "name": "코카)콜라체리제로펫500ml",
+    "category": "음료",
+    "price": 2400,
+    "saving": 2400,
+    "barcode": "8801094072667",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094072667.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카콜라제로펫1",
+    "name": "코카)콜라제로펫1.5L",
+    "category": "음료",
+    "price": 4000,
+    "saving": 4000,
+    "barcode": "8801094082406",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094082406.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카스프라이트펫",
+    "name": "코카)스프라이트펫500ml",
+    "category": "음료",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801094202606",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094202606.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카스프라이트캔",
+    "name": "코카)스프라이트캔350ml",
+    "category": "음료",
+    "price": 1900,
+    "saving": 1900,
+    "barcode": "8801094203207",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094203207.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카환타제로파인캔",
+    "name": "코카)환타제로파인캔350ml",
+    "category": "음료",
+    "price": 1700,
+    "saving": 1700,
+    "barcode": "8801094263218",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094263218.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카토레타펫",
+    "name": "코카)토레타펫500ml",
+    "category": "음료",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801094412005",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094412005.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카토레타제로펫",
+    "name": "코카)토레타제로펫500ml",
+    "category": "음료",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801094412371",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094412371.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카파워에이드스칼렛스톰펫",
+    "name": "코카)파워에이드스칼렛스톰펫600ml",
+    "category": "음료",
+    "price": 2400,
+    "saving": 2400,
+    "barcode": "8801094602703",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094602703.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카파워에이드퍼플스톰펫",
+    "name": "코카)파워에이드퍼플스톰펫600ml",
+    "category": "음료",
+    "price": 2400,
+    "saving": 2400,
+    "barcode": "8801094603700",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094603700.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카스프라이트제로펫",
+    "name": "코카)스프라이트제로펫500ml",
+    "category": "음료",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801094962104",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094962104.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카스프라이트제로캔",
+    "name": "코카)스프라이트제로캔350ml",
+    "category": "음료",
+    "price": 1900,
+    "saving": 1900,
+    "barcode": "8801094963200",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094963200.JPG"
+      }
+    }
+  },
+  {
+    "id": "동아나랑드사이다제로캔",
+    "name": "동아)나랑드사이다제로캔245ml",
+    "category": "음료",
+    "price": 1500,
+    "saving": 1500,
+    "barcode": "8801097135215",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097135215.JPG"
+      }
+    }
+  },
+  {
+    "id": "동아나랑드사이다제로파인캔",
+    "name": "동아)나랑드사이다제로파인캔245ml",
+    "category": "음료",
+    "price": 1500,
+    "saving": 1500,
+    "barcode": "8801097136618",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097136618.JPG"
+      }
+    }
+  },
+  {
+    "id": "동아나랑드사이다제로펫",
+    "name": "동아)나랑드사이다제로펫500ml",
+    "category": "음료",
+    "price": 2000,
+    "saving": 2000,
+    "barcode": "8801097235014",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097235014.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카갈배사이다펫",
+    "name": "코카)갈배사이다펫500ml",
+    "category": "음료",
+    "price": 2300,
+    "saving": 2300,
+    "barcode": "8801105915679",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801105915679.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카봉봉애사비소다펫",
+    "name": "코카)봉봉애사비소다펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801105916959",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801105916959.JPG"
+      }
+    }
+  },
+  {
+    "id": "오리온닥터유제주용암수펫",
+    "name": "오리온)닥터유제주용암수펫530ml",
+    "category": "음료",
+    "price": 1000,
+    "saving": 1000,
+    "barcode": "8801117070007",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117070007.JPG"
+      }
+    }
+  },
+  {
+    "id": "덴마크테이크얼라이브스위티자몽제로펫",
+    "name": "덴마크)테이크얼라이브스위티자몽제로펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801155740054",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801155740054.JPG"
+      }
+    }
+  },
+  {
+    "id": "덴마크테이크얼라이브망고제로펫",
+    "name": "덴마크)테이크얼라이브망고제로펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801155740061",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801155740061.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진오곡누룽지펫",
+    "name": "웅진)오곡누룽지펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801382135036",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382135036.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진빅토리아레몬펫",
+    "name": "웅진)빅토리아레몬펫500ml",
+    "category": "기타",
+    "price": 1800,
+    "saving": 1800,
+    "barcode": "8801382145080",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382145080.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진광명찾은결명자차펫",
+    "name": "웅진)광명찾은결명자차펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801382145769",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382145769.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진빅토리아청포도펫",
+    "name": "웅진)빅토리아청포도펫500ml",
+    "category": "기타",
+    "price": 1800,
+    "saving": 1800,
+    "barcode": "8801382147060",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382147060.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진옥수수수염차펫",
+    "name": "웅진)옥수수수염차펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8801382148449",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382148449.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진티즐제로피치우롱티펫",
+    "name": "웅진)티즐제로피치우롱티펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801382148500",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382148500.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진티즐제로유자그린티펫",
+    "name": "웅진)티즐제로유자그린티펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801382148524",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382148524.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진티즐제로자몽블랙티펫",
+    "name": "웅진)티즐제로자몽블랙티펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801382149743",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382149743.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진자연은더말린복숭아제로펫",
+    "name": "웅진)자연은더말린복숭아제로펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801382150206",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382150206.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진자연은더말린자몽제로펫",
+    "name": "웅진)자연은더말린자몽제로펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801382150220",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382150220.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진푸룬부스터펫",
+    "name": "웅진)푸룬부스터펫200ml",
+    "category": "기타",
+    "price": 4500,
+    "saving": 4500,
+    "barcode": "8801382150626",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382150626.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진유기농하늘보리펫",
+    "name": "웅진)유기농하늘보리펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801382151449",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382151449.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진카무트현미차펫",
+    "name": "웅진)카무트현미차펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801382151777",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382151777.JPG"
+      }
+    }
+  },
+  {
+    "id": "옐로우프루티리치캐모마일제로펫",
+    "name": "옐로우)프루티리치캐모마일제로펫500ml",
+    "category": "기타",
+    "price": 2300,
+    "saving": 2300,
+    "barcode": "8801382152392",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152392.JPG"
+      }
+    }
+  },
+  {
+    "id": "옐로우프루티매실그린제로펫",
+    "name": "옐로우)프루티매실그린제로펫500ml",
+    "category": "기타",
+    "price": 2300,
+    "saving": 2300,
+    "barcode": "8801382152408",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152408.JPG"
+      }
+    }
+  },
+  {
+    "id": "옐로우프루티유자민트제로펫",
+    "name": "옐로우)프루티유자민트제로펫500ml",
+    "category": "기타",
+    "price": 2300,
+    "saving": 2300,
+    "barcode": "8801382152415",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152415.JPG"
+      }
+    }
+  },
+  {
+    "id": "옐로우소프트워터청포도제로",
+    "name": "옐로우)소프트워터청포도제로500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801382152699",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152699.JPG"
+      }
+    }
+  },
+  {
+    "id": "옐로우소프트워터복숭아제로",
+    "name": "옐로우)소프트워터복숭아제로500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801382152712",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152712.JPG"
+      }
+    }
+  },
+  {
+    "id": "옐로우에너지워터블루레몬제로",
+    "name": "옐로우)에너지워터블루레몬제로500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801382152736",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152736.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진생차녹차",
+    "name": "웅진)생차녹차500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801382152798",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152798.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진생차호지차",
+    "name": "웅진)생차호지차500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801382152811",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152811.JPG"
+      }
+    }
+  },
+  {
+    "id": "옐로우프루티망고우롱제로펫",
+    "name": "옐로우)프루티망고우롱제로펫500ml",
+    "category": "기타",
+    "price": 2300,
+    "saving": 2300,
+    "barcode": "8801382153146",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382153146.JPG"
+      }
+    }
+  },
+  {
+    "id": "cj햇반파로누룽지차펫",
+    "name": "CJ)햇반파로누룽지차펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801392177118",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392177118.JPG"
+      }
+    }
+  },
+  {
+    "id": "cj햇반루피니빈보리차펫",
+    "name": "CJ)햇반루피니빈보리차펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801392183874",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392183874.JPG"
+      }
+    }
+  },
+  {
+    "id": "cj햇반레드빈호박차펫",
+    "name": "CJ)햇반레드빈호박차펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801392186400",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392186400.JPG"
+      }
+    }
+  },
+  {
+    "id": "연세블루이글포커스캔",
+    "name": "연세)블루이글포커스캔355ml",
+    "category": "기타",
+    "price": 2300,
+    "saving": 2300,
+    "barcode": "8801753116848",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801753116848.JPG"
+      }
+    }
+  },
+  {
+    "id": "연세블루이글밸런스캔",
+    "name": "연세)블루이글밸런스캔355ml",
+    "category": "기타",
+    "price": 2300,
+    "saving": 2300,
+    "barcode": "8801753116862",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801753116862.JPG"
+      }
+    }
+  },
+  {
+    "id": "청정몽베스트펫qr",
+    "name": "청정)몽베스트펫500ml(QR)",
+    "category": "기타",
+    "price": 1100,
+    "saving": 1100,
+    "barcode": "8803186000992",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8803186000992.JPG"
+      }
+    }
+  },
+  {
+    "id": "종근당건강아임비타에너지샷병",
+    "name": "종근당건강)아임비타에너지샷병100ml",
+    "category": "기타",
+    "price": 1500,
+    "saving": 1500,
+    "barcode": "8805915916901",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8805915916901.JPG"
+      }
+    }
+  },
+  {
+    "id": "광동밀싹보리차펫",
+    "name": "광동)밀싹보리차펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8806002020174",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002020174.JPG"
+      }
+    }
+  },
+  {
+    "id": "광동더진한헛개차골드라벨펫",
+    "name": "광동)더진한헛개차골드라벨펫500ml",
+    "category": "기타",
+    "price": 3300,
+    "saving": 3300,
+    "barcode": "8806002020334",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002020334.JPG"
+      }
+    }
+  },
+  {
+    "id": "광동비타500이온킥제로펫1",
+    "name": "광동)비타500이온킥제로펫1.5L",
+    "category": "음료",
+    "price": 4500,
+    "saving": 4500,
+    "barcode": "8806002025469",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002025469.JPG"
+      }
+    }
+  },
+  {
+    "id": "광동유기농옥수수수염차펫",
+    "name": "광동)유기농옥수수수염차펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8806002025636",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002025636.JPG"
+      }
+    }
+  },
+  {
+    "id": "동화배러푸룬펫",
+    "name": "동화)배러푸룬펫120g",
+    "category": "기타",
+    "price": 3500,
+    "saving": 3500,
+    "barcode": "8806016185289",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806016185289.JPG"
+      }
+    }
+  },
+  {
+    "id": "동화부채표소다활펫",
+    "name": "동화)부채표소다활펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8806016186491",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806016186491.JPG"
+      }
+    }
+  },
+  {
+    "id": "쟈뎅제주청보리차펫",
+    "name": "쟈뎅)제주청보리차펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8808024030803",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8808024030803.JPG"
+      }
+    }
+  },
+  {
+    "id": "풀무원샘물펫qr",
+    "name": "풀무원)샘물펫500ml(QR)",
+    "category": "기타",
+    "price": 1000,
+    "saving": 1000,
+    "barcode": "8809169710179",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809169711138.JPG"
+      }
+    }
+  },
+  {
+    "id": "풀무원곡물차하루귀리펫",
+    "name": "풀무원)곡물차하루귀리펫500ml",
+    "category": "유제품",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8809169710872",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809169710872.JPG"
+      }
+    }
+  },
+  {
+    "id": "테일러블루베리주스펫",
+    "name": "테일러)블루베리주스펫180ml",
+    "category": "음료",
+    "price": 3500,
+    "saving": 3500,
+    "barcode": "8809170540352",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809170540352.JPG"
+      }
+    }
+  },
+  {
+    "id": "딥스춘식이해양심층수펫",
+    "name": "딥스)춘식이해양심층수펫500ml",
+    "category": "기타",
+    "price": 1500,
+    "saving": 1500,
+    "barcode": "8809309399936",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809309399936.JPG"
+      }
+    }
+  },
+  {
+    "id": "천지개벽병new",
+    "name": "천지개벽)병100ml(NEW)",
+    "category": "기타",
+    "price": 5000,
+    "saving": 5000,
+    "barcode": "8809329050541",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809329050541.JPG"
+      }
+    }
+  },
+  {
+    "id": "hk새싹보리펫",
+    "name": "HK)새싹보리펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8809422041125",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422041125.JPG"
+      }
+    }
+  },
+  {
+    "id": "hk헛개수ex펫",
+    "name": "HK)헛개수EX펫500ml",
+    "category": "기타",
+    "price": 3000,
+    "saving": 3000,
+    "barcode": "8809422041729",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422041729.JPG"
+      }
+    }
+  },
+  {
+    "id": "hk티로그청귤아이스티제로펫",
+    "name": "HK)티로그청귤아이스티제로펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8809422044430",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422044430.JPG"
+      }
+    }
+  },
+  {
+    "id": "hk티로그복숭아아이스티제로펫",
+    "name": "HK)티로그복숭아아이스티제로펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8809422044447",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422044447.JPG"
+      }
+    }
+  },
+  {
+    "id": "hk티로그애플청포도아이스티제로펫",
+    "name": "HK)티로그애플청포도아이스티제로펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8809422045925",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422045925.JPG"
+      }
+    }
+  },
+  {
+    "id": "hk티로그자두아이스티제로펫",
+    "name": "HK)티로그자두아이스티제로펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8809422045932",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422045932.JPG"
+      }
+    }
+  },
+  {
+    "id": "hk컨디션스파클링자몽제로병",
+    "name": "HK)컨디션스파클링자몽제로병100ml",
+    "category": "기타",
+    "price": 5000,
+    "saving": 5000,
+    "barcode": "8809422046045",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422046045.JPG"
+      }
+    }
+  },
+  {
+    "id": "hk새싹보리블랙펫",
+    "name": "HK)새싹보리블랙펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8809422046106",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422046106.JPG"
+      }
+    }
+  },
+  {
+    "id": "hk컨디션제로스파클링메론소다병",
+    "name": "HK)컨디션제로스파클링메론소다병100ml",
+    "category": "기타",
+    "price": 5000,
+    "saving": 5000,
+    "barcode": "8809422046762",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422046762.JPG"
+      }
+    }
+  },
+  {
+    "id": "hk티로그망고수박아이스티제로펫",
+    "name": "HK)티로그망고수박아이스티제로펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8809422046991",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422046991.JPG"
+      }
+    }
+  },
+  {
+    "id": "코아캐치티니핑워터젤리복숭아",
+    "name": "코아)캐치티니핑워터젤리복숭아110ml",
+    "category": "스낵·과자",
+    "price": 1800,
+    "saving": 1800,
+    "barcode": "8809456260646",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809456260646.JPG"
+      }
+    }
+  },
+  {
+    "id": "코아캐치티니핑하루키즈포도",
+    "name": "코아)캐치티니핑하루키즈포도100ml",
+    "category": "기타",
+    "price": 1800,
+    "saving": 1800,
+    "barcode": "8809456260783",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809456260783.JPG"
+      }
+    }
+  },
+  {
+    "id": "코아캐치티니핑하루키즈소다",
+    "name": "코아)캐치티니핑하루키즈소다100ml",
+    "category": "기타",
+    "price": 1800,
+    "saving": 1800,
+    "barcode": "8809456260806",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809456260806.JPG"
+      }
+    }
+  },
+  {
+    "id": "링티제로복숭아펫",
+    "name": "링티)제로복숭아펫500ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 2900,
+    "barcode": "8809626920295",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809626920295.JPG"
+      }
+    }
+  },
+  {
+    "id": "링티레몬라이트제로펫",
+    "name": "링티)레몬라이트제로펫500ml",
+    "category": "기타",
+    "price": 3200,
+    "saving": 3200,
+    "barcode": "8809626921407",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809626921407.JPG"
+      }
+    }
+  },
+  {
+    "id": "링티리커버리기어샤인머스켓라임펫",
+    "name": "링티)리커버리기어샤인머스켓라임펫500ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 2900,
+    "barcode": "8809799270500",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809799270500.JPG"
+      }
+    }
+  },
+  {
+    "id": "링티리커버리기어자몽오렌지펫",
+    "name": "링티)리커버리기어자몽오렌지펫500ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 2900,
+    "barcode": "8809799270531",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809799270531.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원양반유자제로펫",
+    "name": "동원)양반유자제로펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8809848280085",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809848280085.JPG"
+      }
+    }
+  },
+  {
+    "id": "동원양반누룽지펫",
+    "name": "동원)양반누룽지펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8809848280412",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809848280412.JPG"
+      }
+    }
+  },
+  {
     "id": "말차310통딸기말차모찌냉동",
     "name": "말차310)통딸기말차모찌70g(냉동)",
     "category": "기타",
@@ -55894,86 +58022,6 @@
     }
   },
   {
-    "id": "하이트제로무알콜캔",
-    "name": "하이트)제로(무알콜)캔500ml",
-    "category": "주류",
-    "price": 2800,
-    "saving": 2800,
-    "barcode": "8801001236434",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001236434.JPG"
-      }
-    }
-  },
-  {
-    "id": "하이트테라제로캔",
-    "name": "하이트)테라제로캔350ml",
-    "category": "주류",
-    "price": 2400,
-    "saving": 2400,
-    "barcode": "8801001237882",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001237882.JPG"
-      }
-    }
-  },
-  {
-    "id": "하이트블랙보리펫",
-    "name": "하이트)블랙보리펫520ml",
-    "category": "주류",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801001238049",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001238049.JPG"
-      }
-    }
-  },
-  {
-    "id": "하이트블랙보리라이트펫",
-    "name": "하이트)블랙보리라이트펫520ml",
-    "category": "주류",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801001238179",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001238179.JPG"
-      }
-    }
-  },
-  {
-    "id": "하이트블랙보리누룽지펫",
-    "name": "하이트)블랙보리누룽지펫520ml",
-    "category": "주류",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801001238391",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001238391.JPG"
-      }
-    }
-  },
-  {
     "id": "cj햇반발아현미밥36",
     "name": "CJ)햇반발아현미밥210g(36)",
     "category": "기타",
@@ -56070,22 +58118,6 @@
     }
   },
   {
-    "id": "hk헛개수펫",
-    "name": "HK)헛개수펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801007171210",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007171210.JPG"
-      }
-    }
-  },
-  {
     "id": "cj안심아삭콩나물",
     "name": "CJ)안심아삭콩나물380g",
     "category": "기타",
@@ -56178,38 +58210,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801013777024.JPG"
-      }
-    }
-  },
-  {
-    "id": "삼양사상쾌환부스터병",
-    "name": "삼양사)상쾌환부스터병100ml",
-    "category": "기타",
-    "price": 5000,
-    "saving": 5000,
-    "barcode": "8801013777260",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801013777260.JPG"
-      }
-    }
-  },
-  {
-    "id": "삼양사상쾌환부스터제로병",
-    "name": "삼양사)상쾌환부스터제로병100ml",
-    "category": "기타",
-    "price": 5000,
-    "saving": 5000,
-    "barcode": "8801013777468",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801013777468.JPG"
       }
     }
   },
@@ -56630,166 +58630,6 @@
     }
   },
   {
-    "id": "동원보성홍차복숭아제로아이스티펫",
-    "name": "동원)보성홍차복숭아제로아이스티펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801047284482",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047284482.JPG"
-      }
-    }
-  },
-  {
-    "id": "동원보성홍차레몬제로아이스티펫",
-    "name": "동원)보성홍차레몬제로아이스티펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801047284499",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047284499.JPG"
-      }
-    }
-  },
-  {
-    "id": "동원보성홍차애플제로아이스티펫",
-    "name": "동원)보성홍차애플제로아이스티펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801047284550",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047284550.JPG"
-      }
-    }
-  },
-  {
-    "id": "동원보성홍차샤인머스캣제로아이스티펫",
-    "name": "동원)보성홍차샤인머스캣제로아이스티펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801047284598",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047284598.JPG"
-      }
-    }
-  },
-  {
-    "id": "동원비타c자몽에이드제로펫",
-    "name": "동원)비타C자몽에이드제로펫500ml",
-    "category": "음료",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801047284642",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047284642.JPG"
-      }
-    }
-  },
-  {
-    "id": "동원샘물펫qr",
-    "name": "동원)샘물펫500ml(QR)",
-    "category": "기타",
-    "price": 1000,
-    "saving": 1000,
-    "barcode": "8801047287957",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047287964.JPG"
-      }
-    }
-  },
-  {
-    "id": "동원샘물펫",
-    "name": "동원)샘물펫500ml",
-    "category": "기타",
-    "price": 1000,
-    "saving": 1000,
-    "barcode": "8801047288114",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047288213.JPG"
-      }
-    }
-  },
-  {
-    "id": "동원오미자차펫",
-    "name": "동원)오미자차펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801047289685",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047289685.JPG"
-      }
-    }
-  },
-  {
-    "id": "동원보성말차펫",
-    "name": "동원)보성말차펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801047289852",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047289852.JPG"
-      }
-    }
-  },
-  {
-    "id": "동원양반매실차펫",
-    "name": "동원)양반매실차펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801047291282",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047291282.JPG"
-      }
-    }
-  },
-  {
     "id": "동원매콤달콤떡볶이",
     "name": "동원)매콤달콤떡볶이160g",
     "category": "간편식",
@@ -56834,22 +58674,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047416920.JPG"
-      }
-    }
-  },
-  {
-    "id": "동원보성홍차한라봉제로아이스티펫",
-    "name": "동원)보성홍차한라봉제로아이스티펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801047496083",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801047496083.JPG"
       }
     }
   },
@@ -57174,486 +58998,6 @@
     }
   },
   {
-    "id": "롯데2복숭아제로펫",
-    "name": "롯데)2%복숭아제로펫500ml",
-    "category": "기타",
-    "price": 2000,
-    "saving": 2000,
-    "barcode": "8801056002725",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056002725.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데밀키스캔",
-    "name": "롯데)밀키스캔340ml",
-    "category": "음료",
-    "price": 1800,
-    "saving": 1800,
-    "barcode": "8801056043551",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056043551.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데핫식스더킹파워캔",
-    "name": "롯데)핫식스더킹파워캔355ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056098834",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056098834.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데핫식스더킹포스캔",
-    "name": "롯데)핫식스더킹포스캔355ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056171032",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056171032.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데펩시콜라제로펫",
-    "name": "롯데)펩시콜라제로펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056175955",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056175955.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데칠성사이다제로펫1",
-    "name": "롯데)칠성사이다제로펫1.5L",
-    "category": "음료",
-    "price": 4200,
-    "saving": 4200,
-    "barcode": "8801056177553",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056177553.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데칠성사이다제로펫",
-    "name": "롯데)칠성사이다제로펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056177584",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056177584.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데핫식스더킹러쉬캔",
-    "name": "롯데)핫식스더킹러쉬캔355ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056178925",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056178925.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데펩시콜라펫",
-    "name": "롯데)펩시콜라펫600ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056193010",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056193010.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데펩시콜라제로펫1",
-    "name": "롯데)펩시콜라제로펫1.5L",
-    "category": "음료",
-    "price": 4200,
-    "saving": 4200,
-    "barcode": "8801056226459",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056226459.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데핫식스더킹제로캔",
-    "name": "롯데)핫식스더킹제로캔355ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056228255",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056228255.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데탐스제로파인애플캔",
-    "name": "롯데)탐스제로파인애플캔355ml",
-    "category": "기타",
-    "price": 1500,
-    "saving": 1500,
-    "barcode": "8801056231682",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056231682.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데핫식스더킹크러쉬피치캔",
-    "name": "롯데)핫식스더킹크러쉬피치캔355ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056234423",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056234423.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데핫식스더킹퍼플그레이프캔",
-    "name": "롯데)핫식스더킹퍼플그레이프캔355ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056240998",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056240998.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데펩시콜라제로카페인펫",
-    "name": "롯데)펩시콜라제로카페인펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056245085",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056245085.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데핫식스더킹애플캔",
-    "name": "롯데)핫식스더킹애플캔355ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056249212",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056249212.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데2레몬라임펫",
-    "name": "롯데)2%레몬라임펫500ml",
-    "category": "기타",
-    "price": 2000,
-    "saving": 2000,
-    "barcode": "8801056251062",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056251062.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데핫식스더킹아이스피치제로캔",
-    "name": "롯데)핫식스더킹아이스피치제로캔355ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056251253",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056251253.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데칠성사이다제로라임펫",
-    "name": "롯데)칠성사이다제로라임펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056251727",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056251727.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데더하다파로귀리펫",
-    "name": "롯데)더하다파로귀리펫500ml",
-    "category": "유제품",
-    "price": 2000,
-    "saving": 2000,
-    "barcode": "8801056252731",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056252731.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데핫식스더킹파인버스트캔",
-    "name": "롯데)핫식스더킹파인버스트캔355ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056910693",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056910693.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데해피즈레몬라임캔",
-    "name": "롯데)해피즈레몬라임캔355ml",
-    "category": "기타",
-    "price": 3000,
-    "saving": 3000,
-    "barcode": "8801056910716",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056910716.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데해피즈트로피칼캔",
-    "name": "롯데)해피즈트로피칼캔355ml",
-    "category": "기타",
-    "price": 3000,
-    "saving": 3000,
-    "barcode": "8801056910723",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056910723.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데해피즈팝핑체리캔",
-    "name": "롯데)해피즈팝핑체리캔355ml",
-    "category": "기타",
-    "price": 3000,
-    "saving": 3000,
-    "barcode": "8801056910730",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056910730.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데펩시제로피치펫",
-    "name": "롯데)펩시제로피치펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056911027",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056911027.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데핫식스글로우피치살구캔",
-    "name": "롯데)핫식스글로우피치살구캔355ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056911072",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056911072.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데핫식스글로우사과포멜로캔",
-    "name": "롯데)핫식스글로우사과포멜로캔355ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056911171",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056911171.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데칠성사이다제로유자펫",
-    "name": "롯데)칠성사이다제로유자펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056911270",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056911270.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데립톤스파클링제로캔",
-    "name": "롯데)립톤스파클링제로캔355ml",
-    "category": "기타",
-    "price": 1800,
-    "saving": 1800,
-    "barcode": "8801056911379",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056911379.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데펩시엑스트라피즈펫",
-    "name": "롯데)펩시엑스트라피즈펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056911782",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056911782.JPG"
-      }
-    }
-  },
-  {
     "id": "남양맛있는두유담백한맛",
     "name": "남양)맛있는두유담백한맛190ml",
     "category": "유제품",
@@ -57746,294 +59090,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801073313064.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카파워에이드제로라임펫",
-    "name": "코카)파워에이드제로라임펫600ml",
-    "category": "음료",
-    "price": 2400,
-    "saving": 2400,
-    "barcode": "8801094000288",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094000288.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카콜라제로제로펫",
-    "name": "코카)콜라제로제로펫500ml",
-    "category": "음료",
-    "price": 2400,
-    "saving": 2400,
-    "barcode": "8801094000554",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094000554.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카스프라이트제로위드티펫",
-    "name": "코카)스프라이트제로위드티펫500ml",
-    "category": "음료",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801094001704",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094001704.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카콜라제로레몬펫",
-    "name": "코카)콜라제로레몬펫500ml",
-    "category": "음료",
-    "price": 2400,
-    "saving": 2400,
-    "barcode": "8801094062675",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094062675.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카콜라체리제로펫",
-    "name": "코카)콜라체리제로펫500ml",
-    "category": "음료",
-    "price": 2400,
-    "saving": 2400,
-    "barcode": "8801094072667",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094072667.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카콜라제로펫1",
-    "name": "코카)콜라제로펫1.5L",
-    "category": "음료",
-    "price": 4000,
-    "saving": 4000,
-    "barcode": "8801094082406",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094082406.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카스프라이트펫",
-    "name": "코카)스프라이트펫500ml",
-    "category": "음료",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801094202606",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094202606.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카스프라이트캔",
-    "name": "코카)스프라이트캔350ml",
-    "category": "음료",
-    "price": 1900,
-    "saving": 1900,
-    "barcode": "8801094203207",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094203207.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카환타제로파인캔",
-    "name": "코카)환타제로파인캔350ml",
-    "category": "음료",
-    "price": 1700,
-    "saving": 1700,
-    "barcode": "8801094263218",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094263218.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카토레타펫",
-    "name": "코카)토레타펫500ml",
-    "category": "음료",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801094412005",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094412005.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카토레타제로펫",
-    "name": "코카)토레타제로펫500ml",
-    "category": "음료",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801094412371",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094412371.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카파워에이드스칼렛스톰펫",
-    "name": "코카)파워에이드스칼렛스톰펫600ml",
-    "category": "음료",
-    "price": 2400,
-    "saving": 2400,
-    "barcode": "8801094602703",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094602703.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카파워에이드퍼플스톰펫",
-    "name": "코카)파워에이드퍼플스톰펫600ml",
-    "category": "음료",
-    "price": 2400,
-    "saving": 2400,
-    "barcode": "8801094603700",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094603700.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카스프라이트제로펫",
-    "name": "코카)스프라이트제로펫500ml",
-    "category": "음료",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801094962104",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094962104.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카스프라이트제로캔",
-    "name": "코카)스프라이트제로캔350ml",
-    "category": "음료",
-    "price": 1900,
-    "saving": 1900,
-    "barcode": "8801094963200",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094963200.JPG"
-      }
-    }
-  },
-  {
-    "id": "동아나랑드사이다제로캔",
-    "name": "동아)나랑드사이다제로캔245ml",
-    "category": "음료",
-    "price": 1500,
-    "saving": 1500,
-    "barcode": "8801097135215",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097135215.JPG"
-      }
-    }
-  },
-  {
-    "id": "동아나랑드사이다제로파인캔",
-    "name": "동아)나랑드사이다제로파인캔245ml",
-    "category": "음료",
-    "price": 1500,
-    "saving": 1500,
-    "barcode": "8801097136618",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097136618.JPG"
-      }
-    }
-  },
-  {
-    "id": "동아나랑드사이다제로펫",
-    "name": "동아)나랑드사이다제로펫500ml",
-    "category": "음료",
-    "price": 2000,
-    "saving": 2000,
-    "barcode": "8801097235014",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097235014.JPG"
       }
     }
   },
@@ -58294,38 +59350,6 @@
     }
   },
   {
-    "id": "코카갈배사이다펫",
-    "name": "코카)갈배사이다펫500ml",
-    "category": "음료",
-    "price": 2300,
-    "saving": 2300,
-    "barcode": "8801105915679",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801105915679.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카봉봉애사비소다펫",
-    "name": "코카)봉봉애사비소다펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801105916959",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801105916959.JPG"
-      }
-    }
-  },
-  {
     "id": "풀무원국산콩부침두부",
     "name": "풀무원)국산콩부침두부210g",
     "category": "기타",
@@ -58418,22 +59442,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801115140214.JPG"
-      }
-    }
-  },
-  {
-    "id": "오리온닥터유제주용암수펫",
-    "name": "오리온)닥터유제주용암수펫530ml",
-    "category": "음료",
-    "price": 1000,
-    "saving": 1000,
-    "barcode": "8801117070007",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117070007.JPG"
       }
     }
   },
@@ -58626,38 +59634,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801155735647.JPG"
-      }
-    }
-  },
-  {
-    "id": "덴마크테이크얼라이브스위티자몽제로펫",
-    "name": "덴마크)테이크얼라이브스위티자몽제로펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801155740054",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801155740054.JPG"
-      }
-    }
-  },
-  {
-    "id": "덴마크테이크얼라이브망고제로펫",
-    "name": "덴마크)테이크얼라이브망고제로펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801155740061",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801155740061.JPG"
       }
     }
   },
@@ -59462,358 +60438,6 @@
     }
   },
   {
-    "id": "웅진오곡누룽지펫",
-    "name": "웅진)오곡누룽지펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801382135036",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382135036.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진빅토리아레몬펫",
-    "name": "웅진)빅토리아레몬펫500ml",
-    "category": "기타",
-    "price": 1800,
-    "saving": 1800,
-    "barcode": "8801382145080",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382145080.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진광명찾은결명자차펫",
-    "name": "웅진)광명찾은결명자차펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801382145769",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382145769.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진빅토리아청포도펫",
-    "name": "웅진)빅토리아청포도펫500ml",
-    "category": "기타",
-    "price": 1800,
-    "saving": 1800,
-    "barcode": "8801382147060",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382147060.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진옥수수수염차펫",
-    "name": "웅진)옥수수수염차펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8801382148449",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382148449.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진티즐제로피치우롱티펫",
-    "name": "웅진)티즐제로피치우롱티펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801382148500",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382148500.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진티즐제로유자그린티펫",
-    "name": "웅진)티즐제로유자그린티펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801382148524",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382148524.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진티즐제로자몽블랙티펫",
-    "name": "웅진)티즐제로자몽블랙티펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801382149743",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382149743.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진자연은더말린복숭아제로펫",
-    "name": "웅진)자연은더말린복숭아제로펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801382150206",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382150206.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진자연은더말린자몽제로펫",
-    "name": "웅진)자연은더말린자몽제로펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801382150220",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382150220.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진푸룬부스터펫",
-    "name": "웅진)푸룬부스터펫200ml",
-    "category": "기타",
-    "price": 4500,
-    "saving": 4500,
-    "barcode": "8801382150626",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382150626.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진유기농하늘보리펫",
-    "name": "웅진)유기농하늘보리펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801382151449",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382151449.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진카무트현미차펫",
-    "name": "웅진)카무트현미차펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801382151777",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382151777.JPG"
-      }
-    }
-  },
-  {
-    "id": "옐로우프루티리치캐모마일제로펫",
-    "name": "옐로우)프루티리치캐모마일제로펫500ml",
-    "category": "기타",
-    "price": 2300,
-    "saving": 2300,
-    "barcode": "8801382152392",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152392.JPG"
-      }
-    }
-  },
-  {
-    "id": "옐로우프루티매실그린제로펫",
-    "name": "옐로우)프루티매실그린제로펫500ml",
-    "category": "기타",
-    "price": 2300,
-    "saving": 2300,
-    "barcode": "8801382152408",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152408.JPG"
-      }
-    }
-  },
-  {
-    "id": "옐로우프루티유자민트제로펫",
-    "name": "옐로우)프루티유자민트제로펫500ml",
-    "category": "기타",
-    "price": 2300,
-    "saving": 2300,
-    "barcode": "8801382152415",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152415.JPG"
-      }
-    }
-  },
-  {
-    "id": "옐로우소프트워터청포도제로",
-    "name": "옐로우)소프트워터청포도제로500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801382152699",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152699.JPG"
-      }
-    }
-  },
-  {
-    "id": "옐로우소프트워터복숭아제로",
-    "name": "옐로우)소프트워터복숭아제로500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801382152712",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152712.JPG"
-      }
-    }
-  },
-  {
-    "id": "옐로우에너지워터블루레몬제로",
-    "name": "옐로우)에너지워터블루레몬제로500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801382152736",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152736.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진생차녹차",
-    "name": "웅진)생차녹차500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801382152798",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152798.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진생차호지차",
-    "name": "웅진)생차호지차500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801382152811",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382152811.JPG"
-      }
-    }
-  },
-  {
-    "id": "옐로우프루티망고우롱제로펫",
-    "name": "옐로우)프루티망고우롱제로펫500ml",
-    "category": "기타",
-    "price": 2300,
-    "saving": 2300,
-    "barcode": "8801382153146",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382153146.JPG"
-      }
-    }
-  },
-  {
     "id": "cj얼티브비건프로틴초코",
     "name": "CJ)얼티브비건프로틴초코250ml",
     "category": "기타",
@@ -60022,54 +60646,6 @@
     }
   },
   {
-    "id": "cj햇반파로누룽지차펫",
-    "name": "CJ)햇반파로누룽지차펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801392177118",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392177118.JPG"
-      }
-    }
-  },
-  {
-    "id": "cj햇반루피니빈보리차펫",
-    "name": "CJ)햇반루피니빈보리차펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801392183874",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392183874.JPG"
-      }
-    }
-  },
-  {
-    "id": "cj햇반레드빈호박차펫",
-    "name": "CJ)햇반레드빈호박차펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801392186400",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392186400.JPG"
-      }
-    }
-  },
-  {
     "id": "아임이허니얼그레이티원컵d",
     "name": "아임이)허니얼그레이티원컵(D)",
     "category": "기타",
@@ -60166,54 +60742,6 @@
     }
   },
   {
-    "id": "연세블루이글포커스캔",
-    "name": "연세)블루이글포커스캔355ml",
-    "category": "기타",
-    "price": 2300,
-    "saving": 2300,
-    "barcode": "8801753116848",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801753116848.JPG"
-      }
-    }
-  },
-  {
-    "id": "연세블루이글밸런스캔",
-    "name": "연세)블루이글밸런스캔355ml",
-    "category": "기타",
-    "price": 2300,
-    "saving": 2300,
-    "barcode": "8801753116862",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801753116862.JPG"
-      }
-    }
-  },
-  {
-    "id": "청정몽베스트펫qr",
-    "name": "청정)몽베스트펫500ml(QR)",
-    "category": "기타",
-    "price": 1100,
-    "saving": 1100,
-    "barcode": "8803186000992",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8803186000992.JPG"
-      }
-    }
-  },
-  {
     "id": "말차310말초키16",
     "name": "말차310)말초키100g(16)",
     "category": "기타",
@@ -60258,22 +60786,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8805915912309.JPG"
-      }
-    }
-  },
-  {
-    "id": "종근당건강아임비타에너지샷병",
-    "name": "종근당건강)아임비타에너지샷병100ml",
-    "category": "기타",
-    "price": 1500,
-    "saving": 1500,
-    "barcode": "8805915916901",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8805915916901.JPG"
       }
     }
   },
@@ -60326,38 +60838,6 @@
     }
   },
   {
-    "id": "광동밀싹보리차펫",
-    "name": "광동)밀싹보리차펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8806002020174",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002020174.JPG"
-      }
-    }
-  },
-  {
-    "id": "광동더진한헛개차골드라벨펫",
-    "name": "광동)더진한헛개차골드라벨펫500ml",
-    "category": "기타",
-    "price": 3300,
-    "saving": 3300,
-    "barcode": "8806002020334",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002020334.JPG"
-      }
-    }
-  },
-  {
     "id": "광동헛개파워스틱포도맛",
     "name": "광동)헛개파워스틱포도맛",
     "category": "기타",
@@ -60390,38 +60870,6 @@
     }
   },
   {
-    "id": "광동비타500이온킥제로펫1",
-    "name": "광동)비타500이온킥제로펫1.5L",
-    "category": "음료",
-    "price": 4500,
-    "saving": 4500,
-    "barcode": "8806002025469",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002025469.JPG"
-      }
-    }
-  },
-  {
-    "id": "광동유기농옥수수수염차펫",
-    "name": "광동)유기농옥수수수염차펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8806002025636",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002025636.JPG"
-      }
-    }
-  },
-  {
     "id": "유한양행내일n숙취해소스틱",
     "name": "유한양행)내일N숙취해소스틱20g",
     "category": "기타",
@@ -60450,38 +60898,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806011638117.JPG"
-      }
-    }
-  },
-  {
-    "id": "동화배러푸룬펫",
-    "name": "동화)배러푸룬펫120g",
-    "category": "기타",
-    "price": 3500,
-    "saving": 3500,
-    "barcode": "8806016185289",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806016185289.JPG"
-      }
-    }
-  },
-  {
-    "id": "동화부채표소다활펫",
-    "name": "동화)부채표소다활펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8806016186491",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806016186491.JPG"
       }
     }
   },
@@ -60742,22 +61158,6 @@
     }
   },
   {
-    "id": "쟈뎅제주청보리차펫",
-    "name": "쟈뎅)제주청보리차펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8808024030803",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8808024030803.JPG"
-      }
-    }
-  },
-  {
     "id": "26ss프리미엄쿨토시검정",
     "name": "26SS)프리미엄쿨토시(검정)",
     "category": "기타",
@@ -60962,54 +61362,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809117022514.JPG"
-      }
-    }
-  },
-  {
-    "id": "풀무원샘물펫qr",
-    "name": "풀무원)샘물펫500ml(QR)",
-    "category": "기타",
-    "price": 1000,
-    "saving": 1000,
-    "barcode": "8809169710179",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809169711138.JPG"
-      }
-    }
-  },
-  {
-    "id": "풀무원곡물차하루귀리펫",
-    "name": "풀무원)곡물차하루귀리펫500ml",
-    "category": "유제품",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8809169710872",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809169710872.JPG"
-      }
-    }
-  },
-  {
-    "id": "테일러블루베리주스펫",
-    "name": "테일러)블루베리주스펫180ml",
-    "category": "음료",
-    "price": 3500,
-    "saving": 3500,
-    "barcode": "8809170540352",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809170540352.JPG"
       }
     }
   },
@@ -61414,38 +61766,6 @@
     }
   },
   {
-    "id": "딥스춘식이해양심층수펫",
-    "name": "딥스)춘식이해양심층수펫500ml",
-    "category": "기타",
-    "price": 1500,
-    "saving": 1500,
-    "barcode": "8809309399936",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809309399936.JPG"
-      }
-    }
-  },
-  {
-    "id": "천지개벽병new",
-    "name": "천지개벽)병100ml(NEW)",
-    "category": "기타",
-    "price": 5000,
-    "saving": 5000,
-    "barcode": "8809329050541",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809329050541.JPG"
-      }
-    }
-  },
-  {
     "id": "성수310딸기바나나스무디",
     "name": "성수310)딸기바나나스무디250ml",
     "category": "음료",
@@ -61590,22 +61910,6 @@
     }
   },
   {
-    "id": "hk새싹보리펫",
-    "name": "HK)새싹보리펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8809422041125",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422041125.JPG"
-      }
-    }
-  },
-  {
     "id": "hknew컨디션환",
     "name": "HK)NEW컨디션환",
     "category": "생활용품",
@@ -61634,22 +61938,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422041293.JPG"
-      }
-    }
-  },
-  {
-    "id": "hk헛개수ex펫",
-    "name": "HK)헛개수EX펫500ml",
-    "category": "기타",
-    "price": 3000,
-    "saving": 3000,
-    "barcode": "8809422041729",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422041729.JPG"
       }
     }
   },
@@ -61686,38 +61974,6 @@
     }
   },
   {
-    "id": "hk티로그청귤아이스티제로펫",
-    "name": "HK)티로그청귤아이스티제로펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8809422044430",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422044430.JPG"
-      }
-    }
-  },
-  {
-    "id": "hk티로그복숭아아이스티제로펫",
-    "name": "HK)티로그복숭아아이스티제로펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8809422044447",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422044447.JPG"
-      }
-    }
-  },
-  {
     "id": "hk컨디션스틱zero망고맛",
     "name": "HK)컨디션스틱ZERO(망고맛)",
     "category": "생활용품",
@@ -61750,86 +62006,6 @@
     }
   },
   {
-    "id": "hk티로그애플청포도아이스티제로펫",
-    "name": "HK)티로그애플청포도아이스티제로펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8809422045925",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422045925.JPG"
-      }
-    }
-  },
-  {
-    "id": "hk티로그자두아이스티제로펫",
-    "name": "HK)티로그자두아이스티제로펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8809422045932",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422045932.JPG"
-      }
-    }
-  },
-  {
-    "id": "hk컨디션스파클링자몽제로병",
-    "name": "HK)컨디션스파클링자몽제로병100ml",
-    "category": "기타",
-    "price": 5000,
-    "saving": 5000,
-    "barcode": "8809422046045",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422046045.JPG"
-      }
-    }
-  },
-  {
-    "id": "hk새싹보리블랙펫",
-    "name": "HK)새싹보리블랙펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8809422046106",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422046106.JPG"
-      }
-    }
-  },
-  {
-    "id": "hk컨디션제로스파클링메론소다병",
-    "name": "HK)컨디션제로스파클링메론소다병100ml",
-    "category": "기타",
-    "price": 5000,
-    "saving": 5000,
-    "barcode": "8809422046762",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422046762.JPG"
-      }
-    }
-  },
-  {
     "id": "hk컨디션스틱초코맛",
     "name": "HK)컨디션스틱(초코맛)",
     "category": "생활용품",
@@ -61858,70 +62034,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422046977.JPG"
-      }
-    }
-  },
-  {
-    "id": "hk티로그망고수박아이스티제로펫",
-    "name": "HK)티로그망고수박아이스티제로펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8809422046991",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422046991.JPG"
-      }
-    }
-  },
-  {
-    "id": "코아캐치티니핑워터젤리복숭아",
-    "name": "코아)캐치티니핑워터젤리복숭아110ml",
-    "category": "스낵·과자",
-    "price": 1800,
-    "saving": 1800,
-    "barcode": "8809456260646",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809456260646.JPG"
-      }
-    }
-  },
-  {
-    "id": "코아캐치티니핑하루키즈포도",
-    "name": "코아)캐치티니핑하루키즈포도100ml",
-    "category": "기타",
-    "price": 1800,
-    "saving": 1800,
-    "barcode": "8809456260783",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809456260783.JPG"
-      }
-    }
-  },
-  {
-    "id": "코아캐치티니핑하루키즈소다",
-    "name": "코아)캐치티니핑하루키즈소다100ml",
-    "category": "기타",
-    "price": 1800,
-    "saving": 1800,
-    "barcode": "8809456260806",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809456260806.JPG"
       }
     }
   },
@@ -62002,38 +62114,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809594170364.JPG"
-      }
-    }
-  },
-  {
-    "id": "링티제로복숭아펫",
-    "name": "링티)제로복숭아펫500ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 2900,
-    "barcode": "8809626920295",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809626920295.JPG"
-      }
-    }
-  },
-  {
-    "id": "링티레몬라이트제로펫",
-    "name": "링티)레몬라이트제로펫500ml",
-    "category": "기타",
-    "price": 3200,
-    "saving": 3200,
-    "barcode": "8809626921407",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809626921407.JPG"
       }
     }
   },
@@ -62518,38 +62598,6 @@
     }
   },
   {
-    "id": "링티리커버리기어샤인머스켓라임펫",
-    "name": "링티)리커버리기어샤인머스켓라임펫500ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 2900,
-    "barcode": "8809799270500",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809799270500.JPG"
-      }
-    }
-  },
-  {
-    "id": "링티리커버리기어자몽오렌지펫",
-    "name": "링티)리커버리기어자몽오렌지펫500ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 2900,
-    "barcode": "8809799270531",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809799270531.JPG"
-      }
-    }
-  },
-  {
     "id": "종근당깨노니스틱배사과맛d",
     "name": "종근당)깨노니스틱(배사과맛)(D)",
     "category": "기타",
@@ -62690,38 +62738,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809815964239.JPG"
-      }
-    }
-  },
-  {
-    "id": "동원양반유자제로펫",
-    "name": "동원)양반유자제로펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8809848280085",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809848280085.JPG"
-      }
-    }
-  },
-  {
-    "id": "동원양반누룽지펫",
-    "name": "동원)양반누룽지펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8809848280412",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809848280412.JPG"
       }
     }
   },
@@ -62930,6 +62946,1318 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8993083943239.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심파워오투오렌지레몬펫",
+    "name": "농심)파워오투오렌지레몬펫500ml",
+    "category": "기타",
+    "price": 2300,
+    "saving": 767,
+    "barcode": "4005906404835",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4005906404835.JPG"
+      }
+    }
+  },
+  {
+    "id": "투민유기농데일리레몬수펫",
+    "name": "투민)유기농데일리레몬수펫500ml",
+    "category": "기타",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8800303660114",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800303660114.JPG"
+      }
+    }
+  },
+  {
+    "id": "싱하레몬소다제로캔",
+    "name": "싱하)레몬소다제로캔355ml",
+    "category": "기타",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8800307632315",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800307632315.JPG"
+      }
+    }
+  },
+  {
+    "id": "싱하유자향소다제로캔",
+    "name": "싱하)유자향소다제로캔355ml",
+    "category": "기타",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8800307632339",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800307632339.JPG"
+      }
+    }
+  },
+  {
+    "id": "하이트토닉워터펫",
+    "name": "하이트)토닉워터펫300ml",
+    "category": "주류",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "8801001236076",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001236076.JPG"
+      }
+    }
+  },
+  {
+    "id": "하이트토닉워터제로펫",
+    "name": "하이트)토닉워터제로펫300ml",
+    "category": "주류",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "8801001236243",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001236243.JPG"
+      }
+    }
+  },
+  {
+    "id": "hk컨디션병",
+    "name": "HK)컨디션병100ml",
+    "category": "기타",
+    "price": 5000,
+    "saving": 1667,
+    "barcode": "8801007071046",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007071046.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서티오피스모키라떼캔",
+    "name": "동서)티오피스모키라떼캔275ml",
+    "category": "음료",
+    "price": 2700,
+    "saving": 900,
+    "barcode": "8801037001716",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037009026.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서티오피스모키블랙캔",
+    "name": "동서)티오피스모키블랙캔275ml",
+    "category": "기타",
+    "price": 2700,
+    "saving": 900,
+    "barcode": "8801037001730",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037001730.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서티오피미디엄돌체라떼캔",
+    "name": "동서)티오피미디엄돌체라떼캔275ml",
+    "category": "음료",
+    "price": 2700,
+    "saving": 900,
+    "barcode": "8801037006193",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037006193.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서티오피배럴에이지드향마일드",
+    "name": "동서)티오피배럴에이지드향마일드380ml",
+    "category": "기타",
+    "price": 3300,
+    "saving": 1100,
+    "barcode": "8801037021981",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037021981.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서티오피배럴에이지드향볼드",
+    "name": "동서)티오피배럴에이지드향볼드380ml",
+    "category": "기타",
+    "price": 3300,
+    "saving": 1100,
+    "barcode": "8801037022056",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037022056.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서티오피아메리카노캔",
+    "name": "동서)티오피아메리카노캔200ml",
+    "category": "음료",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801037039993",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037057843.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서티오피마스터라떼캔",
+    "name": "동서)티오피마스터라떼캔200ml",
+    "category": "음료",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801037040029",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037064346.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서티오피더블랙캔",
+    "name": "동서)티오피더블랙캔200ml",
+    "category": "기타",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801037042863",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037057867.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서맥스웰하우스라떼캔",
+    "name": "동서)맥스웰하우스라떼캔240ml",
+    "category": "음료",
+    "price": 1600,
+    "saving": 533,
+    "barcode": "8801037091397",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037091397.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서맥스웰하우스아메리카노캔",
+    "name": "동서)맥스웰하우스아메리카노캔240ml",
+    "category": "음료",
+    "price": 1600,
+    "saving": 533,
+    "barcode": "8801037091410",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037091410.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서맥스웰마스터블랙캔",
+    "name": "동서)맥스웰마스터블랙캔240ml",
+    "category": "기타",
+    "price": 1600,
+    "saving": 533,
+    "barcode": "8801037092066",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037092066.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서맥스웰하우스블랙펫",
+    "name": "동서)맥스웰하우스블랙펫500ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801037093742",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037093742.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서맥스웰하우스라떼펫",
+    "name": "동서)맥스웰하우스라떼펫500ml",
+    "category": "음료",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801037093766",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037093766.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서맥스웰하우스스위트블랙펫",
+    "name": "동서)맥스웰하우스스위트블랙펫500ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801037094305",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037094305.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서맥스웰하우스헤이즐넛펫",
+    "name": "동서)맥스웰하우스헤이즐넛펫500ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801037096446",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037096446.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심백산수펫",
+    "name": "농심)백산수펫2L",
+    "category": "기타",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "8801043020473",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043022781.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심웰치스포도제로캔",
+    "name": "농심)웰치스포도제로캔355ml",
+    "category": "기타",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801043064088",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043064088.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심웰치스제로포도펫",
+    "name": "농심)웰치스제로포도펫600ml",
+    "category": "기타",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8801043065467",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043065467.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심웰치스포도캔",
+    "name": "농심)웰치스포도캔355ml",
+    "category": "기타",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801043450690",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043450690.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심카프리썬오렌지파우치",
+    "name": "농심)카프리썬오렌지파우치200ml",
+    "category": "기타",
+    "price": 1100,
+    "saving": 367,
+    "barcode": "8801043650182",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043650182.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심카프리썬사파리파우치",
+    "name": "농심)카프리썬사파리파우치200ml",
+    "category": "기타",
+    "price": 1100,
+    "saving": 367,
+    "barcode": "8801043650199",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043650199.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심카프리썬오렌지망고파우치",
+    "name": "농심)카프리썬오렌지망고파우치200ml",
+    "category": "기타",
+    "price": 1100,
+    "saving": 367,
+    "barcode": "8801043650311",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043650311.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데아이시스80펫",
+    "name": "롯데)아이시스8.0펫500ml",
+    "category": "기타",
+    "price": 1100,
+    "saving": 367,
+    "barcode": "8801056049881",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056049904.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데칸타타콘트라베이스펫",
+    "name": "롯데)칸타타콘트라베이스펫500ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801056094591",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056094591.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데칸타타콘트라베이스저칼로리라떼펫",
+    "name": "롯데)칸타타콘트라베이스저칼로리라떼펫500ml",
+    "category": "음료",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801056096052",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056096052.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데레쓰비그란데라떼펫",
+    "name": "롯데)레쓰비그란데라떼펫500ml",
+    "category": "음료",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "8801056097899",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056097899.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데칸타타콘트라베이스스위트블랙펫",
+    "name": "롯데)칸타타콘트라베이스스위트블랙펫500ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801056102036",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056102036.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데레쓰비그란데헤이즐넛펫",
+    "name": "롯데)레쓰비그란데헤이즐넛펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "8801056174149",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056174149.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데펩시콜라제로캔",
+    "name": "롯데)펩시콜라제로캔355ml",
+    "category": "음료",
+    "price": 2100,
+    "saving": 700,
+    "barcode": "8801056175900",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056175900.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데솔의눈펫",
+    "name": "롯데)솔의눈펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "8801056228927",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056228927.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데실론티제로펫",
+    "name": "롯데)실론티제로펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "8801056231927",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056231927.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데칸타타콘트라베이스블랙앤샷펫",
+    "name": "롯데)칸타타콘트라베이스블랙앤샷펫500ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801056234027",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056234027.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데펩시제로카페인캔",
+    "name": "롯데)펩시제로카페인캔355ml",
+    "category": "기타",
+    "price": 2100,
+    "saving": 700,
+    "barcode": "8801056241506",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056241506.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데실론티말차라떼펫",
+    "name": "롯데)실론티말차라떼펫340ml",
+    "category": "음료",
+    "price": 2700,
+    "saving": 900,
+    "barcode": "8801056252687",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056252687.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데칸타타돌체라떼펫",
+    "name": "롯데)칸타타돌체라떼펫340ml",
+    "category": "음료",
+    "price": 2700,
+    "saving": 900,
+    "barcode": "8801056910747",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056910747.JPG"
+      }
+    }
+  },
+  {
+    "id": "남양17차펫",
+    "name": "남양)17차펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "8801069174020",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801069174020.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카조지아블랙펫",
+    "name": "코카)조지아블랙펫470ml",
+    "category": "기타",
+    "price": 2800,
+    "saving": 933,
+    "barcode": "8801094502669",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094502669.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카조지아카페라떼펫",
+    "name": "코카)조지아카페라떼펫470ml",
+    "category": "음료",
+    "price": 2800,
+    "saving": 933,
+    "barcode": "8801094512668",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094512668.JPG"
+      }
+    }
+  },
+  {
+    "id": "동아데미소다복숭아캔",
+    "name": "동아)데미소다복숭아캔250ml",
+    "category": "음료",
+    "price": 1700,
+    "saving": 567,
+    "barcode": "8801097168404",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097168404.JPG"
+      }
+    }
+  },
+  {
+    "id": "동아데자와밀크티펫",
+    "name": "동아)데자와밀크티펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "8801097481206",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097481206.JPG"
+      }
+    }
+  },
+  {
+    "id": "빙그레아카페라allday아메리카노펫",
+    "name": "빙그레)아카페라AllDay아메리카노펫1L",
+    "category": "음료",
+    "price": 4200,
+    "saving": 1400,
+    "barcode": "8801104669658",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104669658.JPG"
+      }
+    }
+  },
+  {
+    "id": "빙그레아카페라allday헤이즐넛펫",
+    "name": "빙그레)아카페라AllDay헤이즐넛펫1L",
+    "category": "기타",
+    "price": 4200,
+    "saving": 1400,
+    "barcode": "8801104669672",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104669672.JPG"
+      }
+    }
+  },
+  {
+    "id": "빙그레사이즈업벤티아메리카노펫",
+    "name": "빙그레)사이즈업벤티아메리카노펫600ml",
+    "category": "음료",
+    "price": 3200,
+    "saving": 1067,
+    "barcode": "8801104944915",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104944915.JPG"
+      }
+    }
+  },
+  {
+    "id": "빙그레사이즈업벤티헤이즐넛펫",
+    "name": "빙그레)사이즈업벤티헤이즐넛펫600ml",
+    "category": "기타",
+    "price": 3200,
+    "saving": 1067,
+    "barcode": "8801104944939",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104944939.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카영진구론산스파클링병",
+    "name": "코카)영진구론산스파클링병150ml",
+    "category": "기타",
+    "price": 1300,
+    "saving": 433,
+    "barcode": "8801105914610",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801105914610.JPG"
+      }
+    }
+  },
+  {
+    "id": "코카영진구론산탄산비타액병",
+    "name": "코카)영진구론산탄산비타액병150ml",
+    "category": "음료",
+    "price": 1300,
+    "saving": 433,
+    "barcode": "8801105916829",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801105916829.JPG"
+      }
+    }
+  },
+  {
+    "id": "매일바리스타그란데아메리카노펫",
+    "name": "매일)바리스타그란데아메리카노펫475ml",
+    "category": "음료",
+    "price": 2700,
+    "saving": 900,
+    "barcode": "8801121031834",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801121031834.JPG"
+      }
+    }
+  },
+  {
+    "id": "매일바리스타그란데라떼펫",
+    "name": "매일)바리스타그란데라떼펫475ml",
+    "category": "음료",
+    "price": 2700,
+    "saving": 900,
+    "barcode": "8801121031858",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801121031858.JPG"
+      }
+    }
+  },
+  {
+    "id": "일화천연사이다캔",
+    "name": "일화)천연사이다캔350ml",
+    "category": "음료",
+    "price": 1400,
+    "saving": 467,
+    "barcode": "8801223007478",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801223007478.JPG"
+      }
+    }
+  },
+  {
+    "id": "일화맥콜펫",
+    "name": "일화)맥콜펫500ml",
+    "category": "음료",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "8801223100261",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801223100261.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진자연은감귤펫",
+    "name": "웅진)자연은감귤펫500ml",
+    "category": "기타",
+    "price": 2350,
+    "saving": 783,
+    "barcode": "8801382137917",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382137917.JPG"
+      }
+    }
+  },
+  {
+    "id": "웅진자연은샤인머스캣펫",
+    "name": "웅진)자연은샤인머스캣펫500ml",
+    "category": "기타",
+    "price": 2350,
+    "saving": 783,
+    "barcode": "8801382149866",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382149866.JPG"
+      }
+    }
+  },
+  {
+    "id": "광동옥수수수염차펫",
+    "name": "광동)옥수수수염차펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "8806002006437",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002006437.JPG"
+      }
+    }
+  },
+  {
+    "id": "현대미에로화이바펫",
+    "name": "현대)미에로화이바펫350ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "8806004407133",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806004407133.JPG"
+      }
+    }
+  },
+  {
+    "id": "동화부채표미인활병",
+    "name": "동화)부채표미인활병75ml",
+    "category": "기타",
+    "price": 1200,
+    "saving": 400,
+    "barcode": "8806016311015",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806016311015.JPG"
+      }
+    }
+  },
+  {
+    "id": "광동삼다수펫qr",
+    "name": "광동)삼다수펫500ml(QR)",
+    "category": "기타",
+    "price": 1100,
+    "saving": 367,
+    "barcode": "8808244101109",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8808244101130.JPG"
+      }
+    }
+  },
+  {
+    "id": "광동삼다수펫",
+    "name": "광동)삼다수펫500ml",
+    "category": "기타",
+    "price": 1100,
+    "saving": 367,
+    "barcode": "8808244201014",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8808244201014.JPG"
+      }
+    }
+  },
+  {
+    "id": "보람사각사각마시는파인애플",
+    "name": "보람)사각사각마시는파인애플150ml",
+    "category": "기타",
+    "price": 2400,
+    "saving": 800,
+    "barcode": "8809005020646",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809005020646.JPG"
+      }
+    }
+  },
+  {
+    "id": "보람구기자소다캔",
+    "name": "보람)구기자소다캔350ml",
+    "category": "기타",
+    "price": 1800,
+    "saving": 600,
+    "barcode": "8809005020769",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809005020769.JPG"
+      }
+    }
+  },
+  {
+    "id": "보람수박소다캔",
+    "name": "보람)수박소다캔350ml",
+    "category": "기타",
+    "price": 1800,
+    "saving": 600,
+    "barcode": "8809005029823",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809005029823.JPG"
+      }
+    }
+  },
+  {
+    "id": "할리스시그니처아메리카노펫",
+    "name": "할리스)시그니처아메리카노펫550ml",
+    "category": "음료",
+    "price": 3200,
+    "saving": 1067,
+    "barcode": "8809286695106",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809286695106.JPG"
+      }
+    }
+  },
+  {
+    "id": "할리스바닐라딜라이트로우슈거펫",
+    "name": "할리스)바닐라딜라이트로우슈거펫450ml",
+    "category": "기타",
+    "price": 3200,
+    "saving": 1067,
+    "barcode": "8809286695120",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809286695120.JPG"
+      }
+    }
+  },
+  {
+    "id": "할리스디카페인아메리카노펫",
+    "name": "할리스)디카페인아메리카노펫450ml",
+    "category": "음료",
+    "price": 3200,
+    "saving": 1067,
+    "barcode": "8809286695731",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809286695731.JPG"
+      }
+    }
+  },
+  {
+    "id": "br레인보우샤베트워터펫",
+    "name": "BR)레인보우샤베트워터펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "8809288634967",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809288634967.JPG"
+      }
+    }
+  },
+  {
+    "id": "br피치요거트워터펫",
+    "name": "BR)피치요거트워터펫500ml",
+    "category": "유제품",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "8809288634974",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809288634974.JPG"
+      }
+    }
+  },
+  {
+    "id": "br망고탱고워터펫",
+    "name": "BR)망고탱고워터펫500ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "8809288635315",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809288635315.JPG"
+      }
+    }
+  },
+  {
+    "id": "천지개벽제주한라봉스파클링캔",
+    "name": "천지개벽)제주한라봉스파클링캔355ml",
+    "category": "기타",
+    "price": 1800,
+    "saving": 600,
+    "barcode": "8809329050473",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809329050473.JPG"
+      }
+    }
+  },
+  {
+    "id": "이디야아메리카노펫",
+    "name": "이디야)아메리카노펫500ml",
+    "category": "음료",
+    "price": 2700,
+    "saving": 900,
+    "barcode": "8809388465034",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388465034.JPG"
+      }
+    }
+  },
+  {
+    "id": "이디야스위트아메리카노펫",
+    "name": "이디야)스위트아메리카노펫500ml",
+    "category": "음료",
+    "price": 2700,
+    "saving": 900,
+    "barcode": "8809388465041",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388465041.JPG"
+      }
+    }
+  },
+  {
+    "id": "이디야바닐라라떼펫",
+    "name": "이디야)바닐라라떼펫500ml",
+    "category": "음료",
+    "price": 2700,
+    "saving": 900,
+    "barcode": "8809388465058",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388465058.JPG"
+      }
+    }
+  },
+  {
+    "id": "이그니스클룹제로소다포도캔",
+    "name": "이그니스)클룹제로소다포도캔500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "8809495075478",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809495075478.JPG"
+      }
+    }
+  },
+  {
+    "id": "이그니스클룹제로소다레몬캔",
+    "name": "이그니스)클룹제로소다레몬캔500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "8809495077793",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809495077793.JPG"
+      }
+    }
+  },
+  {
+    "id": "하베스트라인프렌즈요구르트스파클링펫",
+    "name": "하베스트)라인프렌즈요구르트스파클링펫380ml",
+    "category": "유제품",
+    "price": 3300,
+    "saving": 1100,
+    "barcode": "8809916330964",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809916330964.JPG"
+      }
+    }
+  },
+  {
+    "id": "싱하소다워터병",
+    "name": "싱하)소다워터병325ml",
+    "category": "음료",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8850999133003",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8850999133003.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서레드불캔",
+    "name": "동서)레드불캔355ml",
+    "category": "음료",
+    "price": 3200,
+    "saving": 1067,
+    "barcode": "9002490232887",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/9002490232887.JPG"
       }
     }
   },
@@ -63846,22 +65174,6 @@
     }
   },
   {
-    "id": "농심파워오투오렌지레몬펫",
-    "name": "농심)파워오투오렌지레몬펫500ml",
-    "category": "기타",
-    "price": 2300,
-    "saving": 767,
-    "barcode": "4005906404835",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4005906404835.JPG"
-      }
-    }
-  },
-  {
     "id": "히츨러히치스수수깡젤리오리지날a",
     "name": "히츨러)히치스수수깡젤리오리지날40g(A)",
     "category": "스낵·과자",
@@ -64278,54 +65590,6 @@
     }
   },
   {
-    "id": "투민유기농데일리레몬수펫",
-    "name": "투민)유기농데일리레몬수펫500ml",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8800303660114",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800303660114.JPG"
-      }
-    }
-  },
-  {
-    "id": "싱하레몬소다제로캔",
-    "name": "싱하)레몬소다제로캔355ml",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8800307632315",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800307632315.JPG"
-      }
-    }
-  },
-  {
-    "id": "싱하유자향소다제로캔",
-    "name": "싱하)유자향소다제로캔355ml",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8800307632339",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800307632339.JPG"
-      }
-    }
-  },
-  {
     "id": "하림훌라면",
     "name": "하림)훌라면112g",
     "category": "라면",
@@ -64418,38 +65682,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800359560024.JPG"
-      }
-    }
-  },
-  {
-    "id": "하이트토닉워터펫",
-    "name": "하이트)토닉워터펫300ml",
-    "category": "주류",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "8801001236076",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001236076.JPG"
-      }
-    }
-  },
-  {
-    "id": "하이트토닉워터제로펫",
-    "name": "하이트)토닉워터제로펫300ml",
-    "category": "주류",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "8801001236243",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801001236243.JPG"
       }
     }
   },
@@ -64562,22 +65794,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007069883.JPG"
-      }
-    }
-  },
-  {
-    "id": "hk컨디션병",
-    "name": "HK)컨디션병100ml",
-    "category": "기타",
-    "price": 5000,
-    "saving": 1667,
-    "barcode": "8801007071046",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007071046.JPG"
       }
     }
   },
@@ -65078,38 +66294,6 @@
     }
   },
   {
-    "id": "동서티오피스모키라떼캔",
-    "name": "동서)티오피스모키라떼캔275ml",
-    "category": "음료",
-    "price": 2700,
-    "saving": 900,
-    "barcode": "8801037001716",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037009026.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서티오피스모키블랙캔",
-    "name": "동서)티오피스모키블랙캔275ml",
-    "category": "기타",
-    "price": 2700,
-    "saving": 900,
-    "barcode": "8801037001730",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037001730.JPG"
-      }
-    }
-  },
-  {
     "id": "맥심슈프림골드커피믹스20입",
     "name": "맥심)슈프림골드커피믹스20입",
     "category": "음료",
@@ -65126,22 +66310,6 @@
     }
   },
   {
-    "id": "동서티오피미디엄돌체라떼캔",
-    "name": "동서)티오피미디엄돌체라떼캔275ml",
-    "category": "음료",
-    "price": 2700,
-    "saving": 900,
-    "barcode": "8801037006193",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037006193.JPG"
-      }
-    }
-  },
-  {
     "id": "맥심모카골드제로슈거20입",
     "name": "맥심)모카골드제로슈거20입",
     "category": "기타",
@@ -65154,86 +66322,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037015447.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서티오피배럴에이지드향마일드",
-    "name": "동서)티오피배럴에이지드향마일드380ml",
-    "category": "기타",
-    "price": 3300,
-    "saving": 1100,
-    "barcode": "8801037021981",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037021981.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서티오피배럴에이지드향볼드",
-    "name": "동서)티오피배럴에이지드향볼드380ml",
-    "category": "기타",
-    "price": 3300,
-    "saving": 1100,
-    "barcode": "8801037022056",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037022056.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서티오피아메리카노캔",
-    "name": "동서)티오피아메리카노캔200ml",
-    "category": "음료",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801037039993",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037057843.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서티오피마스터라떼캔",
-    "name": "동서)티오피마스터라떼캔200ml",
-    "category": "음료",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801037040029",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037064346.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서티오피더블랙캔",
-    "name": "동서)티오피더블랙캔200ml",
-    "category": "기타",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801037042863",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037057867.JPG"
       }
     }
   },
@@ -65318,38 +66406,6 @@
     }
   },
   {
-    "id": "동서맥스웰하우스라떼캔",
-    "name": "동서)맥스웰하우스라떼캔240ml",
-    "category": "음료",
-    "price": 1600,
-    "saving": 533,
-    "barcode": "8801037091397",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037091397.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서맥스웰하우스아메리카노캔",
-    "name": "동서)맥스웰하우스아메리카노캔240ml",
-    "category": "음료",
-    "price": 1600,
-    "saving": 533,
-    "barcode": "8801037091410",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037091410.JPG"
-      }
-    }
-  },
-  {
     "id": "리츠크래커24",
     "name": "리츠)크래커80g(24)",
     "category": "스낵·과자",
@@ -65382,22 +66438,6 @@
     }
   },
   {
-    "id": "동서맥스웰마스터블랙캔",
-    "name": "동서)맥스웰마스터블랙캔240ml",
-    "category": "기타",
-    "price": 1600,
-    "saving": 533,
-    "barcode": "8801037092066",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037092066.JPG"
-      }
-    }
-  },
-  {
     "id": "리츠레몬샌드",
     "name": "리츠)레몬샌드96g",
     "category": "기타",
@@ -65410,54 +66450,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037093452.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서맥스웰하우스블랙펫",
-    "name": "동서)맥스웰하우스블랙펫500ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801037093742",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037093742.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서맥스웰하우스라떼펫",
-    "name": "동서)맥스웰하우스라떼펫500ml",
-    "category": "음료",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801037093766",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037093766.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서맥스웰하우스스위트블랙펫",
-    "name": "동서)맥스웰하우스스위트블랙펫500ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801037094305",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037094305.JPG"
       }
     }
   },
@@ -65570,22 +66562,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037096217.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서맥스웰하우스헤이즐넛펫",
-    "name": "동서)맥스웰하우스헤이즐넛펫500ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801037096446",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037096446.JPG"
       }
     }
   },
@@ -65878,22 +66854,6 @@
     }
   },
   {
-    "id": "농심백산수펫",
-    "name": "농심)백산수펫2L",
-    "category": "기타",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "8801043020473",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043022781.JPG"
-      }
-    }
-  },
-  {
     "id": "농심짜파게티더블랙큰사발",
     "name": "농심)짜파게티더블랙큰사발",
     "category": "기타",
@@ -66134,22 +67094,6 @@
     }
   },
   {
-    "id": "농심웰치스포도제로캔",
-    "name": "농심)웰치스포도제로캔355ml",
-    "category": "기타",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801043064088",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043064088.JPG"
-      }
-    }
-  },
-  {
     "id": "농심망고킥16",
     "name": "농심)망고킥60g(16)",
     "category": "기타",
@@ -66178,22 +67122,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043065382.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심웰치스제로포도펫",
-    "name": "농심)웰치스제로포도펫600ml",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8801043065467",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043065467.JPG"
       }
     }
   },
@@ -66258,70 +67186,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043069663.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심웰치스포도캔",
-    "name": "농심)웰치스포도캔355ml",
-    "category": "기타",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801043450690",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043450690.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심카프리썬오렌지파우치",
-    "name": "농심)카프리썬오렌지파우치200ml",
-    "category": "기타",
-    "price": 1100,
-    "saving": 367,
-    "barcode": "8801043650182",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043650182.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심카프리썬사파리파우치",
-    "name": "농심)카프리썬사파리파우치200ml",
-    "category": "기타",
-    "price": 1100,
-    "saving": 367,
-    "barcode": "8801043650199",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043650199.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심카프리썬오렌지망고파우치",
-    "name": "농심)카프리썬오렌지망고파우치200ml",
-    "category": "기타",
-    "price": 1100,
-    "saving": 367,
-    "barcode": "8801043650311",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043650311.JPG"
       }
     }
   },
@@ -66934,182 +67798,6 @@
     }
   },
   {
-    "id": "롯데아이시스80펫",
-    "name": "롯데)아이시스8.0펫500ml",
-    "category": "기타",
-    "price": 1100,
-    "saving": 367,
-    "barcode": "8801056049881",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056049904.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데칸타타콘트라베이스펫",
-    "name": "롯데)칸타타콘트라베이스펫500ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801056094591",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056094591.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데칸타타콘트라베이스저칼로리라떼펫",
-    "name": "롯데)칸타타콘트라베이스저칼로리라떼펫500ml",
-    "category": "음료",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801056096052",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056096052.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데레쓰비그란데라떼펫",
-    "name": "롯데)레쓰비그란데라떼펫500ml",
-    "category": "음료",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8801056097899",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056097899.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데칸타타콘트라베이스스위트블랙펫",
-    "name": "롯데)칸타타콘트라베이스스위트블랙펫500ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801056102036",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056102036.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데레쓰비그란데헤이즐넛펫",
-    "name": "롯데)레쓰비그란데헤이즐넛펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8801056174149",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056174149.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데펩시콜라제로캔",
-    "name": "롯데)펩시콜라제로캔355ml",
-    "category": "음료",
-    "price": 2100,
-    "saving": 700,
-    "barcode": "8801056175900",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056175900.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데솔의눈펫",
-    "name": "롯데)솔의눈펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8801056228927",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056228927.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데실론티제로펫",
-    "name": "롯데)실론티제로펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8801056231927",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056231927.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데칸타타콘트라베이스블랙앤샷펫",
-    "name": "롯데)칸타타콘트라베이스블랙앤샷펫500ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801056234027",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056234027.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데펩시제로카페인캔",
-    "name": "롯데)펩시제로카페인캔355ml",
-    "category": "기타",
-    "price": 2100,
-    "saving": 700,
-    "barcode": "8801056241506",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056241506.JPG"
-      }
-    }
-  },
-  {
     "id": "롯데오트몬드프로틴초코",
     "name": "롯데)오트몬드프로틴초코250ml",
     "category": "유제품",
@@ -67142,22 +67830,6 @@
     }
   },
   {
-    "id": "롯데실론티말차라떼펫",
-    "name": "롯데)실론티말차라떼펫340ml",
-    "category": "음료",
-    "price": 2700,
-    "saving": 900,
-    "barcode": "8801056252687",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056252687.JPG"
-      }
-    }
-  },
-  {
     "id": "롯데콜드오렌지펫",
     "name": "롯데)콜드오렌지펫250ml",
     "category": "기타",
@@ -67186,22 +67858,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056624019.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데칸타타돌체라떼펫",
-    "name": "롯데)칸타타돌체라떼펫340ml",
-    "category": "음료",
-    "price": 2700,
-    "saving": 900,
-    "barcode": "8801056910747",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056910747.JPG"
       }
     }
   },
@@ -67410,22 +68066,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801068940329.JPG"
-      }
-    }
-  },
-  {
-    "id": "남양17차펫",
-    "name": "남양)17차펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8801069174020",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801069174020.JPG"
       }
     }
   },
@@ -67766,70 +68406,6 @@
     }
   },
   {
-    "id": "코카조지아블랙펫",
-    "name": "코카)조지아블랙펫470ml",
-    "category": "기타",
-    "price": 2800,
-    "saving": 933,
-    "barcode": "8801094502669",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094502669.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카조지아카페라떼펫",
-    "name": "코카)조지아카페라떼펫470ml",
-    "category": "음료",
-    "price": 2800,
-    "saving": 933,
-    "barcode": "8801094512668",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801094512668.JPG"
-      }
-    }
-  },
-  {
-    "id": "동아데미소다복숭아캔",
-    "name": "동아)데미소다복숭아캔250ml",
-    "category": "음료",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8801097168404",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097168404.JPG"
-      }
-    }
-  },
-  {
-    "id": "동아데자와밀크티펫",
-    "name": "동아)데자와밀크티펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8801097481206",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097481206.JPG"
-      }
-    }
-  },
-  {
     "id": "빙그레아카페라스위트아메리카노",
     "name": "빙그레)아카페라스위트아메리카노240ml",
     "category": "음료",
@@ -67878,38 +68454,6 @@
     }
   },
   {
-    "id": "빙그레아카페라allday아메리카노펫",
-    "name": "빙그레)아카페라AllDay아메리카노펫1L",
-    "category": "음료",
-    "price": 4200,
-    "saving": 1400,
-    "barcode": "8801104669658",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104669658.JPG"
-      }
-    }
-  },
-  {
-    "id": "빙그레아카페라allday헤이즐넛펫",
-    "name": "빙그레)아카페라AllDay헤이즐넛펫1L",
-    "category": "기타",
-    "price": 4200,
-    "saving": 1400,
-    "barcode": "8801104669672",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104669672.JPG"
-      }
-    }
-  },
-  {
     "id": "빙그레아카페라아메리카노블랙",
     "name": "빙그레)아카페라아메리카노블랙240ml",
     "category": "음료",
@@ -67922,38 +68466,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104944625.JPG"
-      }
-    }
-  },
-  {
-    "id": "빙그레사이즈업벤티아메리카노펫",
-    "name": "빙그레)사이즈업벤티아메리카노펫600ml",
-    "category": "음료",
-    "price": 3200,
-    "saving": 1067,
-    "barcode": "8801104944915",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104944915.JPG"
-      }
-    }
-  },
-  {
-    "id": "빙그레사이즈업벤티헤이즐넛펫",
-    "name": "빙그레)사이즈업벤티헤이즐넛펫600ml",
-    "category": "기타",
-    "price": 3200,
-    "saving": 1067,
-    "barcode": "8801104944939",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104944939.JPG"
       }
     }
   },
@@ -68002,38 +68514,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104950893.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카영진구론산스파클링병",
-    "name": "코카)영진구론산스파클링병150ml",
-    "category": "기타",
-    "price": 1300,
-    "saving": 433,
-    "barcode": "8801105914610",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801105914610.JPG"
-      }
-    }
-  },
-  {
-    "id": "코카영진구론산탄산비타액병",
-    "name": "코카)영진구론산탄산비타액병150ml",
-    "category": "음료",
-    "price": 1300,
-    "saving": 433,
-    "barcode": "8801105916829",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801105916829.JPG"
       }
     }
   },
@@ -68630,38 +69110,6 @@
     }
   },
   {
-    "id": "매일바리스타그란데아메리카노펫",
-    "name": "매일)바리스타그란데아메리카노펫475ml",
-    "category": "음료",
-    "price": 2700,
-    "saving": 900,
-    "barcode": "8801121031834",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801121031834.JPG"
-      }
-    }
-  },
-  {
-    "id": "매일바리스타그란데라떼펫",
-    "name": "매일)바리스타그란데라떼펫475ml",
-    "category": "음료",
-    "price": 2700,
-    "saving": 900,
-    "barcode": "8801121031858",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801121031858.JPG"
-      }
-    }
-  },
-  {
     "id": "매일상하유기농주스사과블루베리케일",
     "name": "매일)상하유기농주스사과블루베리케일125ml",
     "category": "음료",
@@ -69158,70 +69606,6 @@
     }
   },
   {
-    "id": "일화천연사이다캔",
-    "name": "일화)천연사이다캔350ml",
-    "category": "음료",
-    "price": 1400,
-    "saving": 467,
-    "barcode": "8801223007478",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801223007478.JPG"
-      }
-    }
-  },
-  {
-    "id": "일화맥콜펫",
-    "name": "일화)맥콜펫500ml",
-    "category": "음료",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8801223100261",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801223100261.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진자연은감귤펫",
-    "name": "웅진)자연은감귤펫500ml",
-    "category": "기타",
-    "price": 2350,
-    "saving": 783,
-    "barcode": "8801382137917",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382137917.JPG"
-      }
-    }
-  },
-  {
-    "id": "웅진자연은샤인머스캣펫",
-    "name": "웅진)자연은샤인머스캣펫500ml",
-    "category": "기타",
-    "price": 2350,
-    "saving": 783,
-    "barcode": "8801382149866",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801382149866.JPG"
-      }
-    }
-  },
-  {
     "id": "cj비비고치즈떡볶이",
     "name": "CJ)비비고치즈떡볶이108G",
     "category": "간편식",
@@ -69686,38 +70070,6 @@
     }
   },
   {
-    "id": "광동옥수수수염차펫",
-    "name": "광동)옥수수수염차펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8806002006437",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002006437.JPG"
-      }
-    }
-  },
-  {
-    "id": "현대미에로화이바펫",
-    "name": "현대)미에로화이바펫350ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8806004407133",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806004407133.JPG"
-      }
-    }
-  },
-  {
     "id": "유한양행비컴플부스터샷아르기닌",
     "name": "유한양행)비컴플부스터샷아르기닌25ml",
     "category": "기타",
@@ -69762,22 +70114,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806016186446.JPG"
-      }
-    }
-  },
-  {
-    "id": "동화부채표미인활병",
-    "name": "동화)부채표미인활병75ml",
-    "category": "기타",
-    "price": 1200,
-    "saving": 400,
-    "barcode": "8806016311015",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806016311015.JPG"
       }
     }
   },
@@ -69942,86 +70278,6 @@
     }
   },
   {
-    "id": "광동삼다수펫qr",
-    "name": "광동)삼다수펫500ml(QR)",
-    "category": "기타",
-    "price": 1100,
-    "saving": 367,
-    "barcode": "8808244101109",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8808244101130.JPG"
-      }
-    }
-  },
-  {
-    "id": "광동삼다수펫",
-    "name": "광동)삼다수펫500ml",
-    "category": "기타",
-    "price": 1100,
-    "saving": 367,
-    "barcode": "8808244201014",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8808244201014.JPG"
-      }
-    }
-  },
-  {
-    "id": "보람사각사각마시는파인애플",
-    "name": "보람)사각사각마시는파인애플150ml",
-    "category": "기타",
-    "price": 2400,
-    "saving": 800,
-    "barcode": "8809005020646",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809005020646.JPG"
-      }
-    }
-  },
-  {
-    "id": "보람구기자소다캔",
-    "name": "보람)구기자소다캔350ml",
-    "category": "기타",
-    "price": 1800,
-    "saving": 600,
-    "barcode": "8809005020769",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809005020769.JPG"
-      }
-    }
-  },
-  {
-    "id": "보람수박소다캔",
-    "name": "보람)수박소다캔350ml",
-    "category": "기타",
-    "price": 1800,
-    "saving": 600,
-    "barcode": "8809005029823",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809005029823.JPG"
-      }
-    }
-  },
-  {
     "id": "영풍요뽀끼치즈떡볶이컵",
     "name": "영풍)요뽀끼치즈떡볶이컵120g",
     "category": "간편식",
@@ -70166,54 +70422,6 @@
     }
   },
   {
-    "id": "할리스시그니처아메리카노펫",
-    "name": "할리스)시그니처아메리카노펫550ml",
-    "category": "음료",
-    "price": 3200,
-    "saving": 1067,
-    "barcode": "8809286695106",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809286695106.JPG"
-      }
-    }
-  },
-  {
-    "id": "할리스바닐라딜라이트로우슈거펫",
-    "name": "할리스)바닐라딜라이트로우슈거펫450ml",
-    "category": "기타",
-    "price": 3200,
-    "saving": 1067,
-    "barcode": "8809286695120",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809286695120.JPG"
-      }
-    }
-  },
-  {
-    "id": "할리스디카페인아메리카노펫",
-    "name": "할리스)디카페인아메리카노펫450ml",
-    "category": "음료",
-    "price": 3200,
-    "saving": 1067,
-    "barcode": "8809286695731",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809286695731.JPG"
-      }
-    }
-  },
-  {
     "id": "br민트초코우유",
     "name": "BR)민트초코우유190ml",
     "category": "음료",
@@ -70278,38 +70486,6 @@
     }
   },
   {
-    "id": "br레인보우샤베트워터펫",
-    "name": "BR)레인보우샤베트워터펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8809288634967",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809288634967.JPG"
-      }
-    }
-  },
-  {
-    "id": "br피치요거트워터펫",
-    "name": "BR)피치요거트워터펫500ml",
-    "category": "유제품",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8809288634974",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809288634974.JPG"
-      }
-    }
-  },
-  {
     "id": "br메롱멜론우유",
     "name": "BR)메롱멜론우유190ml",
     "category": "음료",
@@ -70326,22 +70502,6 @@
     }
   },
   {
-    "id": "br망고탱고워터펫",
-    "name": "BR)망고탱고워터펫500ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8809288635315",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809288635315.JPG"
-      }
-    }
-  },
-  {
     "id": "바이오트루렌즈세정세트여행용",
     "name": "바이오트루)렌즈세정세트60ml(여행용)",
     "category": "생활용품",
@@ -70354,22 +70514,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809291670150.JPG"
-      }
-    }
-  },
-  {
-    "id": "천지개벽제주한라봉스파클링캔",
-    "name": "천지개벽)제주한라봉스파클링캔355ml",
-    "category": "기타",
-    "price": 1800,
-    "saving": 600,
-    "barcode": "8809329050473",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809329050473.JPG"
       }
     }
   },
@@ -70402,54 +70546,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388460251.JPG"
-      }
-    }
-  },
-  {
-    "id": "이디야아메리카노펫",
-    "name": "이디야)아메리카노펫500ml",
-    "category": "음료",
-    "price": 2700,
-    "saving": 900,
-    "barcode": "8809388465034",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388465034.JPG"
-      }
-    }
-  },
-  {
-    "id": "이디야스위트아메리카노펫",
-    "name": "이디야)스위트아메리카노펫500ml",
-    "category": "음료",
-    "price": 2700,
-    "saving": 900,
-    "barcode": "8809388465041",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388465041.JPG"
-      }
-    }
-  },
-  {
-    "id": "이디야바닐라라떼펫",
-    "name": "이디야)바닐라라떼펫500ml",
-    "category": "음료",
-    "price": 2700,
-    "saving": 900,
-    "barcode": "8809388465058",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388465058.JPG"
       }
     }
   },
@@ -70546,38 +70642,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809393810683.JPG"
-      }
-    }
-  },
-  {
-    "id": "이그니스클룹제로소다포도캔",
-    "name": "이그니스)클룹제로소다포도캔500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8809495075478",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809495075478.JPG"
-      }
-    }
-  },
-  {
-    "id": "이그니스클룹제로소다레몬캔",
-    "name": "이그니스)클룹제로소다레몬캔500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8809495077793",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809495077793.JPG"
       }
     }
   },
@@ -70950,22 +71014,6 @@
     }
   },
   {
-    "id": "하베스트라인프렌즈요구르트스파클링펫",
-    "name": "하베스트)라인프렌즈요구르트스파클링펫380ml",
-    "category": "유제품",
-    "price": 3300,
-    "saving": 1100,
-    "barcode": "8809916330964",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809916330964.JPG"
-      }
-    }
-  },
-  {
     "id": "선우얼려먹는젤리1탄",
     "name": "선우)얼려먹는젤리1탄72g",
     "category": "스낵·과자",
@@ -70994,22 +71042,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809963484221.JPG"
-      }
-    }
-  },
-  {
-    "id": "싱하소다워터병",
-    "name": "싱하)소다워터병325ml",
-    "category": "음료",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8850999133003",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8850999133003.JPG"
       }
     }
   },
@@ -71154,22 +71186,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8992222330039.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서레드불캔",
-    "name": "동서)레드불캔355ml",
-    "category": "음료",
-    "price": 3200,
-    "saving": 1067,
-    "barcode": "9002490232887",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/9002490232887.JPG"
       }
     }
   },
