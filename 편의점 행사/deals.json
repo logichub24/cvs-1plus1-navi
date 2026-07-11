@@ -54831,7 +54831,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045349473.JPG"
       }
