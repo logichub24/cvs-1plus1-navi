@@ -973,13 +973,13 @@
     "category": "생활용품",
     "price": 7500,
     "saving": 7500,
-    "barcode": null,
+    "barcode": "8850956032370",
     "events": {
       "CU": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "http://cdn2.bgfretail.com/bgfbrand/files/product/5D4327F2071F43419BC6AE00554197DA.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8850956032370_1.png"
       }
     }
   },
@@ -10593,7 +10593,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007071046.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007071046_1.png"
       }
     }
   },
@@ -10879,7 +10879,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007178233.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007178233_1.png"
       },
       "EMART24": {
         "type": "2+1",
@@ -13019,7 +13019,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8806002007298.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8806002007298_1.png"
       },
       "EMART24": {
         "type": "2+1",
