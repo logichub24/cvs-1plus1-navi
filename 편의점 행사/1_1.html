@@ -908,6 +908,7 @@
 
         function updateNearbySaving() {
             const el = document.getElementById('nearbySavingAmount');
+            if (!el) return;
             if (storeMarkersData.length === 0) {
                 el.textContent = '매장 없음';
                 return;
@@ -983,13 +984,15 @@
                         const switched = await loadStoresForLocation(lat, lng);
                         if (!switched && REAL_STORES.length === 0) generateVirtualStoresDB(lat, lng);
                         loadStoresInRadius();
+                        setTimeout(showNearbyPreview, 800);
                     },
-                    error => { updateWeather(defaultCenter[0], defaultCenter[1]); loadStoresInRadius(); },
+                    error => { updateWeather(defaultCenter[0], defaultCenter[1]); loadStoresInRadius(); setTimeout(showNearbyPreview, 800); },
                     { timeout: 5000 }
                 );
             } else {
                 updateWeather(defaultCenter[0], defaultCenter[1]);
                 loadStoresInRadius();
+                setTimeout(showNearbyPreview, 800);
             }
             setTimeout(() => { map.invalidateSize(); }, 300);
         }
@@ -1066,8 +1069,6 @@
                 }
             });
             updateNearbySaving();
-            // 첫 로딩 시에만 주변 행사 미리보기 표시
-            setTimeout(showNearbyPreview, 800);
         }
 
         // ── 날씨 기반 추천 (Open-Meteo, 키 불필요) ──────────────────────────
@@ -1117,6 +1118,7 @@
 
         // 날씨 칩 탭 → 추천 시트 다시 열기
         function reopenWeatherPreview() {
+            clearTimeout(nearbyPreviewTimer);
             nearbyPreviewShown = false;
             showNearbyPreview();
         }
@@ -1186,15 +1188,16 @@
                 sheet.style.pointerEvents = 'auto';
             });
 
+            clearTimeout(nearbyPreviewTimer);
             nearbyPreviewTimer = setTimeout(closeNearbyPreview, 8000);
         }
 
         function closeNearbyPreview() {
             clearTimeout(nearbyPreviewTimer);
+            nearbyPreviewShown = false;
             const sheet = document.getElementById('nearbyPreviewSheet');
             sheet.style.transform = 'translateY(120%)';
             sheet.style.pointerEvents = 'none';
-            // 슬라이드다운 애니메이션 종료 후 완전히 숨김(빈 헤더 잔상 방지)
             setTimeout(() => sheet.classList.add('hidden'), 520);
         }
 
@@ -1210,6 +1213,7 @@
             setTimeout(() => {
                 loadStoresInRadius();
                 showToast(`반경 ${currentRadius}m 내에서 ${storeMarkersData.length}개의 매장을 찾았습니다.`);
+                reopenWeatherPreview();
             }, 300);
         }
 
