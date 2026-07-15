@@ -6438,22 +6438,6 @@
     }
   },
   {
-    "id": "롯데칠성사이다오렌지500",
-    "name": "롯데)칠성사이다오렌지500",
-    "category": "음료",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801056249519",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801056249519.jpg"
-      }
-    }
-  },
-  {
     "id": "코카환타멜론p",
     "name": "코카)환타멜론P600ml",
     "category": "음료",
@@ -6616,38 +6600,6 @@
     }
   },
   {
-    "id": "쟈뎅히비스애플오렌지500",
-    "name": "쟈뎅)히비스애플오렌지500",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8808024034269",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8808024034269.jpg"
-      }
-    }
-  },
-  {
-    "id": "쟈뎅루이보스피치망고500",
-    "name": "쟈뎅)루이보스피치망고500",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8808024034276",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8808024034276.jpg"
-      }
-    }
-  },
-  {
     "id": "화이트스테이쿨대형16입",
     "name": "화이트)스테이쿨대형16입",
     "category": "기타",
@@ -6784,22 +6736,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045907802.jpg"
-      }
-    }
-  },
-  {
-    "id": "롯데레쓰비마일드",
-    "name": "롯데)레쓰비마일드230ml",
-    "category": "기타",
-    "price": 1400,
-    "saving": 1400,
-    "barcode": "8801056248536",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801056248536.jpg"
       }
     }
   },
@@ -7158,22 +7094,6 @@
     }
   },
   {
-    "id": "라라스윗블루베리요거바",
-    "name": "라라스윗)블루베리요거바",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8809599361286",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809599361286.jpg"
-      }
-    }
-  },
-  {
     "id": "미트마늘안창살구이",
     "name": "미트)마늘안창살구이350g",
     "category": "기타",
@@ -7322,22 +7242,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://image.woodongs.com/imgsvr/item/GD_8809709260249_001.jpg"
-      }
-    }
-  },
-  {
-    "id": "링티애플라이트p",
-    "name": "링티)애플라이트P500ml",
-    "category": "기타",
-    "price": 3200,
-    "saving": 3200,
-    "barcode": "8809799270661",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809799270661.jpg"
       }
     }
   },
@@ -7786,28 +7690,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045290973.png"
-      }
-    }
-  },
-  {
-    "id": "서울말차에스프레소",
-    "name": "서울)말차에스프레소200ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 2900,
-    "barcode": "8801115140207",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115140207_1.png"
-      },
-      "GS25": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_8801115140207_002.jpg"
       }
     }
   },
@@ -11872,22 +11754,6 @@
     }
   },
   {
-    "id": "맥스웰스윗아메캔",
-    "name": "맥스웰)스윗아메캔240ml",
-    "category": "기타",
-    "price": 1600,
-    "saving": 533,
-    "barcode": "8801037091410",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037091410_1.png"
-      }
-    }
-  },
-  {
     "id": "바른생각에어핏3입",
     "name": "바른생각)에어핏3입",
     "category": "기타",
@@ -13760,6 +13626,12 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://image.woodongs.com/imgsvr/item/GD_8801056040925_005.jpg"
+      },
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056245948.JPG"
       }
     }
   },
@@ -17150,22 +17022,6 @@
     }
   },
   {
-    "id": "코카조지아로우라떼p470",
-    "name": "코카)조지아로우라떼P470",
-    "category": "음료",
-    "price": 2800,
-    "saving": 933,
-    "barcode": "8801094512613",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801094512613.png"
-      }
-    }
-  },
-  {
     "id": "서울강릉커피바닐라",
     "name": "서울)강릉커피바닐라250ml",
     "category": "음료",
@@ -17210,38 +17066,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801056234027.jpg"
-      }
-    }
-  },
-  {
-    "id": "쟈뎅시그니처블랙p",
-    "name": "쟈뎅)시그니처블랙P900ml",
-    "category": "기타",
-    "price": 4200,
-    "saving": 1400,
-    "barcode": "8808024031916",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8808024031916.png"
-      }
-    }
-  },
-  {
-    "id": "쟈뎅로얄헤이즐넛p",
-    "name": "쟈뎅)로얄헤이즐넛P900ml",
-    "category": "기타",
-    "price": 4200,
-    "saving": 1400,
-    "barcode": "8808024031909",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8808024031909.png"
       }
     }
   },
@@ -22130,22 +21954,6 @@
     }
   },
   {
-    "id": "서주젤리의연금술",
-    "name": "서주)젤리의연금술",
-    "category": "스낵·과자",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8809592641866",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809592641866.jpg"
-      }
-    }
-  },
-  {
     "id": "한성일품철판오징어",
     "name": "한성)일품철판오징어",
     "category": "기타",
@@ -24386,28 +24194,6 @@
     }
   },
   {
-    "id": "마즈스니커즈아이스바",
-    "name": "마즈)스니커즈아이스바",
-    "category": "아이스크림",
-    "price": 3500,
-    "saving": 1167,
-    "barcode": "5000159460880",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/5000159460880.jpg"
-      },
-      "GS25": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_5000159460880_001.jpg"
-      }
-    }
-  },
-  {
     "id": "마즈트윅스아이스바",
     "name": "마즈)트윅스아이스바",
     "category": "아이스크림",
@@ -24792,6 +24578,38 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801043067799.jpg"
+      }
+    }
+  },
+  {
+    "id": "서울말차에스프레소",
+    "name": "서울)말차에스프레소200ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 2900,
+    "barcode": "8801115140207",
+    "events": {
+      "GS25": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_8801115140207_002.jpg"
+      }
+    }
+  },
+  {
+    "id": "마즈스니커즈아이스바",
+    "name": "마즈)스니커즈아이스바",
+    "category": "아이스크림",
+    "price": 3500,
+    "saving": 1167,
+    "barcode": "5000159460880",
+    "events": {
+      "GS25": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_5000159460880_001.jpg"
       }
     }
   },
@@ -49936,7 +49754,7 @@
         "image": "https://www.7-eleven.co.kr/upload/product/8809388/463917.1.jpg"
       },
       "EMART24": {
-        "type": "1+1",
+        "type": "2+1",
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388463917.JPG"
@@ -49974,7 +49792,7 @@
         "image": "https://www.7-eleven.co.kr/upload/product/8809388/463931.1.jpg"
       },
       "EMART24": {
-        "type": "1+1",
+        "type": "2+1",
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388463931.JPG"
@@ -55254,6 +55072,22 @@
     }
   },
   {
+    "id": "롯데펩시콜라제로캔",
+    "name": "롯데)펩시콜라제로캔490ml",
+    "category": "음료",
+    "price": 2300,
+    "saving": 2300,
+    "barcode": "8801056247591",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056175900.JPG"
+      }
+    }
+  },
+  {
     "id": "롯데핫식스더킹애플캔",
     "name": "롯데)핫식스더킹애플캔355ml",
     "category": "음료",
@@ -55778,6 +55612,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097235014.JPG"
+      }
+    }
+  },
+  {
+    "id": "동아데자와밀크티펫",
+    "name": "동아)데자와밀크티펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801097481206",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097481206.JPG"
       }
     }
   },
@@ -56354,6 +56204,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002020334.JPG"
+      }
+    }
+  },
+  {
+    "id": "광동비타500제로병",
+    "name": "광동)비타500제로병100ml",
+    "category": "음료",
+    "price": 1200,
+    "saving": 1200,
+    "barcode": "8806002022185",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002022185.JPG"
       }
     }
   },
@@ -57574,22 +57440,6 @@
     }
   },
   {
-    "id": "오븐숯불통다리판매용",
-    "name": "오븐)숯불통다리(판매용)",
-    "category": "기타",
-    "price": 4800,
-    "saving": 4800,
-    "barcode": "1500000159023",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/1500000159023.JPG"
-      }
-    }
-  },
-  {
     "id": "다우니퍼퓸블랙미스티크향",
     "name": "다우니퍼퓸)블랙미스티크향1L",
     "category": "생활용품",
@@ -57782,70 +57632,6 @@
     }
   },
   {
-    "id": "옐로우맛있는군밤s",
-    "name": "옐로우)맛있는군밤80g(S)",
-    "category": "기타",
-    "price": 3500,
-    "saving": 3500,
-    "barcode": "6930343451235",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6930343451235.JPG"
-      }
-    }
-  },
-  {
-    "id": "아임이맛있는군밤snew",
-    "name": "아임이)맛있는군밤80g(S)new",
-    "category": "기타",
-    "price": 3500,
-    "saving": 3500,
-    "barcode": "6930343479819",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6930343479819.JPG"
-      }
-    }
-  },
-  {
-    "id": "호올스제로슈가민트수박향15",
-    "name": "호올스)제로슈가민트수박향15.4g",
-    "category": "기타",
-    "price": 2000,
-    "saving": 2000,
-    "barcode": "7622202342103",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/7622202342103.JPG"
-      }
-    }
-  },
-  {
-    "id": "호올스제로슈가민트민트향15",
-    "name": "호올스)제로슈가민트민트향15.4g",
-    "category": "기타",
-    "price": 2000,
-    "saving": 2000,
-    "barcode": "7622202342134",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/7622202342134.JPG"
-      }
-    }
-  },
-  {
     "id": "후버사과주스s",
     "name": "후버)사과주스200ml(S)",
     "category": "음료",
@@ -57986,38 +57772,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800309770046.JPG"
-      }
-    }
-  },
-  {
-    "id": "크레이지핫라밥",
-    "name": "크레이지)핫라밥",
-    "category": "기타",
-    "price": 3500,
-    "saving": 3500,
-    "barcode": "8800342850026",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800342850026.JPG"
-      }
-    }
-  },
-  {
-    "id": "크레이지핫까르보라밥",
-    "name": "크레이지)핫까르보라밥",
-    "category": "기타",
-    "price": 3500,
-    "saving": 3500,
-    "barcode": "8800342850033",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800342850033.JPG"
       }
     }
   },
@@ -61158,38 +60912,6 @@
     }
   },
   {
-    "id": "26ss프리미엄쿨토시검정",
-    "name": "26SS)프리미엄쿨토시(검정)",
-    "category": "기타",
-    "price": 7500,
-    "saving": 7500,
-    "barcode": "8808994280291",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8808994280291.JPG"
-      }
-    }
-  },
-  {
-    "id": "26ss프리미엄쿨토시화이트",
-    "name": "26SS)프리미엄쿨토시화이트",
-    "category": "기타",
-    "price": 7500,
-    "saving": 7500,
-    "barcode": "8808994293000",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8808994293000.JPG"
-      }
-    }
-  },
-  {
     "id": "바디피트볼록맞춤12입오버",
     "name": "바디피트)볼록맞춤12입(오버)",
     "category": "기타",
@@ -61846,54 +61568,6 @@
     }
   },
   {
-    "id": "이디야토피넛시그니처라떼",
-    "name": "이디야)토피넛시그니처라떼300ml",
-    "category": "음료",
-    "price": 3200,
-    "saving": 3200,
-    "barcode": "8809388463924",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388463924.JPG"
-      }
-    }
-  },
-  {
-    "id": "이디야바닐라라떼",
-    "name": "이디야)바닐라라떼300ml",
-    "category": "음료",
-    "price": 3200,
-    "saving": 3200,
-    "barcode": "8809388464464",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388464464.JPG"
-      }
-    }
-  },
-  {
-    "id": "이디야쇼콜라모카",
-    "name": "이디야)쇼콜라모카300ml",
-    "category": "음료",
-    "price": 3200,
-    "saving": 3200,
-    "barcode": "8809388464471",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388464471.JPG"
-      }
-    }
-  },
-  {
     "id": "앙블랑아기물티슈인디핑크캡형72매",
     "name": "앙블랑)아기물티슈인디핑크(캡형)72매",
     "category": "생활용품",
@@ -62354,22 +62028,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809687440503.JPG"
-      }
-    }
-  },
-  {
-    "id": "라면꼰대x삼다수고사롱라면컵",
-    "name": "라면꼰대x삼다수 고사롱라면컵",
-    "category": "라면",
-    "price": 1900,
-    "saving": 1900,
-    "barcode": "8809704435161",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809704435161.JPG"
       }
     }
   },
@@ -63510,22 +63168,6 @@
     }
   },
   {
-    "id": "롯데펩시콜라제로캔",
-    "name": "롯데)펩시콜라제로캔355ml",
-    "category": "음료",
-    "price": 2100,
-    "saving": 700,
-    "barcode": "8801056175900",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056175900.JPG"
-      }
-    }
-  },
-  {
     "id": "롯데솔의눈펫",
     "name": "롯데)솔의눈펫500ml",
     "category": "기타",
@@ -63682,22 +63324,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097168404.JPG"
-      }
-    }
-  },
-  {
-    "id": "동아데자와밀크티펫",
-    "name": "동아)데자와밀크티펫500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8801097481206",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801097481206.JPG"
       }
     }
   },
@@ -65314,6 +64940,38 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6926215386033.JPG"
+      }
+    }
+  },
+  {
+    "id": "옐로우맛있는군밤s",
+    "name": "옐로우)맛있는군밤80g(S)",
+    "category": "기타",
+    "price": 3500,
+    "saving": 1167,
+    "barcode": "6930343451235",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6930343451235.JPG"
+      }
+    }
+  },
+  {
+    "id": "아임이맛있는군밤snew",
+    "name": "아임이)맛있는군밤80g(S)new",
+    "category": "기타",
+    "price": 3500,
+    "saving": 1167,
+    "barcode": "6930343479819",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6930343479819.JPG"
       }
     }
   },
@@ -68950,38 +68608,6 @@
     }
   },
   {
-    "id": "오리온포카칩오리지널3400중12",
-    "name": "오리온)포카칩오리지널3400(중)(12)",
-    "category": "스낵·과자",
-    "price": 3400,
-    "saving": 1133,
-    "barcode": "8801117760205",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117760205.JPG"
-      }
-    }
-  },
-  {
-    "id": "오리온포카칩어니언3400중12",
-    "name": "오리온)포카칩어니언3400(중)(12)",
-    "category": "스낵·과자",
-    "price": 3400,
-    "saving": 1133,
-    "barcode": "8801117760403",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117760403.JPG"
-      }
-    }
-  },
-  {
     "id": "오리온오징어땅콩16",
     "name": "오리온)오징어땅콩202g(16)",
     "category": "스낵·과자",
@@ -70550,6 +70176,54 @@
     }
   },
   {
+    "id": "이디야토피넛시그니처라떼",
+    "name": "이디야)토피넛시그니처라떼300ml",
+    "category": "음료",
+    "price": 3200,
+    "saving": 1067,
+    "barcode": "8809388463924",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388463924.JPG"
+      }
+    }
+  },
+  {
+    "id": "이디야바닐라라떼",
+    "name": "이디야)바닐라라떼300ml",
+    "category": "음료",
+    "price": 3200,
+    "saving": 1067,
+    "barcode": "8809388464464",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388464464.JPG"
+      }
+    }
+  },
+  {
+    "id": "이디야쇼콜라모카",
+    "name": "이디야)쇼콜라모카300ml",
+    "category": "음료",
+    "price": 3200,
+    "saving": 1067,
+    "barcode": "8809388464471",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809388464471.JPG"
+      }
+    }
+  },
+  {
     "id": "아라움오징어튀김더블치즈",
     "name": "아라움)오징어튀김더블치즈35g",
     "category": "유제품",
@@ -71074,54 +70748,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8852756120462.JPG"
-      }
-    }
-  },
-  {
-    "id": "프링글스치즈맛12",
-    "name": "프링글스)치즈맛110g(12)",
-    "category": "유제품",
-    "price": 4200,
-    "saving": 1400,
-    "barcode": "8886467100031",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8886467100031.JPG"
-      }
-    }
-  },
-  {
-    "id": "프링글스매운맛12",
-    "name": "프링글스)매운맛110g(12)",
-    "category": "기타",
-    "price": 4200,
-    "saving": 1400,
-    "barcode": "8886467100055",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8886467100055.JPG"
-      }
-    }
-  },
-  {
-    "id": "프링글스버터카라멜맛12",
-    "name": "프링글스)버터카라멜맛110g(12)",
-    "category": "유제품",
-    "price": 4200,
-    "saving": 1400,
-    "barcode": "8886467104725",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8886467104725.JPG"
       }
     }
   },
