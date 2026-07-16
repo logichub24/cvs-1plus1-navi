@@ -54512,6 +54512,38 @@
     }
   },
   {
+    "id": "롯데탐스쥬시포도캔",
+    "name": "롯데)탐스쥬시포도캔355ml",
+    "category": "기타",
+    "price": 1500,
+    "saving": 1500,
+    "barcode": "8801056248604",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056248604.JPG"
+      }
+    }
+  },
+  {
+    "id": "오비뉴카스레몬제로캔",
+    "name": "오비)뉴카스레몬제로캔330ml",
+    "category": "주류",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801858048921",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801858048952.JPG"
+      }
+    }
+  },
+  {
     "id": "하이트제로무알콜캔",
     "name": "하이트)제로(무알콜)캔500ml",
     "category": "주류",
@@ -56217,7 +56249,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806002022185.JPG"
       }
