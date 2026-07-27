@@ -1103,7 +1103,7 @@
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801051385410.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801051385410_1.png"
       }
     }
   },
@@ -20802,22 +20802,6 @@
     }
   },
   {
-    "id": "빙그레요플레그릭",
-    "name": "빙그레)요플레그릭180g",
-    "category": "유제품",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8801104950787",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801104950787.jpg"
-      }
-    }
-  },
-  {
     "id": "프링글스캐리비안치킨110",
     "name": "프링글스)캐리비안치킨110",
     "category": "간편식",
@@ -22590,22 +22574,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801068938692_1.png"
-      }
-    }
-  },
-  {
-    "id": "빙그레요플레그릭바나나",
-    "name": "빙그레)요플레그릭바나나",
-    "category": "유제품",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8801104952699",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801104952699.jpg"
       }
     }
   },
