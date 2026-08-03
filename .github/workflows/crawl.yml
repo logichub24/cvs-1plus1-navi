@@ -24,7 +24,12 @@ jobs:
       - name: 행사 정보 크롤링 (CU/GS25/세븐일레븐/이마트24)
         run: npm run crawl
 
+      # 매장 좌표는 거의 바뀌지 않는데(신규 출점 정도), 이 단계가 실패하면
+      # 아래 커밋 단계가 통째로 skip 되면서 매일 갱신돼야 할 행사 데이터까지 버려졌다.
+      # (2026-08-03 실행: 크롤링은 성공했는데 공공데이터 API 타임아웃으로 전체 폐기)
+      # 행사 데이터 갱신이 이 앱의 핵심이므로 매장 동기화 실패는 넘어간다.
       - name: 매장 위치 동기화
+        continue-on-error: true
         env:
           SBIZ_API_KEY: ${{ secrets.SBIZ_API_KEY }}
         run: npm run sync:stores

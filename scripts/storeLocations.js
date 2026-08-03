@@ -35,23 +35,43 @@ function classifyBrand(name) {
   return null;
 }
 
+// 전국 약 56페이지를 순차 조회하는데, 그중 한 페이지만 느려도 전체가 실패했다.
+// (2026-08-03 실행이 'timeout of 20000ms exceeded'로 죽음)
+// 공공데이터포털 API가 간헐적으로 느려지는 건 정상 범위라 재시도로 흡수한다.
+const PAGE_TIMEOUT_MS = 60000;
+const PAGE_RETRIES = 3;
+
+async function fetchPage(serviceKey, pageNo) {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      const { data } = await axios.get(SERVICE_URL, {
+        params: {
+          serviceKey,
+          type: 'json',
+          divId: 'indsSclsCd',
+          key: CONVENIENCE_STORE_CODE,
+          numOfRows: PAGE_SIZE,
+          pageNo,
+        },
+        timeout: PAGE_TIMEOUT_MS,
+      });
+      return data;
+    } catch (e) {
+      if (attempt > PAGE_RETRIES) throw e;
+      const waitMs = attempt * 5000;
+      console.error(`page ${pageNo} 실패(${e.message}) - ${waitMs / 1000}초 후 재시도 ${attempt}/${PAGE_RETRIES}`);
+      await new Promise((r) => setTimeout(r, waitMs));
+    }
+  }
+}
+
 async function fetchAllStores(serviceKey) {
   const stores = [];
   let pageNo = 1;
   let totalCount = Infinity;
 
   while ((pageNo - 1) * PAGE_SIZE < totalCount) {
-    const { data } = await axios.get(SERVICE_URL, {
-      params: {
-        serviceKey,
-        type: 'json',
-        divId: 'indsSclsCd',
-        key: CONVENIENCE_STORE_CODE,
-        numOfRows: PAGE_SIZE,
-        pageNo,
-      },
-      timeout: 20000,
-    });
+    const data = await fetchPage(serviceKey, pageNo);
 
     const body = data && data.body;
     const items = (body && body.items) || [];
