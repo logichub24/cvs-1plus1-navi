@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>편의점 행사</title>
     <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
         html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; background-color: #e5e7eb; display: flex; justify-content: center; align-items: center; }
         
@@ -60,8 +60,6 @@
         }
         .bottom-sheet.active { transform: translateY(0); }
         .category-btn.active { background-color: #111827; color: white; border-color: #111827; }
-        /* 토스 앱 안에서는 토스 자체 헤더와 중복되는 타이틀 캡슐을 숨겨서 위쪽 공간을 확보 */
-        body.in-toss-app #titlePill { display: none; }
 
         /* [개선 2] 네비게이션 탭 모달 전용 CSS (맥락 복구, 블러 배경, 팝업형 시트) */
         .tab-modal {
@@ -97,18 +95,6 @@
 
         <!-- 상단 미니 헤더 -->
         <div class="absolute top-0 left-0 w-full z-[100] pointer-events-none flex flex-col pt-3">
-            <div class="px-3 pb-2 flex items-center justify-between">
-                <!-- 토스 앱 안에서는 토스 자체 헤더가 이미 앱 이름을 보여주므로 중복되는 이 캡슐은 숨김(ads.js의 in-toss-app 클래스) -->
-                <div id="titlePill" class="bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-full shadow-sm border border-gray-100 pointer-events-auto inline-flex items-center gap-2">
-                    <h1 class="text-sm font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 tracking-tight leading-none m-0">편의점 행사</h1>
-                    <div class="w-px h-3 bg-gray-200"></div>
-                    <p class="text-[10px] text-gray-500 font-bold leading-none m-0 pt-0.5">오늘 기준 행사</p>
-                </div>
-                <button onclick="openSettings()" class="w-9 h-9 bg-white/95 backdrop-blur-md rounded-full shadow-sm border border-gray-100 flex items-center justify-center text-gray-500 pointer-events-auto hover:bg-gray-50 active:scale-95 transition shrink-0 ml-auto">
-                    <i class="fa-solid fa-gear text-sm"></i>
-                </button>
-            </div>
-
             <!-- Scrollable Info Chips -->
             <div class="flex overflow-x-auto hide-scrollbar px-3 gap-2 pointer-events-auto pb-2">
                 <!-- 칩 1: 오늘 최대 절약 상품 -->
@@ -116,7 +102,7 @@
                     <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-[10px]">🥇</div>
                     <div class="text-left flex flex-col">
                         <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5" id="topDealName">최대 절약 상품</span>
-                        <span class="text-[8px] text-blue-600 font-bold leading-none mt-1" id="topDealSaving">로딩 중...</span>
+                        <span class="text-[10px] text-blue-600 font-bold leading-none mt-1" id="topDealSaving">로딩 중...</span>
                     </div>
                 </button>
                 <!-- 칩 2: 오늘 마감 -->
@@ -124,7 +110,7 @@
                     <div class="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center text-[10px]">🚨</div>
                     <div class="text-left flex flex-col">
                         <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5">오늘 마감</span>
-                        <span id="endingDealCount" class="text-[8px] text-rose-600 font-bold leading-none mt-1">0개</span>
+                        <span id="endingDealCount" class="text-[10px] text-rose-600 font-bold leading-none mt-1">0개</span>
                     </div>
                 </button>
             </div>
@@ -141,6 +127,10 @@
 
         <!-- 우측 맵 컨트롤 패널 정렬 -->
         <div id="mapControlPanel" class="absolute right-3 bottom-[120px] z-[400] flex flex-col gap-2 pointer-events-none items-end">
+            <!-- 설정 -->
+            <button onclick="openSettings()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-gray-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition" title="설정">
+                <i class="fa-solid fa-gear text-lg"></i>
+            </button>
             <!-- 리스트/지도 뷰 토글 -->
             <button id="listViewToggleBtn" onclick="toggleListView()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-gray-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition" title="리스트 뷰">
                 <i class="fa-solid fa-list text-lg"></i>
@@ -166,16 +156,16 @@
             
             <!-- Radius Selector (2×2 그리드 + 5km 리워드) -->
             <div class="bg-white/95 backdrop-blur-md rounded-2xl shadow-md border border-gray-100 grid grid-cols-2 overflow-hidden pointer-events-auto w-[76px]">
-                <button onclick="setRadius(300)" id="rad300" class="text-[9px] font-black py-2 w-full border-b border-r border-gray-100 text-gray-500 hover:bg-gray-50 transition">300m</button>
-                <button onclick="setRadius(500)" id="rad500" class="text-[9px] font-black py-2 w-full border-b border-gray-100 text-blue-600 bg-blue-50 transition">500m</button>
-                <button onclick="setRadius(1000)" id="rad1000" class="text-[9px] font-black py-2 w-full border-b border-r border-gray-100 text-gray-500 hover:bg-gray-50 transition">1km</button>
-                <button onclick="setRadius(2000)" id="rad2000" class="text-[9px] font-black py-2 w-full border-b border-gray-100 text-gray-500 hover:bg-gray-50 transition">2km</button>
-                <button onclick="requestRadius5km()" id="rad5000" class="text-[9px] font-black py-2 w-full col-span-2 text-amber-600 hover:bg-amber-50 transition flex items-center justify-center gap-1"><i class="fa-solid fa-play text-[8px]"></i>5km</button>
+                <button onclick="setRadius(300)" id="rad300" class="text-[11px] font-black py-2 w-full border-b border-r border-gray-100 text-gray-500 hover:bg-gray-50 transition">300m</button>
+                <button onclick="setRadius(500)" id="rad500" class="text-[11px] font-black py-2 w-full border-b border-gray-100 text-blue-600 bg-blue-50 transition">500m</button>
+                <button onclick="setRadius(1000)" id="rad1000" class="text-[11px] font-black py-2 w-full border-b border-r border-gray-100 text-gray-500 hover:bg-gray-50 transition">1km</button>
+                <button onclick="setRadius(2000)" id="rad2000" class="text-[11px] font-black py-2 w-full border-b border-gray-100 text-gray-500 hover:bg-gray-50 transition">2km</button>
+                <button onclick="requestRadius5km()" id="rad5000" class="text-[11px] font-black py-2 w-full col-span-2 text-amber-600 hover:bg-amber-50 transition flex items-center justify-center gap-1"><i class="fa-solid fa-play text-[10px]"></i>5km</button>
             </div>
         </div>
 
         <!-- 날씨 칩 (상태 따라 아이콘 변경, 탭하면 날씨 추천 다시 보기) -->
-        <button id="weatherChip" onclick="reopenWeatherPreview()" class="hidden absolute top-[158px] left-3 z-[300] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 pl-2 pr-3 py-1.5 items-center gap-1.5 pointer-events-auto active:scale-95 transition">
+        <button id="weatherChip" onclick="reopenWeatherPreview()" class="hidden absolute left-3 z-[300] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 pl-2 pr-3 py-1.5 items-center gap-1.5 pointer-events-auto active:scale-95 transition" style="top:101px">
             <span id="weatherChipIcon" class="text-base leading-none">☀️</span>
             <span id="weatherChipText" class="text-[11px] font-black text-gray-700 leading-none">--℃</span>
         </button>
@@ -203,39 +193,47 @@
         </div>
 
         <!-- Ad Banner (Above Nav) - 토스인앱 환경이면 ads.js가 실제 배너로 교체, 아니면 더미 표시 유지 -->
-        <div class="absolute bottom-[60px] left-0 w-full bg-white/90 backdrop-blur-sm border-t border-gray-100 p-1.5 z-[250] flex justify-center items-center pointer-events-none">
-            <div id="adBannerSlot" class="bg-gray-100 w-full max-w-sm h-10 flex items-center justify-center rounded-lg border border-gray-200 cursor-pointer pointer-events-auto" onclick="showToast('광고 페이지로 이동합니다.')">
-                <span class="text-[10px] text-gray-400 font-bold">Google Ad: 동네 마트 초특가 할인 앱</span>
-            </div>
+        <!-- 토스 인앱에서만 노출. ads.js가 in-toss-app 클래스를 붙이면 CSS로 켜진다.
+             (일반 브라우저에서 가짜 광고 문구가 상시 보이던 것을 제거) -->
+        <div id="adBannerWrap" class="hidden absolute bottom-[60px] left-0 w-full bg-white/90 backdrop-blur-sm border-t border-gray-100 p-1.5 z-[250] justify-center items-center pointer-events-none">
+            <div id="adBannerSlot" class="w-full max-w-sm h-10 flex items-center justify-center rounded-lg pointer-events-auto"></div>
         </div>
 
         <!-- 하단 네비게이션 바 -->
         <nav class="absolute bottom-0 left-0 w-full h-[60px] bg-white border-t border-gray-200 z-[4000] flex justify-around items-center px-1 pb-safe shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
             <button id="nav-home" onclick="goHome()" class="nav-btn flex flex-col items-center justify-center w-full h-full text-blue-600 transition">
                 <i class="fa-solid fa-map-location-dot text-[18px] mb-1"></i>
-                <span class="text-[9px] font-black tracking-tight">지도</span>
+                <span class="text-[11px] font-black tracking-tight">지도</span>
             </button>
             <button id="nav-search" onclick="openTabModal('searchModal', 'search')" class="nav-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-900 transition">
                 <i class="fa-solid fa-code-compare text-[18px] mb-1 text-indigo-500"></i>
-                <span class="text-[9px] font-bold tracking-tight text-indigo-600">비교검색</span>
+                <span class="text-[11px] font-bold tracking-tight text-indigo-600">비교검색</span>
             </button>
             <button id="nav-nearby" onclick="openTabModal('nearbyRankingModal', 'nearby')" class="nav-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-900 transition">
                 <i class="fa-solid fa-store text-[18px] mb-1"></i>
-                <span class="text-[9px] font-bold tracking-tight">주변랭킹</span>
+                <span class="text-[11px] font-bold tracking-tight">주변랭킹</span>
             </button>
             <button id="nav-wishlist" onclick="openTabModal('wishlistModal', 'wishlist')" class="nav-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-900 transition relative">
                 <i class="fa-solid fa-heart text-[18px] mb-1"></i>
-                <span class="text-[9px] font-bold tracking-tight">찜목록</span>
-                <span id="wishBadge" class="absolute top-1.5 right-[15px] bg-rose-500 text-white text-[8px] font-bold w-3.5 h-3.5 flex items-center justify-center rounded-full hidden shadow-sm ring-1 ring-white">0</span>
+                <span class="text-[11px] font-bold tracking-tight">찜목록</span>
+                <span id="wishBadge" class="absolute top-1.5 right-[15px] bg-rose-500 text-white text-[10px] font-bold w-3.5 h-3.5 flex items-center justify-center rounded-full hidden shadow-sm ring-1 ring-white">0</span>
             </button>
             <button id="nav-savings" onclick="openSavings()" class="nav-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-900 transition relative">
                 <i class="fa-solid fa-wallet text-[18px] mb-1"></i>
-                <span class="text-[9px] font-bold tracking-tight">내지갑</span>
+                <span class="text-[11px] font-bold tracking-tight">내지갑</span>
             </button>
         </nav>
 
         <!-- Map Container -->
         <div id="map"></div>
+
+        <!-- 행사 데이터 로딩 실패 안내 (조용한 빈 화면 대신 재시도 제공) -->
+        <div id="dataErrorBanner" class="hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5000] bg-white rounded-2xl shadow-xl border border-gray-200 px-5 py-4 w-[80%] max-w-xs text-center">
+            <i class="fa-solid fa-triangle-exclamation text-amber-500 text-2xl mb-2"></i>
+            <p class="text-[15px] font-black text-gray-900 mb-1">행사 정보를 불러오지 못했어요</p>
+            <p class="text-[13px] text-gray-500 font-bold leading-snug mb-3">네트워크 상태를 확인한 뒤 다시 시도해주세요.</p>
+            <button onclick="retryLoadRemoteData()" class="w-full bg-blue-600 text-white text-[14px] font-black py-2.5 rounded-xl active:scale-95 transition">다시 시도</button>
+        </div>
 
         <div id="toast" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-900/90 backdrop-blur-md text-white px-5 py-3 rounded-2xl text-sm font-medium shadow-2xl z-[6000] opacity-0 pointer-events-none transition-all duration-300 flex flex-col items-center gap-2 text-center max-w-[80%] border border-gray-700">
             <i class="fa-solid fa-bell text-yellow-400 text-2xl mb-1"></i>
@@ -348,11 +346,11 @@
                 <div class="flex gap-1.5">
                     <button onclick="openDirections()" class="bg-blue-50 text-blue-600 p-2.5 rounded-xl flex flex-col items-center justify-center hover:bg-blue-100 transition min-w-[50px] active:scale-95">
                         <i class="fa-solid fa-route text-lg"></i>
-                        <span class="text-[9px] font-bold mt-1">길찾기</span>
+                        <span class="text-[11px] font-bold mt-1">길찾기</span>
                     </button>
                     <button onclick="closeSheet()" class="bg-gray-100 text-gray-500 p-2.5 rounded-xl flex flex-col items-center justify-center hover:bg-gray-200 transition min-w-[50px] active:scale-95">
                         <i class="fa-solid fa-xmark text-lg"></i>
-                        <span class="text-[9px] font-bold mt-1">닫기</span>
+                        <span class="text-[11px] font-bold mt-1">닫기</span>
                     </button>
                 </div>
             </div>
@@ -691,32 +689,10 @@
     </div> <!-- app-container -->
 
     <script>
-        let MASTER_DB = [
-            {
-                id: "p1", name: "코카콜라 제로 500ml", category: "음료", price: 2300, saving: 2300,
-                events: { 'CU': { type: '1+1', isNew: true, daysLeft: 15 }, 'GS25': { type: '2+1', isNew: false, daysLeft: 20 }, 'EMART24': { type: '1+1', isNew: false, daysLeft: 5 } }
-            },
-            {
-                id: "p2", name: "하겐다즈 파인트 바닐라", category: "아이스크림", price: 15900, saving: 15900,
-                events: { 'CU': { type: '1+1', isNew: false, daysLeft: 3 }, '7-ELEVEN': { type: '1+1', isNew: true, daysLeft: 10 } }
-            },
-            {
-                id: "p3", name: "농심 신라면 큰사발", category: "라면", price: 1400, saving: 1400,
-                events: { 'GS25': { type: '1+1', isNew: false, daysLeft: 0 }, '7-ELEVEN': { type: '2+1', isNew: false, daysLeft: 14 } }
-            },
-            {
-                id: "p4", name: "포카칩 어니언", category: "과자", price: 1700, saving: 1700,
-                events: { 'CU': { type: '1+1', isNew: false, daysLeft: 5 }, 'EMART24': { type: '1+1', isNew: true, daysLeft: 25 } }
-            },
-            {
-                id: "p5", name: "크리넥스 3겹 롤휴지", category: "생활용품", price: 4500, saving: 4500,
-                events: { 'GS25': { type: '1+1', isNew: false, daysLeft: 1 }, 'CU': { type: '1+1', isNew: false, daysLeft: 8 } }
-            },
-            {
-                id: "p6", name: "전주비빔 삼각김밥", category: "간편식", price: 1200, saving: 600,
-                events: { '7-ELEVEN': { type: '2+1', isNew: true, daysLeft: 0 }, 'EMART24': { type: '2+1', isNew: false, daysLeft: 12 } }
-            }
-        ];
+        // 행사 상품 원본. 부팅 시에는 비어 있고 deals.json 도착 후 채워진다.
+        // (예전엔 데모 상품 6개가 기본값이었는데, 로딩 실패 시 "행사 6개뿐인 앱"이
+        //  아무 안내 없이 그대로 보여서 제거함. 실패는 showDataError()로 명시한다.)
+        let MASTER_DB = [];
 
         const CATEGORIES = ['ALL', '음료', '간편식', '스낵·과자', '유제품', '생활용품', '라면', '주류', '아이스크림', '기타'];
         const BRAND_INFO = {
@@ -737,41 +713,26 @@
         let searchBrandFilter = null, recentlyViewed = [], mapBrandFilter = null;
         let allVirtualStoresDB = [], REAL_STORES = [];
         let STORE_INDEX = [], loadedProvinceFile = null;
+        // 지도 렌더와 데이터 로딩이 병렬로 돌기 때문에, 둘 중 뭐가 먼저 끝나든
+        // 매장 반영은 한 번만 일어나도록 상태를 들고 있는다.
+        let dataReady = false, userCoords = null;
 
         // 토스인앱 등 외부 빌드 환경(WebView 패키지)에 넣어도 데이터는 항상 GitHub Pages의 최신본을
         // 실시간으로 받아오도록 절대경로를 쓴다. GitHub Pages 자체에서 열 때도 동일 출처라 그대로 동작함.
         const DATA_BASE_URL = 'https://logichub24.github.io/cvs-1plus1-navi/%ED%8E%B8%EC%9D%98%EC%A0%90%20%ED%96%89%EC%82%AC/';
 
+        // 부팅은 2단계로 나눈다.
+        //  1) startApp()  - 네트워크를 기다리지 않고 지도부터 즉시 그린다.
+        //  2) loadRemoteData() - 데이터가 도착하면 마커/집계를 얹는다.
+        // 예전에는 deals.json(약 1.9MB) + 시/도 매장 파일(경기도 약 2.6MB) + 역지오코딩(최대 5초)이
+        // 전부 직렬로 끝난 뒤에야 initMap()이 불려서, 첫 화면까지 수 초간 빈 회색 화면이었다.
         document.addEventListener('DOMContentLoaded', () => {
             loadSavedData();
-
-            // deals.json: 매일 새벽 3시 GitHub Actions가 4사 행사 페이지를 크롤링해 갱신하는 실데이터.
-            // stores/index.json: 전국 시/도별로 쪼갠 매장 좌표 목록(소상공인시장진흥공단 API 동기화 결과)의 색인.
-            // 실제 매장 데이터는 사용자 위치에서 가장 가까운 시/도 파일만 불러온다(전국 통합 파일은 너무 큼).
-            Promise.all([
-                fetch(DATA_BASE_URL + 'deals.json?v=' + (new Date().toISOString().slice(0,10).replace(/-/g,'')) + '_4', {cache:'no-store'}).then(res => res.ok ? res.json() : null).catch(() => null),
-                fetch(DATA_BASE_URL + 'stores/index.json').then(res => res.ok ? res.json() : null).catch(() => null),
-            ]).then(async ([deals, index]) => {
-                if (deals && deals.length > 0) MASTER_DB = deals;
-                else console.log("deals.json 없음 - 내부 데모 DB 사용");
-                computeIsNew();
-
-                if (index && index.length > 0) {
-                    STORE_INDEX = index;
-                    await loadStoresForLocation(37.498095, 127.027610); // 색인 로드 직후 기본 위치(서울) 기준 1차 로딩
-                } else {
-                    console.log("stores/index.json 없음 - 가상 매장 사용");
-                }
-
-                startApp();
-            });
+            startApp();
+            loadRemoteData();
         });
 
         function startApp() {
-            applyDaysLeft();
-            updateDashboardCounts();
-            buildBarcodeIndex();
-            if (REAL_STORES.length === 0) generateVirtualStoresDB();
             initMap();
             applyStartupSettings();
             renderCategories();
@@ -779,7 +740,57 @@
             document.getElementById('map').addEventListener('touchstart', closeSheet);
             window.addEventListener('resize', () => { if(map) map.invalidateSize(); });
             maybeShowOnboarding();
+        }
+
+        // deals.json: 매일 새벽 3시 GitHub Actions가 4사 행사 페이지를 크롤링해 갱신하는 실데이터.
+        // stores/index.json: 전국 시/도별로 쪼갠 매장 좌표 목록(소상공인시장진흥공단 API 동기화 결과)의 색인.
+        // 실제 매장 데이터는 사용자 위치에서 가장 가까운 시/도 파일만 불러온다(전국 통합 파일은 너무 큼).
+        async function loadRemoteData() {
+            const dayTag = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+            const [deals, index] = await Promise.all([
+                fetch(DATA_BASE_URL + 'deals.json?v=' + dayTag + '_4').then(res => res.ok ? res.json() : null).catch(() => null),
+                fetch(DATA_BASE_URL + 'stores/index.json').then(res => res.ok ? res.json() : null).catch(() => null),
+            ]);
+
+            if (!deals || deals.length === 0) { showDataError(); return; }
+
+            MASTER_DB = deals;
+            dealsByBrandCache = null;
+            computeIsNew();
+            applyDaysLeft();
+            updateDashboardCounts();
+            buildBarcodeIndex();
+            if (index && index.length > 0) STORE_INDEX = index;
+
+            dataReady = true;
+
+            // 위치 확정이 먼저 끝났으면 그 좌표를, 아직이면 현재 지도 중심을 쓴다.
+            const center = userCoords || map.getCenter();
+            const lat = userCoords ? userCoords.lat : center.lat;
+            const lng = userCoords ? userCoords.lng : center.lng;
+            await applyStoresForLocation(lat, lng);
+
             initRetentionFeatures();
+        }
+
+        // 좌표 기준으로 매장 목록을 확정하고 지도에 반영. 위치 확정과 데이터 도착 중
+        // 어느 쪽이 먼저 끝나든 같은 경로를 타도록 한 곳에 모았다.
+        async function applyStoresForLocation(lat, lng) {
+            const switched = await loadStoresForLocation(lat, lng);
+            if (!switched && REAL_STORES.length === 0) generateVirtualStoresDB(lat, lng);
+            loadStoresInRadius();
+            setTimeout(showNearbyPreview, 300);
+        }
+
+        // 행사 데이터를 못 받으면 조용히 넘어가지 않고 재시도 수단을 준다.
+        function showDataError() {
+            const box = document.getElementById('dataErrorBanner');
+            if (box) box.classList.remove('hidden');
+        }
+
+        function retryLoadRemoteData() {
+            document.getElementById('dataErrorBanner')?.classList.add('hidden');
+            loadRemoteData();
         }
 
         function maybeShowOnboarding() {
@@ -851,10 +862,28 @@
             }
         }
 
+        // 매장이 걸러내는 조건은 브랜드 하나뿐이라 결과는 브랜드 4종밖에 안 나온다.
+        // 브랜드별로 한 번만 계산해 캐시하고, 각 매장은 같은 배열을 참조만 한다.
+        // (매장마다 MASTER_DB 전체를 filter하면 매장 수천 × 상품 4천 = 수백만 회 연산이
+        //  메인 스레드에서 돌아 화면이 멈춘다.)
+        let dealsByBrandCache = null;
+
+        function dealsByBrand(brand) {
+            if (!dealsByBrandCache) {
+                dealsByBrandCache = {};
+                MASTER_DB.forEach(p => {
+                    Object.keys(p.events).forEach(b => {
+                        (dealsByBrandCache[b] || (dealsByBrandCache[b] = [])).push(p);
+                    });
+                });
+            }
+            return dealsByBrandCache[brand] || [];
+        }
+
         // 매장 좌표(REAL_STORES) + 행사 데이터(MASTER_DB)를 결합해 지도에 쓸 매장 목록을 만든다.
         function buildStoresFromRealData() {
             allVirtualStoresDB = REAL_STORES.map(store => {
-                const storeDeals = MASTER_DB.filter(p => p.events[store.brand]);
+                const storeDeals = dealsByBrand(store.brand);
                 return { ...store, deals: storeDeals, itemCount: storeDeals.length };
             }).filter(store => store.itemCount > 0);
         }
@@ -931,7 +960,7 @@
                 const branchName = BRANCH_NAMES[Math.floor(Math.random() * BRANCH_NAMES.length)] + ` ${i+1}호점`;
                 
                 const store = { id: `store_${i}`, brand: brand, name: `${brand} ${branchName}`, lat: lat, lng: lng };
-                const storeDeals = MASTER_DB.filter(p => p.events[store.brand]);
+                const storeDeals = dealsByBrand(store.brand);
                 store.deals = storeDeals;
                 store.itemCount = storeDeals.length;
                 if(store.itemCount > 0) allVirtualStoresDB.push(store);
@@ -939,7 +968,14 @@
         }
 
         let streetLayer, satelliteLayer, satelliteLabelLayer, isSatelliteView = false;
+        // 이 키들은 정적 페이지로 공개 배포되므로 소스에서 숨길 방법이 없다.
+        // 반드시 발급처 콘솔에서 도메인(Referer) 제한을 걸어 도용을 막을 것.
+        //   - VWorld: 오픈API 신청 화면의 '서비스 URL'에 배포 도메인만 등록
+        //   - 기상청(data.go.kr): 활용신청 건별 일일 트래픽 한도 확인
+        // 키가 소진/차단되면 역지오코딩은 실패하고 중심점 거리 폴백으로만 동작한다.
         const VWORLD_KEY = '6888EEC4-8F4B-3D0D-87AE-7AE4C071E4CA';
+        // 기상청 단기예보 조회서비스(data.go.kr) 인증키. 초단기실황(getUltraSrtNcst)으로 실측 기온을 가져온다.
+        const KMA_KEY = '41d44570cca7921b6fce48322f6a6c3fe85a8eb13d5fb17e3d214ea0a59dfe54';
 
         function initMap() {
             const defaultCenter = [37.498095, 127.027610];
@@ -973,26 +1009,29 @@
                 }
             });
 
+            // 매장 파일은 위치가 확정된 뒤 그 시/도 것만 받는다.
+            // (예전엔 부팅 시 강남 좌표로 서울 파일을 먼저 받아서, 지방 사용자는
+            //  서울 데이터를 통째로 받은 뒤 자기 지역 파일을 또 받는 구조였다.)
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
-                    async position => {
+                    position => {
                         const lat = position.coords.latitude;
                         const lng = position.coords.longitude;
+                        userCoords = { lat, lng };
                         map.setView([lat, lng], 16);
                         searchCircle.setLatLng([lat, lng]);
                         updateWeather(lat, lng);
-                        const switched = await loadStoresForLocation(lat, lng);
-                        if (!switched && REAL_STORES.length === 0) generateVirtualStoresDB(lat, lng);
-                        loadStoresInRadius();
-                        setTimeout(showNearbyPreview, 800);
+                        if (dataReady) applyStoresForLocation(lat, lng);
                     },
-                    error => { updateWeather(defaultCenter[0], defaultCenter[1]); loadStoresInRadius(); setTimeout(showNearbyPreview, 800); },
+                    () => {
+                        updateWeather(defaultCenter[0], defaultCenter[1]);
+                        if (dataReady) applyStoresForLocation(defaultCenter[0], defaultCenter[1]);
+                    },
                     { timeout: 5000 }
                 );
             } else {
                 updateWeather(defaultCenter[0], defaultCenter[1]);
-                loadStoresInRadius();
-                setTimeout(showNearbyPreview, 800);
+                if (dataReady) applyStoresForLocation(defaultCenter[0], defaultCenter[1]);
             }
             setTimeout(() => { map.invalidateSize(); }, 300);
         }
@@ -1100,14 +1139,92 @@
             return null; // 선선 — 특정 필터 없이 일반 추천
         }
 
+        // 위경도 → 기상청 격자(nx, ny) 변환. 기상청 공식 DFS_XY_CONV(람베르트 정각원추도법).
+        function toKmaGrid(lat, lon) {
+            const RE = 6371.00877, GRID = 5.0, SLAT1 = 30.0, SLAT2 = 60.0, OLON = 126.0, OLAT = 38.0, XO = 43, YO = 136;
+            const DEGRAD = Math.PI / 180.0;
+            const re = RE / GRID;
+            const slat1 = SLAT1 * DEGRAD, slat2 = SLAT2 * DEGRAD, olon = OLON * DEGRAD, olat = OLAT * DEGRAD;
+            let sn = Math.tan(Math.PI * 0.25 + slat2 * 0.5) / Math.tan(Math.PI * 0.25 + slat1 * 0.5);
+            sn = Math.log(Math.cos(slat1) / Math.cos(slat2)) / Math.log(sn);
+            let sf = Math.tan(Math.PI * 0.25 + slat1 * 0.5);
+            sf = Math.pow(sf, sn) * Math.cos(slat1) / sn;
+            let ro = Math.tan(Math.PI * 0.25 + olat * 0.5);
+            ro = re * sf / Math.pow(ro, sn);
+            let ra = Math.tan(Math.PI * 0.25 + lat * DEGRAD * 0.5);
+            ra = re * sf / Math.pow(ra, sn);
+            let theta = lon * DEGRAD - olon;
+            if (theta > Math.PI) theta -= 2.0 * Math.PI;
+            if (theta < -Math.PI) theta += 2.0 * Math.PI;
+            theta *= sn;
+            return { nx: Math.floor(ra * Math.sin(theta) + XO + 0.5), ny: Math.floor(ro - ra * Math.cos(theta) + YO + 0.5) };
+        }
+
+        // 초단기실황 기준시각. 매시 40분 이후 해당 정시 자료가 나오므로, 40분 이전이면 직전 정시를 쓴다.
+        function kmaBaseDateTime() {
+            const kst = new Date(Date.now() + 9 * 3600 * 1000); // UTC에 +9시간 → KST 벽시계
+            if (kst.getUTCMinutes() < 40) kst.setUTCHours(kst.getUTCHours() - 1);
+            const p = n => String(n).padStart(2, '0');
+            return {
+                base_date: `${kst.getUTCFullYear()}${p(kst.getUTCMonth() + 1)}${p(kst.getUTCDate())}`,
+                base_time: `${p(kst.getUTCHours())}00`,
+            };
+        }
+
+        // 강수형태(PTY) → weatherIcon/weatherKeywords가 쓰는 WMO 유사 코드. 강수 없으면 null.
+        function ptyToCode(pty) {
+            if (pty === 3 || pty === 7) return 73;            // 눈 / 눈날림
+            if (pty === 2 || pty === 6) return 73;            // 비/눈 · 빗방울눈날림 → 눈 아이콘군
+            if (pty === 1 || pty === 5) return 61;            // 비 / 빗방울
+            return null;                                       // 0: 강수 없음
+        }
+
+        // 기상청 초단기실황에서 실측 기온·강수를 가져온다. 실패 시 null.
+        async function fetchKmaNowcast(lat, lng) {
+            const { nx, ny } = toKmaGrid(lat, lng);
+            const { base_date, base_time } = kmaBaseDateTime();
+            const url = `https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=${KMA_KEY}&pageNo=1&numOfRows=100&dataType=JSON&base_date=${base_date}&base_time=${base_time}&nx=${nx}&ny=${ny}`;
+            const res = await fetch(url);
+            if (!res.ok) return null;
+            const j = await res.json();
+            const items = j?.response?.body?.items?.item;
+            if (!Array.isArray(items)) return null;
+            const get = cat => items.find(it => it.category === cat)?.obsrValue;
+            const t1h = parseFloat(get('T1H'));
+            if (Number.isNaN(t1h)) return null;
+            const rn1 = parseFloat(get('RN1'));
+            return { temp: t1h, pty: parseInt(get('PTY'), 10), rn1: Number.isNaN(rn1) ? 0 : rn1 };
+        }
+
+        // 기온은 기상청 실측을 우선하고, 하늘상태(맑음/구름)는 실황에 없으므로 Open-Meteo 코드로 보완한다.
         async function updateWeather(lat, lng) {
             try {
-                const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,weather_code,precipitation`;
-                const res = await fetch(url);
-                if (!res.ok) return;
-                const j = await res.json();
-                if (!j.current) return;
-                currentWeather = { temp: Math.round(j.current.temperature_2m), code: j.current.weather_code, precip: j.current.precipitation };
+                // 1) Open-Meteo — 기본값 + 하늘상태 코드 확보(폴백 겸용).
+                let base = null;
+                try {
+                    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,weather_code,precipitation`;
+                    const res = await fetch(url);
+                    if (res.ok) {
+                        const j = await res.json();
+                        if (j.current) base = { temp: Math.round(j.current.temperature_2m), code: j.current.weather_code, precip: j.current.precipitation };
+                    }
+                } catch (e) {}
+
+                // 2) 기상청 실황 — 기온·강수 실측으로 덮어쓴다. 실패하면 Open-Meteo 값 유지.
+                const kma = await fetchKmaNowcast(lat, lng).catch(() => null);
+                if (kma) {
+                    const ptyCode = ptyToCode(kma.pty);
+                    currentWeather = {
+                        temp: Math.round(kma.temp),
+                        code: ptyCode !== null ? ptyCode : (base ? base.code : 0),
+                        precip: kma.rn1 > 0 ? kma.rn1 : (ptyCode !== null ? 1 : 0),
+                    };
+                } else if (base) {
+                    currentWeather = base;
+                } else {
+                    return;
+                }
+
                 const chip = document.getElementById('weatherChip');
                 document.getElementById('weatherChipIcon').textContent = weatherIcon(currentWeather);
                 document.getElementById('weatherChipText').textContent = `${currentWeather.temp}℃`;
@@ -1486,7 +1603,7 @@
                         const ringColor = bInfo.bg.replace('bg-', 'ring-'); // e.g. ring-purple-100
                         brandPillsHTML += `
                             <div class="flex flex-col items-center flex-1 bg-gray-50/50 py-1 rounded-lg border border-gray-50">
-                                <div class="w-6 h-6 rounded-full ${bInfo.bg} ${bInfo.color} text-[9px] font-black flex items-center justify-center mb-0.5 shadow-sm ring-1 ${ringColor}">${bInfo.text}</div>
+                                <div class="w-6 h-6 rounded-full ${bInfo.bg} ${bInfo.color} text-[11px] font-black flex items-center justify-center mb-0.5 shadow-sm ring-1 ${ringColor}">${bInfo.text}</div>
                                 <span class="text-[10px] font-black ${typeColor}">${pEvnt.type}</span>
                             </div>
                         `;
@@ -1494,8 +1611,8 @@
                         // 행사가 없는 브랜드는 회색(Grayscale) 처리하여 억누름
                         brandPillsHTML += `
                             <div class="flex flex-col items-center flex-1 py-1 opacity-40 grayscale">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 text-gray-500 text-[9px] font-black flex items-center justify-center mb-0.5">${bInfo.text}</div>
-                                <span class="text-[9px] font-medium text-gray-400">없음</span>
+                                <div class="w-6 h-6 rounded-full bg-gray-200 text-gray-500 text-[11px] font-black flex items-center justify-center mb-0.5">${bInfo.text}</div>
+                                <span class="text-[11px] font-medium text-gray-400">없음</span>
                             </div>
                         `;
                     }
@@ -1655,10 +1772,7 @@
                             <p class="text-[10px] text-gray-500 mt-0.5">선택 시 매장으로 이동 (약 ${Math.round(map.distance(map.getCenter(), [store.lat, store.lng]))}m)</p>
                         </div>
                     </div>
-                    <div class="bg-emerald-50 border border-emerald-100 px-3 py-1.5 rounded-lg flex flex-col items-center shrink-0">
-                        <span class="text-[10px] text-emerald-600 font-bold">진행행사</span>
-                        <span class="text-sm font-black text-emerald-700">${store.itemCount}개</span>
-                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-300 text-sm shrink-0"></i>
                 </div>
                 `;
             }).join('');
@@ -1778,11 +1892,11 @@
                 const isMonday = i === 0;
                 const isSunday = i === 6;
                 let badge = '';
-                if (isMonday) badge = `<span class="text-[8px] text-blue-600 font-black leading-none mt-0.5 block">새행사<br>${newCount}개</span>`;
-                if (isSunday) badge = `<span class="text-[8px] text-rose-500 font-black leading-none mt-0.5 block">마감<br>${endingCount || MASTER_DB.length}개</span>`;
+                if (isMonday) badge = `<span class="text-[10px] text-blue-600 font-black leading-none mt-0.5 block">새행사<br>${newCount}개</span>`;
+                if (isSunday) badge = `<span class="text-[10px] text-rose-500 font-black leading-none mt-0.5 block">마감<br>${endingCount || MASTER_DB.length}개</span>`;
                 return `
                 <div class="flex-1 flex flex-col items-center py-1.5 rounded-xl ${isToday ? 'bg-blue-600 text-white' : 'bg-gray-50 text-gray-600'} min-w-0">
-                    <span class="text-[9px] font-bold">${label}</span>
+                    <span class="text-[11px] font-bold">${label}</span>
                     <span class="text-xs font-black mt-0.5">${d.getDate()}</span>
                     ${badge}
                 </div>`;
@@ -1984,9 +2098,9 @@
                     const h = Math.max(4, Math.round((val / max) * 56));
                     const label = date.slice(5); // MM-DD
                     return `<div class="flex flex-col items-center flex-1 gap-1">
-                        <span class="text-[8px] font-bold text-blue-600">${val >= 1000 ? (val/1000).toFixed(1)+'k' : val}</span>
+                        <span class="text-[10px] font-bold text-blue-600">${val >= 1000 ? (val/1000).toFixed(1)+'k' : val}</span>
                         <div class="w-full rounded-t-sm bg-blue-400" style="height:${h}px"></div>
-                        <span class="text-[8px] text-gray-400 font-medium">${label}</span>
+                        <span class="text-[10px] text-gray-400 font-medium">${label}</span>
                     </div>`;
                 }).join('');
             } catch(e) { box.classList.add('hidden'); }
@@ -2235,6 +2349,7 @@
             else msg = likedCount > 0 ? `이번 주 행사 ${daysToSunday}일 남았어요. 찜한 ${likedCount}개 상품 확인해보세요` : `이번 주 행사 ${daysToSunday}일 후 종료됩니다`;
             text.textContent = msg;
             banner.classList.remove('hidden');
+            setTimeout(() => banner.classList.add('hidden'), 6000);
         }
 
         // ── 월간 절약 리포트 ───────────────────────────────────────────────
@@ -2314,13 +2429,30 @@
             });
         }
 
-        async function toggleNotification(key) {
-            if (!('Notification' in window)) { showToast('이 환경에서는 알림을 지원하지 않습니다.'); return; }
-            if (Notification.permission === 'denied') { showToast('알림이 차단되었습니다. 브라우저 설정에서 허용해주세요.'); return; }
-            if (Notification.permission !== 'granted') {
-                const granted = await requestNotificationPermission();
-                if (!granted) return;
+        // 토스 인앱이면 토스 알림 동의를, 일반 브라우저면 웹 알림 권한을 쓴다.
+        // 두 환경에서 API가 전혀 달라서 호출부는 이 두 함수만 보게 한다.
+        function isInTossApp() {
+            return document.body.classList.contains('in-toss-app');
+        }
+
+        function notificationSupported() {
+            if (isInTossApp()) return typeof tossNotificationSupported === 'function' && tossNotificationSupported();
+            return 'Notification' in window;
+        }
+
+        async function ensureNotificationGranted() {
+            if (isInTossApp()) return await tossRequestNotificationAgreement();
+            if (Notification.permission === 'granted') return true;
+            if (Notification.permission === 'denied') {
+                showToast('알림이 차단되었습니다. 브라우저 설정에서 허용해주세요.');
+                return false;
             }
+            return await requestNotificationPermission();
+        }
+
+        async function toggleNotification(key) {
+            if (!notificationSupported()) { showToast('이 환경에서는 알림을 지원하지 않습니다.'); return; }
+            if (!notifSettings[key] && !(await ensureNotificationGranted())) return;
             notifSettings[key] = !notifSettings[key];
             saveNotifSettings();
             renderNotifToggles();
@@ -2329,14 +2461,9 @@
         }
 
         async function toggleVisitDay(day) {
-            if (!('Notification' in window)) { showToast('이 환경에서는 알림을 지원하지 않습니다.'); return; }
-            if (Notification.permission === 'granted') {
-                if (visitDays.has(day)) visitDays.delete(day); else visitDays.add(day);
-            } else {
-                const granted = await requestNotificationPermission();
-                if (!granted) return;
-                if (visitDays.has(day)) visitDays.delete(day); else visitDays.add(day);
-            }
+            if (!notificationSupported()) { showToast('이 환경에서는 알림을 지원하지 않습니다.'); return; }
+            if (!visitDays.has(day) && !(await ensureNotificationGranted())) return;
+            if (visitDays.has(day)) visitDays.delete(day); else visitDays.add(day);
             saveNotifSettings();
             renderVisitDayBtns();
             scheduleAllNotifications();
@@ -2363,8 +2490,8 @@
             hideAllTabModals();
             document.getElementById('settingsModal').classList.remove('hidden');
             document.getElementById('settingsModal').classList.add('flex');
-            // 알림 권한 버튼 상태 동기화
-            if ('Notification' in window && Notification.permission !== 'granted') {
+            // 알림 권한 버튼 상태 동기화 (토스 인앱은 동의 상태를 조회할 수 없어 웹에서만 노출)
+            if (!isInTossApp() && 'Notification' in window && Notification.permission !== 'granted') {
                 document.getElementById('notifPermBtn')?.classList.remove('hidden');
                 document.getElementById('notifStatusMsg')?.classList.remove('hidden');
             }
@@ -2395,6 +2522,15 @@
                 setTimeout(maybeShowMonthlyReport, 1500);
             }
             scheduleAllNotifications();
+
+            // 날씨는 포커스 복귀 시에만 갱신한다.
+            // (평균 체류가 20초 남짓이라 30분 주기 폴링은 한 번도 발화하지 않았다.)
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden && map) {
+                    const c = map.getCenter();
+                    updateWeather(c.lat, c.lng);
+                }
+            });
         }
     </script>
     <script type="module" src="ads.js"></script>

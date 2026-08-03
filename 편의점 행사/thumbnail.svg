@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1932 828">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1932" height="828" fill="url(#bg)"/>
+
+  <!-- 배경 장식 동그라미 -->
+  <circle cx="1780" cy="120" r="220" fill="#ffffff" opacity="0.06"/>
+  <circle cx="1850" cy="700" r="160" fill="#ffffff" opacity="0.06"/>
+
+  <!-- 매장 일러스트 (좌측) -->
+  <g transform="translate(140,210)">
+    <!-- 차양 -->
+    <rect x="0" y="0" width="460" height="32" rx="16" fill="#ffffff"/>
+    <path d="M0 32 v78 a46 38 0 0 0 92 0 v-78 Z" fill="#7c3aed"/>
+    <path d="M92 32 v78 a46 38 0 0 0 92 0 v-78 Z" fill="#ffffff"/>
+    <path d="M184 32 v78 a46 38 0 0 0 92 0 v-78 Z" fill="#16a34a"/>
+    <path d="M276 32 v78 a46 38 0 0 0 92 0 v-78 Z" fill="#ef4444"/>
+    <path d="M368 32 v78 a46 38 0 0 0 92 0 v-78 Z" fill="#f59e0b"/>
+
+    <!-- 유리창 -->
+    <rect x="36" y="150" width="388" height="172" rx="12" fill="#dbeafe" opacity="0.9"/>
+    <rect x="218" y="150" width="22" height="172" fill="#7c3aed" opacity="0.5"/>
+
+    <!-- 1+1 가격 태그 -->
+    <g transform="translate(0,300) rotate(-14)">
+      <path d="M0 40 L40 0 H190 a29 29 0 0 1 29 29 v23 a29 29 0 0 1 -29 29 H40 Z" fill="#16a34a" stroke="#ffffff" stroke-width="11"/>
+      <circle cx="32" cy="40" r="10" fill="#ffffff"/>
+      <text x="135" y="57" font-family="Arial, sans-serif" font-size="49" font-weight="900" fill="#ffffff" text-anchor="middle">1+1</text>
+    </g>
+
+    <!-- 위치 핀 -->
+    <g transform="translate(330,260)">
+      <path d="M72 0 C112 0 144 32 144 72 C144 118 72 188 72 188 C72 188 0 118 0 72 C0 32 32 0 72 0 Z" fill="#ffffff"/>
+      <circle cx="72" cy="72" r="40" fill="#2563eb"/>
+    </g>
+  </g>
+
+  <!-- 텍스트 (우측) -->
+  <g font-family="Arial, sans-serif" fill="#ffffff">
+    <text x="950" y="400" font-size="110" font-weight="900">편의점 행사</text>
+    <text x="950" y="470" font-size="40" font-weight="700" opacity="0.92">전국 CU·GS25·세븐일레븐·이마트24</text>
+    <text x="950" y="520" font-size="40" font-weight="700" opacity="0.92">1+1 · 2+1 행사를 지도에서 한눈에</text>
+  </g>
+</svg>

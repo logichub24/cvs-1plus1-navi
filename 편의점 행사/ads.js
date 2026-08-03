@@ -1,7 +1,7 @@
 // 토스인앱(Apps in Toss) 광고 SDK 연동.
 // 일반 브라우저(GitHub Pages 등)에서는 isSupported()가 false라 전부 조용히 no-op되고,
 // 토스 앱 WebView 안에서 열렸을 때만 실제 광고가 붙는다.
-import { TossAds, loadFullScreenAd, showFullScreenAd, share, getCurrentLocation, Accuracy } from '@apps-in-toss/web-bridge';
+import { TossAds, loadFullScreenAd, showFullScreenAd, share, getCurrentLocation, Accuracy, requestNotificationAgreement } from '@apps-in-toss/web-bridge';
 
 const AD_CONFIG = {
   banner:       'ait.v2.live.45bb0aad48d04636',
@@ -152,9 +152,34 @@ window.tossGetCurrentLocation = function tossGetCurrentLocation() {
   return getCurrentLocation({ accuracy: Accuracy.Balanced });
 };
 
+// 토스 알림 동의. 실제 발송은 토스 콘솔에 등록한 템플릿으로 서버가 보내므로
+// 앱이 하는 일은 "동의를 받아두는 것"까지다. (WebView에는 서비스워커/Notification이
+// 없어서 기존 로컬 알림 방식은 토스 안에서 아예 발동하지 않았다.)
+// TEMPLATE_CODE는 토스 콘솔에서 발급받은 값으로 채워야 동작한다.
+const NOTIFICATION_TEMPLATE_CODE = '';
+
+window.tossNotificationSupported = function tossNotificationSupported() {
+  return Boolean(NOTIFICATION_TEMPLATE_CODE)
+    && requestNotificationAgreement.isSupported
+    && requestNotificationAgreement.isSupported();
+};
+
+window.tossRequestNotificationAgreement = function tossRequestNotificationAgreement() {
+  return new Promise(resolve => {
+    if (!window.tossNotificationSupported()) { resolve(false); return; }
+    requestNotificationAgreement({
+      options: { templateCode: NOTIFICATION_TEMPLATE_CODE },
+      onEvent: result => resolve(result.type === 'newAgreement' || result.type === 'alreadyAgreed'),
+      onError: () => resolve(false),
+    });
+  });
+};
+
 function init() {
   if (!TossAds.initialize.isSupported || !TossAds.initialize.isSupported()) return;
   document.body.classList.add('in-toss-app');
+  const wrap = document.getElementById('adBannerWrap');
+  if (wrap) { wrap.classList.remove('hidden'); wrap.classList.add('flex'); }
   TossAds.initialize({
     callbacks: {
       onInitialized: () => {
