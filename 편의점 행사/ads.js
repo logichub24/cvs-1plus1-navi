@@ -2,6 +2,7 @@
 // 일반 브라우저(GitHub Pages 등)에서는 isSupported()가 false라 전부 조용히 no-op되고,
 // 토스 앱 WebView 안에서 열렸을 때만 실제 광고가 붙는다.
 import { TossAds, loadFullScreenAd, showFullScreenAd, share, getCurrentLocation, Accuracy, requestNotificationAgreement } from '@apps-in-toss/web-bridge';
+import { Analytics } from '@apps-in-toss/web-analytics';
 
 const AD_CONFIG = {
   banner:       'ait.v2.live.45bb0aad48d04636',
@@ -173,6 +174,16 @@ window.tossRequestNotificationAgreement = function tossRequestNotificationAgreem
       onError: () => resolve(false),
     });
   });
+};
+
+// 토스 애널리틱스로 계측 로그를 보낸다. 토스 밖에서는 Analytics가 undefined를
+// 반환하며 조용히 no-op 된다. 1_1.html의 track()이 이 함수만 호출한다.
+window.tossTrack = function tossTrack(name, params) {
+  try {
+    Analytics.impression({ log_name: name, ...params });
+  } catch (e) {
+    // 계측 실패가 앱 동작을 막으면 안 됨
+  }
 };
 
 function init() {

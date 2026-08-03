@@ -721,6 +721,43 @@
         // 실시간으로 받아오도록 절대경로를 쓴다. GitHub Pages 자체에서 열 때도 동일 출처라 그대로 동작함.
         const DATA_BASE_URL = 'https://logichub24.github.io/cvs-1plus1-navi/%ED%8E%B8%EC%9D%98%EC%A0%90%20%ED%96%89%EC%82%AC/';
 
+        // ── 계측 ──────────────────────────────────────────────────────────
+        // 목적: "로딩 중 이탈"과 "화면은 봤는데 원하는 걸 못 찾아 이탈"을 구분한다.
+        // 지금까지는 이 둘을 나눌 데이터가 없어서 체류 시간만 보고 원인을 추측해야 했다.
+        // 토스 안에서는 Analytics로 전송되고, 밖에서는 콘솔에만 남는다.
+        let firstInteractionLogged = false;
+
+        function track(name, params) {
+            const payload = { ms: Math.round(performance.now()), ...params };
+            if (typeof tossTrack === 'function') tossTrack(name, payload);
+            else console.debug('[track]', name, payload);
+        }
+
+        // 첫 탭까지 걸린 시간. 이게 안 찍히면 "아무것도 안 누르고 나갔다"는 뜻이다.
+        function markFirstInteraction(label) {
+            if (firstInteractionLogged) return;
+            firstInteractionLogged = true;
+            track('first_interaction', { target: label });
+        }
+
+        function initTracking() {
+            ['pointerdown', 'keydown'].forEach(evt => {
+                document.addEventListener(evt, e => {
+                    const btn = e.target?.closest?.('button, a, input');
+                    markFirstInteraction(btn?.id || btn?.tagName?.toLowerCase() || 'map');
+                }, { once: false, passive: true });
+            });
+
+            // 세션 종료 시점에 이탈 유형을 확정한다.
+            window.addEventListener('pagehide', () => {
+                track('session_end', {
+                    interacted: firstInteractionLogged,
+                    data_loaded: dataReady,
+                    markers: mapMarkers.length,
+                });
+            });
+        }
+
         // 부팅은 2단계로 나눈다.
         //  1) startApp()  - 네트워크를 기다리지 않고 지도부터 즉시 그린다.
         //  2) loadRemoteData() - 데이터가 도착하면 마커/집계를 얹는다.
@@ -728,7 +765,9 @@
         // 전부 직렬로 끝난 뒤에야 initMap()이 불려서, 첫 화면까지 수 초간 빈 회색 화면이었다.
         document.addEventListener('DOMContentLoaded', () => {
             loadSavedData();
+            initTracking();
             startApp();
+            track('map_ready');   // 사용자가 첫 화면을 볼 수 있게 된 시점
             loadRemoteData();
         });
 
@@ -752,7 +791,7 @@
                 fetch(DATA_BASE_URL + 'stores/index.json').then(res => res.ok ? res.json() : null).catch(() => null),
             ]);
 
-            if (!deals || deals.length === 0) { showDataError(); return; }
+            if (!deals || deals.length === 0) { track('data_failed'); showDataError(); return; }
 
             MASTER_DB = deals;
             dealsByBrandCache = null;
@@ -769,6 +808,8 @@
             const lat = userCoords ? userCoords.lat : center.lat;
             const lng = userCoords ? userCoords.lng : center.lng;
             await applyStoresForLocation(lat, lng);
+            // 상품/매장이 실제로 지도에 올라간 시점. map_ready와의 차이가 곧 로딩 대기 시간이다.
+            track('data_ready', { deals: MASTER_DB.length, markers: mapMarkers.length });
 
             initRetentionFeatures();
         }
@@ -1718,6 +1759,9 @@
             let matches = MASTER_DB.filter(p => matchSearch(p.name, query));
             if (searchBrandFilter) matches = matches.filter(p => p.events[searchBrandFilter]);
             if (matches.length === 0) {
+                // 찾는 상품이 없어서 나가는 케이스. 어떤 검색어가 비었는지 알아야
+                // 크롤링 누락인지 검색 매칭 문제인지 구분할 수 있다.
+                track('search_empty', { query, brand: searchBrandFilter || 'all' });
                 list.innerHTML = `<div class="p-8 text-center text-gray-500 font-bold mt-10">결과가 없습니다.</div>`;
             } else {
                 list.innerHTML = `<div class="px-2 py-1 flex justify-between items-center"><span class="text-xs font-bold text-gray-500">통합 검색 결과 ${matches.length}건</span></div>` + matches.map(p => createProductHTML(p, 'search', searchBrandFilter)).join('');
