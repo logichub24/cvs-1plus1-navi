@@ -65644,6 +65644,38 @@
     }
   },
   {
+    "id": "청정원오트밀감자크림10",
+    "name": "청정원)오트밀감자크림50g(10)",
+    "category": "유제품",
+    "price": 3800,
+    "saving": 1267,
+    "barcode": "8801052139333",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801052139333.JPG"
+      }
+    }
+  },
+  {
+    "id": "청정원오트밀소고기미역10",
+    "name": "청정원)오트밀소고기미역50g(10)",
+    "category": "유제품",
+    "price": 3800,
+    "saving": 1267,
+    "barcode": "8801052139357",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801052139357.JPG"
+      }
+    }
+  },
+  {
     "id": "제니코플레인스트링치즈",
     "name": "제니코)플레인스트링치즈24g",
     "category": "유제품",
