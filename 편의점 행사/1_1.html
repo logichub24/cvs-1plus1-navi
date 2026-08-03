@@ -113,6 +113,14 @@
                         <span id="endingDealCount" class="text-[10px] text-rose-600 font-bold leading-none mt-1">0개</span>
                     </div>
                 </button>
+                <!-- 칩 3: 다른 앱 안내. 아이콘/이름이 일정 간격으로 교체된다. -->
+                <button id="crossPromoChip" onclick="openCrossPromoApp()" class="hidden bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
+                    <img id="crossPromoIcon" src="" alt="" class="w-6 h-6 rounded-full object-cover bg-gray-100">
+                    <div class="text-left flex flex-col">
+                        <span id="crossPromoName" class="text-[10px] font-black text-gray-900 leading-none mt-0.5">다른 앱</span>
+                        <span class="text-[10px] text-indigo-600 font-bold leading-none mt-1">바로가기</span>
+                    </div>
+                </button>
             </div>
 
             <!-- 3번째 줄: 브랜드 필터 (가로 나열) -->
@@ -758,6 +766,55 @@
             });
         }
 
+        // ── 다른 앱 안내(교차 프로모션) ────────────────────────────────────
+        // 상단 칩 하나에 다른 미니앱을 번갈아 노출한다. 탭하면 intoss:// 스킴으로 해당 앱이 열린다.
+        // intoss://는 정식 출시 승인 후에만 동작하므로, 미출시 앱을 넣으면 링크가 죽는다.
+        const CROSS_PROMO_APPS = [
+            { appName: 'fastfood-event-navi', label: '패스트푸드 행사', icon: 'https://static.toss.im/appsintoss/32449/da4c30df-6fd4-4b08-8c99-72030d0aeec6.png' },
+            { appName: 'cafe-event-map',      label: '카페행사맵',      icon: 'https://static.toss.im/appsintoss/32449/0bca3067-b954-439c-a16c-5f5c8ec2db6f.png' },
+        ];
+        const CROSS_PROMO_INTERVAL_MS = 4000;
+
+        let crossPromoIndex = 0, crossPromoTimer = null;
+
+        function renderCrossPromo() {
+            const app = CROSS_PROMO_APPS[crossPromoIndex];
+            document.getElementById('crossPromoIcon').src = app.icon;
+            document.getElementById('crossPromoIcon').alt = app.label;
+            document.getElementById('crossPromoName').textContent = app.label;
+        }
+
+        function initCrossPromo() {
+            if (CROSS_PROMO_APPS.length === 0) return;
+            const chip = document.getElementById('crossPromoChip');
+            chip.classList.remove('hidden');
+            chip.classList.add('flex');
+            renderCrossPromo();
+
+            if (CROSS_PROMO_APPS.length < 2) return;
+            crossPromoTimer = setInterval(() => {
+                crossPromoIndex = (crossPromoIndex + 1) % CROSS_PROMO_APPS.length;
+                renderCrossPromo();
+            }, CROSS_PROMO_INTERVAL_MS);
+
+            // 손가락이 닿는 순간 회전을 멈춘다. 안 그러면 누르려던 앱이 바뀌어
+            // 엉뚱한 앱이 열린다(40대 이상 비중이 높아 오탭 영향이 크다).
+            chip.addEventListener('pointerdown', stopCrossPromoRotation, { once: true });
+        }
+
+        function stopCrossPromoRotation() {
+            if (crossPromoTimer) { clearInterval(crossPromoTimer); crossPromoTimer = null; }
+        }
+
+        function openCrossPromoApp() {
+            stopCrossPromoRotation();
+            const app = CROSS_PROMO_APPS[crossPromoIndex];
+            track('cross_promo_click', { app: app.appName });
+
+            if (typeof tossOpenApp === 'function' && tossOpenApp(`intoss://${app.appName}`)) return;
+            showToast(`${app.label}은 토스 앱에서 열 수 있어요.`);
+        }
+
         // 부팅은 2단계로 나눈다.
         //  1) startApp()  - 네트워크를 기다리지 않고 지도부터 즉시 그린다.
         //  2) loadRemoteData() - 데이터가 도착하면 마커/집계를 얹는다.
@@ -779,6 +836,7 @@
             document.getElementById('map').addEventListener('touchstart', closeSheet);
             window.addEventListener('resize', () => { if(map) map.invalidateSize(); });
             maybeShowOnboarding();
+            initCrossPromo();
         }
 
         // deals.json: 매일 새벽 3시 GitHub Actions가 4사 행사 페이지를 크롤링해 갱신하는 실데이터.

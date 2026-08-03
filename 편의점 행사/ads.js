@@ -3,6 +3,7 @@
 // 토스 앱 WebView 안에서 열렸을 때만 실제 광고가 붙는다.
 import { TossAds, loadFullScreenAd, showFullScreenAd, share, getCurrentLocation, Accuracy, requestNotificationAgreement } from '@apps-in-toss/web-bridge';
 import { Analytics } from '@apps-in-toss/web-analytics';
+import { openURL } from '@apps-in-toss/web-framework';
 
 const AD_CONFIG = {
   banner:       'ait.v2.live.45bb0aad48d04636',
@@ -183,6 +184,18 @@ window.tossTrack = function tossTrack(name, params) {
     Analytics.impression({ log_name: name, ...params });
   } catch (e) {
     // 계측 실패가 앱 동작을 막으면 안 됨
+  }
+};
+
+// intoss:// 스킴으로 다른 미니앱을 연다. 토스 밖에서는 열 수단이 없으므로
+// false를 돌려주고, 호출부가 안내 토스트를 띄운다.
+window.tossOpenApp = function tossOpenApp(url) {
+  if (!document.body.classList.contains('in-toss-app')) return false;
+  try {
+    openURL(url);
+    return true;
+  } catch (e) {
+    return false;
   }
 };
 
