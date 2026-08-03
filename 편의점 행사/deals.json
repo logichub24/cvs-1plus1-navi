@@ -25,8 +25,8 @@
     "id": "코카환타오렌지p",
     "name": "코카)환타오렌지P600ml",
     "category": "음료",
-    "price": 2200,
-    "saving": 2200,
+    "price": 2400,
+    "saving": 2400,
     "barcode": "8801094112707",
     "events": {
       "CU": {
@@ -41,8 +41,8 @@
     "id": "코카스프라이트p",
     "name": "코카)스프라이트P500ml",
     "category": "음료",
-    "price": 2200,
-    "saving": 2200,
+    "price": 2400,
+    "saving": 2400,
     "barcode": "8801094202606",
     "events": {
       "CU": {
@@ -587,8 +587,8 @@
     "id": "코카스프라이트p1",
     "name": "코카)스프라이트P1.5L",
     "category": "음료",
-    "price": 3700,
-    "saving": 3700,
+    "price": 3900,
+    "saving": 3900,
     "barcode": "8801094202408",
     "events": {
       "CU": {
@@ -603,8 +603,8 @@
     "id": "코카토레타p",
     "name": "코카)토레타P500ml",
     "category": "음료",
-    "price": 2200,
-    "saving": 2200,
+    "price": 2400,
+    "saving": 2400,
     "barcode": "8801094412005",
     "events": {
       "CU": {
@@ -829,8 +829,8 @@
     "id": "오뚜기영양닭죽",
     "name": "오뚜기)영양닭죽285g",
     "category": "간편식",
-    "price": 4500,
-    "saving": 4500,
+    "price": 5200,
+    "saving": 5200,
     "barcode": "8801045303062",
     "events": {
       "CU": {
@@ -883,8 +883,8 @@
     "id": "오뚜기새송이쇠고기죽",
     "name": "오뚜기)새송이쇠고기죽",
     "category": "간편식",
-    "price": 4500,
-    "saving": 4500,
+    "price": 5200,
+    "saving": 5200,
     "barcode": "8801045303017",
     "events": {
       "CU": {
@@ -963,8 +963,8 @@
     "id": "코카파워에이드퍼플p600",
     "name": "코카)파워에이드퍼플P600",
     "category": "음료",
-    "price": 2400,
-    "saving": 2400,
+    "price": 2600,
+    "saving": 2600,
     "barcode": "8801094603700",
     "events": {
       "CU": {
@@ -1071,8 +1071,8 @@
     "id": "코카스프라이트캔",
     "name": "코카)스프라이트캔355ml",
     "category": "음료",
-    "price": 1900,
-    "saving": 1900,
+    "price": 2000,
+    "saving": 2000,
     "barcode": "8801094203207",
     "events": {
       "CU": {
@@ -1109,8 +1109,8 @@
     "id": "오뚜기단호박죽",
     "name": "오뚜기)단호박죽285g",
     "category": "간편식",
-    "price": 4500,
-    "saving": 4500,
+    "price": 5200,
+    "saving": 5200,
     "barcode": "8801045303048",
     "events": {
       "CU": {
@@ -1195,8 +1195,8 @@
     "id": "코카환타파인p",
     "name": "코카)환타파인P600ml",
     "category": "음료",
-    "price": 2200,
-    "saving": 2200,
+    "price": 2400,
+    "saving": 2400,
     "barcode": "8801094132705",
     "events": {
       "CU": {
@@ -1487,8 +1487,8 @@
     "id": "코카코카제로p1",
     "name": "코카)코카제로P1.5L",
     "category": "기타",
-    "price": 4000,
-    "saving": 4000,
+    "price": 4300,
+    "saving": 4300,
     "barcode": "8801094082406",
     "events": {
       "CU": {
@@ -1679,8 +1679,8 @@
     "id": "코카스프라이트제로캔350",
     "name": "코카)스프라이트제로캔350",
     "category": "음료",
-    "price": 1800,
-    "saving": 1800,
+    "price": 2000,
+    "saving": 2000,
     "barcode": "8801094963200",
     "events": {
       "CU": {
@@ -1743,8 +1743,8 @@
     "id": "코카스프라이트제로p500",
     "name": "코카)스프라이트제로P500",
     "category": "음료",
-    "price": 2200,
-    "saving": 2200,
+    "price": 2400,
+    "saving": 2400,
     "barcode": "8801094962104",
     "events": {
       "CU": {
@@ -3107,8 +3107,8 @@
     "id": "코카파워에이드제로p600",
     "name": "코카)파워에이드제로P600",
     "category": "음료",
-    "price": 2400,
-    "saving": 2400,
+    "price": 2600,
+    "saving": 2600,
     "barcode": "8801094212728",
     "events": {
       "CU": {
@@ -3437,8 +3437,8 @@
     "id": "오뚜기전복죽",
     "name": "오뚜기)전복죽285g",
     "category": "간편식",
-    "price": 4500,
-    "saving": 4500,
+    "price": 5200,
+    "saving": 5200,
     "barcode": "8801045303000",
     "events": {
       "CU": {
@@ -3711,8 +3711,8 @@
     "id": "cj100현미밥3입",
     "name": "CJ)100%현미밥130g*3입",
     "category": "기타",
-    "price": 7500,
-    "saving": 7500,
+    "price": 8400,
+    "saving": 8400,
     "barcode": "8801007327372",
     "events": {
       "CU": {
@@ -4211,8 +4211,8 @@
     "id": "코카토레타제로p",
     "name": "코카)토레타제로P500ml",
     "category": "음료",
-    "price": 2200,
-    "saving": 2200,
+    "price": 2400,
+    "saving": 2400,
     "barcode": "8801094412371",
     "events": {
       "CU": {
@@ -4351,8 +4351,8 @@
     "id": "오비카스레몬논알콜캔330",
     "name": "오비)카스레몬논알콜캔330",
     "category": "주류",
-    "price": 2000,
-    "saving": 2000,
+    "price": 2500,
+    "saving": 2500,
     "barcode": "8801858047399",
     "events": {
       "CU": {
@@ -4383,8 +4383,8 @@
     "id": "코카파워스칼렛스톰600p",
     "name": "코카)파워스칼렛스톰600P",
     "category": "기타",
-    "price": 2400,
-    "saving": 2400,
+    "price": 2600,
+    "saving": 2600,
     "barcode": "8801094602703",
     "events": {
       "CU": {
@@ -6051,8 +6051,8 @@
     "id": "코카파워라임제로p600",
     "name": "코카)파워라임제로P600",
     "category": "기타",
-    "price": 2400,
-    "saving": 2400,
+    "price": 2600,
+    "saving": 2600,
     "barcode": "8801094000288",
     "events": {
       "CU": {
@@ -6099,8 +6099,8 @@
     "id": "cj100통곡물밥",
     "name": "CJ)100%통곡물밥130g",
     "category": "기타",
-    "price": 2600,
-    "saving": 2600,
+    "price": 2900,
+    "saving": 2900,
     "barcode": "8801392101724",
     "events": {
       "CU": {
@@ -6249,8 +6249,8 @@
     "id": "코카스프라이트제로칠350",
     "name": "코카)스프라이트제로칠350",
     "category": "음료",
-    "price": 1900,
-    "saving": 1900,
+    "price": 2000,
+    "saving": 2000,
     "barcode": "8801094000318",
     "events": {
       "CU": {
@@ -6575,8 +6575,8 @@
     "id": "코카환타멜론p",
     "name": "코카)환타멜론P600ml",
     "category": "음료",
-    "price": 2200,
-    "saving": 2200,
+    "price": 2400,
+    "saving": 2400,
     "barcode": "8801094000394",
     "events": {
       "CU": {
@@ -8861,8 +8861,8 @@
     "id": "오뚜기계란야채죽",
     "name": "오뚜기)계란야채죽",
     "category": "간편식",
-    "price": 4500,
-    "saving": 4500,
+    "price": 5200,
+    "saving": 5200,
     "barcode": "8801045303055",
     "events": {
       "CU": {
@@ -9965,8 +9965,8 @@
     "id": "코카스프라이트제로티500",
     "name": "코카)스프라이트제로티500",
     "category": "음료",
-    "price": 2200,
-    "saving": 2200,
+    "price": 2400,
+    "saving": 2400,
     "barcode": "8801094001704",
     "events": {
       "CU": {
@@ -10905,8 +10905,8 @@
     "id": "오뚜기3분카레매운맛",
     "name": "오뚜기)3분카레매운맛",
     "category": "기타",
-    "price": 2500,
-    "saving": 833,
+    "price": 2900,
+    "saving": 967,
     "barcode": "8801045290324",
     "events": {
       "CU": {
@@ -11153,8 +11153,8 @@
     "id": "농심카프리썬오렌지팩200",
     "name": "농심)카프리썬오렌지팩200",
     "category": "기타",
-    "price": 1100,
-    "saving": 367,
+    "price": 1200,
+    "saving": 400,
     "barcode": "8801043650182",
     "events": {
       "CU": {
@@ -11551,8 +11551,8 @@
     "id": "cj햇반작은공기",
     "name": "CJ)햇반작은공기130g",
     "category": "기타",
-    "price": 1700,
-    "saving": 567,
+    "price": 2000,
+    "saving": 667,
     "barcode": "8801007002989",
     "events": {
       "CU": {
@@ -11675,8 +11675,8 @@
     "id": "농심오징어짬뽕큰사발컵",
     "name": "농심)오징어짬뽕큰사발컵",
     "category": "라면",
-    "price": 1800,
-    "saving": 600,
+    "price": 1900,
+    "saving": 633,
     "barcode": "8801043016117",
     "events": {
       "CU": {
@@ -11763,8 +11763,8 @@
     "id": "cj햇반",
     "name": "CJ)햇반210g",
     "category": "기타",
-    "price": 2100,
-    "saving": 700,
+    "price": 2400,
+    "saving": 800,
     "barcode": "8801007310572",
     "events": {
       "CU": {
@@ -11779,8 +11779,8 @@
     "id": "오뚜기3분쇠고기간짜장",
     "name": "오뚜기)3분쇠고기간짜장",
     "category": "라면",
-    "price": 2500,
-    "saving": 833,
+    "price": 2900,
+    "saving": 967,
     "barcode": "8801045291321",
     "events": {
       "CU": {
@@ -11849,8 +11849,8 @@
     "id": "cj큰햇반",
     "name": "CJ)큰햇반300g",
     "category": "기타",
-    "price": 2900,
-    "saving": 967,
+    "price": 3400,
+    "saving": 1133,
     "barcode": "8801007054186",
     "events": {
       "CU": {
@@ -12857,8 +12857,8 @@
     "id": "농심튀김우동큰사발컵",
     "name": "농심)튀김우동큰사발컵",
     "category": "라면",
-    "price": 1500,
-    "saving": 500,
+    "price": 1600,
+    "saving": 533,
     "barcode": "8801043016070",
     "events": {
       "CU": {
@@ -13843,8 +13843,8 @@
     "id": "cj햇반3입",
     "name": "CJ)햇반200g*3입",
     "category": "기타",
-    "price": 5700,
-    "saving": 1900,
+    "price": 6500,
+    "saving": 2167,
     "barcode": "8801007066271",
     "events": {
       "CU": {
@@ -14325,8 +14325,8 @@
     "id": "cj햇반8입",
     "name": "CJ)햇반210g*8입",
     "category": "기타",
-    "price": 14500,
-    "saving": 4833,
+    "price": 16600,
+    "saving": 5533,
     "barcode": "8801007295312",
     "events": {
       "CU": {
@@ -14405,8 +14405,8 @@
     "id": "코카조지아블랙p",
     "name": "코카)조지아블랙P470ml",
     "category": "기타",
-    "price": 2800,
-    "saving": 933,
+    "price": 2900,
+    "saving": 967,
     "barcode": "8801094502669",
     "events": {
       "CU": {
@@ -15445,8 +15445,8 @@
     "id": "오뚜기백세카레순한",
     "name": "오뚜기)백세카레순한100g",
     "category": "기타",
-    "price": 4600,
-    "saving": 1533,
+    "price": 5500,
+    "saving": 1833,
     "barcode": "8801045010021",
     "events": {
       "CU": {
@@ -15461,8 +15461,8 @@
     "id": "오뚜기백세카레약매",
     "name": "오뚜기)백세카레약매100g",
     "category": "기타",
-    "price": 4600,
-    "saving": 1533,
+    "price": 5500,
+    "saving": 1833,
     "barcode": "8801045010014",
     "events": {
       "CU": {
@@ -16009,8 +16009,8 @@
     "id": "오비카스논알콜캔355",
     "name": "오비)카스논알콜캔355",
     "category": "주류",
-    "price": 2000,
-    "saving": 667,
+    "price": 2500,
+    "saving": 833,
     "barcode": "8801858045258",
     "events": {
       "CU": {
@@ -16993,8 +16993,8 @@
     "id": "cj큰햇반3입",
     "name": "CJ)큰햇반300g*3입",
     "category": "기타",
-    "price": 8300,
-    "saving": 2767,
+    "price": 9500,
+    "saving": 3167,
     "barcode": "8801007289649",
     "events": {
       "CU": {
@@ -17015,8 +17015,8 @@
     "id": "농심웰치제로포도캔355",
     "name": "농심)웰치제로포도캔355",
     "category": "기타",
-    "price": 1500,
-    "saving": 500,
+    "price": 1600,
+    "saving": 533,
     "barcode": "8801043064088",
     "events": {
       "CU": {
@@ -18851,8 +18851,8 @@
     "id": "cj햇반흑미밥작은공기",
     "name": "CJ)햇반흑미밥작은공기",
     "category": "기타",
-    "price": 2100,
-    "saving": 700,
+    "price": 2400,
+    "saving": 800,
     "barcode": "8801007915340",
     "events": {
       "CU": {
@@ -18873,8 +18873,8 @@
     "id": "cj햇반발아현미작은공기",
     "name": "CJ)햇반발아현미작은공기",
     "category": "기타",
-    "price": 2100,
-    "saving": 700,
+    "price": 2400,
+    "saving": 800,
     "barcode": "8801007915364",
     "events": {
       "CU": {
@@ -19129,8 +19129,8 @@
     "id": "농심배홍동큰사발면",
     "name": "농심)배홍동큰사발면",
     "category": "기타",
-    "price": 1800,
-    "saving": 600,
+    "price": 1900,
+    "saving": 633,
     "barcode": "8801043011235",
     "events": {
       "CU": {
@@ -19711,8 +19711,8 @@
     "id": "농심신라면툼바큰사발면",
     "name": "농심)신라면툼바큰사발면",
     "category": "라면",
-    "price": 1800,
-    "saving": 600,
+    "price": 1900,
+    "saving": 633,
     "barcode": "8801043017022",
     "events": {
       "CU": {
@@ -21725,8 +21725,8 @@
     "id": "오뚜기육즙가득떡갈비",
     "name": "오뚜기)육즙가득떡갈비",
     "category": "간편식",
-    "price": 6500,
-    "saving": 2167,
+    "price": 7500,
+    "saving": 2500,
     "barcode": "8801045611228",
     "events": {
       "CU": {
@@ -21741,8 +21741,8 @@
     "id": "오뚜기레드칠리미트볼",
     "name": "오뚜기)레드칠리미트볼",
     "category": "간편식",
-    "price": 6500,
-    "saving": 2167,
+    "price": 7500,
+    "saving": 2500,
     "barcode": "8801045907802",
     "events": {
       "CU": {
@@ -22271,8 +22271,8 @@
     "id": "농심카프리오렌지망고",
     "name": "농심)카프리오렌지망고",
     "category": "기타",
-    "price": 1100,
-    "saving": 367,
+    "price": 1200,
+    "saving": 400,
     "barcode": "8801043650311",
     "events": {
       "CU": {
@@ -22319,8 +22319,8 @@
     "id": "코카조지아스윗블랙",
     "name": "코카)조지아스윗블랙470ml",
     "category": "기타",
-    "price": 2800,
-    "saving": 933,
+    "price": 2900,
+    "saving": 967,
     "barcode": "8801094542603",
     "events": {
       "CU": {
@@ -22479,8 +22479,8 @@
     "id": "cj햇반발아현미밥3",
     "name": "CJ)햇반발아현미밥210g*3",
     "category": "기타",
-    "price": 7900,
-    "saving": 2633,
+    "price": 8800,
+    "saving": 2933,
     "barcode": "8801007216294",
     "events": {
       "CU": {
@@ -22495,8 +22495,8 @@
     "id": "cj햇반잡곡밥3입",
     "name": "CJ)햇반잡곡밥210g*3입",
     "category": "기타",
-    "price": 7900,
-    "saving": 2633,
+    "price": 8800,
+    "saving": 2933,
     "barcode": "8801007684567",
     "events": {
       "CU": {
@@ -22511,8 +22511,8 @@
     "id": "cj햇반흑미밥3입",
     "name": "CJ)햇반흑미밥210g*3입",
     "category": "기타",
-    "price": 7900,
-    "saving": 2633,
+    "price": 8800,
+    "saving": 2933,
     "barcode": "8801007216317",
     "events": {
       "CU": {
@@ -24463,8 +24463,8 @@
     "id": "농심웰치제로애플망고355",
     "name": "농심)웰치제로애플망고355",
     "category": "기타",
-    "price": 1500,
-    "saving": 500,
+    "price": 1600,
+    "saving": 533,
     "barcode": "8801043059091",
     "events": {
       "CU": {
@@ -25085,8 +25085,8 @@
     "id": "오뚜기3분카레순한맛",
     "name": "오뚜기)3분카레순한맛",
     "category": "기타",
-    "price": 2500,
-    "saving": 833,
+    "price": 2900,
+    "saving": 967,
     "barcode": "8801045290300",
     "events": {
       "CU": {
@@ -25449,8 +25449,8 @@
     "id": "농심신라면로제큰사발",
     "name": "농심)신라면로제큰사발",
     "category": "라면",
-    "price": 1800,
-    "saving": 600,
+    "price": 1900,
+    "saving": 633,
     "barcode": "8801043062435",
     "events": {
       "CU": {
@@ -65653,7 +65653,7 @@
     "events": {
       "EMART24": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801052139333.JPG"
       }
@@ -65669,7 +65669,7 @@
     "events": {
       "EMART24": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801052139357.JPG"
       }
