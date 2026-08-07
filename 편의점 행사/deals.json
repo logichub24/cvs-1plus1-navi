@@ -19660,38 +19660,6 @@
     }
   },
   {
-    "id": "매일바리스타무가당바닐",
-    "name": "매일)바리스타무가당바닐",
-    "category": "음료",
-    "price": 3500,
-    "saving": 1167,
-    "barcode": "8801121045893",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801121045893.png"
-      }
-    }
-  },
-  {
-    "id": "매일바리스타무가당에스",
-    "name": "매일)바리스타무가당에스",
-    "category": "음료",
-    "price": 3500,
-    "saving": 1167,
-    "barcode": "8801121046012",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801121046012.png"
-      }
-    }
-  },
-  {
     "id": "돌후룻바틀망고",
     "name": "돌)후룻바틀망고666g",
     "category": "기타",
@@ -56773,7 +56741,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056227371.JPG"
       }
