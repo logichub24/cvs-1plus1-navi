@@ -3209,7 +3209,7 @@
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115139904.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115139904_1.png"
       }
     }
   },
@@ -13053,7 +13053,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045560038.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045560038_1.png"
       }
     }
   },
@@ -18415,7 +18415,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045560076.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045560076_1.png"
       }
     }
   },
@@ -22375,7 +22375,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045560052.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045560052_1.png"
       }
     }
   },
@@ -56760,6 +56760,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": ""
+      }
+    }
+  },
+  {
+    "id": "롯데더하다옥수수수염차펫",
+    "name": "롯데)더하다옥수수수염차펫500ml",
+    "category": "기타",
+    "price": 2000,
+    "saving": 2000,
+    "barcode": "8801056227371",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056227371.JPG"
       }
     }
   },
