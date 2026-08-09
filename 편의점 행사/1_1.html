@@ -109,7 +109,7 @@
                 <button onclick="openTabModal('allDealsModal', 'alldeals')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
                     <div class="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center text-[10px]">🚨</div>
                     <div class="text-left flex flex-col">
-                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5">오늘 마감</span>
+                        <span id="endingDealLabel" class="text-[10px] font-black text-gray-900 leading-none mt-0.5">오늘 마감</span>
                         <span id="endingDealCount" class="text-[10px] text-rose-600 font-bold leading-none mt-1">0개</span>
                     </div>
                 </button>
@@ -183,7 +183,9 @@
             <i class="fa-solid fa-rotate-right text-blue-400"></i> 이 지역 재검색
         </button>
 
-        <!-- 주변 행사 미리보기 시트 (첫 위치 확정 후 1회 슬라이드업) -->
+        <!-- 주변 행사 시트. 접힘(가로 미리보기) / 펼침(세로 전체 목록) 두 단계.
+             지도만 있으면 훑어볼 대상이 없어 한 번 보고 나가게 되므로, 스크롤할 목록을
+             첫 화면에 상시로 두었다. -->
         <div id="nearbyPreviewSheet" class="absolute left-0 w-full z-[300] transition-transform duration-500 ease-out hidden"
              style="bottom:116px; transform:translateY(120%); pointer-events:none;">
             <div class="mx-3 bg-white rounded-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden">
@@ -191,12 +193,21 @@
                     <button onclick="closeNearbyPreview()" class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-gray-700 active:scale-90 transition rounded-full shrink-0">
                         <i class="fa-solid fa-xmark text-sm"></i>
                     </button>
-                    <p class="text-[12px] font-black text-gray-900">
+                    <p class="text-[12px] font-black text-gray-900 flex-1 truncate">
                         <i class="fa-solid fa-location-dot text-blue-500 mr-1"></i>
                         <span id="nearbyPreviewTitle">내 주변 행사</span>
                     </p>
+                    <button id="nearbySheetToggle" onclick="toggleNearbySheet()" class="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-gray-100 text-gray-700 text-[11px] font-black shrink-0 active:scale-95 transition">
+                        <span id="nearbySheetToggleText">전체보기</span>
+                        <i id="nearbySheetToggleIcon" class="fa-solid fa-chevron-up text-[10px]"></i>
+                    </button>
                 </div>
+                <!-- 지난 방문 이후 새로 생긴 행사. 첫 방문에는 뜨지 않는다. -->
+                <button id="sinceVisitBanner" onclick="toggleSinceOnly()" class="hidden w-full items-center gap-1.5 px-4 pb-2 text-left">
+                    <span id="sinceVisitBannerText" class="text-[11px] font-black text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-2.5 py-1.5"></span>
+                </button>
                 <div id="nearbyPreviewList" class="flex gap-2.5 overflow-x-auto px-4 pb-3 pt-1 hide-scrollbar" style="pointer-events:auto;"></div>
+                <div id="nearbyFullList" class="hidden overflow-y-auto px-3 pb-3 pt-1 space-y-2" style="max-height:45vh; pointer-events:auto;"></div>
             </div>
         </div>
 
@@ -858,6 +869,7 @@
             MASTER_DB = deals;
             dealsByBrandCache = null;
             computeIsNew();
+            updateSinceLastVisit();
             applyDaysLeft();
             updateDashboardCounts();
             buildBarcodeIndex();
@@ -1048,13 +1060,23 @@
             MASTER_DB.forEach(p => {
                 let hasEnding = false;
                 Object.values(p.events).forEach(e => {
-                    if (e.daysLeft === 0) hasEnding = true;
+                    // 추정값은 제외한다. 크롤러가 종료일을 주지 않아 전부 '이번 주 일요일까지'로
+                    // 채워지는데, 일요일에는 그 값이 0이 되어 전 상품이 '오늘 마감'으로 잡혔다.
+                    if (e.daysLeft === 0 && !e.daysLeftEstimated) hasEnding = true;
                 });
                 if (hasEnding) endingCount++;
                 // 가장 비싼 상품 = 절약금액 가장 큰 상품 (1+1 기준 상품가격만큼 절약)
                 if (p.price > bestPrice) { bestPrice = p.price; bestDeal = p; }
             });
-            document.getElementById('endingDealCount').innerText = `${endingCount}개`;
+            // 종료일 데이터가 없어 마감 건수를 알 수 없으면 전체 행사 수를 안내한다.
+            // (없는 정보를 0개로 보여주면 '오늘 마감이 없다'는 잘못된 사실이 된다)
+            if (endingCount > 0) {
+                document.getElementById('endingDealLabel').textContent = '오늘 마감';
+                document.getElementById('endingDealCount').innerText = `${endingCount}개`;
+            } else {
+                document.getElementById('endingDealLabel').textContent = '전체 행사';
+                document.getElementById('endingDealCount').innerText = `${MASTER_DB.length.toLocaleString()}개`;
+            }
 
             // 칩 1: 베스트 절약 상품
             if (bestDeal) {
@@ -1270,6 +1292,8 @@
                 }
             });
             updateNearbySaving();
+            // 반경·브랜드 필터가 바뀌면 펼쳐둔 목록도 같이 갱신한다.
+            if (nearbySheetExpanded) renderNearbyFullList();
         }
 
         // ── 날씨 기반 추천 (Open-Meteo, 키 불필요) ──────────────────────────
@@ -1467,8 +1491,123 @@
                 sheet.style.pointerEvents = 'auto';
             });
 
-            clearTimeout(nearbyPreviewTimer);
-            nearbyPreviewTimer = setTimeout(closeNearbyPreview, 8000);
+            // 예전에는 8초 뒤 자동으로 닫혔다. 훑어볼 시간을 주지 못해 상시 노출로 바꿨다.
+            // (닫기는 X 버튼으로만)
+            renderSinceVisitBanner();
+        }
+
+        // ── 지난 방문 이후 새로 생긴 행사 ──────────────────────────────────
+        // 매 방문마다 상품 id 스냅샷을 저장해두고, 다음 방문에 차집합을 낸다.
+        // 편의점 행사는 월 단위로 갈리므로 "지난번엔 없던 것"이 재방문 이유가 된다.
+        const SEEN_DEALS_KEY = 'cvs_seen_deal_ids';
+        let sinceLastVisitIds = new Set(), sinceOnly = false;
+
+        function updateSinceLastVisit() {
+            // 로드 실패로 목록이 비었을 때 갱신하면 스냅샷이 지워져 다음 방문에 전체가 신규로 잡힌다.
+            if (MASTER_DB.length === 0) return;
+            const current = MASTER_DB.map(p => p.id);
+            let seen = null;
+            try {
+                const raw = localStorage.getItem(SEEN_DEALS_KEY);
+                if (raw) seen = new Set(JSON.parse(raw));
+            } catch (e) {}
+            // 첫 방문은 전부 새 것이라 의미가 없으므로 비워둔다.
+            sinceLastVisitIds = seen ? new Set(current.filter(id => !seen.has(id))) : new Set();
+            try { localStorage.setItem(SEEN_DEALS_KEY, JSON.stringify(current)); } catch (e) {}
+        }
+
+        function renderSinceVisitBanner() {
+            const el = document.getElementById('sinceVisitBanner');
+            if (!el) return;
+            if (sinceLastVisitIds.size === 0) { el.className = 'hidden'; return; }
+            el.className = 'flex w-full items-center gap-1.5 px-4 pb-2 text-left';
+            document.getElementById('sinceVisitBannerText').textContent =
+                sinceOnly ? `새 행사 ${sinceLastVisitIds.size}개만 보는 중 · 전체보기`
+                          : `지난 방문 이후 새 행사 ${sinceLastVisitIds.size}개`;
+        }
+
+        function toggleSinceOnly() {
+            sinceOnly = !sinceOnly;
+            track('since_visit_filter', { on: sinceOnly, count: sinceLastVisitIds.size });
+            if (sinceOnly && !nearbySheetExpanded) toggleNearbySheet();
+            renderSinceVisitBanner();
+            renderNearbyFullList();
+        }
+
+        // ── 시트 접힘/펼침 ────────────────────────────────────────────────
+        let nearbySheetExpanded = false;
+
+        function toggleNearbySheet() {
+            nearbySheetExpanded = !nearbySheetExpanded;
+            document.getElementById('nearbyPreviewList').classList.toggle('hidden', nearbySheetExpanded);
+            document.getElementById('nearbyFullList').classList.toggle('hidden', !nearbySheetExpanded);
+            document.getElementById('nearbySheetToggleText').textContent = nearbySheetExpanded ? '접기' : '전체보기';
+            document.getElementById('nearbySheetToggleIcon').className =
+                `fa-solid fa-chevron-${nearbySheetExpanded ? 'down' : 'up'} text-[10px]`;
+            // 펼치면 목록이 화면 대부분을 덮으므로, 그 위에 떠 있는 지도 컨트롤은 숨긴다.
+            const panel = document.getElementById('mapControlPanel');
+            panel.classList.toggle('opacity-0', nearbySheetExpanded);
+            panel.classList.toggle('pointer-events-none', nearbySheetExpanded);
+
+            if (nearbySheetExpanded) renderNearbyFullList();
+            track('nearby_sheet_toggle', { expanded: nearbySheetExpanded });
+        }
+
+        // 반경 내 매장들의 행사를 상품 단위로 합친다(같은 상품이 여러 매장에 있으면 하나로).
+        function nearbyDealEntries() {
+            const byId = new Map();
+            storeMarkersData.forEach(store => {
+                store.deals.forEach(deal => { if (!byId.has(deal.id)) byId.set(deal.id, { deal, store }); });
+            });
+            return [...byId.values()];
+        }
+
+        const NEARBY_LIST_LIMIT = 100;
+
+        function renderNearbyFullList() {
+            const box = document.getElementById('nearbyFullList');
+            if (!box) return;
+
+            let entries = nearbyDealEntries();
+            if (sinceOnly) entries = entries.filter(e => sinceLastVisitIds.has(e.deal.id));
+            // 지난 방문 이후 새로 생긴 것을 위로, 그다음 절약액이 큰 순.
+            entries.sort((a, b) => {
+                const an = sinceLastVisitIds.has(a.deal.id) ? 1 : 0;
+                const bn = sinceLastVisitIds.has(b.deal.id) ? 1 : 0;
+                if (an !== bn) return bn - an;
+                return (b.deal.saving || 0) - (a.deal.saving || 0);
+            });
+
+            if (entries.length === 0) {
+                box.innerHTML = `<p class="text-[13px] text-gray-500 font-bold text-center py-6">표시할 행사가 없습니다.</p>`;
+                return;
+            }
+
+            const total = entries.length;
+            const shown = entries.slice(0, NEARBY_LIST_LIMIT);
+            box.innerHTML = shown.map(({ deal, store }) => {
+                const evnt = deal.events[store.brand] || {};
+                const imgUrl = evnt.image || Object.values(deal.events).find(e => e?.image)?.image || '';
+                const emoji = EMOJI_MAP[deal.category] || '🛍️';
+                const isNewSince = sinceLastVisitIds.has(deal.id);
+                const info = BRAND_INFO[store.brand] || { text: store.brand, bg: 'bg-gray-100', color: 'text-gray-700' };
+                return `
+                    <button onclick='openStore(${JSON.stringify(store).replace(/'/g, "&apos;")})' class="w-full flex items-center gap-3 p-2 rounded-xl border border-gray-100 bg-white active:scale-[0.98] transition text-left">
+                        <div class="w-12 h-12 rounded-lg bg-gray-100 overflow-hidden flex items-center justify-center shrink-0">
+                            ${imgUrl ? `<img src="${imgUrl}" class="w-full h-full object-cover" onerror="this.replaceWith(document.createTextNode('${emoji}'))">` : `<span class="text-xl">${emoji}</span>`}
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-[13px] font-bold text-gray-900 truncate">${isNewSince ? '<span class="text-blue-600">NEW </span>' : ''}${deal.name}</p>
+                            <div class="flex items-center gap-1.5 mt-1">
+                                <span class="text-[11px] font-black ${evnt.type === '1+1' ? 'text-rose-600' : 'text-blue-600'}">${evnt.type || ''}</span>
+                                <span class="text-[11px] font-bold px-1.5 rounded ${info.bg} ${info.color}">${info.text}</span>
+                                <span class="text-[11px] text-gray-500 font-bold">${(deal.price || 0).toLocaleString()}원</span>
+                            </div>
+                        </div>
+                    </button>`;
+            }).join('') + (total > NEARBY_LIST_LIMIT
+                ? `<p class="text-[11px] text-gray-400 font-bold text-center pt-1">절약액 상위 ${NEARBY_LIST_LIMIT}개만 표시 (총 ${total.toLocaleString()}개)</p>`
+                : '');
         }
 
         function closeNearbyPreview() {
@@ -1744,9 +1883,9 @@
             if (evnt) {
                 if (evnt.isNew) {
                     statusBadge = `<span class="bg-emerald-100 text-emerald-600 border border-emerald-200 text-[11px] font-black px-2 py-0.5 rounded shadow-sm whitespace-nowrap">✨ 새행사</span>`;
-                } else if (evnt.daysLeft === 0) {
+                } else if (evnt.daysLeft === 0 && !evnt.daysLeftEstimated) {
                     statusBadge = `<span class="bg-rose-100 text-rose-600 border border-rose-200 text-[11px] font-black px-2 py-0.5 rounded shadow-sm whitespace-nowrap animate-pulse">🚨 오늘마감</span>`;
-                } else if (typeof evnt.daysLeft === 'number' && evnt.daysLeft <= 2) {
+                } else if (typeof evnt.daysLeft === 'number' && evnt.daysLeft <= 2 && !evnt.daysLeftEstimated) {
                     statusBadge = `<span class="bg-orange-100 text-orange-600 border border-orange-200 text-[11px] font-black px-2 py-0.5 rounded shadow-sm whitespace-nowrap">⏰ D-${evnt.daysLeft}</span>`;
                 }
             }
@@ -2049,7 +2188,7 @@
             monday.setDate(today.getDate() - (dow === 0 ? 6 : dow - 1));
             const DAY_LABELS = ['월','화','수','목','금','토','일'];
             const newCount = MASTER_DB.filter(p => Object.values(p.events).some(e => e.isNew)).length;
-            const endingCount = MASTER_DB.filter(p => Object.values(p.events).some(e => typeof e.daysLeft === 'number' && e.daysLeft === 0)).length;
+            const endingCount = MASTER_DB.filter(p => Object.values(p.events).some(e => typeof e.daysLeft === 'number' && e.daysLeft === 0 && !e.daysLeftEstimated)).length;
             cal.innerHTML = DAY_LABELS.map((label, i) => {
                 const d = new Date(monday);
                 d.setDate(monday.getDate() + i);
@@ -2074,7 +2213,10 @@
             const daysToSunday = dow === 0 ? 0 : 7 - dow;
             MASTER_DB.forEach(p => {
                 Object.values(p.events).forEach(e => {
-                    if (e.daysLeft === null || e.daysLeft === undefined) e.daysLeft = daysToSunday;
+                    if (e.daysLeft === null || e.daysLeft === undefined) {
+                        e.daysLeft = daysToSunday;
+                        e.daysLeftEstimated = true; // 실제 종료일이 아니라 주기로 추정한 값
+                    }
                 });
             });
         }
