@@ -724,6 +724,10 @@
         // 지도 렌더와 데이터 로딩이 병렬로 돌기 때문에, 둘 중 뭐가 먼저 끝나든
         // 매장 반영은 한 번만 일어나도록 상태를 들고 있는다.
         let dataReady = false, userCoords = null;
+        // 위치 응답을 기다리는 중인지. 기다리는 동안에는 기본 좌표(강남)로 매장 파일을
+        // 받지 않는다. 받아버리면 지방 사용자가 서울 파일을 통째로 내려받고,
+        // 뒤늦게 도착한 응답끼리 경합해 엉뚱한 지역 매장이 남을 수 있다.
+        let geoPending = false;
 
         // 토스인앱 등 외부 빌드 환경(WebView 패키지)에 넣어도 데이터는 항상 GitHub Pages의 최신본을
         // 실시간으로 받아오도록 절대경로를 쓴다. GitHub Pages 자체에서 열 때도 동일 출처라 그대로 동작함.
@@ -861,12 +865,17 @@
 
             dataReady = true;
 
-            // 위치 확정이 먼저 끝났으면 그 좌표를, 아직이면 현재 지도 중심을 쓴다.
-            const center = userCoords || map.getCenter();
-            const lat = userCoords ? userCoords.lat : center.lat;
-            const lng = userCoords ? userCoords.lng : center.lng;
-            await applyStoresForLocation(lat, lng);
-            // 상품/매장이 실제로 지도에 올라간 시점. map_ready와의 차이가 곧 로딩 대기 시간이다.
+            // 위치 확정이 먼저 끝났으면 그 좌표를 쓴다.
+            // 아직 응답 대기 중이면 여기서는 매장을 받지 않고 위치 콜백(성공/실패 양쪽)에 맡긴다.
+            // 권한 거부·타임아웃 5초에도 반드시 콜백이 오므로 누락되지 않는다.
+            if (userCoords || !geoPending) {
+                const center = userCoords || map.getCenter();
+                const lat = userCoords ? userCoords.lat : center.lat;
+                const lng = userCoords ? userCoords.lng : center.lng;
+                await applyStoresForLocation(lat, lng);
+            }
+            // 행사 데이터가 도착한 시점. map_ready와의 차이가 곧 로딩 대기 시간이다.
+            // (위치 응답을 기다리는 중이면 markers는 아직 0일 수 있다.)
             track('data_ready', { deals: MASTER_DB.length, markers: mapMarkers.length });
 
             initRetentionFeatures();
@@ -875,8 +884,11 @@
         // 좌표 기준으로 매장 목록을 확정하고 지도에 반영. 위치 확정과 데이터 도착 중
         // 어느 쪽이 먼저 끝나든 같은 경로를 타도록 한 곳에 모았다.
         async function applyStoresForLocation(lat, lng) {
-            const switched = await loadStoresForLocation(lat, lng);
-            if (!switched && REAL_STORES.length === 0) generateVirtualStoresDB(lat, lng);
+            const seq = ++storeLoadSeq;
+            await loadStoresForLocation(lat, lng, seq);
+            if (seq !== storeLoadSeq) return; // 더 최신 위치 요청이 들어왔으면 이 결과는 그리지 않는다
+
+            if (REAL_STORES.length === 0) generateVirtualStoresDB(lat, lng);
             loadStoresInRadius();
             setTimeout(showNearbyPreview, 300);
         }
@@ -940,18 +952,37 @@
             return nearest;
         }
 
-        async function loadStoresForLocation(lat, lng) {
+        // 위치 확정과 데이터 로딩이 병렬이라 이 함수가 서로 다른 좌표로 동시에 두 번
+        // 돌 수 있다(기본 좌표 1회 + 위치 허용 후 1회). 그대로 두면 두 지역 파일을
+        // 같이 받아 REAL_STORES와 loadedProvinceFile이 어긋나고, 그 뒤로는
+        // '같은 지역이니 넘어감' 조건에 걸려 영구히 복구되지 않는다.
+        // 순번을 매겨 마지막 요청만 상태를 쓰게 한다.
+        let storeLoadSeq = 0;
+
+        async function loadStoresForLocation(lat, lng, seq) {
             if (STORE_INDEX.length === 0) return false;
+            const isStale = () => seq !== undefined && seq !== storeLoadSeq;
 
             const provinceName = await getProvinceNameByCoords(lat, lng);
+            if (isStale()) return false;
+
             let nearest = provinceName ? STORE_INDEX.find(p => p.province === provinceName) : null;
             if (!nearest) nearest = nearestProvinceByDistance(lat, lng);
-            if (!nearest || nearest.file === loadedProvinceFile) return false;
+            if (!nearest) return false;
+            if (nearest.file === loadedProvinceFile) {
+                // 이미 받은 지역이어도 결합 결과가 비어 있으면 다시 만든다.
+                // (경합으로 상태가 어긋났을 때 사용자가 GPS를 다시 눌러 복구할 수 있는 유일한 경로)
+                if (allVirtualStoresDB.length === 0 && REAL_STORES.length > 0) buildStoresFromRealData();
+                return false;
+            }
 
             try {
                 const res = await fetch(DATA_BASE_URL + 'stores/' + nearest.file);
                 if (!res.ok) throw new Error('store shard fetch failed');
-                REAL_STORES = await res.json();
+                const stores = await res.json();
+                if (isStale()) return false; // 늦게 도착한 응답은 버린다
+
+                REAL_STORES = stores;
                 loadedProvinceFile = nearest.file;
                 buildStoresFromRealData();
                 return true;
@@ -1112,10 +1143,12 @@
             // (예전엔 부팅 시 강남 좌표로 서울 파일을 먼저 받아서, 지방 사용자는
             //  서울 데이터를 통째로 받은 뒤 자기 지역 파일을 또 받는 구조였다.)
             if (navigator.geolocation) {
+                geoPending = true;
                 navigator.geolocation.getCurrentPosition(
                     position => {
                         const lat = position.coords.latitude;
                         const lng = position.coords.longitude;
+                        geoPending = false;
                         userCoords = { lat, lng };
                         map.setView([lat, lng], 16);
                         searchCircle.setLatLng([lat, lng]);
@@ -1123,6 +1156,7 @@
                         if (dataReady) applyStoresForLocation(lat, lng);
                     },
                     () => {
+                        geoPending = false;
                         updateWeather(defaultCenter[0], defaultCenter[1]);
                         if (dataReady) applyStoresForLocation(defaultCenter[0], defaultCenter[1]);
                     },
@@ -1137,7 +1171,10 @@
 
         async function goToLocation(lat, lng) {
             map.setView([lat, lng], 16);
-            await loadStoresForLocation(lat, lng);
+            userCoords = { lat, lng };
+            const seq = ++storeLoadSeq;
+            await loadStoresForLocation(lat, lng, seq);
+            if (seq !== storeLoadSeq) return;
             searchInCurrentArea();
         }
 
