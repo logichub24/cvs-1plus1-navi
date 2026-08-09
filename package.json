@@ -11,7 +11,8 @@
     "crawl:emart24": "node scripts/crawlers/emart24.js",
     "sync:stores": "node scripts/storeLocations.js",
     "build:css": "tailwindcss -i \"편의점 행사/tailwind.input.css\" -o \"편의점 행사/styles.css\" --content \"편의점 행사/1_1.html\" --minify",
-    "build:toss": "node scripts/build-toss.js"
+    "build:toss": "node scripts/build-toss.js",
+    "check:weather": "node scripts/checkWeatherPicks.js"
   },
   "dependencies": {
     "axios": "^1.7.7",

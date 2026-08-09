@@ -34,6 +34,13 @@ jobs:
           SBIZ_API_KEY: ${{ secrets.SBIZ_API_KEY }}
         run: npm run sync:stores
 
+      # 갱신된 데이터로 날씨 추천 상위 20개를 찍어둔다. 실행 로그에서 눈으로 확인하고,
+      # 이상한 상품이 보일 때만 1_1.html의 [weather-rules] 블록을 고치면 된다.
+      # 점검 실패가 데이터 갱신을 막아서는 안 되므로 통과 여부는 따지지 않는다.
+      - name: 날씨 추천 결과 점검 (참고용 출력)
+        continue-on-error: true
+        run: npm run check:weather
+
       - name: 변경사항 커밋
         run: |
           git config user.name "github-actions[bot]"
