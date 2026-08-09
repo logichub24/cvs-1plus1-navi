@@ -1313,6 +1313,14 @@
         }
 
         // 날씨 상태 → 추천 상품명 키워드. 카테고리가 절반 미분류라 상품명으로 매칭한다.
+        // 상품명만으로 거르면 생활용품이 섞인다(예: 섬유탈취'아이스'). 날씨 추천은 먹는 것만 대상으로 한다.
+        const WEATHER_EXCLUDED_CATEGORIES = new Set(['생활용품']);
+
+        function matchesWeather(deal, wk) {
+            if (!wk || WEATHER_EXCLUDED_CATEGORIES.has(deal.category)) return false;
+            return wk.re.test(deal.name);
+        }
+
         function weatherKeywords(w) {
             if (!w) return null;
             const c = w.code;
@@ -1320,7 +1328,8 @@
             const rain = (c >= 51 && c <= 67) || (c >= 80 && c <= 82) || c === 95 || c === 99 || w.precip > 0;
             if (snow) return { re: /핫팩|커피|아메리카노|라떼|따뜻|호빵|찐빵|어묵|오뎅|컵라면|라면|죽|국밥|핫초코/, msg: '눈 오는 날, 따뜻한 상품 어때요' };
             if (rain) return { re: /우산|커피|아메리카노|라떼|컵라면|라면|우동|따뜻|어묵|오뎅|호빵/, msg: '비 오는 날, 이런 상품 어때요' };
-            if (w.temp >= 25) return { re: /아이스|빙수|콘|메로나|설레임|스크류|월드콘|구구|돼지바|바밤바|탄산|콜라|사이다|스프라이트|환타|밀키스|생수|워터|얼음|이온|게토레이|파워에이드|토레타|에이드/, msg: '시원한 상품이 잘 어울려요' };
+            // '콘'과 '탄산'은 콘돔·꼬깔콘·과탄산소다까지 잡아서 뺐다. 아이스크림은 제품명으로 직접 잡는다.
+            if (w.temp >= 25) return { re: /아이스|빙수|메로나|설레임|스크류|월드콘|구구콘|돼지바|바밤바|콜라|사이다|스프라이트|환타|밀키스|생수|워터|얼음|이온|게토레이|파워에이드|토레타|에이드/, msg: '시원한 상품이 잘 어울려요' };
             if (w.temp <= 10) return { re: /컵라면|라면|우동|호빵|찐빵|죽|국밥|어묵|오뎅|핫초코|따뜻|커피|아메리카노/, msg: '따뜻한 상품을 추천해요' };
             return null; // 선선 — 특정 필터 없이 일반 추천
         }
@@ -1416,6 +1425,10 @@
                 document.getElementById('weatherChipText').textContent = `${currentWeather.temp}℃`;
                 chip.classList.remove('hidden');
                 chip.classList.add('flex');
+
+                // 날씨가 시트보다 늦게 도착하면 문구와 목록 순서가 어긋나므로 함께 다시 그린다.
+                renderNearbySheetTitle();
+                if (nearbySheetExpanded) renderNearbyFullList();
             } catch (e) {}
         }
 
@@ -1441,8 +1454,8 @@
             const wk = weatherKeywords(currentWeather);
             let picks;
             if (wk) {
-                const matched = allDeals.filter(x => wk.re.test(x.deal.name)).sort(() => Math.random() - 0.5);
-                const rest = allDeals.filter(x => !wk.re.test(x.deal.name)).sort(() => Math.random() - 0.5);
+                const matched = allDeals.filter(x => matchesWeather(x.deal, wk)).sort(() => Math.random() - 0.5);
+                const rest = allDeals.filter(x => !matchesWeather(x.deal, wk)).sort(() => Math.random() - 0.5);
                 picks = [...matched, ...rest].slice(0, 5);
             } else {
                 picks = allDeals.sort(() => Math.random() - 0.5).slice(0, 5);
@@ -1452,12 +1465,7 @@
             const BRAND_TEXT_COLORS = { 'CU': 'white', 'GS25': 'white', '7-ELEVEN': 'white', 'EMART24': '#333' };
             const EMOJI_FALLBACK = { '음료': '🥤', '과자': '🍿', '아이스크림': '🍦', '라면': '🍜', '생활용품': '🧴', '유제품': '🥛', '빵': '🍞' };
 
-            document.getElementById('nearbyPreviewTitle').textContent =
-                (currentWeather && wk)
-                    ? `${weatherIcon(currentWeather)} ${currentWeather.temp}℃ · ${wk.msg}`
-                    : currentWeather
-                        ? `${weatherIcon(currentWeather)} ${currentWeather.temp}℃ · 내 주변 ${storeMarkersData.length}개 매장 행사`
-                        : `내 주변 ${storeMarkersData.length}개 매장 행사`;
+            renderNearbySheetTitle();
 
             document.getElementById('nearbyPreviewList').innerHTML = picks.map(({ deal, store }) => {
                 const evnt = deal.events[store.brand];
@@ -1516,6 +1524,18 @@
             try { localStorage.setItem(SEEN_DEALS_KEY, JSON.stringify(current)); } catch (e) {}
         }
 
+        // 날씨는 시트가 뜬 뒤에 도착할 수 있어, 문구를 다시 그릴 수 있게 분리해 둔다.
+        function renderNearbySheetTitle() {
+            const el = document.getElementById('nearbyPreviewTitle');
+            if (!el) return;
+            const wk = weatherKeywords(currentWeather);
+            el.textContent = (currentWeather && wk)
+                ? `${weatherIcon(currentWeather)} ${currentWeather.temp}℃ · ${wk.msg}`
+                : currentWeather
+                    ? `${weatherIcon(currentWeather)} ${currentWeather.temp}℃ · 내 주변 ${storeMarkersData.length}개 매장 행사`
+                    : `내 주변 ${storeMarkersData.length}개 매장 행사`;
+        }
+
         function renderSinceVisitBanner() {
             const el = document.getElementById('sinceVisitBanner');
             if (!el) return;
@@ -1570,8 +1590,16 @@
 
             let entries = nearbyDealEntries();
             if (sinceOnly) entries = entries.filter(e => sinceLastVisitIds.has(e.deal.id));
-            // 지난 방문 이후 새로 생긴 것을 위로, 그다음 절약액이 큰 순.
+
+            // 헤더에 "시원한 상품이 잘 어울려요" 같은 날씨 문구가 뜨면 목록도 그 순서여야 한다.
+            // 문구와 내용이 어긋나면 추천이 아니라 장식이 된다.
+            const wk = weatherKeywords(currentWeather);
             entries.sort((a, b) => {
+                if (wk) {
+                    const aw = matchesWeather(a.deal, wk) ? 1 : 0;
+                    const bw = matchesWeather(b.deal, wk) ? 1 : 0;
+                    if (aw !== bw) return bw - aw;
+                }
                 const an = sinceLastVisitIds.has(a.deal.id) ? 1 : 0;
                 const bn = sinceLastVisitIds.has(b.deal.id) ? 1 : 0;
                 if (an !== bn) return bn - an;
