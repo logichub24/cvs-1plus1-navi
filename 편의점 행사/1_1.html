@@ -1142,31 +1142,52 @@
             // 매장 파일은 위치가 확정된 뒤 그 시/도 것만 받는다.
             // (예전엔 부팅 시 강남 좌표로 서울 파일을 먼저 받아서, 지방 사용자는
             //  서울 데이터를 통째로 받은 뒤 자기 지역 파일을 또 받는 구조였다.)
-            if (navigator.geolocation) {
-                geoPending = true;
+            geoPending = true;
+            requestUserLocation(
+                (lat, lng) => {
+                    geoPending = false;
+                    userCoords = { lat, lng };
+                    map.setView([lat, lng], 16);
+                    searchCircle.setLatLng([lat, lng]);
+                    updateWeather(lat, lng);
+                    if (dataReady) applyStoresForLocation(lat, lng);
+                },
+                () => {
+                    geoPending = false;
+                    updateWeather(defaultCenter[0], defaultCenter[1]);
+                    if (dataReady) applyStoresForLocation(defaultCenter[0], defaultCenter[1]);
+                }
+            );
+            setTimeout(() => { map.invalidateSize(); }, 300);
+        }
+
+        // 위치 조회 단일 창구.
+        // 부팅 시점에는 ads.js의 DOMContentLoaded가 아직 안 돌아서 body에 in-toss-app
+        // 클래스가 붙기 전이다. 그래서 클래스가 아니라 함수 존재 여부로 판단한다.
+        // 토스 WebView에서는 navigator.geolocation이 막혀 있을 수 있어 SDK를 먼저 쓰고,
+        // 실패하거나 응답이 없으면 브라우저 API로 넘어간다.
+        function requestUserLocation(onSuccess, onError) {
+            const useBrowserApi = () => {
+                if (!navigator.geolocation) { onError(); return; }
                 navigator.geolocation.getCurrentPosition(
-                    position => {
-                        const lat = position.coords.latitude;
-                        const lng = position.coords.longitude;
-                        geoPending = false;
-                        userCoords = { lat, lng };
-                        map.setView([lat, lng], 16);
-                        searchCircle.setLatLng([lat, lng]);
-                        updateWeather(lat, lng);
-                        if (dataReady) applyStoresForLocation(lat, lng);
-                    },
-                    () => {
-                        geoPending = false;
-                        updateWeather(defaultCenter[0], defaultCenter[1]);
-                        if (dataReady) applyStoresForLocation(defaultCenter[0], defaultCenter[1]);
-                    },
+                    p => onSuccess(p.coords.latitude, p.coords.longitude),
+                    () => onError(),
                     { timeout: 5000 }
                 );
-            } else {
-                updateWeather(defaultCenter[0], defaultCenter[1]);
-                if (dataReady) applyStoresForLocation(defaultCenter[0], defaultCenter[1]);
+            };
+
+            if (typeof tossGetCurrentLocation !== 'function') { useBrowserApi(); return; }
+
+            let settled = false;
+            const finish = fn => (...args) => { if (settled) return; settled = true; clearTimeout(timer); fn(...args); };
+            const timer = setTimeout(finish(useBrowserApi), 5000); // SDK가 응답하지 않는 환경 대비
+            try {
+                tossGetCurrentLocation()
+                    .then(loc => finish(onSuccess)(loc.coords.latitude, loc.coords.longitude))
+                    .catch(finish(useBrowserApi));
+            } catch (e) {
+                finish(useBrowserApi)();
             }
-            setTimeout(() => { map.invalidateSize(); }, 300);
         }
 
         async function goToLocation(lat, lng) {
@@ -1180,22 +1201,27 @@
 
         function findMyLocation() {
             showToast("위치 탐색 중...", 1000);
+            requestUserLocation(
+                (lat, lng) => goToLocation(lat, lng),
+                () => showToast('위치 권한이 필요합니다. 설정에서 위치 권한을 허용해주세요.')
+            );
+        }
 
-            // 토스 앱 안에서는 navigator.geolocation이 막혀있을 수 있어 SDK 전용 함수를 우선 사용
-            if (document.body.classList.contains('in-toss-app') && typeof tossGetCurrentLocation === 'function') {
-                tossGetCurrentLocation()
-                    .then(loc => goToLocation(loc.coords.latitude, loc.coords.longitude))
-                    .catch(() => showToast('위치 권한이 필요합니다. 설정에서 위치 권한을 허용해주세요.'));
-                return;
-            }
-
-            if (!navigator.geolocation) {
-                showToast('이 브라우저에서는 위치 찾기를 지원하지 않습니다.');
-                return;
-            }
-            navigator.geolocation.getCurrentPosition(
-                position => goToLocation(position.coords.latitude, position.coords.longitude),
-                () => showToast('위치 권한이 필요합니다. 브라우저 설정에서 위치 권한을 허용해주세요.')
+        // 사용자가 안내를 보고 설정에서 위치를 켠 뒤 앱으로 돌아오는 경우가 있다.
+        // 예전에는 부팅 때 딱 한 번만 조회해서, 돌아와도 기본 위치(서울)에 머물렀고
+        // GPS 버튼을 누를 줄 모르면 계속 그 상태였다. 복귀 시 조용히 한 번 더 시도한다.
+        // 이미 위치를 받았으면 아무것도 하지 않으므로 반복 요청은 없다.
+        function retryLocationOnReturn() {
+            if (document.hidden || userCoords) return;
+            requestUserLocation(
+                (lat, lng) => {
+                    userCoords = { lat, lng };
+                    map.setView([lat, lng], 16);
+                    searchCircle.setLatLng([lat, lng]);
+                    updateWeather(lat, lng);
+                    if (dataReady) applyStoresForLocation(lat, lng);
+                },
+                () => {} // 여전히 거부 상태면 조용히 넘어간다
             );
         }
 
@@ -2668,6 +2694,7 @@
                 if (!document.hidden && map) {
                     const c = map.getCenter();
                     updateWeather(c.lat, c.lng);
+                    retryLocationOnReturn();
                 }
             });
         }
