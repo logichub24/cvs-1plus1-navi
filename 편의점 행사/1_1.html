@@ -1316,8 +1316,14 @@
         // 상품명만으로 거르면 생활용품이 섞인다(예: 섬유탈취'아이스'). 날씨 추천은 먹는 것만 대상으로 한다.
         const WEATHER_EXCLUDED_CATEGORIES = new Set(['생활용품']);
 
+        // 조미료나 타 먹는 재료는 '시원한/따뜻한 상품' 추천에 맞지 않는다.
+        // (애플사이다'비니거'가 사이다로, '가루'버블껌콜라가 콜라로 잡히던 문제)
+        // 수량 표기(10입, 10T)로 자르는 방법도 검토했으나 정상 멀티팩까지 걸릴 수 있어 제형 단어만 쓴다.
+        const WEATHER_EXCLUDED_FORMS = /비니거|식초|분말|가루|원액|농축|시럽/;
+
         function matchesWeather(deal, wk) {
             if (!wk || WEATHER_EXCLUDED_CATEGORIES.has(deal.category)) return false;
+            if (WEATHER_EXCLUDED_FORMS.test(deal.name)) return false;
             return wk.re.test(deal.name);
         }
 
