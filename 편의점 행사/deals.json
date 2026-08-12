@@ -6820,22 +6820,6 @@
     }
   },
   {
-    "id": "하림맥시칸핫크리스피",
-    "name": "하림)맥시칸핫크리스피",
-    "category": "기타",
-    "price": 9900,
-    "saving": 9900,
-    "barcode": "8809778498321",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809778498321_1.png"
-      }
-    }
-  },
-  {
     "id": "cj황태듬뿍해장국",
     "name": "CJ)황태듬뿍해장국460g",
     "category": "간편식",
@@ -15070,22 +15054,6 @@
     }
   },
   {
-    "id": "cj맥스봉직화꼬치바big",
-    "name": "CJ)맥스봉직화꼬치바BIG",
-    "category": "간편식",
-    "price": 2700,
-    "saving": 900,
-    "barcode": "8801007835396",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007835396.png"
-      }
-    }
-  },
-  {
     "id": "오리온후레쉬베리6입",
     "name": "오리온)후레쉬베리6입",
     "category": "기타",
@@ -16033,7 +16001,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037058659.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037058659_1.png"
       }
     }
   },
@@ -16082,22 +16050,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801166137942.jpg"
-      }
-    }
-  },
-  {
-    "id": "cj맥스봉꼬치바청양big",
-    "name": "CJ)맥스봉꼬치바청양BIG",
-    "category": "간편식",
-    "price": 2700,
-    "saving": 900,
-    "barcode": "8801007880303",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007880303.png"
       }
     }
   },
@@ -19410,22 +19362,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8806011416289.jpg"
-      }
-    }
-  },
-  {
-    "id": "cj비비고치즈컵떡볶이",
-    "name": "CJ)비비고치즈컵떡볶이",
-    "category": "간편식",
-    "price": 3900,
-    "saving": 1300,
-    "barcode": "8801392089541",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392089541.png"
       }
     }
   },
@@ -22782,22 +22718,6 @@
     }
   },
   {
-    "id": "cj햇반파로누룽지용기",
-    "name": "CJ)햇반파로누룽지용기",
-    "category": "기타",
-    "price": 2400,
-    "saving": 800,
-    "barcode": "8801392154942",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392154942.jpg"
-      }
-    }
-  },
-  {
     "id": "cj햇반현미누룽지용기",
     "name": "CJ)햇반현미누룽지용기",
     "category": "기타",
@@ -24258,28 +24178,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392158391.jpg"
-      }
-    }
-  },
-  {
-    "id": "cj꾸덕납작누들매콤로제",
-    "name": "CJ)꾸덕납작누들매콤로제",
-    "category": "기타",
-    "price": 4500,
-    "saving": 1500,
-    "barcode": "8801392162015",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392162015.jpg"
-      },
-      "GS25": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_8801392162015_002.jpg"
       }
     }
   },
@@ -26554,6 +26452,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8800348943012.jpg"
+      }
+    }
+  },
+  {
+    "id": "cj꾸덕납작누들매콤로제",
+    "name": "CJ)꾸덕납작누들매콤로제",
+    "category": "기타",
+    "price": 4500,
+    "saving": 1500,
+    "barcode": "8801392162015",
+    "events": {
+      "GS25": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_8801392162015_002.jpg"
       }
     }
   },
@@ -57137,7 +57051,7 @@
     "category": "주류",
     "price": 3500,
     "saving": 3500,
-    "barcode": "8712000056896",
+    "barcode": "8712000055721",
     "events": {
       "EMART24": {
         "type": "1+1",
@@ -57329,7 +57243,7 @@
     "category": "주류",
     "price": 2800,
     "saving": 2800,
-    "barcode": "8801119221117",
+    "barcode": "8801001236434",
     "events": {
       "EMART24": {
         "type": "1+1",
@@ -57361,7 +57275,7 @@
     "category": "주류",
     "price": 3100,
     "saving": 3100,
-    "barcode": "8801001237882",
+    "barcode": "8801001237851",
     "events": {
       "EMART24": {
         "type": "1+1",
@@ -57488,8 +57402,8 @@
     "name": "CJ) 행복한콩찌개두부380G",
     "category": "기타",
     "price": 2900,
-    "saving": 967,
-    "barcode": "8801007112480",
+    "saving": 2900,
+    "barcode": "8801007354125",
     "events": {
       "EMART24": {
         "type": "2+1",
@@ -57504,8 +57418,8 @@
     "name": "CJ) 행복한콩부침두부380G",
     "category": "기타",
     "price": 2900,
-    "saving": 967,
-    "barcode": "8801007112497",
+    "saving": 2900,
+    "barcode": "8801007354163",
     "events": {
       "EMART24": {
         "type": "2+1",
@@ -57825,7 +57739,7 @@
     "category": "주류",
     "price": 4500,
     "saving": 4500,
-    "barcode": "8801021233925",
+    "barcode": "8801021229423",
     "events": {
       "EMART24": {
         "type": "1+1",
@@ -57841,7 +57755,7 @@
     "category": "주류",
     "price": 2800,
     "saving": 2800,
-    "barcode": "8801022025086",
+    "barcode": "8801022025048",
     "events": {
       "EMART24": {
         "type": "1+1",
@@ -58273,7 +58187,7 @@
     "category": "기타",
     "price": 1000,
     "saving": 1000,
-    "barcode": "8801047287964",
+    "barcode": "8801047287957",
     "events": {
       "EMART24": {
         "type": "1+1",
@@ -59009,7 +58923,7 @@
     "category": "음료",
     "price": 2100,
     "saving": 2100,
-    "barcode": "8801056248703",
+    "barcode": "8801056175900",
     "events": {
       "EMART24": {
         "type": "1+1",
@@ -62353,7 +62267,7 @@
     "category": "주류",
     "price": 2500,
     "saving": 2500,
-    "barcode": "8801858048952",
+    "barcode": "8801858048921",
     "events": {
       "EMART24": {
         "type": "1+1",
@@ -63297,7 +63211,7 @@
     "category": "기타",
     "price": 1000,
     "saving": 1000,
-    "barcode": "8809169711138",
+    "barcode": "8809169710179",
     "events": {
       "EMART24": {
         "type": "1+1",
@@ -66897,7 +66811,7 @@
     "category": "기타",
     "price": 8900,
     "saving": 2967,
-    "barcode": "8801007512259",
+    "barcode": "8801007512235",
     "events": {
       "EMART24": {
         "type": "2+1",
@@ -67553,7 +67467,7 @@
     "category": "기타",
     "price": 1800,
     "saving": 600,
-    "barcode": "8801024190201",
+    "barcode": "8801024190102",
     "events": {
       "EMART24": {
         "type": "2+1",
@@ -67633,7 +67547,7 @@
     "category": "음료",
     "price": 2700,
     "saving": 900,
-    "barcode": "8801037009026",
+    "barcode": "8801037001716",
     "events": {
       "EMART24": {
         "type": "2+1",
@@ -67761,7 +67675,7 @@
     "category": "음료",
     "price": 3300,
     "saving": 1100,
-    "barcode": "8801037087550",
+    "barcode": "8801037057843",
     "events": {
       "EMART24": {
         "type": "2+1",
@@ -67793,7 +67707,7 @@
     "category": "음료",
     "price": 3300,
     "saving": 1100,
-    "barcode": "8801037087543",
+    "barcode": "8801037064346",
     "events": {
       "EMART24": {
         "type": "2+1",
@@ -68417,7 +68331,7 @@
     "category": "기타",
     "price": 1900,
     "saving": 633,
-    "barcode": "8801043022781",
+    "barcode": "8801043020473",
     "events": {
       "EMART24": {
         "type": "2+1",
@@ -69649,7 +69563,7 @@
     "category": "기타",
     "price": 1100,
     "saving": 367,
-    "barcode": "8801056049904",
+    "barcode": "8801056049881",
     "events": {
       "EMART24": {
         "type": "2+1",
@@ -72673,7 +72587,7 @@
     "category": "주류",
     "price": 2400,
     "saving": 800,
-    "barcode": "8801858048631",
+    "barcode": "8801858048600",
     "events": {
       "EMART24": {
         "type": "2+1",
@@ -74113,7 +74027,7 @@
     "category": "기타",
     "price": 1950,
     "saving": 650,
-    "barcode": "8808244101130",
+    "barcode": "8808244101093",
     "events": {
       "EMART24": {
         "type": "2+1",
