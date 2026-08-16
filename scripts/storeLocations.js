@@ -36,10 +36,15 @@ function classifyBrand(name) {
 }
 
 // 전국 약 56페이지를 순차 조회하는데, 그중 한 페이지만 느려도 전체가 실패했다.
-// (2026-08-03 실행이 'timeout of 20000ms exceeded'로 죽음)
 // 공공데이터포털 API가 간헐적으로 느려지는 건 정상 범위라 재시도로 흡수한다.
-const PAGE_TIMEOUT_MS = 60000;
-const PAGE_RETRIES = 3;
+//
+// 다만 2026-08-01 무렵부터 GitHub Actions에서는 page 1부터 매번 타임아웃이 난다.
+// 같은 키·같은 요청이 로컬에서는 0.6초에 응답하므로(전체 54,446건) API 문제가 아니라
+// apis.data.go.kr이 러너 IP를 막고 있는 것으로 보인다. CI에서는 재시도해도 소용없어
+// 아래 값을 환경변수로 낮춰 빠르게 포기시키고, 실제 갱신은 로컬에서 돌린다.
+//   로컬: npm run sync:stores  (기본값 60초 x 3회)
+const PAGE_TIMEOUT_MS = Number(process.env.SBIZ_TIMEOUT_MS) || 60000;
+const PAGE_RETRIES = Number(process.env.SBIZ_RETRIES ?? 3);
 
 async function fetchPage(serviceKey, pageNo) {
   for (let attempt = 1; ; attempt++) {
