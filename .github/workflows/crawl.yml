@@ -52,6 +52,38 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "편의점 행사/deals.json" "편의점 행사/stores/"
+          git add "편의점 행사/deals.json" "편의점 행사/crawl-status.json" "편의점 행사/stores/"
           git diff --cached --quiet || git commit -m "chore: 행사/매장 데이터 자동 갱신 $(date -u +%Y-%m-%d)"
           git push
+
+      # 크롤링이 실패하면 전날 데이터로 대체돼 화면상 멀쩡해 보인다.
+      # 실제로 GS25·세븐일레븐이 6일간 얼어 있었는데 워크플로는 계속 초록불이었다.
+      # 커밋 뒤에 두어 이 점검이 데이터 갱신을 막지 않도록 한다.
+      - name: 수집 신선도 점검
+        id: freshness
+        continue-on-error: true
+        run: npm run check:crawl
+
+      - name: 갱신 멈춘 브랜드 알림 (이슈 생성/갱신)
+        if: steps.freshness.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BODY=$(npm run --silent check:crawl 2>&1 || true)
+          TITLE="크롤링 갱신 중단 감지"
+          EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number -q '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$(date -u +%Y-%m-%d) 기준 여전히 갱신이 멈춰 있습니다.
+
+          \`\`\`
+          $BODY
+          \`\`\`"
+          else
+            gh issue create --title "$TITLE" --body "일부 브랜드의 행사 데이터 갱신이 멈췄습니다.
+
+          \`\`\`
+          $BODY
+          \`\`\`
+
+          PC에서 \`npm run crawl\` 후 푸시하면 해소됩니다."
+          fi

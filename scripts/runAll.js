@@ -7,6 +7,17 @@ const { crawlSeven } = require('./crawlers/seven');
 const { crawlEmart24 } = require('./crawlers/emart24');
 
 const OUT_PATH = path.join(__dirname, '..', '편의점 행사', 'deals.json');
+// 브랜드별 마지막 실제 수집 기록. 며칠째 갱신이 멈췄는지 판단하는 유일한 근거라
+// deals.json과 함께 커밋한다. (scripts/checkCrawlFreshness.js가 읽는다)
+const STATUS_PATH = path.join(__dirname, '..', '편의점 행사', 'crawl-status.json');
+
+function readCrawlStatus() {
+  try {
+    return JSON.parse(fs.readFileSync(STATUS_PATH, 'utf-8'));
+  } catch (e) {
+    return {};
+  }
+}
 
 // 크롤러는 카테고리를 안 주므로 상품명 키워드로 추정한다. 앱의 CATEGORIES 목록과 맞춰야 함.
 // 순서가 우선순위 — 위에서부터 먼저 매칭되는 카테고리로 분류한다.
@@ -149,14 +160,23 @@ async function run() {
     ['EMART24', crawlEmart24],
   ];
 
+  // 브랜드별 마지막 '실제 수집' 시각을 남긴다.
+  // 실패 시 전날 데이터로 대체되면서 화면상으로는 멀쩡해 보이기 때문에,
+  // 이 기록이 없으면 며칠째 얼어 있는지 알 방법이 없다(2026-08-11~16 실제로 6일간 몰랐다).
+  const status = readCrawlStatus();
+  const today = new Date().toISOString().slice(0, 10);
+
   for (const [brand, crawlFn] of crawlers) {
+    let fresh = false;
     try {
       results[brand] = await withRetry(() => crawlFn(), brand);
       console.error(`${brand}: ${results[brand].length}개 수집 완료`);
+      fresh = results[brand].length > 0;
     } catch (err) {
       console.error(`${brand} 크롤링 최종 실패:`, err.message);
       results[brand] = [];
     }
+    if (fresh) status[brand] = { lastFreshAt: today, count: results[brand].length };
 
     // 재시도 후에도 0건이면 사이트 구조 변경/차단 등으로 의심 -
     // 그 브랜드만 전날 데이터로 대체해서 화면에서 통째로 사라지지 않게 한다.
@@ -195,6 +215,9 @@ async function run() {
   if (sevenImgFixed > 0) console.error(`세븐일레븐 이미지 폴백 적용: ${sevenImgFixed}건`);
   fs.writeFileSync(OUT_PATH, JSON.stringify(masterDB, null, 2), 'utf-8');
   console.error(`deals.json 작성 완료: 상품 ${masterDB.length}건 (${OUT_PATH})`);
+
+  fs.writeFileSync(STATUS_PATH, JSON.stringify(status, null, 2), 'utf-8');
+  console.error('수집 상태:', Object.entries(status).map(([b, s]) => `${b}=${s.lastFreshAt}`).join(' '));
 }
 
 run();
