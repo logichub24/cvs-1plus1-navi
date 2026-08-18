@@ -8712,22 +8712,6 @@
     }
   },
   {
-    "id": "해태구운토마토링",
-    "name": "해태)구운토마토링55g",
-    "category": "기타",
-    "price": 1700,
-    "saving": 1700,
-    "barcode": "8801019613524",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801019613524.jpg"
-      }
-    }
-  },
-  {
     "id": "앰지홀스제로슈가수박향",
     "name": "앰지)홀스제로슈가수박향",
     "category": "기타",
@@ -23694,22 +23678,6 @@
     }
   },
   {
-    "id": "라라스윗매콤닭강정팝콘",
-    "name": "라라스윗)매콤닭강정팝콘",
-    "category": "스낵·과자",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "8809599361521",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809599361521.png"
-      }
-    }
-  },
-  {
     "id": "목우촌닭가슴살육포마라",
     "name": "목우촌)닭가슴살육포마라",
     "category": "기타",
@@ -24586,38 +24554,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809977010911.jpg"
-      }
-    }
-  },
-  {
-    "id": "투데이무이티케이크",
-    "name": "투데이)무이티케이크90g",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8690562007375",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8690562007375.jpg"
-      }
-    }
-  },
-  {
-    "id": "동서리츠멕시칸타코맛",
-    "name": "동서)리츠멕시칸타코맛",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8801037098921",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037098921.jpg"
       }
     }
   },
@@ -25626,22 +25562,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801085885221.jpg"
-      }
-    }
-  },
-  {
-    "id": "서주솔티버터와플",
-    "name": "서주)솔티버터와플55g",
-    "category": "유제품",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8809592642399",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809592642399.jpg"
       }
     }
   },
@@ -76644,6 +76564,22 @@
     }
   },
   {
+    "id": "성수310애플머스캣스무디",
+    "name": "성수310)애플머스캣스무디250ml",
+    "category": "음료",
+    "price": 2900,
+    "saving": 2900,
+    "barcode": "8809350887178",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809350887178.JPG"
+      }
+    }
+  },
+  {
     "id": "롯데더하다옥수수수염차펫",
     "name": "롯데)더하다옥수수수염차펫500ml",
     "category": "기타",
@@ -84407,8 +84343,8 @@
     "id": "cj햇반솥반버섯영양밥",
     "name": "CJ)햇반솥반버섯영양밥200g",
     "category": "기타",
-    "price": 3900,
-    "saving": 3900,
+    "price": 5900,
+    "saving": 5900,
     "barcode": "8801007903699",
     "events": {
       "EMART24": {
@@ -84423,8 +84359,8 @@
     "id": "cj햇반솥반뿌리채소영양밥",
     "name": "CJ)햇반솥반뿌리채소영양밥200G",
     "category": "기타",
-    "price": 3900,
-    "saving": 3900,
+    "price": 5900,
+    "saving": 5900,
     "barcode": "8801007904054",
     "events": {
       "EMART24": {
@@ -84439,8 +84375,8 @@
     "id": "cj햇반솥반꿀약밥",
     "name": "CJ)햇반솥반꿀약밥210g",
     "category": "기타",
-    "price": 3900,
-    "saving": 3900,
+    "price": 5900,
+    "saving": 5900,
     "barcode": "8801007904092",
     "events": {
       "EMART24": {
@@ -85088,6 +85024,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809497532597.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데의성마늘프랑크직화",
+    "name": "롯데)의성마늘프랑크직화65g",
+    "category": "기타",
+    "price": 2600,
+    "saving": 867,
+    "barcode": "8801123002702",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801123002702.JPG"
       }
     }
   },
@@ -87239,8 +87191,8 @@
     "id": "삼립주종카스타드소보루",
     "name": "삼립)주종카스타드소보루130g",
     "category": "주류",
-    "price": 1800,
-    "saving": 600,
+    "price": 2000,
+    "saving": 667,
     "barcode": "8801068405460",
     "events": {
       "EMART24": {
@@ -87303,8 +87255,8 @@
     "id": "삼립주종완듀앙금소보루",
     "name": "삼립)주종완듀앙금소보루95g",
     "category": "기타",
-    "price": 1800,
-    "saving": 600,
+    "price": 2000,
+    "saving": 667,
     "barcode": "8801068930917",
     "events": {
       "EMART24": {
@@ -90775,8 +90727,8 @@
     "id": "cj햇반발아현미밥36",
     "name": "CJ)햇반발아현미밥210g(36)",
     "category": "기타",
-    "price": 2900,
-    "saving": 967,
+    "price": 3200,
+    "saving": 1067,
     "barcode": "8801007010410",
     "events": {
       "EMART24": {
@@ -90791,8 +90743,8 @@
     "id": "cj햇반6입",
     "name": "CJ)햇반210g*6입",
     "category": "기타",
-    "price": 11200,
-    "saving": 3733,
+    "price": 12900,
+    "saving": 4300,
     "barcode": "8801007037783",
     "events": {
       "EMART24": {
@@ -90807,8 +90759,8 @@
     "id": "cj햇반흑미밥36",
     "name": "CJ)햇반흑미밥210g(36)",
     "category": "기타",
-    "price": 2900,
-    "saving": 967,
+    "price": 3200,
+    "saving": 1067,
     "barcode": "8801007038780",
     "events": {
       "EMART24": {
@@ -90823,8 +90775,8 @@
     "id": "cj큰햇반30",
     "name": "CJ)큰햇반300g(30)",
     "category": "기타",
-    "price": 2900,
-    "saving": 967,
+    "price": 3400,
+    "saving": 1133,
     "barcode": "8801007054186",
     "events": {
       "EMART24": {
@@ -90839,8 +90791,8 @@
     "id": "cj햇반작은공기3",
     "name": "CJ)햇반작은공기130G*3",
     "category": "기타",
-    "price": 5100,
-    "saving": 1700,
+    "price": 5900,
+    "saving": 1967,
     "barcode": "8801007256238",
     "events": {
       "EMART24": {
@@ -90855,8 +90807,8 @@
     "id": "cj햇반48",
     "name": "CJ)햇반210g(48)",
     "category": "기타",
-    "price": 2100,
-    "saving": 700,
+    "price": 2400,
+    "saving": 800,
     "barcode": "8801007310572",
     "events": {
       "EMART24": {
@@ -90999,8 +90951,8 @@
     "id": "cj햇반매일잡곡밥36",
     "name": "CJ)햇반매일잡곡밥210g(36)",
     "category": "기타",
-    "price": 2900,
-    "saving": 967,
+    "price": 3200,
+    "saving": 1067,
     "barcode": "8801007684543",
     "events": {
       "EMART24": {
@@ -91063,8 +91015,8 @@
     "id": "cj햇반매일찰잡곡밥36",
     "name": "CJ)햇반매일찰잡곡밥210g(36)",
     "category": "기타",
-    "price": 2900,
-    "saving": 967,
+    "price": 3200,
+    "saving": 1067,
     "barcode": "8801007818955",
     "events": {
       "EMART24": {
@@ -91767,8 +91719,8 @@
     "id": "농심배홍동큰사발큰컵",
     "name": "농심)배홍동큰사발(큰컵)",
     "category": "기타",
-    "price": 1800,
-    "saving": 600,
+    "price": 1900,
+    "saving": 633,
     "barcode": "8801043011235",
     "events": {
       "EMART24": {
@@ -91783,8 +91735,8 @@
     "id": "농심튀김우동큰사발",
     "name": "농심)튀김우동큰사발",
     "category": "라면",
-    "price": 1500,
-    "saving": 500,
+    "price": 1600,
+    "saving": 533,
     "barcode": "8801043016070",
     "events": {
       "EMART24": {
@@ -91799,8 +91751,8 @@
     "id": "농심무파마큰사발",
     "name": "농심)무파마큰사발",
     "category": "기타",
-    "price": 1800,
-    "saving": 600,
+    "price": 1900,
+    "saving": 633,
     "barcode": "8801043016094",
     "events": {
       "EMART24": {
@@ -91831,8 +91783,8 @@
     "id": "농심사천짜파게티큰사발",
     "name": "농심)사천짜파게티큰사발",
     "category": "기타",
-    "price": 1800,
-    "saving": 600,
+    "price": 1900,
+    "saving": 633,
     "barcode": "8801043020237",
     "events": {
       "EMART24": {
@@ -91847,8 +91799,8 @@
     "id": "농심메론킥16",
     "name": "농심)메론킥60g(16)",
     "category": "기타",
-    "price": 1700,
-    "saving": 567,
+    "price": 1800,
+    "saving": 600,
     "barcode": "8801043031196",
     "events": {
       "EMART24": {
@@ -91863,8 +91815,8 @@
     "id": "농심양파링20",
     "name": "농심)양파링80g(20)",
     "category": "기타",
-    "price": 1700,
-    "saving": 567,
+    "price": 1800,
+    "saving": 600,
     "barcode": "8801043036597",
     "events": {
       "EMART24": {
@@ -91879,8 +91831,8 @@
     "id": "농심바나나킥20",
     "name": "농심)바나나킥75g(20)",
     "category": "스낵·과자",
-    "price": 1700,
-    "saving": 567,
+    "price": 1800,
+    "saving": 600,
     "barcode": "8801043036634",
     "events": {
       "EMART24": {
@@ -91927,8 +91879,8 @@
     "id": "농심포테토칩교촌간장치킨맛16",
     "name": "농심)포테토칩교촌간장치킨맛55g(16)",
     "category": "간편식",
-    "price": 1700,
-    "saving": 567,
+    "price": 1800,
+    "saving": 600,
     "barcode": "8801043060097",
     "events": {
       "EMART24": {
@@ -91975,8 +91927,8 @@
     "id": "농심신라면로제큰사발면",
     "name": "농심)신라면로제큰사발면",
     "category": "라면",
-    "price": 1800,
-    "saving": 600,
+    "price": 1900,
+    "saving": 633,
     "barcode": "8801043062435",
     "events": {
       "EMART24": {
@@ -91991,8 +91943,8 @@
     "id": "농심망고킥16",
     "name": "농심)망고킥60g(16)",
     "category": "기타",
-    "price": 1700,
-    "saving": 567,
+    "price": 1800,
+    "saving": 600,
     "barcode": "8801043064767",
     "events": {
       "EMART24": {
@@ -92023,8 +91975,8 @@
     "id": "농심포테토칩엽떡로제맛16",
     "name": "농심)포테토칩엽떡로제맛55g(16)",
     "category": "스낵·과자",
-    "price": 1700,
-    "saving": 567,
+    "price": 1800,
+    "saving": 600,
     "barcode": "8801043067799",
     "events": {
       "EMART24": {
@@ -93159,8 +93111,8 @@
     "id": "cj햇반서리태흑미밥",
     "name": "CJ)햇반서리태흑미밥210g",
     "category": "기타",
-    "price": 2900,
-    "saving": 967,
+    "price": 3200,
+    "saving": 1067,
     "barcode": "8801392076251",
     "events": {
       "EMART24": {
