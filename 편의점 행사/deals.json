@@ -4338,22 +4338,6 @@
     }
   },
   {
-    "id": "오비카스레몬논알콜캔330",
-    "name": "오비)카스레몬논알콜캔330",
-    "category": "주류",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801858047399",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801858047399.png"
-      }
-    }
-  },
-  {
     "id": "아우라생화캡슐로즈",
     "name": "아우라)생화캡슐로즈1L",
     "category": "기타",
@@ -5977,7 +5961,7 @@
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115140047.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115140047_1.png"
       }
     }
   },
@@ -8049,7 +8033,7 @@
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392022654.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392022654_1.png"
       }
     }
   },
@@ -8065,7 +8049,7 @@
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392150012.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392150012_1.png"
       }
     }
   },
@@ -12546,22 +12530,6 @@
     }
   },
   {
-    "id": "하겐바닐라미니컵",
-    "name": "하겐)바닐라미니컵",
-    "category": "기타",
-    "price": 6900,
-    "saving": 2300,
-    "barcode": "3415581311297",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/3415581311297.jpg"
-      }
-    }
-  },
-  {
     "id": "동원야채참치",
     "name": "동원)야채참치150g",
     "category": "간편식",
@@ -13597,7 +13565,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037092240.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037092240_1.png"
       }
     }
   },
@@ -15605,7 +15573,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037092264.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037092264_1.png"
       }
     }
   },
@@ -16056,22 +16024,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801104669672.png"
-      }
-    }
-  },
-  {
-    "id": "오비카스논알콜캔355",
-    "name": "오비)카스논알콜캔355",
-    "category": "주류",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8801858045258",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801858045258.png"
       }
     }
   },
@@ -20972,92 +20924,6 @@
     }
   },
   {
-    "id": "하겐티라미수파인트",
-    "name": "하겐)티라미수파인트",
-    "category": "기타",
-    "price": 17900,
-    "saving": 5967,
-    "barcode": "3415583011294",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/3415583011294.jpg"
-      }
-    }
-  },
-  {
-    "id": "하겐츄러스파인트",
-    "name": "하겐)츄러스파인트",
-    "category": "기타",
-    "price": 17900,
-    "saving": 5967,
-    "barcode": "3415583012291",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/3415583012291.jpg"
-      }
-    }
-  },
-  {
-    "id": "하겐티라미수미니컵",
-    "name": "하겐)티라미수미니컵",
-    "category": "기타",
-    "price": 6900,
-    "saving": 2300,
-    "barcode": "3415584307297",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/3415584307297.jpg"
-      }
-    }
-  },
-  {
-    "id": "하겐츄러스미니컵",
-    "name": "하겐)츄러스미니컵",
-    "category": "기타",
-    "price": 6900,
-    "saving": 2300,
-    "barcode": "3415584308294",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/3415584308294.jpg"
-      }
-    }
-  },
-  {
-    "id": "하겐티라미수바",
-    "name": "하겐)티라미수바",
-    "category": "기타",
-    "price": 6900,
-    "saving": 2300,
-    "barcode": "3415587444296",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/3415587444296.jpg"
-      },
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/3415587444296.jpg"
-      }
-    }
-  },
-  {
     "id": "정관장비타민활기력샷20m",
     "name": "정관장)비타민활기력샷20m",
     "category": "기타",
@@ -24660,22 +24526,6 @@
     }
   },
   {
-    "id": "하겐딸기모찌파인트",
-    "name": "하겐)딸기모찌파인트",
-    "category": "기타",
-    "price": 17900,
-    "saving": 5967,
-    "barcode": "3415583017296",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/3415583017296.jpg"
-      }
-    }
-  },
-  {
     "id": "하겐초코브라우니미니컵",
     "name": "하겐)초코브라우니미니컵",
     "category": "기타",
@@ -25970,34 +25820,6 @@
     }
   },
   {
-    "id": "마즈트윅스아이스바",
-    "name": "마즈)트윅스아이스바",
-    "category": "아이스크림",
-    "price": 3500,
-    "saving": 1167,
-    "barcode": "5000159484640",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/5000159484640.jpg"
-      },
-      "GS25": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_5000159484640_001.jpg"
-      },
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/5000159484640.jpg"
-      }
-    }
-  },
-  {
     "id": "해태구운나초",
     "name": "해태)구운나초104g",
     "category": "기타",
@@ -26762,6 +26584,28 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8800348943012.jpg"
+      }
+    }
+  },
+  {
+    "id": "마즈트윅스아이스바",
+    "name": "마즈)트윅스아이스바",
+    "category": "아이스크림",
+    "price": 3500,
+    "saving": 1167,
+    "barcode": "5000159484640",
+    "events": {
+      "GS25": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_5000159484640_001.jpg"
+      },
+      "7-ELEVEN": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/5000159484640.jpg"
       }
     }
   },
@@ -52752,6 +52596,22 @@
     }
   },
   {
+    "id": "하겐티라미수바",
+    "name": "하겐)티라미수바",
+    "category": "기타",
+    "price": 6900,
+    "saving": 2300,
+    "barcode": "3415587444296",
+    "events": {
+      "7-ELEVEN": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/3415587444296.jpg"
+      }
+    }
+  },
+  {
     "id": "덴마크커피커피",
     "name": "덴마크)커피커피300ml",
     "category": "음료",
@@ -76573,7 +76433,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809350887178.JPG"
       }
@@ -85037,7 +84897,7 @@
     "events": {
       "EMART24": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801123002702.JPG"
       }
