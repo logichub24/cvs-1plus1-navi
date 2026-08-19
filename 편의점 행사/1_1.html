@@ -268,7 +268,7 @@
                     <button onclick="goHome()" class="text-gray-500 hover:text-gray-800 p-2"><i class="fa-solid fa-arrow-left text-xl"></i></button>
                     <div class="flex-1 relative">
                         <i class="fa-solid fa-code-compare absolute left-3 top-1/2 transform -translate-y-1/2 text-indigo-500"></i>
-                        <input type="text" id="searchInput" oninput="performSearch()" placeholder="비교할 상품명 입력 (예: 콜라)" class="w-full bg-indigo-50 text-gray-900 rounded-full py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 font-bold placeholder-indigo-300">
+                        <input type="text" id="searchInput" oninput="onSearchInput()" placeholder="비교할 상품명 입력 (예: 콜라)" class="w-full bg-indigo-50 text-gray-900 rounded-full py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 font-bold placeholder-indigo-300">
                     </div>
                 </div>
                 <div class="flex gap-2 px-4 py-2 border-b border-gray-100 overflow-x-auto hide-scrollbar shrink-0">
@@ -2137,7 +2137,19 @@
             return false;
         }
 
+        // 한 글자마다 5,000건을 그리면 폰에서 입력이 몇 초씩 밀린다.
+        // ('1'만 쳐도 1+1/2+1 때문에 전 상품이 걸려 DOM 노드가 16만 개까지 갔다)
+        // 입력이 멈춘 뒤에 한 번만 그리고, 그리는 개수도 상한을 둔다.
+        const SEARCH_RENDER_LIMIT = 100;
+        let searchDebounceTimer = null;
+
+        function onSearchInput() {
+            clearTimeout(searchDebounceTimer);
+            searchDebounceTimer = setTimeout(performSearch, 200);
+        }
+
         function performSearch() {
+            clearTimeout(searchDebounceTimer);
             const query = document.getElementById('searchInput').value.trim().toLowerCase();
             const empty = document.getElementById('searchEmptyState');
             const list = document.getElementById('searchResultsList');
@@ -2152,9 +2164,18 @@
                 // 크롤링 누락인지 검색 매칭 문제인지 구분할 수 있다.
                 track('search_empty', { query, brand: searchBrandFilter || 'all' });
                 list.innerHTML = `<div class="p-8 text-center text-gray-500 font-bold mt-10">결과가 없습니다.</div>`;
-            } else {
-                list.innerHTML = `<div class="px-2 py-1 flex justify-between items-center"><span class="text-xs font-bold text-gray-500">통합 검색 결과 ${matches.length}건</span></div>` + matches.map(p => createProductHTML(p, 'search', searchBrandFilter)).join('');
+                return;
             }
+
+            // 절약액이 큰 순으로 앞쪽만 보여준다. 잘렸다는 사실은 반드시 알린다.
+            const sorted = [...matches].sort((a, b) => (b.saving || 0) - (a.saving || 0));
+            const shown = sorted.slice(0, SEARCH_RENDER_LIMIT);
+            const more = matches.length > SEARCH_RENDER_LIMIT
+                ? `<p class="text-[11px] text-gray-400 font-bold text-center py-2">절약액 상위 ${SEARCH_RENDER_LIMIT}개만 표시 · 검색어를 더 입력하면 좁혀집니다</p>`
+                : '';
+            list.innerHTML = `<div class="px-2 py-1 flex justify-between items-center"><span class="text-xs font-bold text-gray-500">통합 검색 결과 ${matches.length.toLocaleString()}건</span></div>`
+                + shown.map(p => createProductHTML(p, 'search', searchBrandFilter)).join('')
+                + more;
         }
 
         function renderWishlist() {
