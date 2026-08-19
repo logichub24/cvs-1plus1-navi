@@ -875,6 +875,7 @@
 
             MASTER_DB = deals;
             dealsByBrandCache = null;
+            searchHaystackCache.clear();
             computeIsNew();
             updateSinceLastVisit();
             applyDaysLeft();
@@ -2086,11 +2087,40 @@
                 return CHOSUNG[Math.floor(code / 588)];
             }).join('');
         }
-        function matchSearch(name, query) {
-            const n = name.toLowerCase();
-            if (n.includes(query)) return true;
-            // 초성 검색
-            if (/^[ㄱ-ㅎ]+$/.test(query)) return toChosung(name).includes(query);
+        // 검색이 상품명만 보고 있어서 'CU', 'GS25', '1+1', '음료' 같은 말은 전부 0건이었다.
+        // 브랜드는 events 키에, 행사유형은 events[].type에, 분류는 category에 들어 있어
+        // 상품명에는 나타나지 않는다. 사용자는 이 앱을 '1+1 앱'으로 알고 오는데
+        // 정작 '1+1'을 치면 결과가 없었다.
+        const BRAND_ALIASES = {
+            'CU': 'cu 씨유',
+            'GS25': 'gs25 지에스25 지에스',
+            '7-ELEVEN': '세븐일레븐 세븐 7-eleven 711 세븐 일레븐',
+            'EMART24': '이마트24 이마트 emart24 emart',
+        };
+
+        // 상품마다 매번 문자열을 만들면 5,000건 x 입력 한 글자마다 반복되므로 캐시한다.
+        const searchHaystackCache = new Map();
+
+        function searchHaystack(product) {
+            let hay = searchHaystackCache.get(product.id);
+            if (hay) return hay;
+            const brands = Object.keys(product.events || {});
+            const types = [...new Set(brands.map(b => product.events[b]?.type).filter(Boolean))];
+            hay = [
+                product.name,
+                product.category || '',
+                ...brands.map(b => BRAND_ALIASES[b] || b),
+                ...types,
+            ].join(' ').toLowerCase();
+            searchHaystackCache.set(product.id, hay);
+            return hay;
+        }
+
+        function matchSearch(product, query) {
+            const hay = searchHaystack(product);
+            if (hay.includes(query)) return true;
+            // 초성 검색은 상품명에만 적용한다(브랜드 별칭까지 넣으면 오탐이 커진다)
+            if (/^[ㄱ-ㅎ]+$/.test(query)) return toChosung(product.name).includes(query);
             return false;
         }
 
@@ -2102,7 +2132,7 @@
             if (!query) { empty.classList.remove('hidden'); list.classList.add('hidden'); return; }
             empty.classList.add('hidden'); list.classList.remove('hidden');
 
-            let matches = MASTER_DB.filter(p => matchSearch(p.name, query));
+            let matches = MASTER_DB.filter(p => matchSearch(p, query));
             if (searchBrandFilter) matches = matches.filter(p => p.events[searchBrandFilter]);
             if (matches.length === 0) {
                 // 찾는 상품이 없어서 나가는 케이스. 어떤 검색어가 비었는지 알아야
