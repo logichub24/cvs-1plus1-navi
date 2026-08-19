@@ -443,7 +443,7 @@
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="text-xl shrink-0">🔄</span>
-                        <p class="text-sm text-gray-700 leading-relaxed">행사 정보와 매장 위치는 <b>매일 새벽 3시 자동으로 갱신</b>됩니다.</p>
+                        <p class="text-sm text-gray-700 leading-relaxed"><b>행사 정보는 매일 새벽 3시 자동으로 갱신</b>됩니다. 매장 위치는 공공데이터를 사용해 분기마다 갱신되므로, 최근 문을 연 매장은 아직 표시되지 않을 수 있어요.</p>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
@@ -504,7 +504,8 @@
                         <p class="text-sm font-bold text-gray-800 mb-2">앱 정보</p>
                         <div class="bg-gray-50 rounded-xl p-3.5 space-y-1.5">
                             <div class="flex items-center justify-between text-xs"><span class="text-gray-500">버전</span><span class="font-bold text-gray-800">1.0.0</span></div>
-                            <div class="flex items-center justify-between text-xs"><span class="text-gray-500">행사·매장 데이터</span><span class="font-bold text-gray-800">매일 새벽 3시 자동 갱신</span></div>
+                            <div class="flex items-center justify-between text-xs"><span class="text-gray-500">행사 데이터</span><span class="font-bold text-gray-800">매일 새벽 3시 자동 갱신</span></div>
+                            <div class="flex items-center justify-between text-xs"><span class="text-gray-500">매장 위치</span><span class="font-bold text-gray-800">공공데이터 · 분기 갱신</span></div>
                         </div>
                     </div>
                     <div>
@@ -861,6 +862,7 @@
 
         // deals.json: 매일 새벽 3시 GitHub Actions가 4사 행사 페이지를 크롤링해 갱신하는 실데이터.
         // stores/index.json: 전국 시/도별로 쪼갠 매장 좌표 목록(소상공인시장진흥공단 API 동기화 결과)의 색인.
+            // 이 API는 분기 스냅샷이라 매일 호출해도 같은 결과가 온다. 신규 개점 매장은 다음 분기에 들어온다.
         // 실제 매장 데이터는 사용자 위치에서 가장 가까운 시/도 파일만 불러온다(전국 통합 파일은 너무 큼).
         async function loadRemoteData() {
             const dayTag = new Date().toISOString().slice(0, 10).replace(/-/g, '');

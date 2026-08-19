@@ -147,6 +147,23 @@ async function run() {
 
   fs.writeFileSync(path.join(OUT_DIR, 'index.json'), JSON.stringify(index, null, 2), 'utf-8');
 
+  // 매장 수가 실제로 바뀐 날만 기록한다.
+  // 이 API는 분기 스냅샷이라 매일 호출해도 같은 결과가 오고, 동기화가 성공해도 파일이
+  // 그대로라 커밋이 안 생긴다. 그래서 '언제 마지막으로 내용이 바뀌었는지'를 따로 남겨야
+  // 분기 갱신이 실제로 들어왔는지 확인할 수 있다.
+  const statusPath = path.join(__dirname, '..', '편의점 행사', 'crawl-status.json');
+  let status = {};
+  try { status = JSON.parse(fs.readFileSync(statusPath, 'utf-8')); } catch (e) {}
+  const total = allStores.length;
+  const prev = status.__stores;
+  if (!prev || prev.count !== total) {
+    status.__stores = { lastChangedAt: new Date().toISOString().slice(0, 10), count: total };
+    fs.writeFileSync(statusPath, JSON.stringify(status, null, 2), 'utf-8');
+    console.error(`매장 수 변경 감지: ${prev ? prev.count : '기록없음'} → ${total}건`);
+  } else {
+    console.error(`매장 수 동일(${total}건) - 마지막 변경 ${prev.lastChangedAt}`);
+  }
+
   const byBrand = allStores.reduce((acc, s) => {
     acc[s.brand] = (acc[s.brand] || 0) + 1;
     return acc;

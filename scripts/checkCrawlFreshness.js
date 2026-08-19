@@ -17,6 +17,8 @@ const path = require('path');
 const STATUS_PATH = path.join(__dirname, '..', '편의점 행사', 'crawl-status.json');
 const BRANDS = ['CU', 'GS25', '7-ELEVEN', 'EMART24'];
 const STALE_DAYS = Number(process.env.STALE_DAYS) || 3;
+// 매장 위치는 분기 스냅샷이라 100일 넘게 안 바뀌면 그때 확인한다.
+const STORE_STALE_DAYS = Number(process.env.STORE_STALE_DAYS) || 100;
 
 function daysSince(dateStr) {
   const then = Date.parse(`${dateStr}T00:00:00Z`);
@@ -47,6 +49,19 @@ function main() {
       stale.push({ brand, days: d, note: label });
     } else {
       console.log(`  OK  ${label}`);
+    }
+  }
+
+  // 매장 위치는 공공데이터 분기 스냅샷이라 며칠 그대로인 게 정상이다.
+  // 다만 분기가 지났는데도 안 바뀌면 그때는 확인이 필요해 별도 임계값으로 본다.
+  const st = status.__stores;
+  if (st && st.lastChangedAt) {
+    const sd = daysSince(st.lastChangedAt);
+    const line = `매장 위치: 마지막 변경 ${st.lastChangedAt} (${sd}일 전, ${st.count}건)`;
+    if (sd !== null && sd >= STORE_STALE_DAYS) {
+      stale.push({ brand: '매장 위치', days: sd, note: `${line} - 분기 갱신이 들어오지 않았습니다` });
+    } else {
+      console.log(`  OK  ${line}`);
     }
   }
 
