@@ -173,23 +173,22 @@
         </div>
 
         <!-- 날씨 칩 (상태 따라 아이콘 변경, 탭하면 날씨 추천 다시 보기) -->
-        <button id="weatherChip" onclick="reopenWeatherPreview()" class="hidden absolute left-3 z-[300] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 pl-2 pr-3 py-1.5 items-center gap-1.5 pointer-events-auto active:scale-95 transition" style="top:101px">
-            <span id="weatherChipIcon" class="text-base leading-none">☀️</span>
-            <span id="weatherChipText" class="text-[11px] font-black text-gray-700 leading-none">--℃</span>
-        </button>
+        <!-- 날씨 칩과 '내 주변 매장' 버튼을 같은 줄에 둔다.
+             하단은 광고 배너와 플로팅 탭바가 있어 겹치기 쉬웠다. -->
+        <div class="absolute left-3 z-[300] flex items-center gap-2 pointer-events-none" style="top:101px">
+            <button id="weatherChip" onclick="reopenWeatherPreview()" class="hidden bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 pl-2 pr-3 py-1.5 items-center gap-1.5 pointer-events-auto active:scale-95 transition">
+                <span id="weatherChipIcon" class="text-base leading-none">☀️</span>
+                <span id="weatherChipText" class="text-[11px] font-black text-gray-700 leading-none">--℃</span>
+            </button>
+            <button id="nearbyOpener" onclick="openNearbySheet()" class="hidden bg-gray-900 text-white rounded-full shadow-md pl-2.5 pr-3 py-1.5 items-center gap-1.5 pointer-events-auto active:scale-95 transition">
+                <i class="fa-solid fa-location-dot text-blue-300 text-[11px]"></i>
+                <span id="nearbyOpenerText" class="text-[11px] font-black leading-none">내 주변 매장</span>
+            </button>
+        </div>
 
         <!-- Re-search Area Button -->
         <button id="reSearchBtn" onclick="searchInCurrentArea()" style="bottom: calc(124px + env(safe-area-inset-bottom));" class="absolute left-1/2 transform -translate-x-1/2 z-[500] bg-gray-900 text-white px-4 py-2.5 rounded-full text-[12px] font-bold shadow-[0_4px_15px_rgba(0,0,0,0.3)] flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-[10px]">
             <i class="fa-solid fa-rotate-right text-blue-400"></i> 이 지역 재검색
-        </button>
-
-        <!-- 주변 행사 시트를 여는 버튼. 진입 시에는 시트를 띄우지 않고 이 버튼만 보여준다. -->
-        <button id="nearbyOpener" onclick="openNearbySheet()"
-                class="hidden absolute left-1/2 -translate-x-1/2 z-[300] bg-gray-900 text-white pl-4 pr-3 py-2.5 rounded-full shadow-[0_4px_16px_rgba(0,0,0,0.28)] items-center gap-2 active:scale-95 transition"
-                style="bottom: calc(82px + env(safe-area-inset-bottom));">
-            <i class="fa-solid fa-location-dot text-blue-300 text-[12px]"></i>
-            <span id="nearbyOpenerText" class="text-[13px] font-black">내 주변 행사</span>
-            <i class="fa-solid fa-chevron-up text-[10px] opacity-70"></i>
         </button>
 
         <!-- 주변 행사 시트. 접힘(가로 미리보기) / 펼침(세로 전체 목록) 두 단계.
