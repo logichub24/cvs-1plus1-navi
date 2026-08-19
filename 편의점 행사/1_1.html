@@ -701,8 +701,8 @@
                 <div class="p-4 border-b border-gray-100 flex items-center gap-3 bg-white sticky top-0 z-20 shrink-0 rounded-t-[24px]">
                     <button onclick="goHome()" class="text-gray-500 hover:text-gray-800 p-2"><i class="fa-solid fa-arrow-left text-xl"></i></button>
                     <div class="flex-1">
-                        <h3 class="font-black text-lg text-gray-900"><i class="fa-solid fa-list text-blue-500 mr-1"></i> 전체 딜 목록</h3>
-                        <p class="text-[10px] text-gray-500 font-bold leading-tight">4사 행사 상품을 브랜드/유형별로 필터</p>
+                        <h3 class="font-black text-lg text-gray-900"><i class="fa-solid fa-list text-blue-500 mr-1"></i> 전체 행사 목록</h3>
+                        <p class="text-[11px] text-gray-500 font-bold leading-tight">4사 행사 상품을 브랜드·유형별로 필터 · <span id="allDealCount" class="text-blue-600">0개</span></p>
                     </div>
                 </div>
                 <div class="flex gap-2 px-3 py-2 border-b border-gray-100 overflow-x-auto hide-scrollbar shrink-0 bg-white">
@@ -2736,17 +2736,28 @@
         }
 
         // 전체 딜 목록 렌더링
+        const ALL_DEALS_RENDER_LIMIT = 100;
+
         function renderAllDeals() {
             const list = document.getElementById('allDealsList');
             let items = [...MASTER_DB].sort((a, b) => b.saving - a.saving);
             if (allDealsFilterBrand) items = items.filter(p => p.events[allDealsFilterBrand]);
             if (allDealsFilterType) items = items.filter(p => Object.values(p.events).some(e => e.type === allDealsFilterType));
-            document.getElementById('allDealCount').innerText = `${items.length}개`;
+            // 이 요소가 없으면 예외가 나면서 아래 목록 렌더까지 통째로 죽는다.
+            // 실제로 마크업에서 빠져 있어 '전체 행사' 목록이 빈 화면으로 보였다.
+            const countEl = document.getElementById('allDealCount');
+            if (countEl) countEl.innerText = `${items.length.toLocaleString()}개`;
             if (items.length === 0) {
                 list.innerHTML = `<div class="p-8 text-center text-gray-400 font-medium">해당 조건의 상품이 없습니다.</div>`;
                 return;
             }
-            list.innerHTML = items.map(p => createProductHTML(p, 'search', allDealsFilterBrand)).join('');
+            // 5,572건을 한 번에 그리면 DOM 노드가 16만 개까지 가서 폰이 몇 초간 멈춘다.
+            // 비교검색과 같은 기준으로 상위 100건만 그리고, 잘렸다는 사실을 알린다.
+            const shown = items.slice(0, ALL_DEALS_RENDER_LIMIT);
+            const more = items.length > ALL_DEALS_RENDER_LIMIT
+                ? `<p class="text-[11px] text-gray-400 font-bold text-center py-3">절약액 상위 ${ALL_DEALS_RENDER_LIMIT}개만 표시 · 위 필터로 좁혀보세요</p>`
+                : '';
+            list.innerHTML = shown.map(p => createProductHTML(p, 'search', allDealsFilterBrand)).join('') + more;
         }
 
         // ──────────────────────────────────────────────────────────────────
