@@ -1,9 +1,11 @@
 // 토스인앱(Apps in Toss) 광고 SDK 연동.
 // 일반 브라우저(GitHub Pages 등)에서는 isSupported()가 false라 전부 조용히 no-op되고,
 // 토스 앱 WebView 안에서 열렸을 때만 실제 광고가 붙는다.
-import { TossAds, loadFullScreenAd, showFullScreenAd, share, getCurrentLocation, Accuracy, requestNotificationAgreement } from '@apps-in-toss/web-bridge';
-import { Analytics } from '@apps-in-toss/web-analytics';
-import { openURL } from '@apps-in-toss/web-framework';
+// SDK 3.x부터 web-bridge / web-analytics가 web-framework 하나로 합쳐졌다.
+import {
+  TossAds, loadFullScreenAd, showFullScreenAd, share, getCurrentLocation, Accuracy,
+  requestNotificationAgreement, openURL, Analytics,
+} from '@apps-in-toss/web-framework';
 
 const AD_CONFIG = {
   banner:       'ait.v2.live.45bb0aad48d04636',
@@ -199,8 +201,18 @@ window.tossOpenApp = function tossOpenApp(url) {
   }
 };
 
+// SDK 3.x의 isSupported()는 토스 밖에서 false를 돌려주지 않고 내부 참조 오류를 던진다.
+// (2.x에서는 조용히 false였다) 여기서 막지 않으면 일반 브라우저 콘솔에 매번 예외가 남는다.
+function isTossEnv() {
+  try {
+    return Boolean(TossAds.initialize.isSupported && TossAds.initialize.isSupported());
+  } catch (e) {
+    return false;
+  }
+}
+
 function init() {
-  if (!TossAds.initialize.isSupported || !TossAds.initialize.isSupported()) return;
+  if (!isTossEnv()) return;
   document.body.classList.add('in-toss-app');
   const wrap = document.getElementById('adBannerWrap');
   if (wrap) { wrap.classList.remove('hidden'); wrap.classList.add('flex'); }

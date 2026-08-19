@@ -13,7 +13,9 @@
     "build:css": "tailwindcss -i \"편의점 행사/tailwind.input.css\" -o \"편의점 행사/styles.css\" --content \"편의점 행사/1_1.html\" --minify",
     "build:toss": "node scripts/build-toss.js",
     "check:weather": "node scripts/checkWeatherPicks.js",
-    "check:crawl": "node scripts/checkCrawlFreshness.js"
+    "check:crawl": "node scripts/checkCrawlFreshness.js",
+    "dev": "node scripts/build-toss.js",
+    "build": "node scripts/build-toss.js && ait build"
   },
   "dependencies": {
     "axios": "^1.7.7",
@@ -22,7 +24,9 @@
     "tough-cookie": "^5.0.0"
   },
   "devDependencies": {
-    "@apps-in-toss/web-framework": "^2.9.2",
+    "@apps-in-toss/devtools": "^3.0.4",
+    "@apps-in-toss/web-framework": "^3.0.4",
+    "esbuild": "^0.28.2",
     "tailwindcss": "^3.4.19"
   }
 }
