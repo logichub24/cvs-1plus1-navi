@@ -728,6 +728,10 @@
         window.purchasedHistory = purchasedHistory; // ads.js(보상형 광고)에서 최근 적립 내역을 참조하기 위해 노출 
         let storeMarkersData = [], mapMarkers = [];
         let isUserPanning = false, currentRadius = 500, searchCircle = null, dealTypeFilter = null;
+        // 매장 상세를 열면 지도가 그 매장으로 옮겨간다. 닫을 때 원래 보던 화면으로 되돌리기 위해
+        // 이동 직전 위치를 기억한다. 시트가 열린 동안 사용자가 직접 지도를 움직였다면
+        // 그 의도를 덮어쓰지 않도록 복귀하지 않는다.
+        let preStoreView = null, userMovedSinceOpen = false, programmaticMove = false;
         let nearbyPreviewShown = false, nearbyPreviewTimer = null;
         let searchBrandFilter = null, recentlyViewed = [], mapBrandFilter = null;
         let allVirtualStoresDB = [], REAL_STORES = [];
@@ -847,8 +851,8 @@
             initMap();
             applyStartupSettings();
             renderCategories();
-            document.getElementById('map').addEventListener('mousedown', closeSheet);
-            document.getElementById('map').addEventListener('touchstart', closeSheet);
+            document.getElementById('map').addEventListener('mousedown', dismissSheetForMapGesture);
+            document.getElementById('map').addEventListener('touchstart', dismissSheetForMapGesture);
             window.addEventListener('resize', () => { if(map) map.invalidateSize(); });
             maybeShowOnboarding();
             initCrossPromo();
@@ -1151,9 +1155,12 @@
             }).addTo(map);
 
             map.on('move', () => { searchCircle.setLatLng(map.getCenter()); });
-            map.on('dragstart', () => { isUserPanning = true; });
-            map.on('zoomstart', () => { isUserPanning = true; });
+            // flyTo 같은 자동 이동에도 zoomstart가 뜬다. 그대로 두면 사용자가 지도를 옮긴 것으로
+            // 오인해 '이 지역 재검색' 버튼이 멋대로 나타난다.
+            map.on('dragstart', () => { if (!programmaticMove) { isUserPanning = true; userMovedSinceOpen = true; } });
+            map.on('zoomstart', () => { if (!programmaticMove) { isUserPanning = true; userMovedSinceOpen = true; } });
             map.on('moveend', () => {
+                if (programmaticMove) { programmaticMove = false; return; }
                 if (isUserPanning) {
                     const btn = document.getElementById('reSearchBtn');
                     btn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-[10px]');
@@ -1170,6 +1177,7 @@
                 (lat, lng) => {
                     geoPending = false;
                     userCoords = { lat, lng };
+                    programmaticMove = true;
                     map.setView([lat, lng], 16);
                     searchCircle.setLatLng([lat, lng]);
                     updateWeather(lat, lng);
@@ -1214,6 +1222,7 @@
         }
 
         async function goToLocation(lat, lng) {
+            programmaticMove = true;
             map.setView([lat, lng], 16);
             userCoords = { lat, lng };
             const seq = ++storeLoadSeq;
@@ -1239,6 +1248,7 @@
             requestUserLocation(
                 (lat, lng) => {
                     userCoords = { lat, lng };
+                    programmaticMove = true;
                     map.setView([lat, lng], 16);
                     searchCircle.setLatLng([lat, lng]);
                     updateWeather(lat, lng);
@@ -1699,6 +1709,7 @@
             currentRadius = r;
             highlightRadiusButton(r);
             searchCircle.setRadius(r);
+            programmaticMove = true;
             map.flyToBounds(searchCircle.getBounds(), {padding: [20, 20], duration: 0.5});
             const label = r >= 1000 ? `${r/1000}km` : `${r}m`;
             setTimeout(() => { loadStoresInRadius(); showToast(`검색 반경이 ${label}로 변경되었습니다.`); }, 600);
@@ -1808,6 +1819,7 @@
             if (!item) return;
             closeLocationSearch();
             showToast(`'${item.title}' 위치로 이동합니다.`);
+            programmaticMove = true;
             map.setView([item.lat, item.lng], 16);
             await loadStoresForLocation(item.lat, item.lng);
             searchCircle.setLatLng([item.lat, item.lng]);
@@ -1869,7 +1881,11 @@
         // [개선 1 적용] 지도 오프셋 적용하여 마커와 바텀시트 공존
         function openStore(store) {
             activeStore = store;
+            // 시트가 이미 열린 채로 다른 매장을 눌러도 '처음 보던 화면'을 기준으로 유지한다.
+            if (!preStoreView) preStoreView = { center: map.getCenter(), zoom: map.getZoom() };
+            userMovedSinceOpen = false;
             // 바텀시트가 55vh 이므로 중심축을 약간 남쪽(위도 마이너스)으로 보정
+            programmaticMove = true;
             map.flyTo([store.lat - 0.0015, store.lng], 17, { duration: 0.5 });
 
             const brandInfo = BRAND_INFO[store.brand];
@@ -1885,7 +1901,29 @@
             document.getElementById('bottomSheet').classList.add('active');
         }
 
-        function closeSheet() { document.getElementById('bottomSheet').classList.remove('active'); }
+        function closeSheet() {
+            document.getElementById('bottomSheet').classList.remove('active');
+            restoreViewAfterStore();
+        }
+
+        // 지도를 직접 만져서 닫히는 경우. 여기서 화면을 되돌리면 사용자의 드래그와 싸우게 되므로
+        // 저장해 둔 화면만 버리고 시트를 닫는다.
+        function dismissSheetForMapGesture() {
+            preStoreView = null;
+            document.getElementById('bottomSheet').classList.remove('active');
+        }
+
+        // 상세를 열기 전 화면으로 되돌린다.
+        // 예전에는 닫아도 매장 위치·줌 17에 그대로 머물러서, 사용자가 반경을 다시 고르고
+        // 원래 보던 자리를 찾아 들어가야 했다.
+        function restoreViewAfterStore() {
+            const view = preStoreView;
+            preStoreView = null;
+            if (!view) return;
+            if (userMovedSinceOpen) return; // 사용자가 직접 옮겼으면 그 화면을 존중한다
+            programmaticMove = true;
+            map.flyTo(view.center, view.zoom, { duration: 0.4 });
+        }
 
         function openDirections() {
             if(!activeStore) return;
