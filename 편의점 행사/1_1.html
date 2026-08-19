@@ -134,7 +134,7 @@
         </div>
 
         <!-- 우측 맵 컨트롤 패널 정렬 -->
-        <div id="mapControlPanel" class="absolute right-3 bottom-[120px] z-[400] flex flex-col gap-2 pointer-events-none items-end">
+        <div id="mapControlPanel" style="bottom: calc(134px + env(safe-area-inset-bottom));" class="absolute right-3 z-[400] flex flex-col gap-2 pointer-events-none items-end">
             <!-- 설정 -->
             <button onclick="openSettings()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-gray-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition" title="설정">
                 <i class="fa-solid fa-gear text-lg"></i>
@@ -179,15 +179,24 @@
         </button>
 
         <!-- Re-search Area Button -->
-        <button id="reSearchBtn" onclick="searchInCurrentArea()" class="absolute bottom-[110px] left-1/2 transform -translate-x-1/2 z-[500] bg-gray-900 text-white px-4 py-2.5 rounded-full text-[12px] font-bold shadow-[0_4px_15px_rgba(0,0,0,0.3)] flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-[10px]">
+        <button id="reSearchBtn" onclick="searchInCurrentArea()" style="bottom: calc(124px + env(safe-area-inset-bottom));" class="absolute left-1/2 transform -translate-x-1/2 z-[500] bg-gray-900 text-white px-4 py-2.5 rounded-full text-[12px] font-bold shadow-[0_4px_15px_rgba(0,0,0,0.3)] flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-[10px]">
             <i class="fa-solid fa-rotate-right text-blue-400"></i> 이 지역 재검색
+        </button>
+
+        <!-- 주변 행사 시트를 여는 버튼. 진입 시에는 시트를 띄우지 않고 이 버튼만 보여준다. -->
+        <button id="nearbyOpener" onclick="openNearbySheet()"
+                class="hidden absolute left-1/2 -translate-x-1/2 z-[300] bg-gray-900 text-white pl-4 pr-3 py-2.5 rounded-full shadow-[0_4px_16px_rgba(0,0,0,0.28)] items-center gap-2 active:scale-95 transition"
+                style="bottom: calc(82px + env(safe-area-inset-bottom));">
+            <i class="fa-solid fa-location-dot text-blue-300 text-[12px]"></i>
+            <span id="nearbyOpenerText" class="text-[13px] font-black">내 주변 행사</span>
+            <i class="fa-solid fa-chevron-up text-[10px] opacity-70"></i>
         </button>
 
         <!-- 주변 행사 시트. 접힘(가로 미리보기) / 펼침(세로 전체 목록) 두 단계.
              지도만 있으면 훑어볼 대상이 없어 한 번 보고 나가게 되므로, 스크롤할 목록을
              첫 화면에 상시로 두었다. -->
         <div id="nearbyPreviewSheet" class="absolute left-0 w-full z-[300] transition-transform duration-500 ease-out hidden"
-             style="bottom:116px; transform:translateY(120%); pointer-events:none;">
+             style="bottom: calc(130px + env(safe-area-inset-bottom)); transform:translateY(120%); pointer-events:none;">
             <div class="mx-3 bg-white rounded-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden">
                 <div class="flex items-center gap-2 px-3 pt-3 pb-1.5">
                     <button onclick="closeNearbyPreview()" class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-gray-700 active:scale-90 transition rounded-full shrink-0">
@@ -214,12 +223,15 @@
         <!-- Ad Banner (Above Nav) - 토스인앱 환경이면 ads.js가 실제 배너로 교체, 아니면 더미 표시 유지 -->
         <!-- 토스 인앱에서만 노출. ads.js가 in-toss-app 클래스를 붙이면 CSS로 켜진다.
              (일반 브라우저에서 가짜 광고 문구가 상시 보이던 것을 제거) -->
-        <div id="adBannerWrap" class="hidden absolute bottom-[60px] left-0 w-full bg-white/90 backdrop-blur-sm border-t border-gray-100 p-1.5 z-[250] justify-center items-center pointer-events-none">
+        <div id="adBannerWrap" style="bottom: calc(78px + env(safe-area-inset-bottom));" class="hidden absolute left-3 right-3 bg-white/95 backdrop-blur-sm border border-gray-100 rounded-2xl p-1.5 z-[250] justify-center items-center pointer-events-none">
             <div id="adBannerSlot" class="w-full max-w-sm h-10 flex items-center justify-center rounded-lg pointer-events-auto"></div>
         </div>
 
         <!-- 하단 네비게이션 바 -->
-        <nav class="absolute bottom-0 left-0 w-full h-[60px] bg-white border-t border-gray-200 z-[4000] flex justify-around items-center px-1 pb-safe shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+        <!-- 토스 미니앱 가이드: 탭바는 토스 기본 하단 탭과 형태가 겹치지 않도록 플로팅으로 둔다.
+             화면 전체 폭을 채우는 고정 바는 토스 메인 탭과 혼동을 준다. -->
+        <nav class="absolute left-3 right-3 h-[58px] bg-white rounded-[20px] border border-gray-100 z-[4000] flex justify-around items-center px-1 shadow-[0_6px_20px_rgba(0,0,0,0.14)]"
+             style="bottom: calc(12px + env(safe-area-inset-bottom));">
             <button id="nav-home" onclick="goHome()" class="nav-btn flex flex-col items-center justify-center w-full h-full text-blue-600 transition">
                 <i class="fa-solid fa-map-location-dot text-[18px] mb-1"></i>
                 <span class="text-[11px] font-black tracking-tight">지도</span>
@@ -910,7 +922,9 @@
 
             if (REAL_STORES.length === 0) generateVirtualStoresDB(lat, lng);
             loadStoresInRadius();
-            setTimeout(showNearbyPreview, 300);
+            // 토스 심사 지적: 미니앱 진입 직후 바텀시트가 바로 노출되면 안 된다.
+            // 자동으로 띄우지 않고, 사용자가 아래 '내 주변 행사' 버튼을 눌렀을 때만 연다.
+            updateNearbyOpenerLabel();
         }
 
         // 행사 데이터를 못 받으면 조용히 넘어가지 않고 재시도 수단을 준다.
@@ -1308,6 +1322,7 @@
             updateNearbySaving();
             // 반경·브랜드 필터가 바뀌면 펼쳐둔 목록도 같이 갱신한다.
             if (nearbySheetExpanded) renderNearbyFullList();
+            updateNearbyOpenerLabel();
         }
 
         // ── 날씨 기반 추천 (Open-Meteo, 키 불필요) ──────────────────────────
@@ -1669,13 +1684,35 @@
                 : '');
         }
 
+        // 진입 시에는 시트 대신 이 버튼만 보인다. 반경 내 매장이 있을 때만 노출.
+        function updateNearbyOpenerLabel() {
+            const btn = document.getElementById('nearbyOpener');
+            if (!btn) return;
+            const sheetOpen = !document.getElementById('nearbyPreviewSheet').classList.contains('hidden');
+            const show = storeMarkersData.length > 0 && !sheetOpen;
+            btn.classList.toggle('hidden', !show);
+            btn.classList.toggle('flex', show);
+            if (!show) return;
+            // 상품 수는 반경을 좁혀도 거의 안 변한다(반경 안에 4사가 다 있으면 전 상품이 잡힘).
+            // 반경에 따라 실제로 달라지는 매장 수를 보여준다.
+            document.getElementById('nearbyOpenerText').textContent =
+                `내 주변 매장 ${storeMarkersData.length.toLocaleString()}곳`;
+        }
+
+        function openNearbySheet() {
+            track('nearby_sheet_open', { stores: storeMarkersData.length });
+            nearbyPreviewShown = false;
+            showNearbyPreview();
+            updateNearbyOpenerLabel();
+        }
+
         function closeNearbyPreview() {
             clearTimeout(nearbyPreviewTimer);
             nearbyPreviewShown = false;
             const sheet = document.getElementById('nearbyPreviewSheet');
             sheet.style.transform = 'translateY(120%)';
             sheet.style.pointerEvents = 'none';
-            setTimeout(() => sheet.classList.add('hidden'), 520);
+            setTimeout(() => { sheet.classList.add('hidden'); updateNearbyOpenerLabel(); }, 520);
         }
 
         async function searchInCurrentArea() {
