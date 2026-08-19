@@ -51,19 +51,32 @@ function loadRewardAd() {
   });
 }
 
+// 트리거가 4개라 한 흐름에서 두 개가 동시에 걸릴 수 있다.
+// (예: 상세에서 길찾기를 누르면 길찾기 광고와 상세 닫기 광고가 겹친다)
+// 광고가 떠 있는 동안 들어온 요청은 무시해 연달아 뜨는 일을 막는다.
+let interstitialShowing = false;
+
 function showInterstitial(onAfter) {
-  if (!interstitialReady) { if (onAfter) onAfter(); return; }
+  if (interstitialShowing) { if (onAfter) onAfter(); return false; }
+  if (!interstitialReady) { if (onAfter) onAfter(); return false; }
+
+  interstitialShowing = true;
+  const done = () => {
+    if (!interstitialShowing) return;
+    interstitialShowing = false;
+    interstitialReady = false;
+    loadInterstitial();
+    if (onAfter) onAfter();
+  };
+
   showFullScreenAd({
     options: { adGroupId: AD_CONFIG.interstitial },
     onEvent: (event) => {
-      if (event.type === 'dismissed' || event.type === 'failedToShow') {
-        interstitialReady = false;
-        loadInterstitial();
-        if (onAfter) onAfter();
-      }
+      if (event.type === 'dismissed' || event.type === 'failedToShow') done();
     },
-    onError: () => { if (onAfter) onAfter(); },
+    onError: () => { interstitialShowing = false; if (onAfter) onAfter(); },
   });
+  return true;
 }
 
 // 리워드 광고 공통. onEarned = 끝까지 시청 시 콜백. 광고 없으면 false 반환.
@@ -96,6 +109,22 @@ window.addEventListener('pagehide', () => {
   exitAdShown = true;
   showInterstitial(null);
 });
+
+// ── 전면광고 트리거 4: 매장 상세 닫기 ────────────────────────────
+// 매장 상세를 3번 닫을 때마다 1번. 전면광고 eCPM이 배너의 13배인데 기존
+// 트리거(길찾기·종료·브랜드변경)로는 19일간 6회밖에 노출되지 않았다.
+//
+// '누를 때'가 아니라 '닫을 때'로 잡은 이유: 매장 상세를 보는 게 이 앱의 핵심
+// 행동이라, 그 앞을 막으면 보려던 걸 못 보게 된다. 닫는 시점이면 사용자는
+// 원하는 걸 이미 얻은 뒤라 같은 노출 수를 훨씬 덜 거슬리게 만들 수 있다.
+const STORE_AD_EVERY = 3;
+let storeCloseCount = 0;
+
+window.onStoreDetailClosed = function onStoreDetailClosed() {
+  storeCloseCount += 1;
+  if (storeCloseCount % STORE_AD_EVERY !== 0) return false;
+  return showInterstitial(null);
+};
 
 // ── 전면광고 트리거 3: 브랜드 변경 ────────────────────────────────
 window.onBrandChanged = function onBrandChanged() {

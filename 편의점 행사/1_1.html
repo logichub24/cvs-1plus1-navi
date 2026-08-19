@@ -1905,15 +1905,28 @@
         }
 
         function closeSheet() {
+            // closeSheet는 goHome/openTabModal에서도 불린다. 실제로 열려 있던 경우만 세야
+            // 광고 주기가 엉뚱하게 빨라지지 않는다.
+            const wasOpen = document.getElementById('bottomSheet').classList.contains('active');
             document.getElementById('bottomSheet').classList.remove('active');
             restoreViewAfterStore();
+            if (wasOpen) notifyStoreDetailClosed();
+        }
+
+        // 매장 상세를 닫은 횟수에 따라 전면광고가 뜬다(3회마다 1회). 광고 노출 여부를
+        // 계측에 남겨 실제 노출 수와 체류 변화를 함께 볼 수 있게 한다.
+        function notifyStoreDetailClosed() {
+            const shown = typeof onStoreDetailClosed === 'function' ? onStoreDetailClosed() : false;
+            track('store_detail_closed', { ad: !!shown });
         }
 
         // 지도를 직접 만져서 닫히는 경우. 여기서 화면을 되돌리면 사용자의 드래그와 싸우게 되므로
         // 저장해 둔 화면만 버리고 시트를 닫는다.
         function dismissSheetForMapGesture() {
+            const wasOpen = document.getElementById('bottomSheet').classList.contains('active');
             preStoreView = null;
             document.getElementById('bottomSheet').classList.remove('active');
+            if (wasOpen) notifyStoreDetailClosed();
         }
 
         // 상세를 열기 전 화면으로 되돌린다.
