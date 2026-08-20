@@ -1710,22 +1710,6 @@
     }
   },
   {
-    "id": "하이하이네켄논알콜캔330",
-    "name": "하이)하이네켄논알콜캔330",
-    "category": "주류",
-    "price": 3500,
-    "saving": 3500,
-    "barcode": "8712000055721",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8712000055721.jpg"
-      }
-    }
-  },
-  {
     "id": "링티제로복숭아p",
     "name": "링티)제로복숭아P500ml",
     "category": "기타",
@@ -2658,28 +2642,6 @@
     }
   },
   {
-    "id": "cj한뿌리홍삼대보병",
-    "name": "CJ)한뿌리홍삼대보병100ml",
-    "category": "기타",
-    "price": 5000,
-    "saving": 5000,
-    "barcode": "8801007955551",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007955551.jpg"
-      },
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007955551.JPG"
-      }
-    }
-  },
-  {
     "id": "cj숯불갈비맛후랑크",
     "name": "CJ)숯불갈비맛후랑크120g",
     "category": "간편식",
@@ -3310,22 +3272,6 @@
     }
   },
   {
-    "id": "연세블루베리요거트300",
-    "name": "연세)블루베리요거트300",
-    "category": "유제품",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801753110501",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801753110501.jpg"
-      }
-    }
-  },
-  {
     "id": "쏘피내몸에순한면대4p",
     "name": "쏘피)내몸에순한면대4P",
     "category": "생활용품",
@@ -3472,22 +3418,6 @@
     }
   },
   {
-    "id": "웅진빅토리아파인p",
-    "name": "웅진)빅토리아파인P500ml",
-    "category": "기타",
-    "price": 1800,
-    "saving": 1800,
-    "barcode": "8801382147343",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801382147343.jpg"
-      }
-    }
-  },
-  {
     "id": "좋은입는데이팬티l4p",
     "name": "좋은)입는데이팬티L4P",
     "category": "생활용품",
@@ -3522,22 +3452,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://image.woodongs.com/imgsvr/item/GD_8801007769868_003.jpg"
-      }
-    }
-  },
-  {
-    "id": "연세스트로베리요거트300",
-    "name": "연세)스트로베리요거트300",
-    "category": "유제품",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801753110976",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801753110976.jpg"
       }
     }
   },
@@ -3622,22 +3536,6 @@
     }
   },
   {
-    "id": "cj한뿌리아르기닌병",
-    "name": "CJ)한뿌리아르기닌병100ml",
-    "category": "기타",
-    "price": 5000,
-    "saving": 5000,
-    "barcode": "8801392028014",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392028014.jpg"
-      }
-    }
-  },
-  {
     "id": "퐁퐁친환경주방세제1",
     "name": "퐁퐁)친환경주방세제1.2L",
     "category": "생활용품",
@@ -3698,22 +3596,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007327372.png"
-      }
-    }
-  },
-  {
-    "id": "연세복숭아요거트300",
-    "name": "연세)복숭아요거트300",
-    "category": "유제품",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801753111201",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801753111201.jpg"
       }
     }
   },
@@ -4210,28 +4092,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801094412371.png"
-      }
-    }
-  },
-  {
-    "id": "연세플레인요거트",
-    "name": "연세)플레인요거트300ml",
-    "category": "유제품",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801753111966",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801753111966.png"
-      },
-      "GS25": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_8801753111966_001.jpg"
       }
     }
   },
@@ -6266,22 +6126,6 @@
     }
   },
   {
-    "id": "오비카스레몬논알콜캔473",
-    "name": "오비)카스레몬논알콜캔473",
-    "category": "주류",
-    "price": 2800,
-    "saving": 2800,
-    "barcode": "8801858048259",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801858048259.jpg"
-      }
-    }
-  },
-  {
     "id": "이디야블렌딩티유자자몽",
     "name": "이디야)블렌딩티유자자몽",
     "category": "기타",
@@ -7420,38 +7264,6 @@
     }
   },
   {
-    "id": "쟈뎅프루토프루타피치500",
-    "name": "쟈뎅)프루토프루타피치500",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8808024050597",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8808024050597.jpg"
-      }
-    }
-  },
-  {
-    "id": "쟈뎅프루토프루타레몬500",
-    "name": "쟈뎅)프루토프루타레몬500",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8808024050603",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8808024050603.jpg"
-      }
-    }
-  },
-  {
     "id": "링티굿나잇티p",
     "name": "링티)굿나잇티P240ml",
     "category": "기타",
@@ -8444,22 +8256,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115140214.jpg"
-      }
-    }
-  },
-  {
-    "id": "동원하이요구르트소다280",
-    "name": "동원)하이요구르트소다280",
-    "category": "유제품",
-    "price": 1700,
-    "saving": 1700,
-    "barcode": "8801155000523",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801155000523.jpg"
       }
     }
   },
@@ -17198,22 +16994,6 @@
     }
   },
   {
-    "id": "오비버드와이저논알콜500",
-    "name": "오비)버드와이저논알콜500",
-    "category": "주류",
-    "price": 4500,
-    "saving": 1500,
-    "barcode": "8801021229423",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801021229423.jpg"
-      }
-    }
-  },
-  {
     "id": "남양테이크핏프로틴곡물",
     "name": "남양)테이크핏프로틴곡물",
     "category": "기타",
@@ -21320,22 +21100,6 @@
     }
   },
   {
-    "id": "hk새싹보리블랙p",
-    "name": "HK)새싹보리블랙P500ml",
-    "category": "기타",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8809422046106",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809422046106.jpg"
-      }
-    }
-  },
-  {
     "id": "사조불닭숯불구이후랑크",
     "name": "사조)불닭숯불구이후랑크",
     "category": "간편식",
@@ -22392,22 +22156,6 @@
     }
   },
   {
-    "id": "유앤돈시몬오렌지주스200",
-    "name": "유앤)돈시몬오렌지주스200",
-    "category": "음료",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8410261608303",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8410261608303.jpg"
-      }
-    }
-  },
-  {
     "id": "켈로그더커진레드베리",
     "name": "켈로그)더커진레드베리35G",
     "category": "기타",
@@ -22694,28 +22442,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801133013187.jpg"
-      }
-    }
-  },
-  {
-    "id": "유한내일n스파클링",
-    "name": "유한)내일N스파클링100ml",
-    "category": "기타",
-    "price": 5000,
-    "saving": 1667,
-    "barcode": "8806006506162",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8806006506162.jpg"
-      },
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8806006506162.jpg"
       }
     }
   },
@@ -23780,22 +23506,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8800261387450.jpg"
-      }
-    }
-  },
-  {
-    "id": "랩노쉬n프로틴그레인p350",
-    "name": "랩노쉬)N프로틴그레인P350",
-    "category": "기타",
-    "price": 3800,
-    "saving": 1267,
-    "barcode": "8800261387467",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8800261387467.png"
       }
     }
   },
@@ -25254,28 +24964,6 @@
     }
   },
   {
-    "id": "오뚜기데이프로틴바나나",
-    "name": "오뚜기)데이프로틴바나나",
-    "category": "스낵·과자",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801045254913",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045254913.jpg"
-      },
-      "GS25": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_8801045254913_001.jpg"
-      }
-    }
-  },
-  {
     "id": "오뚜기식이섬유보리밥130",
     "name": "오뚜기)식이섬유보리밥130",
     "category": "기타",
@@ -26584,6 +26272,38 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8800348943012.jpg"
+      }
+    }
+  },
+  {
+    "id": "연세플레인요거트",
+    "name": "연세)플레인요거트300ml",
+    "category": "유제품",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801753111966",
+    "events": {
+      "GS25": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_8801753111966_001.jpg"
+      }
+    }
+  },
+  {
+    "id": "오뚜기데이프로틴바나나",
+    "name": "오뚜기)데이프로틴바나나",
+    "category": "스낵·과자",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801045254913",
+    "events": {
+      "GS25": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_8801045254913_001.jpg"
       }
     }
   },
@@ -52596,6 +52316,22 @@
     }
   },
   {
+    "id": "유한내일n스파클링",
+    "name": "유한)내일N스파클링100ml",
+    "category": "기타",
+    "price": 5000,
+    "saving": 5000,
+    "barcode": "8806006506162",
+    "events": {
+      "7-ELEVEN": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8806006506162.jpg"
+      }
+    }
+  },
+  {
     "id": "하겐티라미수바",
     "name": "하겐)티라미수바",
     "category": "기타",
@@ -76424,6 +76160,22 @@
     }
   },
   {
+    "id": "cj소바바황금홀릭후라이드",
+    "name": "CJ)소바바황금홀릭후라이드210g",
+    "category": "기타",
+    "price": 9900,
+    "saving": 9900,
+    "barcode": "8801392198427",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392198427.JPG"
+      }
+    }
+  },
+  {
     "id": "성수310애플머스캣스무디",
     "name": "성수310)애플머스캣스무디250ml",
     "category": "음료",
@@ -77044,6 +76796,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007951805.JPG"
+      }
+    }
+  },
+  {
+    "id": "cj한뿌리홍삼대보병",
+    "name": "CJ)한뿌리홍삼대보병100ml",
+    "category": "기타",
+    "price": 5000,
+    "saving": 5000,
+    "barcode": "8801007955551",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007955551.JPG"
       }
     }
   },
@@ -84884,6 +84652,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809497532597.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서티오피바닐라라떼캔",
+    "name": "동서)티오피바닐라라떼캔275ml",
+    "category": "음료",
+    "price": 2700,
+    "saving": 900,
+    "barcode": "8801037026313",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037026313.JPG"
       }
     }
   },
