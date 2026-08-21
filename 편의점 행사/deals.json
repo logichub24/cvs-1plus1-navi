@@ -76169,7 +76169,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392198427.JPG"
       }
@@ -84665,7 +84665,7 @@
     "events": {
       "EMART24": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037026313.JPG"
       }
