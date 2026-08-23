@@ -111,24 +111,14 @@
         <!-- 상단 미니 헤더 -->
         <div class="absolute top-0 left-0 w-full z-[100] pointer-events-none flex flex-col pt-2">
             <!-- Scrollable Info Chips -->
-            <div class="flex overflow-x-auto hide-scrollbar px-3 gap-2 pointer-events-auto pb-1">
-                <!-- 칩 1: 오늘 최대 절약 상품 -->
-                <button onclick="openTabModal('top10Modal', 'top10')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
-                    <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-[10px]">🥇</div>
-                    <div class="text-left flex flex-col">
-                        <span class="text-[10px] font-black text-gray-900 leading-none mt-0.5" id="topDealName">최대 절약 상품</span>
-                        <span class="text-[10px] text-blue-600 font-bold leading-none mt-1" id="topDealSaving">로딩 중...</span>
-                    </div>
+  <div class="flex overflow-x-auto hide-scrollbar px-3 gap-1 pointer-events-auto pb-1">
+                <!-- 행사 핵심 정보 + 다른 앱 홍보를 같은 줄에 둔다. -->
+                <button id="benefitTeaser" onclick="openBenefitSheet()" class="hidden min-w-0 max-w-[calc(100vw-150px)] shrink-0 bg-blue-600 text-white rounded-full shadow-md px-3 py-2 items-center gap-1.5 text-left pointer-events-auto active:scale-95 transition">
+                    <i class="fa-solid fa-won-sign text-blue-100 text-[11px]"></i>
+                    <span id="benefitTeaserText" class="text-[11px] font-black truncate">내 주변 행사 혜택</span>
+                    <i class="fa-solid fa-chevron-right text-[9px] text-blue-200"></i>
                 </button>
-                <!-- 칩 2: 오늘 마감 -->
-                <button onclick="openTabModal('allDealsModal', 'alldeals')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
-                    <div class="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center text-[10px]">🚨</div>
-                    <div class="text-left flex flex-col">
-                        <span id="endingDealLabel" class="text-[10px] font-black text-gray-900 leading-none mt-0.5">오늘 마감</span>
-                        <span id="endingDealCount" class="text-[10px] text-rose-600 font-bold leading-none mt-1">0개</span>
-                    </div>
-                </button>
-                <!-- 칩 3: 다른 앱 안내. 아이콘/이름이 일정 간격으로 교체된다. -->
+                <!-- 다른 앱 안내. 아이콘/이름이 일정 간격으로 교체된다. -->
                 <button id="crossPromoChip" onclick="openCrossPromoApp()" class="hidden bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
                     <img id="crossPromoIcon" src="" alt="" class="w-6 h-6 rounded-full object-cover bg-gray-100">
                     <div class="text-left flex flex-col">
@@ -157,10 +147,6 @@
             <!-- 리스트/지도 뷰 토글 -->
             <button id="listViewToggleBtn" onclick="toggleListView()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-gray-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition" title="리스트 뷰">
                 <i class="fa-solid fa-list text-lg"></i>
-            </button>
-            <!-- 바코드 스캔 -->
-            <button onclick="openBarcodeScanner()" class="w-[38px] h-[38px] bg-blue-600 rounded-full shadow-md border border-blue-500 flex items-center justify-center text-white pointer-events-auto hover:bg-blue-700 active:scale-95 transition" title="바코드 스캔">
-                <i class="fa-solid fa-barcode text-lg"></i>
             </button>
             <!-- 지역/주소 검색 -->
             <button onclick="openLocationSearch()" class="w-[38px] h-[38px] bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 flex items-center justify-center text-gray-600 pointer-events-auto hover:bg-gray-50 active:scale-95 transition">
@@ -191,9 +177,9 @@
         <!-- 날씨 칩과 '내 주변 매장' 버튼을 같은 줄에 둔다.
              하단은 광고 배너와 플로팅 탭바가 있어 겹치기 쉬웠다. -->
         <div class="absolute left-3 z-[300] flex items-center gap-2 pointer-events-none" style="top:81px">
-            <button id="weatherChip" onclick="reopenWeatherPreview()" class="hidden bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 pl-2 pr-3 py-1.5 items-center gap-1.5 pointer-events-auto active:scale-95 transition">
+            <button id="weatherChip" onclick="reopenWeatherPreview()" class="flex bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 pl-2 pr-3 py-1.5 items-center gap-1.5 pointer-events-auto active:scale-95 transition">
                 <span id="weatherChipIcon" class="text-base leading-none">☀️</span>
-                <span id="weatherChipText" class="text-[11px] font-black text-gray-700 leading-none">--℃</span>
+                <span id="weatherChipText" class="text-[11px] font-black text-gray-700 leading-none">날씨 확인 중</span>
             </button>
             <button id="nearbyOpener" onclick="openNearbySheet()" class="hidden bg-gray-900 text-white rounded-full shadow-md pl-2.5 pr-3 py-1.5 items-center gap-1.5 pointer-events-auto active:scale-95 transition">
                 <i class="fa-solid fa-location-dot text-blue-300 text-[11px]"></i>
@@ -204,13 +190,6 @@
                 <span class="text-[11px] font-black text-blue-700 leading-none">무엇이 필요하세요?</span>
             </button>
         </div>
-
-        <!-- 첫 화면에서 바로 보이는 개인 혜택. 상세는 기존 주변 행사 시트로만 연다. -->
-        <button id="benefitTeaser" onclick="openBenefitSheet()" style="top:116px" class="hidden absolute left-3 z-[300] max-w-[calc(100%-24px)] bg-blue-600 text-white rounded-full shadow-md px-3 py-2 items-center gap-1.5 text-left pointer-events-auto active:scale-95 transition">
-            <i class="fa-solid fa-won-sign text-blue-100 text-[11px]"></i>
-            <span id="benefitTeaserText" class="text-[11px] font-black truncate">내 주변 행사 혜택</span>
-            <i class="fa-solid fa-chevron-right text-[9px] text-blue-200"></i>
-        </button>
 
         <!-- Re-search Area Button -->
         <button id="reSearchBtn" onclick="searchInCurrentArea()" style="bottom: calc(124px + env(safe-area-inset-bottom));" class="absolute left-1/2 transform -translate-x-1/2 z-[500] bg-gray-900 text-white px-4 py-2.5 rounded-full text-[12px] font-bold shadow-[0_4px_15px_rgba(0,0,0,0.3)] flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-[10px]">
@@ -901,6 +880,8 @@
             // 전체 안내는 설정 > '시작 안내 다시 보기'에서 언제든 볼 수 있다.
             initCrossPromo();
             applyNotificationVisibility();
+            updateBenefitTeaser();
+            updateNearbyOpenerLabel();
         }
 
         // deals.json: 매일 새벽 3시 GitHub Actions가 4사 행사 페이지를 크롤링해 갱신하는 실데이터.
@@ -926,7 +907,6 @@
             computeIsNew();
             updateSinceLastVisit();
             applyDaysLeft();
-            updateDashboardCounts();
             buildBarcodeIndex();
             if (index && index.length > 0) STORE_INDEX = index;
 
@@ -1109,39 +1089,6 @@
                 localStorage.setItem('cvs_history', JSON.stringify(purchasedHistory));
                 localStorage.setItem('cvs_likes', JSON.stringify([...likedItems]));
             } catch(e) {}
-        }
-
-        function updateDashboardCounts() {
-            let endingCount = 0;
-            let bestDeal = null, bestPrice = 0;
-            MASTER_DB.forEach(p => {
-                let hasEnding = false;
-                Object.values(p.events).forEach(e => {
-                    // 추정값은 제외한다. 크롤러가 종료일을 주지 않아 전부 '이번 주 일요일까지'로
-                    // 채워지는데, 일요일에는 그 값이 0이 되어 전 상품이 '오늘 마감'으로 잡혔다.
-                    if (e.daysLeft === 0 && !e.daysLeftEstimated) hasEnding = true;
-                });
-                if (hasEnding) endingCount++;
-                // 가장 비싼 상품 = 절약금액 가장 큰 상품 (1+1 기준 상품가격만큼 절약)
-                if (p.price > bestPrice) { bestPrice = p.price; bestDeal = p; }
-            });
-            // 종료일 데이터가 없어 마감 건수를 알 수 없으면 전체 행사 수를 안내한다.
-            // (없는 정보를 0개로 보여주면 '오늘 마감이 없다'는 잘못된 사실이 된다)
-            if (endingCount > 0) {
-                document.getElementById('endingDealLabel').textContent = '오늘 마감';
-                document.getElementById('endingDealCount').innerText = `${endingCount}개`;
-            } else {
-                document.getElementById('endingDealLabel').textContent = '전체 행사';
-                document.getElementById('endingDealCount').innerText = `${MASTER_DB.length.toLocaleString()}개`;
-            }
-
-            // 칩 1: 베스트 절약 상품
-            if (bestDeal) {
-                document.getElementById('topDealName').textContent =
-                    bestDeal.name.length > 9 ? bestDeal.name.slice(0, 9) + '…' : bestDeal.name;
-                document.getElementById('topDealSaving').textContent =
-                    `${bestDeal.price.toLocaleString()}원 절약`;
-            }
         }
 
         function updateNearbySaving() {
@@ -1731,18 +1678,22 @@
                 : '');
         }
 
-        // 진입 시에는 시트 대신 이 버튼만 보인다. 반경 내 매장이 있을 때만 노출.
+        // 데이터가 늦어도 탐색 진입점은 숨기지 않고, 준비 전 상태만 정확히 알린다.
         function updateNearbyOpenerLabel() {
             const btn = document.getElementById('nearbyOpener');
             if (!btn) return;
             const sheetOpen = !document.getElementById('nearbyPreviewSheet').classList.contains('hidden');
-            const show = storeMarkersData.length > 0 && !sheetOpen;
+            const show = !sheetOpen;
             btn.classList.toggle('hidden', !show);
             btn.classList.toggle('flex', show);
             const finder = document.getElementById('needFinderBtn');
             finder.classList.toggle('hidden', !show);
             finder.classList.toggle('flex', show);
             if (!show) return;
+            if (storeMarkersData.length === 0) {
+                document.getElementById('nearbyOpenerText').textContent = '내 주변 행사';
+                return;
+            }
             // 상품 수는 반경을 좁혀도 거의 안 변한다(반경 안에 4사가 다 있으면 전 상품이 잡힘).
             // 반경에 따라 실제로 달라지는 매장 수를 보여준다.
             document.getElementById('nearbyOpenerText').textContent =
@@ -1757,10 +1708,12 @@
             const liked = entries.filter(({ deal }) => likedItems.has(deal.id));
             const source = liked.length ? liked : entries;
             const best = source.reduce((top, { deal }) => Math.max(top, deal.saving || deal.price || 0), 0);
-            const show = source.length > 0;
-            btn.classList.toggle('hidden', !show);
-            btn.classList.toggle('flex', show);
-            if (!show) return;
+            btn.classList.remove('hidden');
+            btn.classList.add('flex');
+            if (source.length === 0) {
+                text.textContent = '내 주변 행사 불러오는 중';
+                return;
+            }
             text.textContent = liked.length
                 ? `찜한 상품 ${liked.length}개 · 최대 ${best.toLocaleString()}원 절약`
                 : `내 주변 최대 ${best.toLocaleString()}원 절약 · 행사 ${source.length.toLocaleString()}개`;
@@ -1775,6 +1728,7 @@
         }
 
         function openBenefitSheet() {
+            if (storeMarkersData.length === 0) { showToast('내 주변 행사 데이터를 불러오는 중이에요.'); return; }
             track('benefit_teaser_open', { stores: storeMarkersData.length, liked: likedItems.size });
             nearbyPreviewShown = false;
             nearbyPreviewMode = 'benefit';
