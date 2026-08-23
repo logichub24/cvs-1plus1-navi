@@ -82,11 +82,26 @@
             box-shadow: 0 -10px 25px rgba(0,0,0,0.2);
         }
         .tab-modal.active .tab-modal-content { transform: translateY(0); }
+        .need-finder-modal .tab-modal-content { height: auto; }
+        .need-choice { width: 110px; height: 139px; justify-self: center; }
+        .need-choice-photo { width: 96px; height: 92px; }
+        .need-choice-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
         @keyframes scanAnim {
             0%   { top: 10%; }
             50%  { top: 85%; }
             100% { top: 10%; }
         }
+        @keyframes needGlow {
+            0%, 70%, 100% { box-shadow: 0 2px 8px rgba(37,99,235,.12); border-color: rgb(219 234 254); }
+            85% { box-shadow: 0 0 0 5px rgba(59,130,246,.16), 0 4px 12px rgba(37,99,235,.24); border-color: rgb(96 165 250); }
+        }
+        @keyframes needBounce {
+            0%, 75%, 100% { transform: translateY(0); }
+            85% { transform: translateY(-2px); }
+        }
+        .need-finder-cta { animation: needGlow 2.8s ease-in-out infinite; }
+        .need-finder-cta span { display:inline-block; animation: needBounce 2.8s ease-in-out infinite; }
+        @media (prefers-reduced-motion: reduce) { .need-finder-cta, .need-finder-cta span { animation: none; } }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800 selection:bg-blue-100">
@@ -94,9 +109,9 @@
     <div id="app-container">
 
         <!-- 상단 미니 헤더 -->
-        <div class="absolute top-0 left-0 w-full z-[100] pointer-events-none flex flex-col pt-3">
+        <div class="absolute top-0 left-0 w-full z-[100] pointer-events-none flex flex-col pt-2">
             <!-- Scrollable Info Chips -->
-            <div class="flex overflow-x-auto hide-scrollbar px-3 gap-2 pointer-events-auto pb-2">
+            <div class="flex overflow-x-auto hide-scrollbar px-3 gap-2 pointer-events-auto pb-1">
                 <!-- 칩 1: 오늘 최대 절약 상품 -->
                 <button onclick="openTabModal('top10Modal', 'top10')" class="bg-white border border-gray-100 rounded-full pl-1 pr-3 py-1 flex items-center gap-1.5 shadow-sm shrink-0 hover:bg-gray-50 active:scale-95 transition">
                     <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-[10px]">🥇</div>
@@ -123,8 +138,8 @@
                 </button>
             </div>
 
-            <!-- 3번째 줄: 브랜드 필터 (가로 나열) -->
-            <div class="flex overflow-x-auto hide-scrollbar px-3 gap-2 pointer-events-auto pb-2">
+            <!-- 브랜드 필터 -->
+            <div class="flex overflow-x-auto hide-scrollbar px-3 gap-2 pointer-events-auto pb-1">
                 <button onclick="setMapBrandFilter(null)" id="mapFilter_all" class="px-3.5 py-1.5 bg-gray-800 text-white rounded-full shadow-sm text-[11px] font-black flex items-center justify-center active:scale-95 transition border border-transparent shrink-0" title="전체">전체</button>
                 <button onclick="setMapBrandFilter('CU')" id="mapFilter_CU" class="px-3.5 py-1.5 bg-white/95 rounded-full shadow-sm text-[11px] font-black flex items-center justify-center active:scale-95 transition border border-gray-100 text-purple-700 shrink-0" title="CU">CU</button>
                 <button onclick="setMapBrandFilter('GS25')" id="mapFilter_GS25" class="px-3.5 py-1.5 bg-white/95 rounded-full shadow-sm text-[11px] font-black flex items-center justify-center active:scale-95 transition border border-gray-100 text-teal-600 shrink-0" title="GS25">GS25</button>
@@ -175,7 +190,7 @@
         <!-- 날씨 칩 (상태 따라 아이콘 변경, 탭하면 날씨 추천 다시 보기) -->
         <!-- 날씨 칩과 '내 주변 매장' 버튼을 같은 줄에 둔다.
              하단은 광고 배너와 플로팅 탭바가 있어 겹치기 쉬웠다. -->
-        <div class="absolute left-3 z-[300] flex items-center gap-2 pointer-events-none" style="top:101px">
+        <div class="absolute left-3 z-[300] flex items-center gap-2 pointer-events-none" style="top:81px">
             <button id="weatherChip" onclick="reopenWeatherPreview()" class="hidden bg-white/95 backdrop-blur-md rounded-full shadow-md border border-gray-100 pl-2 pr-3 py-1.5 items-center gap-1.5 pointer-events-auto active:scale-95 transition">
                 <span id="weatherChipIcon" class="text-base leading-none">☀️</span>
                 <span id="weatherChipText" class="text-[11px] font-black text-gray-700 leading-none">--℃</span>
@@ -184,7 +199,18 @@
                 <i class="fa-solid fa-location-dot text-blue-300 text-[11px]"></i>
                 <span id="nearbyOpenerText" class="text-[11px] font-black leading-none">내 주변 매장</span>
             </button>
+            <button id="needFinderBtn" onclick="openNeedFinder()" class="need-finder-cta hidden bg-white/95 backdrop-blur-md rounded-full shadow-md border border-blue-100 pl-2 pr-2.5 py-1.5 items-center gap-1 pointer-events-auto active:scale-95 transition">
+                <i class="fa-solid fa-wand-magic-sparkles text-blue-500 text-[11px]"></i>
+                <span class="text-[11px] font-black text-blue-700 leading-none">무엇이 필요하세요?</span>
+            </button>
         </div>
+
+        <!-- 첫 화면에서 바로 보이는 개인 혜택. 상세는 기존 주변 행사 시트로만 연다. -->
+        <button id="benefitTeaser" onclick="openBenefitSheet()" style="top:116px" class="hidden absolute left-3 z-[300] max-w-[calc(100%-24px)] bg-blue-600 text-white rounded-full shadow-md px-3 py-2 items-center gap-1.5 text-left pointer-events-auto active:scale-95 transition">
+            <i class="fa-solid fa-won-sign text-blue-100 text-[11px]"></i>
+            <span id="benefitTeaserText" class="text-[11px] font-black truncate">내 주변 행사 혜택</span>
+            <i class="fa-solid fa-chevron-right text-[9px] text-blue-200"></i>
+        </button>
 
         <!-- Re-search Area Button -->
         <button id="reSearchBtn" onclick="searchInCurrentArea()" style="bottom: calc(124px + env(safe-area-inset-bottom));" class="absolute left-1/2 transform -translate-x-1/2 z-[500] bg-gray-900 text-white px-4 py-2.5 rounded-full text-[12px] font-bold shadow-[0_4px_15px_rgba(0,0,0,0.3)] flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-[10px]">
@@ -237,7 +263,7 @@
             </button>
             <button id="nav-search" onclick="openTabModal('searchModal', 'search')" class="nav-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-900 transition">
                 <i class="fa-solid fa-code-compare text-[18px] mb-1 text-indigo-500"></i>
-                <span class="text-[11px] font-bold tracking-tight text-indigo-600">비교검색</span>
+                <span class="text-[11px] font-bold tracking-tight text-indigo-600">행사검색</span>
             </button>
             <button id="nav-nearby" onclick="openTabModal('nearbyRankingModal', 'nearby')" class="nav-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-900 transition">
                 <i class="fa-solid fa-store text-[18px] mb-1"></i>
@@ -279,7 +305,7 @@
                     <button onclick="goHome()" class="text-gray-500 hover:text-gray-800 p-2"><i class="fa-solid fa-arrow-left text-xl"></i></button>
                     <div class="flex-1 relative">
                         <i class="fa-solid fa-code-compare absolute left-3 top-1/2 transform -translate-y-1/2 text-indigo-500"></i>
-                        <input type="text" id="searchInput" oninput="onSearchInput()" placeholder="비교할 상품명 입력 (예: 콜라)" class="w-full bg-indigo-50 text-gray-900 rounded-full py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 font-bold placeholder-indigo-300">
+                        <input type="text" id="searchInput" oninput="onSearchInput()" placeholder="행사 상품명 입력 (예: 콜라)" class="w-full bg-indigo-50 text-gray-900 rounded-full py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 font-bold placeholder-indigo-300">
                     </div>
                 </div>
                 <div class="flex gap-2 px-4 py-2 border-b border-gray-100 overflow-x-auto hide-scrollbar shrink-0">
@@ -291,7 +317,7 @@
                 </div>
                 <div class="flex-1 overflow-y-auto pb-4">
                     <div id="searchEmptyState" class="p-6 flex flex-col items-center">
-                        <div class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-xl mb-4 text-xs font-black w-full text-center">💡 4사 편의점의 행사 여부를 한눈에 비교하세요!</div>
+                        <div class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-xl mb-4 text-xs font-black w-full text-center">💡 4사 1+1·2+1 행사 상품만 비교할 수 있어요</div>
                         <div class="flex gap-2 w-full overflow-x-auto hide-scrollbar pb-2">
                             <button onclick="quickSearch('제로')" class="text-xs font-bold text-gray-600 bg-white border border-gray-200 px-3 py-2 rounded-lg shadow-sm whitespace-nowrap active:scale-95 flex-1">🥤 제로음료</button>
                             <button onclick="quickSearch('초코')" class="text-xs font-bold text-gray-600 bg-white border border-gray-200 px-3 py-2 rounded-lg shadow-sm whitespace-nowrap active:scale-95 flex-1">🍫 초코스낵</button>
@@ -357,6 +383,20 @@
             </div>
         </div>
 
+        <!-- 현재 반경에서 필요한 상품을 먼저 고르는 질문형 탐색 -->
+        <div id="needFinderModal" class="tab-modal need-finder-modal">
+            <div class="tab-modal-bg" onclick="goHome()"></div>
+            <div class="tab-modal-content">
+                <div class="p-4 border-b border-gray-100 flex items-center gap-3 bg-white sticky top-0 z-20 shrink-0 rounded-t-[24px]">
+                    <button onclick="goHome()" class="text-gray-500 hover:text-gray-800 p-2"><i class="fa-solid fa-arrow-left text-xl"></i></button>
+                    <div>
+                        <h3 class="font-black text-lg text-gray-900"><i class="fa-solid fa-wand-magic-sparkles text-blue-500 mr-1"></i> 무엇이 필요하세요?</h3>
+                        <p class="text-[10px] text-gray-500 font-bold leading-tight">현재 지도 반경 안의 행사 상품만 찾아드려요.</p>
+                    </div>
+                </div>
+                <div id="needFinderContent" class="shrink-0 overflow-hidden p-4 pb-6"></div>
+            </div>
+        </div>
 
         <!-- 매장 상품 바텀 시트 (높이 55vh로 맵과 공존) -->
         <div id="bottomSheet" class="bottom-sheet pointer-events-auto">
@@ -364,7 +404,7 @@
                 <div class="w-12 h-1.5 bg-gray-300 rounded-full"></div>
             </div>
             <p class="px-5 pb-2 text-[11px] text-gray-500 font-bold leading-snug shrink-0">
-                행사는 본사 전산 기준이라 매장별 재고에 따라 다를 수 있어요. 방문 전 확인해주세요.
+                행사 상품만 표시돼요. 매장별 재고에 따라 다를 수 있으니 방문 전 확인해주세요.
             </p>
             <div class="px-5 pb-3 border-b border-gray-100 shrink-0 flex justify-between items-center">
                 <div class="flex items-center gap-3">
@@ -623,10 +663,8 @@
 
         <!-- 바코드 스캐너 모달 -->
         <div id="barcodeScannerModal" class="absolute inset-0 bg-black hidden flex-col z-[8000]">
-            <!-- 카메라 뷰 -->
             <div class="relative flex-1 overflow-hidden">
                 <video id="barcodeVideo" class="w-full h-full object-cover" autoplay playsinline muted></video>
-                <!-- 스캔 가이드 박스 -->
                 <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <div class="relative w-64 h-40">
                         <div class="absolute inset-0 border-2 border-white/30 rounded-lg"></div>
@@ -638,20 +676,13 @@
                     </div>
                 </div>
                 <p class="absolute bottom-6 left-0 right-0 text-center text-white/80 text-sm font-bold">바코드를 네모 안에 맞춰주세요</p>
-                <!-- 닫기 버튼 -->
-                <button onclick="closeBarcodeScanner()" class="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white">
-                    <i class="fa-solid fa-xmark text-xl"></i>
-                </button>
+                <button onclick="closeBarcodeScanner()" class="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
             </div>
-            <!-- 직접 입력 폴백 -->
             <div class="bg-gray-900 px-5 py-4 shrink-0">
                 <p class="text-gray-400 text-xs font-bold mb-2 text-center">스캔이 안 될 경우 번호를 직접 입력</p>
                 <div class="flex gap-2">
-                    <input id="barcodeManualInput" type="number" placeholder="바코드 번호 13자리"
-                        class="flex-1 bg-gray-800 text-white rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-blue-500 font-mono"
-                        oninput="if(this.value.length===13) lookupBarcode(this.value)">
-                    <button onclick="lookupBarcode(document.getElementById('barcodeManualInput').value)"
-                        class="bg-blue-600 text-white px-4 py-3 rounded-xl font-bold text-sm active:scale-95 transition">조회</button>
+                    <input id="barcodeManualInput" type="number" placeholder="바코드 번호 13자리" class="flex-1 bg-gray-800 text-white rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-blue-500 font-mono" oninput="if(this.value.length===13) lookupBarcode(this.value)">
+                    <button onclick="lookupBarcode(document.getElementById('barcodeManualInput').value)" class="bg-blue-600 text-white px-4 py-3 rounded-xl font-bold text-sm active:scale-95 transition">조회</button>
                 </div>
             </div>
         </div>
@@ -659,16 +690,9 @@
         <!-- 바코드 조회 결과 모달 -->
         <div id="barcodeResultModal" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center p-5 z-[8500]">
             <div class="bg-white rounded-[2rem] w-full max-w-sm overflow-hidden shadow-2xl">
-                <div id="barcodeResultHeader" class="p-5 text-center">
-                    <div class="text-4xl mb-2" id="barcodeResultIcon">🔍</div>
-                    <h3 id="barcodeResultTitle" class="font-black text-lg text-gray-900"></h3>
-                    <p id="barcodeResultSub" class="text-xs text-gray-500 mt-1"></p>
-                </div>
+                <div id="barcodeResultHeader" class="p-5 text-center"><div class="text-4xl mb-2" id="barcodeResultIcon">🔍</div><h3 id="barcodeResultTitle" class="font-black text-lg text-gray-900"></h3><p id="barcodeResultSub" class="text-xs text-gray-500 mt-1"></p></div>
                 <div id="barcodeResultBody" class="px-4 pb-2"></div>
-                <div class="p-4 flex gap-2">
-                    <button onclick="closeBarcodeResult()" class="flex-1 py-3 bg-gray-100 text-gray-700 font-bold rounded-xl active:scale-95 transition">닫기</button>
-                    <button id="barcodeScanAgainBtn" onclick="closeBarcodeResult(); openBarcodeScanner();" class="flex-1 py-3 bg-blue-600 text-white font-bold rounded-xl active:scale-95 transition">다시 스캔</button>
-                </div>
+                <div class="p-4 flex gap-2"><button onclick="closeBarcodeResult()" class="flex-1 py-3 bg-gray-100 text-gray-700 font-bold rounded-xl active:scale-95 transition">닫기</button><button id="barcodeScanAgainBtn" onclick="closeBarcodeResult(); openBarcodeScanner();" class="flex-1 py-3 bg-blue-600 text-white font-bold rounded-xl active:scale-95 transition">다시 스캔</button></div>
             </div>
         </div>
 
@@ -737,8 +761,10 @@
         };
         const EMOJI_MAP = { '음료':'🥤', '과자':'🍪', '라면':'🍜', '간편식':'🍙', '생활용품':'🧻', '아이스크림':'🍦' };
         const BRANCH_NAMES = ['중앙점', '본점', '사거리점', '역앞점', '프리미엄점'];
+        // 원본 크롤링 데이터의 예전 오분류도 앱에서 즉시 바로잡는다.
+        const HOUSEHOLD_NAME_PATTERN = /휴지|롤티슈|미용티슈|화장지|키친타월|물티슈|깨끗한나라|크리넥스|코디\)|모나리자/;
 
-        let map, activeStore = null, activeCategory = 'ALL';
+        let map, activeStore = null, activeCategory = 'ALL', storeIntentFilter = null, storeIntentLabel = '';
         let totalSavings = 0, likedItems = new Set(), purchasedHistory = [];
         window.purchasedHistory = purchasedHistory; // ads.js(보상형 광고)에서 최근 적립 내역을 참조하기 위해 노출 
         let storeMarkersData = [], mapMarkers = [];
@@ -747,7 +773,7 @@
         // 이동 직전 위치를 기억한다. 시트가 열린 동안 사용자가 직접 지도를 움직였다면
         // 그 의도를 덮어쓰지 않도록 복귀하지 않는다.
         let preStoreView = null, userMovedSinceOpen = false, programmaticMove = false;
-        let nearbyPreviewShown = false, nearbyPreviewTimer = null;
+        let nearbyPreviewShown = false, nearbyPreviewTimer = null, nearbyPreviewMode = 'nearby';
         let searchBrandFilter = null, recentlyViewed = [], mapBrandFilter = null;
         let allVirtualStoresDB = [], REAL_STORES = [];
         let STORE_INDEX = [], loadedProvinceFile = null;
@@ -891,6 +917,10 @@
             if (!deals || deals.length === 0) { track('data_failed'); showDataError(); return; }
 
             MASTER_DB = deals;
+            MASTER_DB.forEach(deal => {
+                if (/도시락김/.test(deal.name)) deal.category = '기타';
+                else if (HOUSEHOLD_NAME_PATTERN.test(deal.name)) deal.category = '생활용품';
+            });
             dealsByBrandCache = null;
             searchHaystackCache.clear();
             computeIsNew();
@@ -1487,6 +1517,7 @@
         function reopenWeatherPreview() {
             clearTimeout(nearbyPreviewTimer);
             nearbyPreviewShown = false;
+            nearbyPreviewMode = 'weather';
             showNearbyPreview();
         }
 
@@ -1502,15 +1533,18 @@
                 });
             });
             // 날씨가 있으면 관련 상품을 앞으로 당겨 추천, 없으면 기존처럼 무작위
-            const wk = weatherKeywords(currentWeather);
+            const wk = nearbyPreviewMode === 'weather' ? weatherKeywords(currentWeather) : null;
             let picks;
-            if (wk) {
-                const matched = allDeals.filter(x => matchesWeather(x.deal, wk)).sort(() => Math.random() - 0.5);
-                const rest = allDeals.filter(x => !matchesWeather(x.deal, wk)).sort(() => Math.random() - 0.5);
-                picks = [...matched, ...rest].slice(0, 5);
-            } else {
-                picks = allDeals.sort(() => Math.random() - 0.5).slice(0, 5);
-            }
+            const ranked = allDeals.sort((a, b) => {
+                const al = likedItems.has(a.deal.id) ? 1 : 0;
+                const bl = likedItems.has(b.deal.id) ? 1 : 0;
+                if (al !== bl) return bl - al;
+                const aw = wk && matchesWeather(a.deal, wk) ? 1 : 0;
+                const bw = wk && matchesWeather(b.deal, wk) ? 1 : 0;
+                if (aw !== bw) return bw - aw;
+                return (b.deal.saving || b.deal.price || 0) - (a.deal.saving || a.deal.price || 0);
+            });
+            picks = ranked.slice(0, 5);
 
             const BRAND_COLORS = { 'CU': '#652C91', 'GS25': '#00B69B', '7-ELEVEN': '#008061', 'EMART24': '#FFB71B' };
             const BRAND_TEXT_COLORS = { 'CU': 'white', 'GS25': 'white', '7-ELEVEN': 'white', 'EMART24': '#333' };
@@ -1579,6 +1613,11 @@
         function renderNearbySheetTitle() {
             const el = document.getElementById('nearbyPreviewTitle');
             if (!el) return;
+            if (nearbyPreviewMode === 'benefit') {
+                const liked = nearbyDealEntries().filter(({ deal }) => likedItems.has(deal.id));
+                el.textContent = liked.length ? `💝 찜한 상품 ${liked.length}개, 오늘의 절약` : '💰 오늘의 내 이득 · 절약액 높은 순';
+                return;
+            }
             const wk = weatherKeywords(currentWeather);
             el.textContent = (currentWeather && wk)
                 ? `${weatherIcon(currentWeather)} ${currentWeather.temp}℃ · ${wk.msg}`
@@ -1644,8 +1683,11 @@
 
             // 헤더에 "시원한 상품이 잘 어울려요" 같은 날씨 문구가 뜨면 목록도 그 순서여야 한다.
             // 문구와 내용이 어긋나면 추천이 아니라 장식이 된다.
-            const wk = weatherKeywords(currentWeather);
+            const wk = nearbyPreviewMode === 'weather' ? weatherKeywords(currentWeather) : null;
             entries.sort((a, b) => {
+                const al = likedItems.has(a.deal.id) ? 1 : 0;
+                const bl = likedItems.has(b.deal.id) ? 1 : 0;
+                if (al !== bl) return bl - al;
                 if (wk) {
                     const aw = matchesWeather(a.deal, wk) ? 1 : 0;
                     const bw = matchesWeather(b.deal, wk) ? 1 : 0;
@@ -1697,16 +1739,45 @@
             const show = storeMarkersData.length > 0 && !sheetOpen;
             btn.classList.toggle('hidden', !show);
             btn.classList.toggle('flex', show);
+            const finder = document.getElementById('needFinderBtn');
+            finder.classList.toggle('hidden', !show);
+            finder.classList.toggle('flex', show);
             if (!show) return;
             // 상품 수는 반경을 좁혀도 거의 안 변한다(반경 안에 4사가 다 있으면 전 상품이 잡힘).
             // 반경에 따라 실제로 달라지는 매장 수를 보여준다.
             document.getElementById('nearbyOpenerText').textContent =
                 `내 주변 매장 ${storeMarkersData.length.toLocaleString()}곳`;
+            updateBenefitTeaser();
+        }
+
+        function updateBenefitTeaser() {
+            const btn = document.getElementById('benefitTeaser');
+            const text = document.getElementById('benefitTeaserText');
+            const entries = nearbyDealEntries();
+            const liked = entries.filter(({ deal }) => likedItems.has(deal.id));
+            const source = liked.length ? liked : entries;
+            const best = source.reduce((top, { deal }) => Math.max(top, deal.saving || deal.price || 0), 0);
+            const show = source.length > 0;
+            btn.classList.toggle('hidden', !show);
+            btn.classList.toggle('flex', show);
+            if (!show) return;
+            text.textContent = liked.length
+                ? `찜한 상품 ${liked.length}개 · 최대 ${best.toLocaleString()}원 절약`
+                : `내 주변 최대 ${best.toLocaleString()}원 절약 · 행사 ${source.length.toLocaleString()}개`;
         }
 
         function openNearbySheet() {
             track('nearby_sheet_open', { stores: storeMarkersData.length });
             nearbyPreviewShown = false;
+            nearbyPreviewMode = 'nearby';
+            showNearbyPreview();
+            updateNearbyOpenerLabel();
+        }
+
+        function openBenefitSheet() {
+            track('benefit_teaser_open', { stores: storeMarkersData.length, liked: likedItems.size });
+            nearbyPreviewShown = false;
+            nearbyPreviewMode = 'benefit';
             showNearbyPreview();
             updateNearbyOpenerLabel();
         }
@@ -1718,6 +1789,102 @@
             sheet.style.transform = 'translateY(120%)';
             sheet.style.pointerEvents = 'none';
             setTimeout(() => { sheet.classList.add('hidden'); updateNearbyOpenerLabel(); }, 520);
+        }
+
+        let needFinderCategory = null, needFinderQuery = '';
+
+        function openNeedFinder() {
+            if (storeMarkersData.length === 0) { showToast('주변 매장을 먼저 찾는 중이에요.'); return; }
+            track('need_finder_open', { stores: storeMarkersData.length });
+            openTabModal('needFinderModal', 'home');
+            renderNeedFinderPrompt();
+        }
+
+        function renderNeedFinderPrompt() {
+            const photo = (category, emoji, namePattern = null) => {
+                const deal = MASTER_DB.find(item => item.category === category && (!namePattern || namePattern.test(item.name)) && Object.values(item.events || {}).some(event => event?.image));
+                const src = deal && Object.values(deal.events).find(event => event?.image)?.image;
+                return src ? `<div class="need-choice-photo mx-auto rounded-xl overflow-hidden bg-white"><img src="${escapeNeedText(src)}" alt="${category}" class="w-full h-full object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="hidden h-full items-center justify-center text-xl">${emoji}</span></div>` : `<div class="need-choice-photo mx-auto rounded-xl bg-white flex items-center justify-center text-xl">${emoji}</div>`;
+            };
+            document.getElementById('needFinderContent').innerHTML = `
+                <p class="text-sm font-black text-gray-800 mb-3">지금 편의점에서 찾는 것이 있나요?</p>
+                <div class="need-choice-grid">
+                    <button onclick="pickNeedFinder('아이스크림')" class="need-choice rounded-2xl bg-blue-50 border border-blue-100 p-1 text-center active:scale-[0.98] transition">${photo('아이스크림', '🍦')}<strong class="block text-sm mt-1">아이스크림</strong></button>
+                    <button onclick="pickNeedFinder('음료')" class="need-choice rounded-2xl bg-sky-50 border border-sky-100 p-1 text-center active:scale-[0.98] transition">${photo('음료', '🥤')}<strong class="block text-sm mt-1">음료수</strong></button>
+                    <button onclick="pickNeedFinderQuery('커피')" class="need-choice rounded-2xl bg-amber-50 border border-amber-100 p-1 text-center active:scale-[0.98] transition">${photo('음료', '☕', /커피|라떼|아메리카노/)}<strong class="block text-sm mt-1">커피</strong></button>
+                    <button onclick="pickNeedFinder('간편식')" class="need-choice rounded-2xl bg-amber-50 border border-amber-100 p-1 text-center active:scale-[0.98] transition">${photo('간편식', '🍱')}<strong class="block text-sm mt-1">도시락·간편식</strong></button>
+                    <button onclick="pickNeedFinder('스낵·과자')" class="need-choice rounded-2xl bg-rose-50 border border-rose-100 p-1 text-center active:scale-[0.98] transition">${photo('스낵·과자', '🍪')}<strong class="block text-sm mt-1">과자·스낵</strong></button>
+                    <button onclick="document.getElementById('needFinderInput').focus()" class="need-choice rounded-2xl bg-gray-50 border border-gray-200 p-1 text-center flex flex-col items-center justify-center active:scale-[0.98] transition"><span class="need-choice-photo rounded-xl bg-white flex items-center justify-center text-xl">⌨️</span><strong class="block text-sm mt-1">직접 입력</strong></button>
+                </div>
+                <form onsubmit="submitNeedFinder(event)" class="mt-4 flex gap-2">
+                    <input id="needFinderInput" maxlength="40" class="flex-1 min-w-0 rounded-xl border border-gray-200 px-3 py-3 text-sm outline-none focus:ring-2 focus:ring-blue-200" placeholder="행사 중인 상품 입력 (예: 커피, 라면)">
+                    <button class="rounded-xl bg-gray-900 text-white px-4 text-sm font-black active:scale-95">찾기</button>
+                </form>`;
+        }
+
+        function pickNeedFinder(category) {
+            needFinderCategory = category;
+            needFinderQuery = '';
+            track('need_finder_pick', { category });
+            renderNeedFinderResults();
+        }
+
+        function pickNeedFinderQuery(query) {
+            needFinderCategory = null;
+            needFinderQuery = query;
+            track('need_finder_pick', { query });
+            renderNeedFinderResults();
+        }
+
+        function submitNeedFinder(event) {
+            event.preventDefault();
+            const input = document.getElementById('needFinderInput');
+            const query = input.value.trim().toLowerCase();
+            if (!query) { input.focus(); return; }
+            needFinderCategory = null;
+            needFinderQuery = query;
+            track('need_finder_search', { query });
+            renderNeedFinderResults();
+        }
+
+        function needFinderMatch(deal) {
+            if (!needFinderCategory && needFinderQuery === '도시락') {
+                return deal.category === '간편식' && /도시락|컵밥|덮밥|볶음밥|주먹밥|김밥/.test(deal.name) && !/도시락김/.test(deal.name);
+            }
+            return needFinderCategory ? deal.category === needFinderCategory : matchSearch(deal, needFinderQuery);
+        }
+
+        function escapeNeedText(text) {
+            return String(text).replace(/[&<>"']/g, ch => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[ch]);
+        }
+
+        function renderNeedFinderResults() {
+            const byBrand = new Map();
+            storeMarkersData.forEach(store => {
+                const group = byBrand.get(store.brand) || { store, stores: 0, deals: new Map() };
+                group.stores++;
+                store.deals.filter(needFinderMatch).forEach(deal => group.deals.set(deal.id, deal));
+                byBrand.set(store.brand, group);
+            });
+            const label = needFinderCategory || needFinderQuery;
+            const groups = [...byBrand.entries()].map(([brand, group]) => ({ brand, ...group, items: [...group.deals.values()].sort((a, b) => (b.saving || 0) - (a.saving || 0)) })).filter(group => group.items.length);
+            const box = document.getElementById('needFinderContent');
+            if (!groups.length) {
+                box.innerHTML = `<button onclick="renderNeedFinderPrompt()" class="text-xs text-blue-600 font-black mb-4">← 다시 선택</button><p class="text-center text-sm text-gray-500 font-bold py-12">'${escapeNeedText(label)}' 행사 상품이 현재 반경에는 없어요.</p>`;
+                return;
+            }
+            box.innerHTML = `<button onclick="renderNeedFinderPrompt()" class="text-xs text-blue-600 font-black mb-3">← 다시 선택</button><p class="text-sm font-black text-gray-800 mb-3">'${escapeNeedText(label)}'을(를) 찾았어요</p>` + groups.map(({ brand, store, stores, items }) => {
+                const info = BRAND_INFO[brand];
+                return `<button onclick='openNeedFinderStore(${JSON.stringify(store).replace(/'/g, "&apos;")})' class="w-full text-left rounded-2xl border border-gray-100 bg-white p-3 mb-2 shadow-sm active:scale-[0.99] transition">
+                    <div class="flex justify-between items-center mb-2"><strong class="text-sm ${info.color}">${info.text}</strong><span class="text-[11px] font-bold text-gray-500">${stores}곳 · ${items.length}개 행사 ›</span></div>
+                    <p class="text-[12px] font-bold text-gray-800 truncate">${items.slice(0, 3).map(deal => escapeNeedText(deal.name)).join(' · ')}</p>
+                </button>`;
+            }).join('');
+        }
+
+        function openNeedFinderStore(store) {
+            goHome();
+            openStore(store, needFinderMatch, needFinderCategory || 'ALL', needFinderCategory || needFinderQuery);
         }
 
         async function searchInCurrentArea() {
@@ -1899,7 +2066,7 @@
         }
 
         function hideAllTabModals() {
-            ['searchModal', 'wishlistModal', 'nearbyRankingModal', 'top10Modal', 'allDealsModal'].forEach(id => {
+            ['searchModal', 'wishlistModal', 'nearbyRankingModal', 'top10Modal', 'allDealsModal', 'needFinderModal'].forEach(id => {
                 document.getElementById(id).classList.remove('active');
             });
         }
@@ -1924,8 +2091,10 @@
         }
 
         // [개선 1 적용] 지도 오프셋 적용하여 마커와 바텀시트 공존
-        function openStore(store) {
+        function openStore(store, intentFilter = null, category = 'ALL', intentLabel = '') {
             activeStore = store;
+            storeIntentFilter = intentFilter;
+            storeIntentLabel = intentLabel;
             // 시트가 이미 열린 채로 다른 매장을 눌러도 '처음 보던 화면'을 기준으로 유지한다.
             if (!preStoreView) preStoreView = { center: map.getCenter(), zoom: map.getZoom() };
             userMovedSinceOpen = false;
@@ -1939,7 +2108,7 @@
             logoEl.innerText = brandInfo.text;
             document.getElementById('bsStoreName').innerText = store.name;
             
-            activeCategory = 'ALL';
+            activeCategory = category;
             renderCategories();
             document.getElementById('sortSelect').value = 'recommend';
             renderDeals();
@@ -2116,13 +2285,13 @@
             const list = document.getElementById('dealsList');
             const sortVal = document.getElementById('sortSelect').value;
             
-            let filtered = activeStore.deals.filter(p => activeCategory === 'ALL' || p.category === activeCategory);
+            let filtered = activeStore.deals.filter(p => (activeCategory === 'ALL' || p.category === activeCategory) && (!storeIntentFilter || storeIntentFilter(p)));
             if(dealTypeFilter) filtered = filtered.filter(p => p.events[activeStore.brand] && p.events[activeStore.brand].type === dealTypeFilter);
 
             if(sortVal === 'priceLow') filtered.sort((a,b) => a.price - b.price);
             else filtered.sort((a,b) => b.saving - a.saving);
 
-            document.getElementById('bsItemCount').innerText = `총 ${filtered.length}개`;
+            document.getElementById('bsItemCount').innerText = storeIntentLabel ? `${storeIntentLabel} ${filtered.length}개` : `총 ${filtered.length}개`;
 
             if(filtered.length === 0) {
                 list.innerHTML = `<div class="p-8 text-center text-gray-400 font-medium">해당 조건의 상품이 없습니다.</div>`;
@@ -2205,7 +2374,7 @@
                 // 찾는 상품이 없어서 나가는 케이스. 어떤 검색어가 비었는지 알아야
                 // 크롤링 누락인지 검색 매칭 문제인지 구분할 수 있다.
                 track('search_empty', { query, brand: searchBrandFilter || 'all' });
-                list.innerHTML = `<div class="p-8 text-center text-gray-500 font-bold mt-10">결과가 없습니다.</div>`;
+                list.innerHTML = `<div class="p-8 text-center text-gray-500 font-bold mt-10">현재 행사 중인 상품이 없습니다.<p class="text-[11px] text-gray-400 mt-2">일반 판매 상품은 검색 대상이 아니에요.</p></div>`;
                 return;
             }
 
@@ -2215,7 +2384,7 @@
             const more = matches.length > SEARCH_RENDER_LIMIT
                 ? `<p class="text-[11px] text-gray-400 font-bold text-center py-2">절약액 상위 ${SEARCH_RENDER_LIMIT}개만 표시 · 검색어를 더 입력하면 좁혀집니다</p>`
                 : '';
-            list.innerHTML = `<div class="px-2 py-1 flex justify-between items-center"><span class="text-xs font-bold text-gray-500">통합 검색 결과 ${matches.length.toLocaleString()}건</span></div>`
+            list.innerHTML = `<div class="px-2 py-1 flex justify-between items-center"><span class="text-xs font-bold text-gray-500">행사 상품 검색 결과 ${matches.length.toLocaleString()}건</span></div>`
                 + shown.map(p => createProductHTML(p, 'search', searchBrandFilter)).join('')
                 + more;
         }
@@ -2337,6 +2506,7 @@
             }
             saveLocalData();
             updateBadgeUI();
+            updateBenefitTeaser();
 
             if(activeStore) renderDeals();
             if(document.getElementById('searchModal').classList.contains('active')) performSearch();
@@ -2416,32 +2586,25 @@
         function buildBarcodeIndex() {
             BARCODE_INDEX.clear();
             MASTER_DB.forEach(p => { if (p.barcode) BARCODE_INDEX.set(p.barcode, p); });
-            console.log('BARCODE_INDEX:', BARCODE_INDEX.size + '건');
         }
 
         async function openBarcodeScanner() {
             const modal = document.getElementById('barcodeScannerModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+            modal.classList.remove('hidden'); modal.classList.add('flex');
             document.getElementById('barcodeManualInput').value = '';
-
-            // BarcodeDetector 미지원 브라우저는 수동 입력만 안내
             if (!('BarcodeDetector' in window)) {
                 document.querySelector('#barcodeScannerModal video').classList.add('hidden');
                 document.querySelector('#barcodeScannerModal .absolute.inset-0.flex').classList.add('hidden');
                 showToast('이 브라우저는 카메라 스캔을 지원하지 않습니다. 번호를 직접 입력해주세요.');
                 return;
             }
-
             try {
                 barcodeStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
                 const video = document.getElementById('barcodeVideo');
                 video.srcObject = barcodeStream;
                 barcodeDetector = new BarcodeDetector({ formats: ['ean_13', 'ean_8', 'upc_a'] });
                 detectBarcode();
-            } catch (e) {
-                showToast('카메라 권한이 필요합니다. 번호를 직접 입력해주세요.');
-            }
+            } catch (e) { showToast('카메라 권한이 필요합니다. 번호를 직접 입력해주세요.'); }
         }
 
         function detectBarcode() {
@@ -2450,13 +2613,7 @@
             barcodeRafId = requestAnimationFrame(async () => {
                 if (video.readyState === video.HAVE_ENOUGH_DATA && barcodeDetector) {
                     const codes = await barcodeDetector.detect(video).catch(() => []);
-                    if (codes.length > 0) {
-                        const code = codes[0].rawValue;
-                        stopBarcodeCamera();
-                        closeBarcodeScanner();
-                        lookupBarcode(code);
-                        return;
-                    }
+                    if (codes.length > 0) { stopBarcodeCamera(); closeBarcodeScanner(); lookupBarcode(codes[0].rawValue); return; }
                 }
                 detectBarcode();
             });
@@ -2465,51 +2622,38 @@
         function stopBarcodeCamera() {
             if (barcodeRafId) { cancelAnimationFrame(barcodeRafId); barcodeRafId = null; }
             if (barcodeStream) { barcodeStream.getTracks().forEach(t => t.stop()); barcodeStream = null; }
-            const video = document.getElementById('barcodeVideo');
-            video.srcObject = null;
+            document.getElementById('barcodeVideo').srcObject = null;
         }
 
         function closeBarcodeScanner() {
             stopBarcodeCamera();
             const modal = document.getElementById('barcodeScannerModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
+            modal.classList.add('hidden'); modal.classList.remove('flex');
         }
 
         function lookupBarcode(code) {
             const barcode = String(code).trim().replace(/\D/g, '');
             if (!barcode) { showToast('바코드 번호를 입력해주세요.'); return; }
-
             const product = BARCODE_INDEX.get(barcode);
             const header = document.getElementById('barcodeResultHeader');
             const title = document.getElementById('barcodeResultTitle');
             const sub = document.getElementById('barcodeResultSub');
             const body = document.getElementById('barcodeResultBody');
             const icon = document.getElementById('barcodeResultIcon');
-
             if (product) {
-                icon.textContent = '🎉';
-                title.textContent = '행사 상품 발견!';
-                sub.textContent = `바코드: ${barcode}`;
-                header.className = 'p-5 text-center bg-emerald-50';
-                body.innerHTML = createProductHTML(product, 'search');
+                icon.textContent = '🎉'; title.textContent = '행사 상품 발견!'; sub.textContent = `바코드: ${barcode}`;
+                header.className = 'p-5 text-center bg-emerald-50'; body.innerHTML = createProductHTML(product, 'search');
             } else {
-                icon.textContent = '😢';
-                title.textContent = '행사 상품이 아닙니다';
-                sub.textContent = `바코드: ${barcode} — 현재 1+1·2+1 행사 없음`;
-                header.className = 'p-5 text-center';
-                body.innerHTML = `<p class="text-center text-xs text-gray-400 pb-4">이 상품은 오늘 편의점 4사 행사 목록에 없습니다.</p>`;
+                icon.textContent = '😢'; title.textContent = '행사 상품이 아닙니다'; sub.textContent = `바코드: ${barcode} — 현재 1+1·2+1 행사 없음`;
+                header.className = 'p-5 text-center'; body.innerHTML = '<p class="text-center text-xs text-gray-400 pb-4">이 상품은 오늘 편의점 4사 행사 목록에 없습니다.</p>';
             }
-
             const result = document.getElementById('barcodeResultModal');
-            result.classList.remove('hidden');
-            result.classList.add('flex');
+            result.classList.remove('hidden'); result.classList.add('flex');
         }
 
         function closeBarcodeResult() {
             const modal = document.getElementById('barcodeResultModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
+            modal.classList.add('hidden'); modal.classList.remove('flex');
         }
 
         // ── 신규 기능 함수들 ──────────────────────────────────────────────
@@ -2610,15 +2754,14 @@
 
         function setMapBrandFilter(brand) {
             mapBrandFilter = brand;
-            // 버튼 활성 상태 업데이트
             const map_ = { null: 'all', 'CU': 'CU', 'GS25': 'GS25', '7-ELEVEN': '7EL', 'EMART24': 'EM' };
-            ['all','CU','GS25','7EL','EM'].forEach(k => {
-                const btn = document.getElementById('mapFilter_' + k);
-                if (!btn) return;
-                const isActive = (brand === null && k === 'all') || (brand && map_[brand] === k);
-                btn.classList.toggle('bg-gray-800', isActive);
-                btn.classList.toggle('text-white', isActive);
-                btn.classList.toggle('bg-white/95', !isActive);
+            ['all','CU','GS25','7EL','EM'].forEach(key => {
+                const button = document.getElementById('mapFilter_' + key);
+                if (!button) return;
+                const active = (brand === null && key === 'all') || (brand && map_[brand] === key);
+                button.classList.toggle('bg-gray-800', active);
+                button.classList.toggle('text-white', active);
+                button.classList.toggle('bg-white/95', !active);
             });
             if (typeof loadStoresInRadius === 'function') loadStoresInRadius();
         }
