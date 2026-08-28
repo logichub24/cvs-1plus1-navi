@@ -2300,9 +2300,35 @@
             return hay;
         }
 
+        // 사용자는 '휴지'라고 치는데 상품명은 '깨끗)촉앤감프리미엄24롤'이다.
+        // 제조사 표기와 일상어가 달라서, 정작 절약액이 가장 큰 화장지류가 검색에서
+        // 통째로 빠졌다(니즈 파인더에서 '휴지' → 결과 없음).
+        // 카테고리까지 함께 보는 이유는 토큰만으로는 오매칭이 크기 때문이다.
+        // ('진로'는 진로토닉워터를, '워터'는 워터멜론을, '컵'은 컵밥을 잡는다)
+        // 데이터에 실제로 없는 말(소주·기저귀·삼각김밥)은 넣지 않았다. 억지로 넣으면 오매칭만 는다.
+        const SEARCH_SYNONYMS = [
+            { words: ['휴지', '화장지', '두루마리'], categories: ['생활용품', '기타'], re: /\d+롤|\d+겹|화장지|미용티슈|각티슈/ },
+            { words: ['컵라면', '용기면'],           categories: ['라면'],            re: /사발|용기면|컵라면|라면컵|왕뚜껑|컵$/ },
+            // '카스'는 위스카스(사료)·카스타드(빵)·박카스를, '테라'는 립테라피를 잡는다.
+            // 카테고리(주류)도 못 믿는다. 사료와 빵이 주류로 분류돼 있다.
+            // 그래서 맥주 브랜드는 제조사 표기까지 함께 요구한다(오비)카스, 하이트)테라).
+            { words: ['맥주'], categories: ['주류'], re: /오비\)|하이트\)|롯데\)클라우드|하이네켄|아사히|칭따오|필라이트|버드와이저|기네스|호가든|맥주|라거/ },
+            { words: ['생수', '물'],                 categories: ['음료', '기타'],    re: /생수|아이시스|삼다수|백산수|평창수|스파클링워터/ },
+        ];
+
+        function matchSynonym(product, query) {
+            for (const s of SEARCH_SYNONYMS) {
+                if (!s.words.includes(query)) continue;
+                if (!s.categories.includes(product.category)) continue;
+                if (s.re.test(product.name)) return true;
+            }
+            return false;
+        }
+
         function matchSearch(product, query) {
             const hay = searchHaystack(product);
             if (hay.includes(query)) return true;
+            if (matchSynonym(product, query)) return true;
             // 초성 검색은 상품명에만 적용한다(브랜드 별칭까지 넣으면 오탐이 커진다)
             if (/^[ㄱ-ㅎ]+$/.test(query)) return toChosung(product.name).includes(query);
             return false;

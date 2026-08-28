@@ -52967,13 +52967,13 @@
     "category": "기타",
     "price": 4700,
     "saving": 4700,
-    "barcode": "8809274510916",
+    "barcode": null,
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
+        "image": ""
       }
     }
   },
@@ -52983,13 +52983,13 @@
     "category": "기타",
     "price": 500,
     "saving": 500,
-    "barcode": "8809274510916",
+    "barcode": null,
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
+        "image": ""
       }
     }
   },
@@ -52999,13 +52999,13 @@
     "category": "생활용품",
     "price": 7900,
     "saving": 7900,
-    "barcode": "8809274510916",
+    "barcode": null,
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
+        "image": ""
       }
     }
   },
@@ -53015,13 +53015,13 @@
     "category": "기타",
     "price": 2500,
     "saving": 2500,
-    "barcode": "8809274510916",
+    "barcode": null,
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
+        "image": ""
       }
     }
   },
@@ -53031,13 +53031,13 @@
     "category": "기타",
     "price": 2500,
     "saving": 2500,
-    "barcode": "8809274510916",
+    "barcode": null,
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
+        "image": ""
       }
     }
   },
