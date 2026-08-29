@@ -7,6 +7,7 @@ const PAGE_URL = `${BASE}/gscvs/ko/products/event-goods`;
 const SEARCH_URL = `${BASE}/gscvs/ko/products/event-goods-search`;
 
 const EVENT_TYPES = { '1+1': 'ONE_TO_ONE', '2+1': 'TWO_TO_ONE' };
+const FALLBACK_SITE = 'https://pyeondori.com';
 
 function parsePrice(value) {
   const n = parseInt(String(value).replace(/[^0-9]/g, ''), 10);
@@ -17,6 +18,50 @@ function extractCsrfToken(html) {
   const match = html.match(/name=["']CSRFToken["']\s+value=["']([^"']+)["']/i)
     || html.match(/CSRFToken['"]?\s*[:=]\s*['"]([^'"]+)['"]/i);
   return match ? match[1] : null;
+}
+
+// GS25가 기존 공개 행사 API를 종료해 0건을 반환할 때만 사용하는 공개 보완 데이터 경로.
+// 외부 페이지의 공개 클라이언트 설정을 매 실행 시 읽어 토큰을 코드에 저장하지 않는다.
+async function crawlFallbackGS25() {
+  const page = (await axios.get(`${FALLBACK_SITE}/store/gs25`, { timeout: 15000 })).data;
+  const scripts = [...String(page).matchAll(/<script[^>]+src="([^"]+)/g)].map((match) => match[1]);
+  let chunk = '';
+  for (const src of scripts) {
+    const code = (await axios.get(new URL(src, FALLBACK_SITE).href, { timeout: 15000 })).data;
+    if (String(code).includes('.supabase.co')) { chunk = String(code); break; }
+  }
+  const apiKey = chunk.match(/eyJ[a-zA-Z0-9._-]+/)?.[0];
+  const apiBase = chunk.match(/https:\/\/[^"\\]+\.supabase\.co/)?.[0];
+  if (!apiKey || !apiBase) throw new Error('GS25 보완 데이터 연결 정보를 찾지 못했습니다.');
+
+  const headers = { apikey: apiKey, Authorization: `Bearer ${apiKey}` };
+  const products = [];
+  for (let offset = 0; ; offset += 1000) {
+    const { data } = await axios.get(`${apiBase}/rest/v1/products`, {
+      headers,
+      params: {
+        select: 'product_name,promo_type,price,image_url,year_month',
+        store_id: 'eq.2',
+        order: 'year_month.desc',
+        limit: 1000,
+        offset,
+      },
+      timeout: 15000,
+    });
+    products.push(...data);
+    if (data.length < 1000) break;
+  }
+
+  const latestMonth = products[0]?.year_month;
+  return products
+    .filter((item) => item.year_month === latestMonth && item.product_name && item.price && EVENT_TYPES[item.promo_type])
+    .map((item) => ({
+      brand: 'GS25',
+      name: item.product_name.trim(),
+      price: parsePrice(item.price),
+      promoType: item.promo_type,
+      image: item.image_url || '',
+    }));
 }
 
 async function crawlGS25({ delayMs = 300 } = {}) {
@@ -77,7 +122,11 @@ async function crawlGS25({ delayMs = 300 } = {}) {
     } while (pageNum <= totalPages);
   }
 
-  return all;
+  if (all.length > 0) return all;
+
+  const fallback = await crawlFallbackGS25();
+  console.error(`GS25: 기존 공식 API 대신 공개 보완 경로에서 ${fallback.length}개 수집 완료`);
+  return fallback;
 }
 
 module.exports = { crawlGS25 };
