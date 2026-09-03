@@ -78814,6 +78814,22 @@
     }
   },
   {
+    "id": "hk컨디션스틱zero샤인머스켓맛",
+    "name": "HK)컨디션스틱ZERO(샤인머스켓맛)",
+    "category": "생활용품",
+    "price": 3900,
+    "saving": 3900,
+    "barcode": "8809422046694",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422046694.JPG"
+      }
+    }
+  },
+  {
     "id": "cj소바바황금홀릭후라이드",
     "name": "CJ)소바바황금홀릭후라이드210g",
     "category": "기타",
