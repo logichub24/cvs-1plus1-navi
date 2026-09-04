@@ -13643,7 +13643,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115134220_1.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115134220_2.png"
       },
       "GS25": {
         "type": "2+1",
@@ -14697,7 +14697,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115137290_1.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115137290_2.png"
       },
       "GS25": {
         "type": "2+1",
@@ -22362,38 +22362,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045484969.jpg"
-      }
-    }
-  },
-  {
-    "id": "오뚜기유니짜장2인",
-    "name": "오뚜기)유니짜장2인",
-    "category": "라면",
-    "price": 9900,
-    "saving": 3300,
-    "barcode": "8801045512815",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045512815.jpg"
-      }
-    }
-  },
-  {
-    "id": "오뚜기얼큰짬뽕2인",
-    "name": "오뚜기)얼큰짬뽕2인",
-    "category": "라면",
-    "price": 9900,
-    "saving": 3300,
-    "barcode": "8801045513102",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045513102.jpg"
       }
     }
   },
@@ -78814,6 +78782,38 @@
     }
   },
   {
+    "id": "cjnew소바바마쏘킥",
+    "name": "CJ)NEW소바바마쏘킥210g",
+    "category": "기타",
+    "price": 9900,
+    "saving": 9900,
+    "barcode": "8801392203992",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392203992.JPG"
+      }
+    }
+  },
+  {
+    "id": "cjnew소바바레드핫",
+    "name": "CJ)NEW소바바레드핫210g",
+    "category": "기타",
+    "price": 9900,
+    "saving": 9900,
+    "barcode": "8801392204036",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392204036.JPG"
+      }
+    }
+  },
+  {
     "id": "hk컨디션스틱zero샤인머스켓맛",
     "name": "HK)컨디션스틱ZERO(샤인머스켓맛)",
     "category": "생활용품",
@@ -78823,7 +78823,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809422046694.JPG"
       }
