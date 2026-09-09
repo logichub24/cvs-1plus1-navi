@@ -28896,12 +28896,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://image.woodongs.com/imgsvr/item/GD_8801007625058_002.jpg"
-      },
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007625058.JPG"
       }
     }
   },
@@ -28918,12 +28912,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://image.woodongs.com/imgsvr/item/GD_8801007683522_002.jpg"
-      },
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007683522.JPG"
       }
     }
   },
@@ -78766,6 +78754,22 @@
     }
   },
   {
+    "id": "롯데펩시콜라펫1",
+    "name": "롯데)펩시콜라펫1.5L",
+    "category": "음료",
+    "price": 4200,
+    "saving": 4200,
+    "barcode": "8801056195014",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056195014.JPG"
+      }
+    }
+  },
+  {
     "id": "cjnew소바바마쏘킥",
     "name": "CJ)NEW소바바마쏘킥210g",
     "category": "기타",
@@ -78966,7 +78970,7 @@
     "barcode": "6930343451235",
     "events": {
       "EMART24": {
-        "type": "2+1",
+        "type": "1+1",
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6930343451235.JPG"
@@ -78982,7 +78986,7 @@
     "barcode": "6930343479819",
     "events": {
       "EMART24": {
-        "type": "2+1",
+        "type": "1+1",
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6930343479819.JPG"
@@ -81974,7 +81978,7 @@
     "barcode": "8801155732769",
     "events": {
       "EMART24": {
-        "type": "2+1",
+        "type": "1+1",
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801155732769.JPG"
@@ -81990,7 +81994,7 @@
     "barcode": "8801155735074",
     "events": {
       "EMART24": {
-        "type": "2+1",
+        "type": "1+1",
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801155735074.JPG"
@@ -82006,7 +82010,7 @@
     "barcode": "8801155735081",
     "events": {
       "EMART24": {
-        "type": "2+1",
+        "type": "1+1",
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801155735081.JPG"
@@ -82022,7 +82026,7 @@
     "barcode": "8801155735135",
     "events": {
       "EMART24": {
-        "type": "2+1",
+        "type": "1+1",
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801155735135.JPG"
