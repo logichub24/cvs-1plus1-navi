@@ -22937,7 +22937,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392135903.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392135903_1.png"
       }
     }
   },
@@ -78754,6 +78754,22 @@
     }
   },
   {
+    "id": "롯데핫식스더킹프로즌블루캔",
+    "name": "롯데)핫식스더킹프로즌블루캔355ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801056912987",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056912987.JPG"
+      }
+    }
+  },
+  {
     "id": "롯데펩시콜라펫1",
     "name": "롯데)펩시콜라펫1.5L",
     "category": "음료",
@@ -78763,7 +78779,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056195014.JPG"
       }
