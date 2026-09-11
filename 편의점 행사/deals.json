@@ -23340,8 +23340,8 @@
     }
   },
   {
-    "id": "오뚜기컵누들불닭맛소컵",
-    "name": "오뚜기)컵누들불닭맛소컵",
+    "id": "오뚜기컵누들열닭맛소컵",
+    "name": "오뚜기)컵누들열닭맛소컵",
     "category": "기타",
     "price": 2000,
     "saving": 667,
@@ -23349,9 +23349,9 @@
     "events": {
       "CU": {
         "type": "2+1",
-        "isNew": false,
+        "isNew": true,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045779959.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801045779959_1.png"
       }
     }
   },
@@ -78763,7 +78763,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801056912987.JPG"
       }
