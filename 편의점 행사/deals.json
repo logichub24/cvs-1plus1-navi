@@ -86956,6 +86956,22 @@
     }
   },
   {
+    "id": "정식품베지밀a190ml24팩",
+    "name": "정식품)베지밀A190ml24팩",
+    "category": "유제품",
+    "price": 31200,
+    "saving": 10400,
+    "barcode": "8801033770678",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801033770678.JPG"
+      }
+    }
+  },
+  {
     "id": "롯데허쉬쿠키앤크림냉장",
     "name": "롯데)허쉬쿠키앤크림40g(냉장)",
     "category": "스낵·과자",
