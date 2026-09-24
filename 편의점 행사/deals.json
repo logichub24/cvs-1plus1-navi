@@ -86956,6 +86956,38 @@
     }
   },
   {
+    "id": "엘투붉은빛의우롱티펫",
+    "name": "엘투)붉은빛의우롱티펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "6974906992025",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6974906992025.JPG"
+      }
+    }
+  },
+  {
+    "id": "엘투눈꽃내리는자스민티펫",
+    "name": "엘투)눈꽃내리는자스민티펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "6974906992384",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6974906992384.JPG"
+      }
+    }
+  },
+  {
     "id": "정식품베지밀a190ml24팩",
     "name": "정식품)베지밀A190ml24팩",
     "category": "유제품",
