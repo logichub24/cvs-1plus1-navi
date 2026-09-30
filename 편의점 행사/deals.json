@@ -54893,7 +54893,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801128/243193.1.jpg"
       }
@@ -54989,7 +54989,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801066/019447.1.jpg"
       }
@@ -55101,7 +55101,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/942188.1.jpg"
       }
@@ -55149,7 +55149,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/001026.1.jpg"
       }
@@ -55181,7 +55181,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/944236.1.jpg"
       }
@@ -55197,7 +55197,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/944304.1.jpg"
       }
@@ -55261,7 +55261,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/001774.1.jpg"
       }
@@ -55277,7 +55277,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/001989.1.jpg"
       }
@@ -55309,7 +55309,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
       }
@@ -55405,7 +55405,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
       }
@@ -55485,7 +55485,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
       }
@@ -55517,7 +55517,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
       }
@@ -55533,7 +55533,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
       }
@@ -55597,7 +55597,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
       }
@@ -55709,7 +55709,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
       }
@@ -55741,7 +55741,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
       }
@@ -55881,13 +55881,13 @@
     "category": "스낵·과자",
     "price": 4000,
     "saving": 4000,
-    "barcode": "8809274510916",
+    "barcode": null,
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
+        "image": ""
       }
     }
   },
@@ -55901,7 +55901,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -55933,7 +55933,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -56029,7 +56029,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -56077,7 +56077,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -56333,7 +56333,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -56381,7 +56381,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -56515,7 +56515,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/7610700/901007.1.jpg"
       }
@@ -56755,7 +56755,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -57583,7 +57583,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -57727,7 +57727,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -57775,7 +57775,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -57807,7 +57807,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -57823,7 +57823,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -58063,7 +58063,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -58079,7 +58079,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -58095,7 +58095,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -58469,7 +58469,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -58645,7 +58645,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -58661,7 +58661,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -58693,7 +58693,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -58821,7 +58821,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -59863,7 +59863,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -60167,7 +60167,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -60183,7 +60183,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -60877,7 +60877,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61139,7 +61139,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61155,7 +61155,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61187,7 +61187,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61219,7 +61219,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61235,7 +61235,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61315,7 +61315,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61347,7 +61347,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61539,7 +61539,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61651,7 +61651,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61667,7 +61667,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61683,7 +61683,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61699,7 +61699,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61715,7 +61715,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61731,7 +61731,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61747,7 +61747,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61763,7 +61763,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61779,7 +61779,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61795,7 +61795,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61811,7 +61811,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61827,7 +61827,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61891,7 +61891,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -61939,7 +61939,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801007/628813.1.jpg"
       }
@@ -62031,7 +62031,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801045/533346.1.jpg"
       }
@@ -62063,7 +62063,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/417438.1.jpg"
       }
@@ -62079,7 +62079,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/417452.1.jpg"
       }
@@ -62095,7 +62095,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/249921.1.jpg"
       }
@@ -62111,7 +62111,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -62229,7 +62229,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801056/195014.1.jpg"
       }
@@ -62309,7 +62309,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801094/082406.1.jpg"
       }
@@ -62341,7 +62341,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801308/460242.1.jpg"
       }
@@ -62357,7 +62357,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801308/470371.1.jpg"
       }
@@ -62533,7 +62533,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801056/051037.1.jpg"
       }
@@ -62677,7 +62677,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801056/076542.1.jpg"
       }
@@ -62757,7 +62757,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801037/091397.1.jpg"
       }
@@ -62805,7 +62805,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801056/051150.1.jpg"
       }
@@ -62949,7 +62949,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801094/962104.1.jpg"
       }
@@ -63045,7 +63045,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801155/740054.1.jpg"
       }
@@ -63061,7 +63061,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801155/740061.1.jpg"
       }
@@ -63077,7 +63077,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801056/227371.1.jpg"
       }
@@ -63141,7 +63141,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801056/227517.1.jpg"
       }
@@ -63365,7 +63365,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -63477,7 +63477,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/250590.1.jpg"
       }
@@ -63493,7 +63493,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/250910.1.jpg"
       }
@@ -63509,7 +63509,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801206/680100.1.jpg"
       }
@@ -63541,7 +63541,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/251573.1.jpg"
       }
@@ -63557,7 +63557,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/251269.1.jpg"
       }
@@ -63573,7 +63573,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/251900.1.jpg"
       }
@@ -63605,7 +63605,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/623518.1.jpg"
       }
@@ -63621,7 +63621,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -63637,7 +63637,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -63653,7 +63653,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8805584/111591.1.jpg"
       }
@@ -63669,7 +63669,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/443468.1.jpg"
       }
@@ -63685,7 +63685,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809490/180016.1.jpg"
       }
@@ -63701,7 +63701,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809490/180054.1.jpg"
       }
@@ -63717,7 +63717,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/254048.1.jpg"
       }
@@ -63733,7 +63733,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/008582.1.jpg"
       }
@@ -63749,7 +63749,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809490/180092.1.jpg"
       }
@@ -63765,7 +63765,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/304351.1.jpg"
       }
@@ -63781,7 +63781,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/304375.1.jpg"
       }
@@ -63797,7 +63797,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/307154.1.jpg"
       }
@@ -63813,7 +63813,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801206/001196.1.jpg"
       }
@@ -63829,7 +63829,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/017065.1.jpg"
       }
@@ -63845,7 +63845,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/255229.1.jpg"
       }
@@ -63861,7 +63861,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/016815.1.jpg"
       }
@@ -63877,7 +63877,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/890958.1.jpg"
       }
@@ -63893,7 +63893,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/664202.1.jpg"
       }
@@ -63909,7 +63909,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/889747.1.jpg"
       }
@@ -63925,7 +63925,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801019/515026.1.jpg"
       }
@@ -63941,7 +63941,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/885268.1.jpg"
       }
@@ -63957,7 +63957,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/884902.1.jpg"
       }
@@ -63973,7 +63973,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/666831.1.jpg"
       }
@@ -63989,7 +63989,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/256097.1.jpg"
       }
@@ -64005,7 +64005,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801382/702726.1.jpg"
       }
@@ -64021,7 +64021,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801382/702733.1.jpg"
       }
@@ -64037,7 +64037,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/256080.1.jpg"
       }
@@ -64053,7 +64053,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/883110.1.jpg"
       }
@@ -64069,7 +64069,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/666770.1.jpg"
       }
@@ -64085,7 +64085,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/666855.1.jpg"
       }
@@ -64101,7 +64101,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/883035.1.jpg"
       }
@@ -64117,7 +64117,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/220611.1.jpg"
       }
@@ -64133,7 +64133,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4710122/204960.1.jpg"
       }
@@ -64149,7 +64149,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/252839.1.jpg"
       }
@@ -64165,7 +64165,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8807203/001924.1.jpg"
       }
@@ -64181,7 +64181,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/880416.1.jpg"
       }
@@ -64197,7 +64197,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/221007.1.jpg"
       }
@@ -64213,7 +64213,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4710250/200988.1.jpg"
       }
@@ -64229,7 +64229,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8807203/001573.1.jpg"
       }
@@ -64245,7 +64245,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8807203/001863.1.jpg"
       }
@@ -64261,7 +64261,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/220444.1.jpg"
       }
@@ -64277,7 +64277,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/879960.1.jpg"
       }
@@ -64293,7 +64293,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/878406.1.jpg"
       }
@@ -64309,7 +64309,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/876587.1.jpg"
       }
@@ -64325,7 +64325,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/876150.1.jpg"
       }
@@ -64341,7 +64341,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/670067.1.jpg"
       }
@@ -64357,7 +64357,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/892518.1.jpg"
       }
@@ -64373,7 +64373,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/670920.1.jpg"
       }
@@ -64389,7 +64389,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/670814.1.jpg"
       }
@@ -64405,7 +64405,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/220307.1.jpg"
       }
@@ -64421,7 +64421,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/256585.1.jpg"
       }
@@ -64437,7 +64437,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/874200.1.jpg"
       }
@@ -64453,7 +64453,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/670791.1.jpg"
       }
@@ -64469,7 +64469,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/874484.1.jpg"
       }
@@ -64485,7 +64485,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809490/180528.1.jpg"
       }
@@ -64501,7 +64501,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/221342.1.jpg"
       }
@@ -64517,7 +64517,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/221335.1.jpg"
       }
@@ -64533,7 +64533,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/670838.1.jpg"
       }
@@ -64549,7 +64549,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/872619.1.jpg"
       }
@@ -64565,7 +64565,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/256783.1.jpg"
       }
@@ -64581,7 +64581,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/256646.1.jpg"
       }
@@ -64613,7 +64613,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/221373.1.jpg"
       }
@@ -64629,7 +64629,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/872886.1.jpg"
       }
@@ -64645,7 +64645,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -64661,7 +64661,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/872893.1.jpg"
       }
@@ -64677,7 +64677,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8805584/224352.1.jpg"
       }
@@ -64693,7 +64693,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809815/272051.1.jpg"
       }
@@ -64709,7 +64709,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809490/180634.1.jpg"
       }
@@ -64725,7 +64725,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/868933.1.jpg"
       }
@@ -64741,7 +64741,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809490/180566.1.jpg"
       }
@@ -64757,7 +64757,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/221496.1.jpg"
       }
@@ -64773,7 +64773,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8805584/224482.1.jpg"
       }
@@ -64789,7 +64789,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/869121.1.jpg"
       }
@@ -64805,7 +64805,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809815/279197.1.jpg"
       }
@@ -64821,7 +64821,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/867394.1.jpg"
       }
@@ -64837,7 +64837,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/257117.1.jpg"
       }
@@ -64853,7 +64853,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/672818.1.jpg"
       }
@@ -64869,7 +64869,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8805584/224499.1.jpg"
       }
@@ -64885,7 +64885,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8805584/224505.1.jpg"
       }
@@ -64901,7 +64901,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/664486.1.jpg"
       }
@@ -64917,7 +64917,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/870318.1.jpg"
       }
@@ -64933,7 +64933,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/257278.1.jpg"
       }
@@ -64949,7 +64949,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/221519.1.jpg"
       }
@@ -64965,7 +64965,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/412020.1.jpg"
       }
@@ -64997,7 +64997,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/220109.1.jpg"
       }
@@ -65013,7 +65013,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/221502.1.jpg"
       }
@@ -65029,7 +65029,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/257322.1.jpg"
       }
@@ -65045,7 +65045,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809490/180757.1.jpg"
       }
@@ -65061,7 +65061,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/673822.1.jpg"
       }
@@ -65077,7 +65077,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/257339.1.jpg"
       }
@@ -65093,7 +65093,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4770166/222849.1.jpg"
       }
@@ -65109,7 +65109,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4770166/222863.1.jpg"
       }
@@ -65125,7 +65125,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809815/279203.1.jpg"
       }
@@ -65141,7 +65141,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/866007.1.jpg"
       }
@@ -65157,7 +65157,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8805584/125192.1.jpg"
       }
@@ -65189,7 +65189,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809286/121582.1.jpg"
       }
@@ -65205,7 +65205,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/675307.1.jpg"
       }
@@ -65221,7 +65221,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809490/180849.1.jpg"
       }
@@ -65237,7 +65237,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801206/003749.1.jpg"
       }
@@ -65253,7 +65253,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801206/003404.1.jpg"
       }
@@ -65269,7 +65269,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8805584/224642.1.jpg"
       }
@@ -65285,7 +65285,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/675468.1.jpg"
       }
@@ -65301,7 +65301,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809815/277223.1.jpg"
       }
@@ -65333,7 +65333,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801206/003725.1.jpg"
       }
@@ -65349,7 +65349,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/221731.1.jpg"
       }
@@ -65365,7 +65365,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809592/640753.1.jpg"
       }
@@ -65381,7 +65381,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809490/180900.1.jpg"
       }
@@ -65397,7 +65397,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809286/121650.1.jpg"
       }
@@ -65413,7 +65413,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/675505.1.jpg"
       }
@@ -65445,7 +65445,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809490/180658.1.jpg"
       }
@@ -65461,7 +65461,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809592/640791.1.jpg"
       }
@@ -65493,7 +65493,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801206/004128.1.jpg"
       }
@@ -65509,7 +65509,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -65525,7 +65525,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/940771.1.jpg"
       }
@@ -65541,7 +65541,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/940795.1.jpg"
       }
@@ -65557,7 +65557,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809713/221946.1.jpg"
       }
@@ -65573,7 +65573,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8805584/224680.1.jpg"
       }
@@ -65589,7 +65589,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809592/640807.1.jpg"
       }
@@ -65605,7 +65605,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/861729.1.jpg"
       }
@@ -65621,7 +65621,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809490/180641.1.jpg"
       }
@@ -65653,7 +65653,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -65669,7 +65669,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801069/419091.1.jpg"
       }
@@ -65685,7 +65685,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801206/004418.1.jpg"
       }
@@ -65701,7 +65701,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809592/640883.1.jpg"
       }
@@ -65765,7 +65765,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809815/279135.1.jpg"
       }
@@ -65781,7 +65781,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/859290.1.jpg"
       }
@@ -65797,7 +65797,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/942522.1.jpg"
       }
@@ -65813,7 +65813,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -65845,7 +65845,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -65861,7 +65861,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -65893,7 +65893,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -66033,7 +66033,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/3006501/44834.1.jpg"
       }
@@ -66209,7 +66209,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801038/116204.1.jpg"
       }
@@ -66385,7 +66385,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4902430/741880.1.jpg"
       }
@@ -66401,7 +66401,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4902430/643191.1.jpg"
       }
@@ -66433,7 +66433,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4902430/507332.1.jpg"
       }
@@ -66481,7 +66481,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4902430/850322.1.jpg"
       }
@@ -66513,7 +66513,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -66545,7 +66545,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -66609,7 +66609,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4902430/741873.1.jpg"
       }
@@ -66625,7 +66625,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4902430/741866.1.jpg"
       }
@@ -67393,7 +67393,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8806011/711605.1.jpg"
       }
@@ -67425,7 +67425,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/3014260/274856.1.jpg"
       }
@@ -67489,7 +67489,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/7610700/607046.1.jpg"
       }
@@ -67505,7 +67505,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/7610700/009338.1.jpg"
       }
@@ -67537,7 +67537,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/442911.1.jpg"
       }
@@ -67553,7 +67553,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801118/249938.1.jpg"
       }
@@ -67569,7 +67569,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/416950.1.jpg"
       }
@@ -67585,7 +67585,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/3014260/844622.1.jpg"
       }
@@ -67617,7 +67617,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/442553.1.jpg"
       }
@@ -67665,7 +67665,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8805584/111416.1.jpg"
       }
@@ -67697,7 +67697,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809641/110220.1.jpg"
       }
@@ -67729,7 +67729,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -67745,7 +67745,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -67761,7 +67761,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -67777,7 +67777,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/664158.1.jpg"
       }
@@ -67809,7 +67809,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -67825,7 +67825,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -67841,7 +67841,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -67889,7 +67889,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809064/499933.1.jpg"
       }
@@ -67905,7 +67905,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809064/498431.1.jpg"
       }
@@ -67921,7 +67921,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809064/498370.1.jpg"
       }
@@ -67953,7 +67953,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4711162/987042.1.jpg"
       }
@@ -67969,7 +67969,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4711162/984508.1.jpg"
       }
@@ -67985,7 +67985,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801033/799075.1.jpg"
       }
@@ -68569,7 +68569,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801128/281003.1.jpg"
       }
@@ -69031,7 +69031,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801492/375384.1.jpg"
       }
@@ -69047,7 +69047,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801492/377654.1.jpg"
       }
@@ -69079,7 +69079,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801068/399165.1.jpg"
       }
@@ -69143,7 +69143,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -69159,7 +69159,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -69207,7 +69207,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809069/304010.1.jpg"
       }
@@ -69223,7 +69223,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809069/304034.1.jpg"
       }
@@ -69239,7 +69239,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809069/304812.1.jpg"
       }
@@ -69255,7 +69255,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809405/270719.1.jpg"
       }
@@ -69271,7 +69271,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/80050/278.1.jpg"
       }
@@ -69287,7 +69287,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/93682/091.1.jpg"
       }
@@ -69303,7 +69303,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -69319,7 +69319,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801019/306396.1.jpg"
       }
@@ -69335,7 +69335,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801019/603426.1.jpg"
       }
@@ -69351,7 +69351,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801111/610636.1.jpg"
       }
@@ -69399,7 +69399,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -69527,7 +69527,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -69543,7 +69543,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -69639,7 +69639,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -69671,7 +69671,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -69703,7 +69703,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -69719,7 +69719,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -69783,7 +69783,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -69917,7 +69917,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -70003,7 +70003,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -70099,7 +70099,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -70115,7 +70115,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -70227,7 +70227,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -70287,7 +70287,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/331673.1.jpg"
       }
@@ -70303,7 +70303,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/331772.1.jpg"
       }
@@ -70319,7 +70319,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801117/760205.1.jpg"
       }
@@ -70351,7 +70351,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801111/188012.1.jpg"
       }
@@ -70367,7 +70367,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/380114.1.jpg"
       }
@@ -70383,7 +70383,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/380213.1.jpg"
       }
@@ -70431,7 +70431,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801111/904292.1.jpg"
       }
@@ -70447,7 +70447,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -70463,7 +70463,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/869664.1.jpg"
       }
@@ -70511,7 +70511,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/80974/482.1.jpg"
       }
@@ -70527,7 +70527,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/80768/258.1.jpg"
       }
@@ -70559,7 +70559,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801111/917421.1.jpg"
       }
@@ -70575,7 +70575,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/6917878/047201.1.jpg"
       }
@@ -70703,7 +70703,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/5011053/013591.1.jpg"
       }
@@ -70719,7 +70719,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801037/091526.1.jpg"
       }
@@ -70735,7 +70735,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8994834/002595.1.jpg"
       }
@@ -70799,7 +70799,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/013395.1.jpg"
       }
@@ -70837,7 +70837,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8804973/304842.1.jpg"
       }
@@ -70853,7 +70853,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8804973/304835.1.jpg"
       }
@@ -70901,7 +70901,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801117/681807.1.jpg"
       }
@@ -70917,7 +70917,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801073/310711.1.jpg"
       }
@@ -70933,7 +70933,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8804973/304828.1.jpg"
       }
@@ -70949,7 +70949,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809415/434217.1.jpg"
       }
@@ -70965,7 +70965,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801037/094374.1.jpg"
       }
@@ -71269,7 +71269,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -71333,7 +71333,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -71349,7 +71349,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -71429,7 +71429,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -71445,7 +71445,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -71493,7 +71493,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -71509,7 +71509,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -71921,7 +71921,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -72365,7 +72365,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -72381,7 +72381,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -72525,7 +72525,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -72541,7 +72541,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -72717,7 +72717,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -72733,7 +72733,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -72909,7 +72909,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -72941,7 +72941,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -72957,7 +72957,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -73059,7 +73059,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -73075,7 +73075,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -73135,7 +73135,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -73151,7 +73151,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -73183,7 +73183,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801043/016070.1.jpg"
       }
@@ -73199,7 +73199,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801043/015943.1.jpg"
       }
@@ -73253,7 +73253,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801043/015776.1.jpg"
       }
@@ -73269,7 +73269,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801045/574585.1.jpg"
       }
@@ -73339,7 +73339,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801045/097299.1.jpg"
       }
@@ -73371,7 +73371,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801045/512518.1.jpg"
       }
@@ -73563,7 +73563,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -73643,7 +73643,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -73675,7 +73675,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801052/436012.1.jpg"
       }
@@ -73755,7 +73755,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -73835,7 +73835,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -73899,7 +73899,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -73915,7 +73915,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -74247,7 +74247,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -74455,7 +74455,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -74471,7 +74471,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -74535,7 +74535,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -74583,7 +74583,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -74695,7 +74695,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -74743,7 +74743,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -74823,7 +74823,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -74919,7 +74919,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -74983,7 +74983,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75015,7 +75015,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75047,7 +75047,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75063,7 +75063,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75171,7 +75171,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75187,7 +75187,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75219,7 +75219,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75235,7 +75235,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75267,7 +75267,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75283,7 +75283,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75299,7 +75299,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75315,7 +75315,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75395,7 +75395,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75443,7 +75443,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75459,7 +75459,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75507,7 +75507,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75523,7 +75523,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75539,7 +75539,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75571,7 +75571,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75587,7 +75587,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75603,7 +75603,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75635,7 +75635,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75683,7 +75683,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75931,7 +75931,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75947,7 +75947,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75963,7 +75963,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75979,7 +75979,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -75995,7 +75995,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76011,7 +76011,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76043,7 +76043,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76075,7 +76075,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76091,7 +76091,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76107,7 +76107,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76123,7 +76123,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76139,7 +76139,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76171,7 +76171,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76203,7 +76203,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76219,7 +76219,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76235,7 +76235,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76251,7 +76251,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76267,7 +76267,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76283,7 +76283,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76299,7 +76299,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76315,7 +76315,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76331,7 +76331,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76347,7 +76347,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76363,7 +76363,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76401,7 +76401,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76417,7 +76417,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76433,7 +76433,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76449,7 +76449,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76465,7 +76465,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -76641,7 +76641,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801045/303079.1.jpg"
       }
@@ -77047,7 +77047,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801056/048129.1.jpg"
       }
@@ -77111,7 +77111,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801037/039993.1.jpg"
       }
@@ -77165,7 +77165,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801308/441531.1.jpg"
       }
@@ -77181,7 +77181,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -77213,7 +77213,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801005/013307.1.jpg"
       }
@@ -77273,7 +77273,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -77289,7 +77289,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801308/460471.1.jpg"
       }
@@ -77401,7 +77401,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -77481,7 +77481,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801382/126232.1.jpg"
       }
@@ -77577,7 +77577,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801037/042870.1.jpg"
       }
@@ -77641,7 +77641,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801382/138976.1.jpg"
       }
@@ -77657,7 +77657,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -77689,7 +77689,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8850389/100684.1.jpg"
       }
@@ -77705,7 +77705,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8850389/106280.1.jpg"
       }
@@ -77721,7 +77721,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801105/914610.1.jpg"
       }
@@ -77737,7 +77737,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8850389/109229.1.jpg"
       }
@@ -77753,7 +77753,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801056/094591.1.jpg"
       }
@@ -77769,7 +77769,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801056/096052.1.jpg"
       }
@@ -77817,7 +77817,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801056/102036.1.jpg"
       }
@@ -77993,7 +77993,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801056/178666.1.jpg"
       }
@@ -78073,7 +78073,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801382/150169.1.jpg"
       }
@@ -78105,7 +78105,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801056/234027.1.jpg"
       }
@@ -78175,7 +78175,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/435197.1.jpg"
       }
@@ -78335,7 +78335,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/435692.1.jpg"
       }
@@ -78399,7 +78399,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/668897.1.jpg"
       }
@@ -78575,7 +78575,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/675642.1.jpg"
       }
@@ -78591,7 +78591,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801104/675628.1.jpg"
       }
@@ -78715,7 +78715,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4901001/022564.1.jpg"
       }
@@ -78861,7 +78861,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801007/980683.1.jpg"
       }
@@ -78909,7 +78909,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801007/130453.1.jpg"
       }
@@ -78925,7 +78925,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801007/150369.1.jpg"
       }
@@ -78941,7 +78941,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801007/150406.1.jpg"
       }
@@ -78957,7 +78957,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801007/402284.1.jpg"
       }
@@ -78973,7 +78973,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4005808/310883.1.jpg"
       }
@@ -79005,7 +79005,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801008/004821.1.jpg"
       }
@@ -79037,7 +79037,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -79053,7 +79053,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8806128/400447.1.jpg"
       }
@@ -79069,7 +79069,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801008/700105.1.jpg"
       }
@@ -79133,7 +79133,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8806011/616047.1.jpg"
       }
@@ -79149,7 +79149,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8806011/616153.1.jpg"
       }
@@ -79229,7 +79229,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8806011/616054.1.jpg"
       }
@@ -79245,7 +79245,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8806011/616160.1.jpg"
       }
@@ -79389,7 +79389,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -79421,7 +79421,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4902806/584028.1.jpg"
       }
@@ -79437,7 +79437,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4902806/584349.1.jpg"
       }
@@ -79469,7 +79469,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/4902806/125337.1.jpg"
       }
@@ -79485,7 +79485,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801008/122853.1.jpg"
       }
@@ -79517,7 +79517,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -79533,7 +79533,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -79549,7 +79549,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -79581,7 +79581,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -79597,7 +79597,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -79651,7 +79651,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8809415/431803.1.jpg"
       }
@@ -79667,7 +79667,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -79683,7 +79683,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8802876/205136.1.jpg"
       }
@@ -79699,7 +79699,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -79715,7 +79715,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -79747,7 +79747,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/0000080/176732.1.jpg"
       }
@@ -79795,7 +79795,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/5011053/025921.1.jpg"
       }
@@ -79827,7 +79827,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": ""
       }
@@ -79945,7 +79945,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801019/308246.1.jpg"
       }
@@ -80009,7 +80009,7 @@
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801008/002858.1.jpg"
       }
