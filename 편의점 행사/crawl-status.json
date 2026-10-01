@@ -1,10 +1,10 @@
 {
   "CU": {
-    "lastFreshAt": "2026-09-30",
-    "count": 1512
+    "lastFreshAt": "2026-10-01",
+    "count": 1531
   },
   "GS25": {
-    "lastFreshAt": "2026-09-30",
+    "lastFreshAt": "2026-10-01",
     "count": 1855
   },
   "7-ELEVEN": {
@@ -12,8 +12,8 @@
     "count": 1906
   },
   "EMART24": {
-    "lastFreshAt": "2026-09-30",
-    "count": 1462
+    "lastFreshAt": "2026-10-01",
+    "count": 1467
   },
   "__stores": {
     "lastChangedAt": "2026-07-31",
