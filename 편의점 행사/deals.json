@@ -93,7 +93,7 @@
     "category": "스낵·과자",
     "price": 2200,
     "saving": 2200,
-    "barcode": "8801007358499",
+    "barcode": "8801007021652",
     "events": {
       "CU": {
         "type": "1+1",
@@ -449,7 +449,7 @@
     "category": "생활용품",
     "price": 18000,
     "saving": 18000,
-    "barcode": "8809685746973",
+    "barcode": "8806403068409",
     "events": {
       "CU": {
         "type": "1+1",
@@ -1030,8 +1030,8 @@
     "name": "사조)스노우크랩킹140g",
     "category": "간편식",
     "price": 5500,
-    "saving": 1833,
-    "barcode": "8801066056169",
+    "saving": 5500,
+    "barcode": "8801066055438",
     "events": {
       "CU": {
         "type": "2+1",
@@ -1581,7 +1581,7 @@
     "category": "스낵·과자",
     "price": 2200,
     "saving": 2200,
-    "barcode": "8801392059636",
+    "barcode": "8801007849126",
     "events": {
       "CU": {
         "type": "1+1",
@@ -5266,8 +5266,8 @@
     "name": "동원)얼라이브망고200ml",
     "category": "기타",
     "price": 1500,
-    "saving": 500,
-    "barcode": "8801155735081",
+    "saving": 1500,
+    "barcode": "8801155735647",
     "events": {
       "CU": {
         "type": "2+1",
@@ -5282,8 +5282,8 @@
     "name": "동원)얼라이브자몽200ml",
     "category": "기타",
     "price": 1500,
-    "saving": 500,
-    "barcode": "8801155735074",
+    "saving": 1500,
+    "barcode": "8801155744762",
     "events": {
       "CU": {
         "type": "2+1",
@@ -5937,7 +5937,7 @@
     "category": "기타",
     "price": 9900,
     "saving": 9900,
-    "barcode": "8801392203954",
+    "barcode": "8801392087073",
     "events": {
       "CU": {
         "type": "1+1",
@@ -7779,7 +7779,7 @@
     "category": "기타",
     "price": 9900,
     "saving": 9900,
-    "barcode": "8801392203992",
+    "barcode": "8801392151118",
     "events": {
       "CU": {
         "type": "1+1",
@@ -11287,7 +11287,7 @@
     "category": "기타",
     "price": 1600,
     "saving": 533,
-    "barcode": "8801056018900",
+    "barcode": "8801056048150",
     "events": {
       "CU": {
         "type": "2+1",
@@ -11303,7 +11303,7 @@
     "category": "기타",
     "price": 2700,
     "saving": 900,
-    "barcode": "8801037057843",
+    "barcode": "8801037087550",
     "events": {
       "CU": {
         "type": "2+1",
@@ -11319,7 +11319,7 @@
     "category": "기타",
     "price": 2700,
     "saving": 900,
-    "barcode": "8801037057867",
+    "barcode": "8801037087741",
     "events": {
       "CU": {
         "type": "2+1",
@@ -11351,7 +11351,7 @@
     "category": "음료",
     "price": 2800,
     "saving": 933,
-    "barcode": "8801056048129",
+    "barcode": "8801056018948",
     "events": {
       "CU": {
         "type": "2+1",
@@ -11481,7 +11481,7 @@
     "category": "음료",
     "price": 2700,
     "saving": 900,
-    "barcode": "8801037064346",
+    "barcode": "8801037087543",
     "events": {
       "CU": {
         "type": "2+1",
@@ -11541,7 +11541,7 @@
     "category": "기타",
     "price": 1000,
     "saving": 333,
-    "barcode": "8801043020473",
+    "barcode": "8801043022781",
     "events": {
       "CU": {
         "type": "2+1",
@@ -11601,7 +11601,7 @@
     "category": "음료",
     "price": 1300,
     "saving": 433,
-    "barcode": "8801115135708",
+    "barcode": "8801115134039",
     "events": {
       "CU": {
         "type": "2+1",
@@ -11635,7 +11635,7 @@
     "category": "음료",
     "price": 1300,
     "saving": 433,
-    "barcode": "8801115134213",
+    "barcode": "8801115134435",
     "events": {
       "CU": {
         "type": "2+1",
@@ -11935,7 +11935,7 @@
     "category": "간편식",
     "price": 2400,
     "saving": 800,
-    "barcode": "8801077285701",
+    "barcode": "8801077285800",
     "events": {
       "CU": {
         "type": "2+1",
@@ -12213,7 +12213,7 @@
     "category": "음료",
     "price": 1300,
     "saving": 433,
-    "barcode": "8801115134220",
+    "barcode": "8801115134237",
     "events": {
       "CU": {
         "type": "2+1",
@@ -12901,7 +12901,7 @@
     "category": "간편식",
     "price": 4800,
     "saving": 1600,
-    "barcode": "8801047121312",
+    "barcode": "8801047121350",
     "events": {
       "CU": {
         "type": "2+1",
@@ -13951,7 +13951,7 @@
     "category": "기타",
     "price": 8900,
     "saving": 2967,
-    "barcode": "8801007512259",
+    "barcode": "8801007512235",
     "events": {
       "CU": {
         "type": "2+1",
@@ -16403,7 +16403,7 @@
     "category": "기타",
     "price": 6900,
     "saving": 2300,
-    "barcode": "8801007029641",
+    "barcode": "8801007029658",
     "events": {
       "CU": {
         "type": "2+1",
@@ -16823,7 +16823,7 @@
     "category": "간편식",
     "price": 4900,
     "saving": 1633,
-    "barcode": "8801074255851",
+    "barcode": "8801074251372",
     "events": {
       "CU": {
         "type": "2+1",
@@ -18465,7 +18465,7 @@
     "category": "기타",
     "price": 6700,
     "saving": 2233,
-    "barcode": "8801007216317",
+    "barcode": "8801007281247",
     "events": {
       "CU": {
         "type": "2+1",
@@ -19541,7 +19541,7 @@
     "category": "기타",
     "price": 5000,
     "saving": 1667,
-    "barcode": "8801066062979",
+    "barcode": "8801066062986",
     "events": {
       "CU": {
         "type": "2+1",
@@ -21785,7 +21785,7 @@
     "category": "간편식",
     "price": 2400,
     "saving": 800,
-    "barcode": "8801077384800",
+    "barcode": "8801077384305",
     "events": {
       "CU": {
         "type": "2+1",
@@ -26549,7 +26549,7 @@
     "category": "기타",
     "price": 2400,
     "saving": 800,
-    "barcode": "8806011619161",
+    "barcode": "8806011619154",
     "events": {
       "CU": {
         "type": "2+1",
