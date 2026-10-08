@@ -10886,6 +10886,62 @@
     }
   },
   {
+    "id": "빙그레곤약젤리복숭아",
+    "name": "빙그레)곤약젤리복숭아",
+    "category": "스낵·과자",
+    "price": 1900,
+    "saving": 1900,
+    "barcode": "8801104946117",
+    "events": {
+      "CU": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801104946117.jpg"
+      },
+      "GS25": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_8801104946117_002.jpg"
+      },
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104946117.JPG"
+      }
+    }
+  },
+  {
+    "id": "빙그레곤약젤리청포도",
+    "name": "빙그레)곤약젤리청포도",
+    "category": "스낵·과자",
+    "price": 1900,
+    "saving": 1900,
+    "barcode": "8801104946148",
+    "events": {
+      "CU": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801104946148.jpg"
+      },
+      "GS25": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_8801104946148_002.jpg"
+      },
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104946148.JPG"
+      }
+    }
+  },
+  {
     "id": "크라운새콤달콤복숭아",
     "name": "크라운)새콤달콤복숭아",
     "category": "기타",
@@ -12506,6 +12562,28 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801056049201.jpg"
+      }
+    }
+  },
+  {
+    "id": "롯데스크류바",
+    "name": "롯데)스크류바",
+    "category": "아이스크림",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801062417018",
+    "events": {
+      "CU": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801062417018.jpg"
+      },
+      "GS25": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_8801062417018_021.jpg"
       }
     }
   },
@@ -16743,7 +16821,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809709261178.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809709261178_1.png"
       }
     }
   },
@@ -20647,7 +20725,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809345610842.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809345610842_1.png"
       }
     }
   },
@@ -20663,7 +20741,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809345610859.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809345610859_1.png"
       }
     }
   },
@@ -46402,50 +46480,6 @@
     }
   },
   {
-    "id": "빙그레곤약젤리복숭아",
-    "name": "빙그레)곤약젤리복숭아130ML",
-    "category": "스낵·과자",
-    "price": 1900,
-    "saving": 1900,
-    "barcode": "8801104946117",
-    "events": {
-      "GS25": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_8801104946117_002.jpg"
-      },
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104946117.JPG"
-      }
-    }
-  },
-  {
-    "id": "빙그레곤약젤리청포도",
-    "name": "빙그레)곤약젤리청포도130ML",
-    "category": "스낵·과자",
-    "price": 1900,
-    "saving": 1900,
-    "barcode": "8801104946148",
-    "events": {
-      "GS25": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_8801104946148_002.jpg"
-      },
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104946148.JPG"
-      }
-    }
-  },
-  {
     "id": "트롤리계란후라이젤리",
     "name": "트롤리)계란후라이젤리",
     "category": "스낵·과자",
@@ -50176,22 +50210,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://image.woodongs.com/imgsvr/item/GD_8801062417056_058.jpg"
-      }
-    }
-  },
-  {
-    "id": "롯데스크류바",
-    "name": "롯데)스크류바75ML",
-    "category": "아이스크림",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801062417018",
-    "events": {
-      "GS25": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_8801062417018_021.jpg"
       }
     }
   },
