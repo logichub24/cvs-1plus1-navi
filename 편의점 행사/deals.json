@@ -53250,8 +53250,8 @@
     "name": "대림)스노우크랩킹70g",
     "category": "간편식",
     "price": 3000,
-    "saving": 1000,
-    "barcode": "8801066055438",
+    "saving": 3000,
+    "barcode": "8801066056169",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -53539,7 +53539,7 @@
     "category": "기타",
     "price": 2100,
     "saving": 2100,
-    "barcode": null,
+    "barcode": "8801056241506",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -53779,7 +53779,7 @@
     "category": "기타",
     "price": 1800,
     "saving": 1800,
-    "barcode": null,
+    "barcode": "3073780886840",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -54153,13 +54153,13 @@
     "category": "기타",
     "price": 4800,
     "saving": 4800,
-    "barcode": null,
+    "barcode": "3073780886840",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": ""
+        "image": "https://www.7-eleven.co.kr/upload/product/3073780/886840.1"
       }
     }
   },
@@ -54185,13 +54185,13 @@
     "category": "기타",
     "price": 11200,
     "saving": 11200,
-    "barcode": null,
+    "barcode": "3073780886840",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": ""
+        "image": "https://www.7-eleven.co.kr/upload/product/3073780/886840.1"
       }
     }
   },
@@ -55479,7 +55479,7 @@
     "category": "음료",
     "price": 2300,
     "saving": 2300,
-    "barcode": "8801056175900",
+    "barcode": "8801056175955",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -60575,7 +60575,7 @@
     "category": "음료",
     "price": 2500,
     "saving": 2500,
-    "barcode": "8801056150013",
+    "barcode": "8801056193010",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -60687,7 +60687,7 @@
     "category": "음료",
     "price": 2600,
     "saving": 2600,
-    "barcode": "8801094083205",
+    "barcode": "8801094082604",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -61243,7 +61243,7 @@
     "category": "음료",
     "price": 2500,
     "saving": 2500,
-    "barcode": "8801056177645",
+    "barcode": "8801056177584",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -61450,8 +61450,8 @@
     "name": "칠성)잔치집식혜500ml",
     "category": "음료",
     "price": 2200,
-    "saving": 733,
-    "barcode": "8801056063245",
+    "saving": 2200,
+    "barcode": "8801056230630",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -66891,7 +66891,7 @@
     "category": "음료",
     "price": 5100,
     "saving": 1700,
-    "barcode": "8801074003896",
+    "barcode": "8801074003490",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74371,7 +74371,7 @@
     "category": "기타",
     "price": 1600,
     "saving": 533,
-    "barcode": "8801097481206",
+    "barcode": "8801097481015",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74387,7 +74387,7 @@
     "category": "음료",
     "price": 2800,
     "saving": 933,
-    "barcode": "8801056048150",
+    "barcode": "8801056018900",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74467,7 +74467,7 @@
     "category": "음료",
     "price": 2700,
     "saving": 900,
-    "barcode": "8801037064346",
+    "barcode": "8801037087543",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74483,7 +74483,7 @@
     "category": "음료",
     "price": 2700,
     "saving": 900,
-    "barcode": "8801037057843",
+    "barcode": "8801037087550",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74927,7 +74927,7 @@
     "category": "음료",
     "price": 1500,
     "saving": 500,
-    "barcode": "8801097235014",
+    "barcode": "8801097135215",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74943,7 +74943,7 @@
     "category": "기타",
     "price": 1100,
     "saving": 367,
-    "barcode": null,
+    "barcode": "8801056049881",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -75279,7 +75279,7 @@
     "category": "음료",
     "price": 2000,
     "saving": 667,
-    "barcode": "8801097136618",
+    "barcode": "8801097235670",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -76043,7 +76043,7 @@
     "category": "기타",
     "price": 8900,
     "saving": 2967,
-    "barcode": "8801007512259",
+    "barcode": "8801007512235",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
