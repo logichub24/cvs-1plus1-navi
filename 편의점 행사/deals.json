@@ -4634,34 +4634,6 @@
     }
   },
   {
-    "id": "cj동치미냉면육수",
-    "name": "CJ)동치미냉면육수300g",
-    "category": "라면",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8801007033686",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007033686.png"
-      },
-      "GS25": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_8801007033686_004.jpg"
-      },
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8801007/033686.1.jpg"
-      }
-    }
-  },
-  {
     "id": "cj두부듬뿍김치찌개",
     "name": "CJ)두부듬뿍김치찌개460g",
     "category": "기타",
@@ -12117,7 +12089,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801043015745.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801043015745_1.png"
       }
     }
   },
@@ -13225,7 +13197,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801043015837.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801043015837_1.png"
       }
     }
   },
@@ -14598,22 +14570,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115381761_1.png"
-      }
-    }
-  },
-  {
-    "id": "서울꿀딴지딸기우유",
-    "name": "서울)꿀딴지딸기우유180ml",
-    "category": "음료",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8801115384014",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115384014.jpg"
       }
     }
   },
@@ -21448,22 +21404,6 @@
     }
   },
   {
-    "id": "삼립볼케이노bbq치킨누들",
-    "name": "삼립)볼케이노BBQ치킨누들",
-    "category": "간편식",
-    "price": 8900,
-    "saving": 2967,
-    "barcode": "8801068930672",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801068930672.jpg"
-      }
-    }
-  },
-  {
     "id": "동서맥심모카제로슈거20t",
     "name": "동서)맥심모카제로슈거20T",
     "category": "기타",
@@ -21530,22 +21470,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801047648871.jpg"
-      }
-    }
-  },
-  {
-    "id": "삼립블랙소이bbq치킨누들",
-    "name": "삼립)블랙소이BBQ치킨누들",
-    "category": "간편식",
-    "price": 8900,
-    "saving": 2967,
-    "barcode": "8801068930665",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801068930665.jpg"
       }
     }
   },
@@ -28904,6 +28828,28 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://image.woodongs.com/imgsvr/item/GD_8853301550017_002.jpg"
+      }
+    }
+  },
+  {
+    "id": "cj동치미냉면육수",
+    "name": "CJ)동치미냉면육수300G",
+    "category": "라면",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8801007033686",
+    "events": {
+      "GS25": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_8801007033686_004.jpg"
+      },
+      "7-ELEVEN": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://www.7-eleven.co.kr/upload/product/8801007/033686.1.jpg"
       }
     }
   },
@@ -77252,6 +77198,326 @@
     }
   },
   {
+    "id": "에스엠유니콘풉마쉬멜로",
+    "name": "에스엠)유니콘풉마쉬멜로42g",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "4582660025594",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4582660025594.JPG"
+      }
+    }
+  },
+  {
+    "id": "에스엠스위티하트마쉬멜로",
+    "name": "에스엠)스위티하트마쉬멜로45g",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "4582660025761",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4582660025761.JPG"
+      }
+    }
+  },
+  {
+    "id": "호올스제로슈가민트민트향15",
+    "name": "호올스)제로슈가민트민트향15.4g",
+    "category": "기타",
+    "price": 2000,
+    "saving": 2000,
+    "barcode": "7622202342134",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/7622202342134.JPG"
+      }
+    }
+  },
+  {
+    "id": "츄파춥스인크레더블츄딸기맛",
+    "name": "츄파춥스)인크레더블츄딸기맛45g",
+    "category": "기타",
+    "price": 1200,
+    "saving": 1200,
+    "barcode": "8801043045551",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043045551.JPG"
+      }
+    }
+  },
+  {
+    "id": "츄파춥스플러피판다",
+    "name": "츄파춥스)플러피판다60g",
+    "category": "기타",
+    "price": 1700,
+    "saving": 1700,
+    "barcode": "8801043047081",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043047081.JPG"
+      }
+    }
+  },
+  {
+    "id": "오뚜기스리라차나쵸12",
+    "name": "오뚜기)스리라차나쵸120g(12)",
+    "category": "기타",
+    "price": 3500,
+    "saving": 3500,
+    "barcode": "8801045487229",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045487229.JPG"
+      }
+    }
+  },
+  {
+    "id": "베리베리블루베리크림콘16",
+    "name": "베리베리)블루베리크림콘72g(16)",
+    "category": "기타",
+    "price": 1500,
+    "saving": 1500,
+    "barcode": "8801204904857",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801204904857.JPG"
+      }
+    }
+  },
+  {
+    "id": "cj밸런스밀프로틴바말차초코",
+    "name": "CJ)밸런스밀프로틴바말차초코38g",
+    "category": "스낵·과자",
+    "price": 2900,
+    "saving": 2900,
+    "barcode": "8801392154379",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392154379.JPG"
+      }
+    }
+  },
+  {
+    "id": "cj밸런스밀프로틴바피넛버터",
+    "name": "CJ)밸런스밀프로틴바피넛버터34g",
+    "category": "스낵·과자",
+    "price": 2900,
+    "saving": 2900,
+    "barcode": "8801392154393",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392154393.JPG"
+      }
+    }
+  },
+  {
+    "id": "말차310말초키16",
+    "name": "말차310)말초키100g(16)",
+    "category": "기타",
+    "price": 1700,
+    "saving": 1700,
+    "barcode": "8803718103252",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8803718103252.JPG"
+      }
+    }
+  },
+  {
+    "id": "위너스망고콘16",
+    "name": "위너스)망고콘80g(16)",
+    "category": "기타",
+    "price": 1700,
+    "saving": 1700,
+    "barcode": "8809304880576",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809304880576.JPG"
+      }
+    }
+  },
+  {
+    "id": "베리베리에브리베리씨리얼바",
+    "name": "베리베리)에브리베리씨리얼바40g",
+    "category": "스낵·과자",
+    "price": 1500,
+    "saving": 1500,
+    "barcode": "8809387747094",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809387747094.JPG"
+      }
+    }
+  },
+  {
+    "id": "토이스토리드로잉패드키링앤캔디",
+    "name": "토이스토리)드로잉패드키링앤캔디12g",
+    "category": "스낵·과자",
+    "price": 5900,
+    "saving": 5900,
+    "barcode": "8809402813476",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809402813476.JPG"
+      }
+    }
+  },
+  {
+    "id": "슈야토야멜라지구미",
+    "name": "슈야토야)멜라지구미30g",
+    "category": "기타",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8809535032751",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809535032751.JPG"
+      }
+    }
+  },
+  {
+    "id": "선우초코두쫀볼두바이한정",
+    "name": "선우)초코두쫀볼40g(두바이한정)",
+    "category": "기타",
+    "price": 4500,
+    "saving": 4500,
+    "barcode": "8809963483774",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809963483774.JPG"
+      }
+    }
+  },
+  {
+    "id": "선우얼려먹는젤리1탄",
+    "name": "선우)얼려먹는젤리1탄72g",
+    "category": "스낵·과자",
+    "price": 2000,
+    "saving": 2000,
+    "barcode": "8809963484191",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809963484191.JPG"
+      }
+    }
+  },
+  {
+    "id": "선우얼려먹는젤리2탄",
+    "name": "선우)얼려먹는젤리2탄72g",
+    "category": "스낵·과자",
+    "price": 2000,
+    "saving": 2000,
+    "barcode": "8809963484221",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809963484221.JPG"
+      }
+    }
+  },
+  {
+    "id": "선우쿠쫀볼한정",
+    "name": "선우)쿠쫀볼40g(한정)",
+    "category": "기타",
+    "price": 4500,
+    "saving": 4500,
+    "barcode": "8809963484290",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809963484290.JPG"
+      }
+    }
+  },
+  {
+    "id": "선우황치즈두쫀볼한정",
+    "name": "선우)황치즈두쫀볼40g(한정)",
+    "category": "유제품",
+    "price": 4500,
+    "saving": 4500,
+    "barcode": "8809963484399",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809963484399.JPG"
+      }
+    }
+  },
+  {
+    "id": "옐로우컵버터쿠키s",
+    "name": "옐로우)컵버터쿠키400g(s)",
+    "category": "스낵·과자",
+    "price": 4300,
+    "saving": 4300,
+    "barcode": "8993083943239",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8993083943239.JPG"
+      }
+    }
+  },
+  {
     "id": "링티제로레몬펫",
     "name": "링티)제로레몬펫500ml",
     "category": "기타",
@@ -77380,38 +77646,6 @@
     }
   },
   {
-    "id": "에스엠유니콘풉마쉬멜로",
-    "name": "에스엠)유니콘풉마쉬멜로42g",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "4582660025594",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4582660025594.JPG"
-      }
-    }
-  },
-  {
-    "id": "에스엠스위티하트마쉬멜로",
-    "name": "에스엠)스위티하트마쉬멜로45g",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "4582660025761",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4582660025761.JPG"
-      }
-    }
-  },
-  {
     "id": "코카뱅피치망고캔",
     "name": "코카)뱅피치망고캔355ml",
     "category": "기타",
@@ -77520,22 +77754,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6930343479819.JPG"
-      }
-    }
-  },
-  {
-    "id": "호올스제로슈가민트민트향15",
-    "name": "호올스)제로슈가민트민트향15.4g",
-    "category": "기타",
-    "price": 2000,
-    "saving": 2000,
-    "barcode": "7622202342134",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/7622202342134.JPG"
       }
     }
   },
@@ -78260,38 +78478,6 @@
     }
   },
   {
-    "id": "츄파춥스인크레더블츄딸기맛",
-    "name": "츄파춥스)인크레더블츄딸기맛45g",
-    "category": "기타",
-    "price": 1200,
-    "saving": 1200,
-    "barcode": "8801043045551",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043045551.JPG"
-      }
-    }
-  },
-  {
-    "id": "츄파춥스플러피판다",
-    "name": "츄파춥스)플러피판다60g",
-    "category": "기타",
-    "price": 1700,
-    "saving": 1700,
-    "barcode": "8801043047081",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043047081.JPG"
-      }
-    }
-  },
-  {
     "id": "오뚜기컵밥치즈불닭마요덮밥",
     "name": "오뚜기)컵밥치즈불닭마요덮밥",
     "category": "간편식",
@@ -78336,22 +78522,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045415888.JPG"
-      }
-    }
-  },
-  {
-    "id": "오뚜기스리라차나쵸12",
-    "name": "오뚜기)스리라차나쵸120g(12)",
-    "category": "기타",
-    "price": 3500,
-    "saving": 3500,
-    "barcode": "8801045487229",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045487229.JPG"
       }
     }
   },
@@ -81300,22 +81470,6 @@
     }
   },
   {
-    "id": "베리베리블루베리크림콘16",
-    "name": "베리베리)블루베리크림콘72g(16)",
-    "category": "기타",
-    "price": 1500,
-    "saving": 1500,
-    "barcode": "8801204904857",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801204904857.JPG"
-      }
-    }
-  },
-  {
     "id": "깨끗한나라순수소프트27m12롤",
     "name": "깨끗한나라)순수소프트27m*12롤",
     "category": "생활용품",
@@ -81988,38 +82142,6 @@
     }
   },
   {
-    "id": "cj밸런스밀프로틴바말차초코",
-    "name": "CJ)밸런스밀프로틴바말차초코38g",
-    "category": "스낵·과자",
-    "price": 2900,
-    "saving": 2900,
-    "barcode": "8801392154379",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392154379.JPG"
-      }
-    }
-  },
-  {
-    "id": "cj밸런스밀프로틴바피넛버터",
-    "name": "CJ)밸런스밀프로틴바피넛버터34g",
-    "category": "스낵·과자",
-    "price": 2900,
-    "saving": 2900,
-    "barcode": "8801392154393",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392154393.JPG"
-      }
-    }
-  },
-  {
     "id": "cj소바바레드핫치킨",
     "name": "CJ)소바바레드핫치킨240g",
     "category": "간편식",
@@ -82544,22 +82666,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8803186000992.JPG"
-      }
-    }
-  },
-  {
-    "id": "말차310말초키16",
-    "name": "말차310)말초키100g(16)",
-    "category": "기타",
-    "price": 1700,
-    "saving": 1700,
-    "barcode": "8803718103252",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8803718103252.JPG"
       }
     }
   },
@@ -84020,22 +84126,6 @@
     }
   },
   {
-    "id": "위너스망고콘16",
-    "name": "위너스)망고콘80g(16)",
-    "category": "기타",
-    "price": 1700,
-    "saving": 1700,
-    "barcode": "8809304880576",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809304880576.JPG"
-      }
-    }
-  },
-  {
     "id": "딥스춘식이해양심층수펫",
     "name": "딥스)춘식이해양심층수펫500ml",
     "category": "기타",
@@ -84132,22 +84222,6 @@
     }
   },
   {
-    "id": "베리베리에브리베리씨리얼바",
-    "name": "베리베리)에브리베리씨리얼바40g",
-    "category": "스낵·과자",
-    "price": 1500,
-    "saving": 1500,
-    "barcode": "8809387747094",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809387747094.JPG"
-      }
-    }
-  },
-  {
     "id": "이디야토피넛시그니처라떼",
     "name": "이디야)토피넛시그니처라떼300ml",
     "category": "음료",
@@ -84176,22 +84250,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809389494118.JPG"
-      }
-    }
-  },
-  {
-    "id": "토이스토리드로잉패드키링앤캔디",
-    "name": "토이스토리)드로잉패드키링앤캔디12g",
-    "category": "스낵·과자",
-    "price": 5900,
-    "saving": 5900,
-    "barcode": "8809402813476",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809402813476.JPG"
       }
     }
   },
@@ -84640,22 +84698,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809497532597.JPG"
-      }
-    }
-  },
-  {
-    "id": "슈야토야멜라지구미",
-    "name": "슈야토야)멜라지구미30g",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": "8809535032751",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809535032751.JPG"
       }
     }
   },
@@ -85636,86 +85678,6 @@
     }
   },
   {
-    "id": "선우초코두쫀볼두바이한정",
-    "name": "선우)초코두쫀볼40g(두바이한정)",
-    "category": "기타",
-    "price": 4500,
-    "saving": 4500,
-    "barcode": "8809963483774",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809963483774.JPG"
-      }
-    }
-  },
-  {
-    "id": "선우얼려먹는젤리1탄",
-    "name": "선우)얼려먹는젤리1탄72g",
-    "category": "스낵·과자",
-    "price": 2000,
-    "saving": 2000,
-    "barcode": "8809963484191",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809963484191.JPG"
-      }
-    }
-  },
-  {
-    "id": "선우얼려먹는젤리2탄",
-    "name": "선우)얼려먹는젤리2탄72g",
-    "category": "스낵·과자",
-    "price": 2000,
-    "saving": 2000,
-    "barcode": "8809963484221",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809963484221.JPG"
-      }
-    }
-  },
-  {
-    "id": "선우쿠쫀볼한정",
-    "name": "선우)쿠쫀볼40g(한정)",
-    "category": "기타",
-    "price": 4500,
-    "saving": 4500,
-    "barcode": "8809963484290",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809963484290.JPG"
-      }
-    }
-  },
-  {
-    "id": "선우황치즈두쫀볼한정",
-    "name": "선우)황치즈두쫀볼40g(한정)",
-    "category": "유제품",
-    "price": 4500,
-    "saving": 4500,
-    "barcode": "8809963484399",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809963484399.JPG"
-      }
-    }
-  },
-  {
     "id": "유니프믹스그린주스",
     "name": "유니프)믹스그린주스200ml",
     "category": "음료",
@@ -85760,70 +85722,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8901138011413.JPG"
-      }
-    }
-  },
-  {
-    "id": "옐로우컵버터쿠키s",
-    "name": "옐로우)컵버터쿠키400g(s)",
-    "category": "스낵·과자",
-    "price": 4300,
-    "saving": 4300,
-    "barcode": "8993083943239",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8993083943239.JPG"
-      }
-    }
-  },
-  {
-    "id": "질러볼케이노육포",
-    "name": "질러)볼케이노육포30g",
-    "category": "기타",
-    "price": 4200,
-    "saving": 1400,
-    "barcode": "8801005632201",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801005632201.JPG"
-      }
-    }
-  },
-  {
-    "id": "엘투빙홍차펫",
-    "name": "엘투)빙홍차펫550ml",
-    "category": "음료",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "6980025460000",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6980025460000.JPG"
-      }
-    }
-  },
-  {
-    "id": "싱하라임레몬소다제로캔",
-    "name": "싱하)라임레몬소다제로캔355ml",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8800307633770",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800307633770.JPG"
       }
     }
   },
@@ -85892,118 +85790,6 @@
     }
   },
   {
-    "id": "후라잉빅찰도그체다치즈판매용",
-    "name": "후라잉)빅찰도그체다치즈(판매용)",
-    "category": "유제품",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "1500000138233",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/1500000138233.JPG"
-      }
-    }
-  },
-  {
-    "id": "오븐매콤다리살꼬치판매용",
-    "name": "오븐)매콤다리살꼬치(판매용)",
-    "category": "간편식",
-    "price": 2400,
-    "saving": 800,
-    "barcode": "1500000165703",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/1500000165703.JPG"
-      }
-    }
-  },
-  {
-    "id": "후라잉빅후랑크소시지판매용",
-    "name": "후라잉)빅후랑크소시지(판매용)",
-    "category": "간편식",
-    "price": 2600,
-    "saving": 867,
-    "barcode": "1500000189341",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/1500000189341.JPG"
-      }
-    }
-  },
-  {
-    "id": "후라잉빅후랑크매콤소시지판매용",
-    "name": "후라잉)빅후랑크매콤소시지(판매용)",
-    "category": "간편식",
-    "price": 2600,
-    "saving": 867,
-    "barcode": "1500000189365",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/1500000189365.JPG"
-      }
-    }
-  },
-  {
-    "id": "숯불직화데리야끼닭꼬치판매용",
-    "name": "숯불직화데리야끼닭꼬치(판매용)",
-    "category": "간편식",
-    "price": 2300,
-    "saving": 767,
-    "barcode": "1500000210533",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/1500000210533.JPG"
-      }
-    }
-  },
-  {
-    "id": "니베아립케어에센셜4",
-    "name": "니베아)립케어에센셜4.8g",
-    "category": "기타",
-    "price": 5500,
-    "saving": 1833,
-    "barcode": "4005808369485",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4005808369485.JPG"
-      }
-    }
-  },
-  {
-    "id": "니베아립케어스트로베리4",
-    "name": "니베아)립케어스트로베리4.8g",
-    "category": "기타",
-    "price": 5500,
-    "saving": 1833,
-    "barcode": "4005808372881",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4005808372881.JPG"
-      }
-    }
-  },
-  {
     "id": "히츨러히치스수수깡젤리오리지날a",
     "name": "히츨러)히치스수수깡젤리오리지날40g(A)",
     "category": "스낵·과자",
@@ -86016,86 +85802,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4100250052401.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심보노체다치즈스프3입",
-    "name": "농심)보노체다치즈스프3입",
-    "category": "유제품",
-    "price": 4400,
-    "saving": 1467,
-    "barcode": "4901001123094",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4901001123094.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심이토엔오이오차녹차펫",
-    "name": "농심)이토엔오이오차녹차펫525ml",
-    "category": "음료",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "4901085003800",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4901085003800.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심야키호타테카이히모가리비덧살",
-    "name": "농심)야키호타테카이히모14g(가리비덧살)",
-    "category": "기타",
-    "price": 3900,
-    "saving": 1300,
-    "barcode": "4902181098738",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4902181098738.JPG"
-      }
-    }
-  },
-  {
-    "id": "에이스소이푸딩유자크림치즈",
-    "name": "에이스)소이푸딩유자크림치즈100g",
-    "category": "유제품",
-    "price": 4700,
-    "saving": 1567,
-    "barcode": "4903039240491",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4903039240491.JPG"
-      }
-    }
-  },
-  {
-    "id": "쥬맥스기린오후의차밀크티펫",
-    "name": "쥬맥스)기린오후의차밀크티펫500ml",
-    "category": "주류",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "4909411116972",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4909411116972.JPG"
       }
     }
   },
@@ -86160,38 +85866,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/54010697.JPG"
-      }
-    }
-  },
-  {
-    "id": "로투스벨지안와플",
-    "name": "로투스)벨지안와플50g",
-    "category": "기타",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "5410126132038",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/5410126132038.JPG"
-      }
-    }
-  },
-  {
-    "id": "로투스벨지안와플초콜렛57",
-    "name": "로투스)벨지안와플초콜렛57.5g",
-    "category": "기타",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "5410126132472",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/5410126132472.JPG"
       }
     }
   },
@@ -86340,38 +86014,6 @@
     }
   },
   {
-    "id": "엘투붉은빛의우롱티펫",
-    "name": "엘투)붉은빛의우롱티펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "6974906992025",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6974906992025.JPG"
-      }
-    }
-  },
-  {
-    "id": "엘투눈꽃내리는자스민티펫",
-    "name": "엘투)눈꽃내리는자스민티펫500ml",
-    "category": "기타",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "6974906992384",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6974906992384.JPG"
-      }
-    }
-  },
-  {
     "id": "호올스블루베리27",
     "name": "호올스)블루베리27.9g",
     "category": "기타",
@@ -86512,6 +86154,1926 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8445291079717.JPG"
+      }
+    }
+  },
+  {
+    "id": "해태샌드에이스우유크림24한정",
+    "name": "해태)샌드에이스우유크림51g(24)한정",
+    "category": "음료",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801019320125",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019320125.JPG"
+      }
+    }
+  },
+  {
+    "id": "해태에이스씬솔티카라멜맛16한정",
+    "name": "해태)에이스씬솔티카라멜맛145g(16)한정",
+    "category": "기타",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "8801019320347",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019320347.JPG"
+      }
+    }
+  },
+  {
+    "id": "해태버터링with에쉬레버터18한정",
+    "name": "해태)버터링with에쉬레버터86g(18)한정",
+    "category": "유제품",
+    "price": 3000,
+    "saving": 1000,
+    "barcode": "8801019320859",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019320859.JPG"
+      }
+    }
+  },
+  {
+    "id": "해태구운감자100030",
+    "name": "해태)구운감자1000(30)",
+    "category": "기타",
+    "price": 1000,
+    "saving": 333,
+    "barcode": "8801019602498",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019602498.JPG"
+      }
+    }
+  },
+  {
+    "id": "해태맛동산중12",
+    "name": "해태)맛동산165g(중)(12)",
+    "category": "기타",
+    "price": 3200,
+    "saving": 1067,
+    "barcode": "8801019603426",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019603426.JPG"
+      }
+    }
+  },
+  {
+    "id": "해태자가비짭짤한맛12",
+    "name": "해태)자가비짭짤한맛45g(12)",
+    "category": "기타",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8801019607912",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019607912.JPG"
+      }
+    }
+  },
+  {
+    "id": "해태맛동산10",
+    "name": "해태)맛동산90g(10)",
+    "category": "기타",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8801019608766",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019608766.JPG"
+      }
+    }
+  },
+  {
+    "id": "해태자가비케첩맛12",
+    "name": "해태)자가비케첩맛45g(12)",
+    "category": "기타",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8801019610929",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019610929.JPG"
+      }
+    }
+  },
+  {
+    "id": "해태구운양파16",
+    "name": "해태)구운양파60g(16)",
+    "category": "기타",
+    "price": 1700,
+    "saving": 567,
+    "barcode": "8801019611049",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019611049.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서오레오웨하스스틱낱개",
+    "name": "동서)오레오웨하스스틱(낱개)",
+    "category": "기타",
+    "price": 700,
+    "saving": 233,
+    "barcode": "8801037090178",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037090178.JPG"
+      }
+    }
+  },
+  {
+    "id": "오레오씬즈화이트크림24",
+    "name": "오레오)씬즈화이트크림84g(24)",
+    "category": "기타",
+    "price": 2300,
+    "saving": 767,
+    "barcode": "8801037091113",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037091113.JPG"
+      }
+    }
+  },
+  {
+    "id": "리츠크래커24",
+    "name": "리츠)크래커80g(24)",
+    "category": "스낵·과자",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8801037091519",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037091519.JPG"
+      }
+    }
+  },
+  {
+    "id": "리츠치즈샌드",
+    "name": "리츠)치즈샌드",
+    "category": "유제품",
+    "price": 2400,
+    "saving": 800,
+    "barcode": "8801037091526",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037091526.JPG"
+      }
+    }
+  },
+  {
+    "id": "리츠레몬샌드",
+    "name": "리츠)레몬샌드96g",
+    "category": "기타",
+    "price": 2400,
+    "saving": 800,
+    "barcode": "8801037093452",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037093452.JPG"
+      }
+    }
+  },
+  {
+    "id": "리츠샌드위치크래커초코",
+    "name": "리츠)샌드위치크래커초코77g",
+    "category": "간편식",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8801037094374",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037094374.JPG"
+      }
+    }
+  },
+  {
+    "id": "리츠샌드위치크래커화이트",
+    "name": "리츠)샌드위치크래커화이트77g",
+    "category": "간편식",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8801037094664",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037094664.JPG"
+      }
+    }
+  },
+  {
+    "id": "오레오씬즈초코크림24",
+    "name": "오레오)씬즈초코크림84g(24)",
+    "category": "기타",
+    "price": 2300,
+    "saving": 767,
+    "barcode": "8801037094763",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037094763.JPG"
+      }
+    }
+  },
+  {
+    "id": "오레오민트초코24",
+    "name": "오레오)민트초코80g(24)",
+    "category": "기타",
+    "price": 2300,
+    "saving": 767,
+    "barcode": "8801037094909",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037094909.JPG"
+      }
+    }
+  },
+  {
+    "id": "오레오시나몬번24",
+    "name": "오레오)시나몬번80g(24)",
+    "category": "기타",
+    "price": 2300,
+    "saving": 767,
+    "barcode": "8801037095302",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037095302.JPG"
+      }
+    }
+  },
+  {
+    "id": "동서콘푸라이트밀크바",
+    "name": "동서)콘푸라이트밀크바35g",
+    "category": "기타",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "8801037095845",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037095845.JPG"
+      }
+    }
+  },
+  {
+    "id": "리츠어니언크래커",
+    "name": "리츠)어니언크래커73g",
+    "category": "스낵·과자",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8801037096217",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037096217.JPG"
+      }
+    }
+  },
+  {
+    "id": "리츠바삭김맛24",
+    "name": "리츠)바삭김맛73g(24)",
+    "category": "기타",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8801037097900",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037097900.JPG"
+      }
+    }
+  },
+  {
+    "id": "리츠맥시칸타코맛24",
+    "name": "리츠)맥시칸타코맛73g(24)",
+    "category": "기타",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8801037098921",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037098921.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심꿀꽈배기20",
+    "name": "농심)꿀꽈배기90g(20)",
+    "category": "기타",
+    "price": 1800,
+    "saving": 600,
+    "barcode": "8801043036177",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043036177.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심인디안밥20",
+    "name": "농심)인디안밥83g(20)",
+    "category": "기타",
+    "price": 1800,
+    "saving": 600,
+    "barcode": "8801043036672",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043036672.JPG"
+      }
+    }
+  },
+  {
+    "id": "츄파춥스사워바이츠",
+    "name": "츄파춥스)사워바이츠60g",
+    "category": "기타",
+    "price": 1700,
+    "saving": 567,
+    "barcode": "8801043067317",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043067317.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심포테토칩엽떡로제맛16",
+    "name": "농심)포테토칩엽떡로제맛55g(16)",
+    "category": "스낵·과자",
+    "price": 1800,
+    "saving": 600,
+    "barcode": "8801043067799",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043067799.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심먹태깡청양마요맛16",
+    "name": "농심)먹태깡청양마요맛60g(16)",
+    "category": "기타",
+    "price": 1800,
+    "saving": 600,
+    "barcode": "8801043068314",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043068314.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심포테토칩크림치즈소시지맛16",
+    "name": "농심)포테토칩크림치즈소시지맛55g(16)",
+    "category": "간편식",
+    "price": 1800,
+    "saving": 600,
+    "barcode": "8801043069823",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043069823.JPG"
+      }
+    }
+  },
+  {
+    "id": "오뚜기뿌셔뿌셔양념치킨맛팝콘12",
+    "name": "오뚜기)뿌셔뿌셔양념치킨맛팝콘45g(12)",
+    "category": "간편식",
+    "price": 2100,
+    "saving": 700,
+    "barcode": "8801045258218",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045258218.JPG"
+      }
+    }
+  },
+  {
+    "id": "오뚜기스위트콘나쵸12",
+    "name": "오뚜기)스위트콘나쵸60g(12)",
+    "category": "기타",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "8801045314556",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045314556.JPG"
+      }
+    }
+  },
+  {
+    "id": "오뚜기뿌셔뿌셔불고기맛팝콘12",
+    "name": "오뚜기)뿌셔뿌셔불고기맛팝콘45g(12)",
+    "category": "간편식",
+    "price": 2100,
+    "saving": 700,
+    "barcode": "8801045387802",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045387802.JPG"
+      }
+    }
+  },
+  {
+    "id": "오뚜기뿌셔뿌셔불고기맛24",
+    "name": "오뚜기)뿌셔뿌셔불고기맛(24)",
+    "category": "간편식",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801045560038",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045560038.JPG"
+      }
+    }
+  },
+  {
+    "id": "오뚜기뿌셔뿌셔양념치킨맛24",
+    "name": "오뚜기)뿌셔뿌셔양념치킨맛(24)",
+    "category": "간편식",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801045560052",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045560052.JPG"
+      }
+    }
+  },
+  {
+    "id": "오뚜기뿌셔뿌셔바베큐맛24",
+    "name": "오뚜기)뿌셔뿌셔바베큐맛(24)",
+    "category": "기타",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801045560076",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045560076.JPG"
+      }
+    }
+  },
+  {
+    "id": "오뚜기순후추팝콘12",
+    "name": "오뚜기)순후추팝콘55g(12)",
+    "category": "스낵·과자",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "8801045652573",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045652573.JPG"
+      }
+    }
+  },
+  {
+    "id": "오뚜기열라면프레첼20",
+    "name": "오뚜기)열라면프레첼50g(20)",
+    "category": "라면",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "8801045768014",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045768014.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데꼬깔콘고소한맛중12",
+    "name": "롯데)꼬깔콘고소한맛134g(중)(12)",
+    "category": "스낵·과자",
+    "price": 3400,
+    "saving": 1133,
+    "barcode": "8801062010578",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062010578.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데꼬깔콘군옥수수맛중12",
+    "name": "롯데)꼬깔콘군옥수수맛134g(중)(12)",
+    "category": "스낵·과자",
+    "price": 3400,
+    "saving": 1133,
+    "barcode": "8801062011315",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062011315.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데말랑카우딸기우유",
+    "name": "롯데)말랑카우딸기우유79g",
+    "category": "음료",
+    "price": 3000,
+    "saving": 1000,
+    "barcode": "8801062013395",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062013395.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데오잉12",
+    "name": "롯데)오잉75g(12)",
+    "category": "기타",
+    "price": 1700,
+    "saving": 567,
+    "barcode": "8801062382811",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062382811.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데쌀로별오리지널16",
+    "name": "롯데)쌀로별오리지널78g(16)",
+    "category": "기타",
+    "price": 1700,
+    "saving": 567,
+    "barcode": "8801062384921",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062384921.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데칸쵸컵15",
+    "name": "롯데)칸쵸컵88g(15)",
+    "category": "기타",
+    "price": 2800,
+    "saving": 933,
+    "barcode": "8801062516858",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062516858.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데엄마손파이16",
+    "name": "롯데)엄마손파이127g(16)",
+    "category": "기타",
+    "price": 3300,
+    "saving": 1100,
+    "barcode": "8801062521241",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062521241.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데마가렛트12",
+    "name": "롯데)마가렛트176g(12)",
+    "category": "기타",
+    "price": 3400,
+    "saving": 1133,
+    "barcode": "8801062873418",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062873418.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데더블크런치바쿠앤크",
+    "name": "롯데)더블크런치바쿠앤크33g",
+    "category": "기타",
+    "price": 1300,
+    "saving": 433,
+    "barcode": "8801062878529",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062878529.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데짱셔요후르츠",
+    "name": "롯데)짱셔요후르츠51g",
+    "category": "기타",
+    "price": 1200,
+    "saving": 400,
+    "barcode": "8801062885404",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062885404.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데짱셔요콜라",
+    "name": "롯데)짱셔요콜라50g",
+    "category": "음료",
+    "price": 1200,
+    "saving": 400,
+    "barcode": "8801062885428",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062885428.JPG"
+      }
+    }
+  },
+  {
+    "id": "삼양짱구",
+    "name": "삼양)짱구115g",
+    "category": "기타",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801073310698",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801073310698.JPG"
+      }
+    }
+  },
+  {
+    "id": "삼양맹구짱구12",
+    "name": "삼양)맹구짱구85g(12)",
+    "category": "기타",
+    "price": 1700,
+    "saving": 567,
+    "barcode": "8801073313064",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801073313064.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운빅파이딸기3200",
+    "name": "크라운)빅파이딸기3200",
+    "category": "기타",
+    "price": 3200,
+    "saving": 1067,
+    "barcode": "8801111180481",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111180481.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운카라멜콘땅콩150016",
+    "name": "크라운)카라멜콘&땅콩1500(16)",
+    "category": "스낵·과자",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801111180986",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111180986.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운콘초150018",
+    "name": "크라운)콘초1500(18)",
+    "category": "기타",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801111180993",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111180993.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운콘치150018",
+    "name": "크라운)콘치1500(18)",
+    "category": "기타",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801111183062",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111183062.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운못말리는신짱16",
+    "name": "크라운)못말리는신짱120g(16)",
+    "category": "기타",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801111185066",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111185066.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운참크래커w",
+    "name": "크라운)참크래커56g(W)",
+    "category": "스낵·과자",
+    "price": 1200,
+    "saving": 400,
+    "barcode": "8801111186582",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111186582.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운새콤달콤포도",
+    "name": "크라운)새콤달콤포도",
+    "category": "기타",
+    "price": 500,
+    "saving": 167,
+    "barcode": "8801111188012",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111188012.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운츄러스16",
+    "name": "크라운)츄러스84g(16)",
+    "category": "기타",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801111916479",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111916479.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운고소한땅콩샌드20",
+    "name": "크라운)고소한땅콩샌드93g(20)",
+    "category": "스낵·과자",
+    "price": 1600,
+    "saving": 533,
+    "barcode": "8801111954877",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111954877.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운콘칲초당옥수수16new",
+    "name": "크라운)콘칲초당옥수수70g(16)NEW",
+    "category": "기타",
+    "price": 1700,
+    "saving": 567,
+    "barcode": "8801111955454",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111955454.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운뽀또체다치즈버터12",
+    "name": "크라운)뽀또체다치즈버터139g(12)",
+    "category": "유제품",
+    "price": 3000,
+    "saving": 1000,
+    "barcode": "8801111964777",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111964777.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운뽀또레몬커스타드12",
+    "name": "크라운)뽀또레몬커스타드144g(12)",
+    "category": "기타",
+    "price": 3000,
+    "saving": 1000,
+    "barcode": "8801111964807",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111964807.JPG"
+      }
+    }
+  },
+  {
+    "id": "크라운빅콘캔털루프멜론16한정",
+    "name": "크라운)빅콘캔털루프멜론60g(16)한정",
+    "category": "기타",
+    "price": 1700,
+    "saving": 567,
+    "barcode": "8801111965231",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111965231.JPG"
+      }
+    }
+  },
+  {
+    "id": "오리온에너지바미니",
+    "name": "오리온)에너지바미니200g",
+    "category": "스낵·과자",
+    "price": 6500,
+    "saving": 2167,
+    "barcode": "8801117442101",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117442101.JPG"
+      }
+    }
+  },
+  {
+    "id": "오리온단백질바미니202",
+    "name": "오리온)단백질바미니202.5g",
+    "category": "스낵·과자",
+    "price": 6500,
+    "saving": 2167,
+    "barcode": "8801117479305",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117479305.JPG"
+      }
+    }
+  },
+  {
+    "id": "오리온오징어땅콩16",
+    "name": "오리온)오징어땅콩202g(16)",
+    "category": "스낵·과자",
+    "price": 3200,
+    "saving": 1067,
+    "barcode": "8801117761004",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117761004.JPG"
+      }
+    }
+  },
+  {
+    "id": "뽀니옥수수쫀득찰떡쿠키18",
+    "name": "뽀니)옥수수쫀득찰떡쿠키(18)",
+    "category": "스낵·과자",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8801204009644",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801204009644.JPG"
+      }
+    }
+  },
+  {
+    "id": "청우계란과자오리지널10",
+    "name": "청우)계란과자오리지널55g(10)",
+    "category": "스낵·과자",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801204009798",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801204009798.JPG"
+      }
+    }
+  },
+  {
+    "id": "청우계란과자치즈맛10",
+    "name": "청우)계란과자치즈맛55g(10)",
+    "category": "스낵·과자",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801204009804",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801204009804.JPG"
+      }
+    }
+  },
+  {
+    "id": "청우알파콘황치즈맛16",
+    "name": "청우)알파콘황치즈맛60g(16)",
+    "category": "유제품",
+    "price": 1500,
+    "saving": 500,
+    "barcode": "8801204904895",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801204904895.JPG"
+      }
+    }
+  },
+  {
+    "id": "cj바삭칩스팸맛12",
+    "name": "CJ)바삭칩스팸맛45g(12)",
+    "category": "스낵·과자",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "8801392149153",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392149153.JPG"
+      }
+    }
+  },
+  {
+    "id": "cj비비고오마이갓김치팝콘12",
+    "name": "CJ)비비고오마이갓김치팝콘80g(12)",
+    "category": "스낵·과자",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "8801392155307",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392155307.JPG"
+      }
+    }
+  },
+  {
+    "id": "cj바삭팝콘스팸맛12",
+    "name": "CJ)바삭팝콘스팸맛55g(12)",
+    "category": "스낵·과자",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "8801392158940",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392158940.JPG"
+      }
+    }
+  },
+  {
+    "id": "cj바삭팝콘허브솔트맛12",
+    "name": "CJ)바삭팝콘허브솔트맛55g(12)",
+    "category": "스낵·과자",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "8801392158964",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392158964.JPG"
+      }
+    }
+  },
+  {
+    "id": "하림오늘단백스트로베리바",
+    "name": "하림)오늘단백스트로베리바48g",
+    "category": "기타",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801492393517",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801492393517.JPG"
+      }
+    }
+  },
+  {
+    "id": "하림오늘단백치즈케이크바",
+    "name": "하림)오늘단백치즈케이크바48g",
+    "category": "유제품",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801492393531",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801492393531.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데짱셔요라임포도",
+    "name": "롯데)짱셔요라임포도48g",
+    "category": "기타",
+    "price": 1200,
+    "saving": 400,
+    "barcode": "8802259019763",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8802259019763.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데빈츠프리미엄말차20",
+    "name": "롯데)빈츠프리미엄말차102g(20)",
+    "category": "기타",
+    "price": 3500,
+    "saving": 1167,
+    "barcode": "8802259027522",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8802259027522.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데가나프리미엄쇼콜라립파이16",
+    "name": "롯데)가나프리미엄쇼콜라립파이88g(16)",
+    "category": "음료",
+    "price": 3900,
+    "saving": 1300,
+    "barcode": "8802259032434",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8802259032434.JPG"
+      }
+    }
+  },
+  {
+    "id": "롯데치토스us오리진치즈맛12",
+    "name": "롯데)치토스US오리진치즈맛72g(12)",
+    "category": "유제품",
+    "price": 1700,
+    "saving": 567,
+    "barcode": "8802259033004",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8802259033004.JPG"
+      }
+    }
+  },
+  {
+    "id": "크레이지치즈올치글30",
+    "name": "크레이지치즈)올치글50g(30)",
+    "category": "유제품",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "8804294026522",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8804294026522.JPG"
+      }
+    }
+  },
+  {
+    "id": "마즈스키틀즈젤리후르츠믹스42",
+    "name": "마즈)스키틀즈젤리후르츠믹스42.5g",
+    "category": "스낵·과자",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8804973311161",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8804973311161.JPG"
+      }
+    }
+  },
+  {
+    "id": "마즈스키틀즈젤리후르츠믹스요거트향42",
+    "name": "마즈)스키틀즈젤리후르츠믹스요거트향42.5g",
+    "category": "스낵·과자",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8804973311185",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8804973311185.JPG"
+      }
+    }
+  },
+  {
+    "id": "동아박카스젤리",
+    "name": "동아)박카스젤리50g",
+    "category": "스낵·과자",
+    "price": 1700,
+    "saving": 567,
+    "barcode": "8806011435631",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806011435631.JPG"
+      }
+    }
+  },
+  {
+    "id": "프레첼갈릭버터",
+    "name": "프레첼갈릭버터85g",
+    "category": "유제품",
+    "price": 1700,
+    "saving": 567,
+    "barcode": "8809304881016",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809304881016.JPG"
+      }
+    }
+  },
+  {
+    "id": "프레첼체다치즈",
+    "name": "프레첼체다치즈85g",
+    "category": "유제품",
+    "price": 1700,
+    "saving": 567,
+    "barcode": "8809304881023",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809304881023.JPG"
+      }
+    }
+  },
+  {
+    "id": "화성당자연을담다고구마12",
+    "name": "화성당)자연을담다고구마100g(12)",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "8809508780436",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809508780436.JPG"
+      }
+    }
+  },
+  {
+    "id": "화성당자연을담다양파12",
+    "name": "화성당)자연을담다양파100g(12)",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "8809508780443",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809508780443.JPG"
+      }
+    }
+  },
+  {
+    "id": "히치스수수깡젤리코리아에디션",
+    "name": "히치스)수수깡젤리코리아에디션40g",
+    "category": "스낵·과자",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8809522040868",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809522040868.JPG"
+      }
+    }
+  },
+  {
+    "id": "시원무지개줄자젤리",
+    "name": "시원)무지개줄자젤리35g",
+    "category": "스낵·과자",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8809648260966",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809648260966.JPG"
+      }
+    }
+  },
+  {
+    "id": "시원스피너팝",
+    "name": "시원)스피너팝13g",
+    "category": "기타",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "8809648261765",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809648261765.JPG"
+      }
+    }
+  },
+  {
+    "id": "시원녹음하는메세지캔디",
+    "name": "시원)녹음하는메세지캔디12g",
+    "category": "스낵·과자",
+    "price": 5000,
+    "saving": 1667,
+    "barcode": "8809648262724",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809648262724.JPG"
+      }
+    }
+  },
+  {
+    "id": "메이플스토리노래나오는캔디",
+    "name": "메이플스토리)노래나오는캔디12g",
+    "category": "스낵·과자",
+    "price": 4800,
+    "saving": 1600,
+    "barcode": "8809648262786",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809648262786.JPG"
+      }
+    }
+  },
+  {
+    "id": "시원노래나오는마이크캔디",
+    "name": "시원)노래나오는마이크캔디6g",
+    "category": "스낵·과자",
+    "price": 3500,
+    "saving": 1167,
+    "barcode": "8809648262809",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809648262809.JPG"
+      }
+    }
+  },
+  {
+    "id": "시원트렌스파워로보카딸기비타",
+    "name": "시원)트렌스파워로보카딸기비타15g",
+    "category": "기타",
+    "price": 5000,
+    "saving": 1667,
+    "barcode": "8809648262908",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809648262908.JPG"
+      }
+    }
+  },
+  {
+    "id": "유앤스웨디시스타일젤리믹스",
+    "name": "유앤)스웨디시스타일젤리믹스80g",
+    "category": "스낵·과자",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "8809714123591",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809714123591.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심켈로그에너지바k레드베리",
+    "name": "농심)켈로그에너지바K레드베리35g",
+    "category": "스낵·과자",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8852756120431",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8852756120431.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심켈로그에너지바k크런치넛",
+    "name": "농심)켈로그에너지바K크런치넛40g",
+    "category": "스낵·과자",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8852756120462",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8852756120462.JPG"
+      }
+    }
+  },
+  {
+    "id": "위스트후지야컨트리맘초코쿠키",
+    "name": "위스트)후지야컨트리맘초코쿠키",
+    "category": "스낵·과자",
+    "price": 1800,
+    "saving": 600,
+    "barcode": "8936235440156",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8936235440156.JPG"
+      }
+    }
+  },
+  {
+    "id": "위스트후지야컨트리맘딸기쿠키",
+    "name": "위스트)후지야컨트리맘딸기쿠키",
+    "category": "스낵·과자",
+    "price": 1800,
+    "saving": 600,
+    "barcode": "8936235440163",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8936235440163.JPG"
+      }
+    }
+  },
+  {
+    "id": "게메즈에낙라면스낵바베큐맛24",
+    "name": "게메즈에낙)라면스낵바베큐맛28g(24)",
+    "category": "라면",
+    "price": 800,
+    "saving": 267,
+    "barcode": "8994834010125",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8994834010125.JPG"
+      }
+    }
+  },
+  {
+    "id": "질러볼케이노육포",
+    "name": "질러)볼케이노육포30g",
+    "category": "기타",
+    "price": 4200,
+    "saving": 1400,
+    "barcode": "8801005632201",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801005632201.JPG"
+      }
+    }
+  },
+  {
+    "id": "엘투빙홍차펫",
+    "name": "엘투)빙홍차펫550ml",
+    "category": "음료",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "6980025460000",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6980025460000.JPG"
+      }
+    }
+  },
+  {
+    "id": "싱하라임레몬소다제로캔",
+    "name": "싱하)라임레몬소다제로캔355ml",
+    "category": "기타",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8800307633770",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800307633770.JPG"
+      }
+    }
+  },
+  {
+    "id": "후라잉빅찰도그체다치즈판매용",
+    "name": "후라잉)빅찰도그체다치즈(판매용)",
+    "category": "유제품",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "1500000138233",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/1500000138233.JPG"
+      }
+    }
+  },
+  {
+    "id": "오븐매콤다리살꼬치판매용",
+    "name": "오븐)매콤다리살꼬치(판매용)",
+    "category": "간편식",
+    "price": 2400,
+    "saving": 800,
+    "barcode": "1500000165703",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/1500000165703.JPG"
+      }
+    }
+  },
+  {
+    "id": "후라잉빅후랑크소시지판매용",
+    "name": "후라잉)빅후랑크소시지(판매용)",
+    "category": "간편식",
+    "price": 2600,
+    "saving": 867,
+    "barcode": "1500000189341",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/1500000189341.JPG"
+      }
+    }
+  },
+  {
+    "id": "후라잉빅후랑크매콤소시지판매용",
+    "name": "후라잉)빅후랑크매콤소시지(판매용)",
+    "category": "간편식",
+    "price": 2600,
+    "saving": 867,
+    "barcode": "1500000189365",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/1500000189365.JPG"
+      }
+    }
+  },
+  {
+    "id": "숯불직화데리야끼닭꼬치판매용",
+    "name": "숯불직화데리야끼닭꼬치(판매용)",
+    "category": "간편식",
+    "price": 2300,
+    "saving": 767,
+    "barcode": "1500000210533",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/1500000210533.JPG"
+      }
+    }
+  },
+  {
+    "id": "니베아립케어에센셜4",
+    "name": "니베아)립케어에센셜4.8g",
+    "category": "기타",
+    "price": 5500,
+    "saving": 1833,
+    "barcode": "4005808369485",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4005808369485.JPG"
+      }
+    }
+  },
+  {
+    "id": "니베아립케어스트로베리4",
+    "name": "니베아)립케어스트로베리4.8g",
+    "category": "기타",
+    "price": 5500,
+    "saving": 1833,
+    "barcode": "4005808372881",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4005808372881.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심보노체다치즈스프3입",
+    "name": "농심)보노체다치즈스프3입",
+    "category": "유제품",
+    "price": 4400,
+    "saving": 1467,
+    "barcode": "4901001123094",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4901001123094.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심이토엔오이오차녹차펫",
+    "name": "농심)이토엔오이오차녹차펫525ml",
+    "category": "음료",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "4901085003800",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4901085003800.JPG"
+      }
+    }
+  },
+  {
+    "id": "농심야키호타테카이히모가리비덧살",
+    "name": "농심)야키호타테카이히모14g(가리비덧살)",
+    "category": "기타",
+    "price": 3900,
+    "saving": 1300,
+    "barcode": "4902181098738",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4902181098738.JPG"
+      }
+    }
+  },
+  {
+    "id": "에이스소이푸딩유자크림치즈",
+    "name": "에이스)소이푸딩유자크림치즈100g",
+    "category": "유제품",
+    "price": 4700,
+    "saving": 1567,
+    "barcode": "4903039240491",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4903039240491.JPG"
+      }
+    }
+  },
+  {
+    "id": "쥬맥스기린오후의차밀크티펫",
+    "name": "쥬맥스)기린오후의차밀크티펫500ml",
+    "category": "주류",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "4909411116972",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/4909411116972.JPG"
+      }
+    }
+  },
+  {
+    "id": "로투스벨지안와플",
+    "name": "로투스)벨지안와플50g",
+    "category": "기타",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "5410126132038",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/5410126132038.JPG"
+      }
+    }
+  },
+  {
+    "id": "로투스벨지안와플초콜렛57",
+    "name": "로투스)벨지안와플초콜렛57.5g",
+    "category": "기타",
+    "price": 1900,
+    "saving": 633,
+    "barcode": "5410126132472",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/5410126132472.JPG"
+      }
+    }
+  },
+  {
+    "id": "엘투붉은빛의우롱티펫",
+    "name": "엘투)붉은빛의우롱티펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "6974906992025",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6974906992025.JPG"
+      }
+    }
+  },
+  {
+    "id": "엘투눈꽃내리는자스민티펫",
+    "name": "엘투)눈꽃내리는자스민티펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "6974906992384",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6974906992384.JPG"
       }
     }
   },
@@ -87588,150 +89150,6 @@
     }
   },
   {
-    "id": "해태샌드에이스우유크림24한정",
-    "name": "해태)샌드에이스우유크림51g(24)한정",
-    "category": "음료",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801019320125",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019320125.JPG"
-      }
-    }
-  },
-  {
-    "id": "해태에이스씬솔티카라멜맛16한정",
-    "name": "해태)에이스씬솔티카라멜맛145g(16)한정",
-    "category": "기타",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8801019320347",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019320347.JPG"
-      }
-    }
-  },
-  {
-    "id": "해태버터링with에쉬레버터18한정",
-    "name": "해태)버터링with에쉬레버터86g(18)한정",
-    "category": "유제품",
-    "price": 3000,
-    "saving": 1000,
-    "barcode": "8801019320859",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019320859.JPG"
-      }
-    }
-  },
-  {
-    "id": "해태구운감자100030",
-    "name": "해태)구운감자1000(30)",
-    "category": "기타",
-    "price": 1000,
-    "saving": 333,
-    "barcode": "8801019602498",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019602498.JPG"
-      }
-    }
-  },
-  {
-    "id": "해태맛동산중12",
-    "name": "해태)맛동산165g(중)(12)",
-    "category": "기타",
-    "price": 3200,
-    "saving": 1067,
-    "barcode": "8801019603426",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019603426.JPG"
-      }
-    }
-  },
-  {
-    "id": "해태자가비짭짤한맛12",
-    "name": "해태)자가비짭짤한맛45g(12)",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8801019607912",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019607912.JPG"
-      }
-    }
-  },
-  {
-    "id": "해태맛동산10",
-    "name": "해태)맛동산90g(10)",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8801019608766",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019608766.JPG"
-      }
-    }
-  },
-  {
-    "id": "해태자가비케첩맛12",
-    "name": "해태)자가비케첩맛45g(12)",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8801019610929",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019610929.JPG"
-      }
-    }
-  },
-  {
-    "id": "해태구운양파16",
-    "name": "해태)구운양파60g(16)",
-    "category": "기타",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8801019611049",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801019611049.JPG"
-      }
-    }
-  },
-  {
     "id": "종가열무김치",
     "name": "종가)열무김치80g",
     "category": "기타",
@@ -88068,38 +89486,6 @@
     }
   },
   {
-    "id": "동서오레오웨하스스틱낱개",
-    "name": "동서)오레오웨하스스틱(낱개)",
-    "category": "기타",
-    "price": 700,
-    "saving": 233,
-    "barcode": "8801037090178",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037090178.JPG"
-      }
-    }
-  },
-  {
-    "id": "오레오씬즈화이트크림24",
-    "name": "오레오)씬즈화이트크림84g(24)",
-    "category": "기타",
-    "price": 2300,
-    "saving": 767,
-    "barcode": "8801037091113",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037091113.JPG"
-      }
-    }
-  },
-  {
     "id": "동서맥스웰하우스라떼캔",
     "name": "동서)맥스웰하우스라떼캔240ml",
     "category": "음료",
@@ -88128,38 +89514,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037091410.JPG"
-      }
-    }
-  },
-  {
-    "id": "리츠크래커24",
-    "name": "리츠)크래커80g(24)",
-    "category": "스낵·과자",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8801037091519",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037091519.JPG"
-      }
-    }
-  },
-  {
-    "id": "리츠치즈샌드",
-    "name": "리츠)치즈샌드",
-    "category": "유제품",
-    "price": 2400,
-    "saving": 800,
-    "barcode": "8801037091526",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037091526.JPG"
       }
     }
   },
@@ -88212,22 +89566,6 @@
     }
   },
   {
-    "id": "리츠레몬샌드",
-    "name": "리츠)레몬샌드96g",
-    "category": "기타",
-    "price": 2400,
-    "saving": 800,
-    "barcode": "8801037093452",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037093452.JPG"
-      }
-    }
-  },
-  {
     "id": "동서맥스웰하우스블랙펫",
     "name": "동서)맥스웰하우스블랙펫500ml",
     "category": "기타",
@@ -88272,118 +89610,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037094305.JPG"
-      }
-    }
-  },
-  {
-    "id": "리츠샌드위치크래커초코",
-    "name": "리츠)샌드위치크래커초코77g",
-    "category": "간편식",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8801037094374",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037094374.JPG"
-      }
-    }
-  },
-  {
-    "id": "리츠샌드위치크래커화이트",
-    "name": "리츠)샌드위치크래커화이트77g",
-    "category": "간편식",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8801037094664",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037094664.JPG"
-      }
-    }
-  },
-  {
-    "id": "오레오씬즈초코크림24",
-    "name": "오레오)씬즈초코크림84g(24)",
-    "category": "기타",
-    "price": 2300,
-    "saving": 767,
-    "barcode": "8801037094763",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037094763.JPG"
-      }
-    }
-  },
-  {
-    "id": "오레오민트초코24",
-    "name": "오레오)민트초코80g(24)",
-    "category": "기타",
-    "price": 2300,
-    "saving": 767,
-    "barcode": "8801037094909",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037094909.JPG"
-      }
-    }
-  },
-  {
-    "id": "오레오시나몬번24",
-    "name": "오레오)시나몬번80g(24)",
-    "category": "기타",
-    "price": 2300,
-    "saving": 767,
-    "barcode": "8801037095302",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037095302.JPG"
-      }
-    }
-  },
-  {
-    "id": "동서콘푸라이트밀크바",
-    "name": "동서)콘푸라이트밀크바35g",
-    "category": "기타",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "8801037095845",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037095845.JPG"
-      }
-    }
-  },
-  {
-    "id": "리츠어니언크래커",
-    "name": "리츠)어니언크래커73g",
-    "category": "스낵·과자",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8801037096217",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037096217.JPG"
       }
     }
   },
@@ -88448,38 +89674,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037096576.JPG"
-      }
-    }
-  },
-  {
-    "id": "리츠바삭김맛24",
-    "name": "리츠)바삭김맛73g(24)",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8801037097900",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037097900.JPG"
-      }
-    }
-  },
-  {
-    "id": "리츠맥시칸타코맛24",
-    "name": "리츠)맥시칸타코맛73g(24)",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8801037098921",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801037098921.JPG"
       }
     }
   },
@@ -88580,38 +89774,6 @@
     }
   },
   {
-    "id": "농심꿀꽈배기20",
-    "name": "농심)꿀꽈배기90g(20)",
-    "category": "기타",
-    "price": 1800,
-    "saving": 600,
-    "barcode": "8801043036177",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043036177.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심인디안밥20",
-    "name": "농심)인디안밥83g(20)",
-    "category": "기타",
-    "price": 1800,
-    "saving": 600,
-    "barcode": "8801043036672",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043036672.JPG"
-      }
-    }
-  },
-  {
     "id": "농심배홍동막국수봉지4입",
     "name": "농심)배홍동막국수봉지*4입",
     "category": "기타",
@@ -88676,70 +89838,6 @@
     }
   },
   {
-    "id": "츄파춥스사워바이츠",
-    "name": "츄파춥스)사워바이츠60g",
-    "category": "기타",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8801043067317",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043067317.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심포테토칩엽떡로제맛16",
-    "name": "농심)포테토칩엽떡로제맛55g(16)",
-    "category": "스낵·과자",
-    "price": 1800,
-    "saving": 600,
-    "barcode": "8801043067799",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043067799.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심먹태깡청양마요맛16",
-    "name": "농심)먹태깡청양마요맛60g(16)",
-    "category": "기타",
-    "price": 1800,
-    "saving": 600,
-    "barcode": "8801043068314",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043068314.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심포테토칩크림치즈소시지맛16",
-    "name": "농심)포테토칩크림치즈소시지맛55g(16)",
-    "category": "간편식",
-    "price": 1800,
-    "saving": 600,
-    "barcode": "8801043069823",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801043069823.JPG"
-      }
-    }
-  },
-  {
     "id": "오뚜기짜슐랭봉지면",
     "name": "오뚜기)짜슐랭봉지면",
     "category": "기타",
@@ -88788,38 +89886,6 @@
     }
   },
   {
-    "id": "오뚜기뿌셔뿌셔양념치킨맛팝콘12",
-    "name": "오뚜기)뿌셔뿌셔양념치킨맛팝콘45g(12)",
-    "category": "간편식",
-    "price": 2100,
-    "saving": 700,
-    "barcode": "8801045258218",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045258218.JPG"
-      }
-    }
-  },
-  {
-    "id": "오뚜기스위트콘나쵸12",
-    "name": "오뚜기)스위트콘나쵸60g(12)",
-    "category": "기타",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "8801045314556",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045314556.JPG"
-      }
-    }
-  },
-  {
     "id": "오뚜기컵누들진짬뽕맛소컵",
     "name": "오뚜기)컵누들진짬뽕맛소컵",
     "category": "라면",
@@ -88848,22 +89914,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045335612.JPG"
-      }
-    }
-  },
-  {
-    "id": "오뚜기뿌셔뿌셔불고기맛팝콘12",
-    "name": "오뚜기)뿌셔뿌셔불고기맛팝콘45g(12)",
-    "category": "간편식",
-    "price": 2100,
-    "saving": 700,
-    "barcode": "8801045387802",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045387802.JPG"
       }
     }
   },
@@ -88932,54 +89982,6 @@
     }
   },
   {
-    "id": "오뚜기뿌셔뿌셔불고기맛24",
-    "name": "오뚜기)뿌셔뿌셔불고기맛(24)",
-    "category": "간편식",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801045560038",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045560038.JPG"
-      }
-    }
-  },
-  {
-    "id": "오뚜기뿌셔뿌셔양념치킨맛24",
-    "name": "오뚜기)뿌셔뿌셔양념치킨맛(24)",
-    "category": "간편식",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801045560052",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045560052.JPG"
-      }
-    }
-  },
-  {
-    "id": "오뚜기뿌셔뿌셔바베큐맛24",
-    "name": "오뚜기)뿌셔뿌셔바베큐맛(24)",
-    "category": "기타",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801045560076",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045560076.JPG"
-      }
-    }
-  },
-  {
     "id": "오뚜기컵누들우동맛소컵",
     "name": "오뚜기)컵누들우동맛소컵",
     "category": "라면",
@@ -89040,22 +90042,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045625638.JPG"
-      }
-    }
-  },
-  {
-    "id": "오뚜기순후추팝콘12",
-    "name": "오뚜기)순후추팝콘55g(12)",
-    "category": "스낵·과자",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "8801045652573",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045652573.JPG"
       }
     }
   },
@@ -89136,22 +90122,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045750095.JPG"
-      }
-    }
-  },
-  {
-    "id": "오뚜기열라면프레첼20",
-    "name": "오뚜기)열라면프레첼50g(20)",
-    "category": "라면",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "8801045768014",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045768014.JPG"
       }
     }
   },
@@ -89892,182 +90862,6 @@
     }
   },
   {
-    "id": "롯데꼬깔콘고소한맛중12",
-    "name": "롯데)꼬깔콘고소한맛134g(중)(12)",
-    "category": "스낵·과자",
-    "price": 3400,
-    "saving": 1133,
-    "barcode": "8801062010578",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062010578.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데꼬깔콘군옥수수맛중12",
-    "name": "롯데)꼬깔콘군옥수수맛134g(중)(12)",
-    "category": "스낵·과자",
-    "price": 3400,
-    "saving": 1133,
-    "barcode": "8801062011315",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062011315.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데말랑카우딸기우유",
-    "name": "롯데)말랑카우딸기우유79g",
-    "category": "음료",
-    "price": 3000,
-    "saving": 1000,
-    "barcode": "8801062013395",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062013395.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데오잉12",
-    "name": "롯데)오잉75g(12)",
-    "category": "기타",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8801062382811",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062382811.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데쌀로별오리지널16",
-    "name": "롯데)쌀로별오리지널78g(16)",
-    "category": "기타",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8801062384921",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062384921.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데칸쵸컵15",
-    "name": "롯데)칸쵸컵88g(15)",
-    "category": "기타",
-    "price": 2800,
-    "saving": 933,
-    "barcode": "8801062516858",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062516858.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데엄마손파이16",
-    "name": "롯데)엄마손파이127g(16)",
-    "category": "기타",
-    "price": 3300,
-    "saving": 1100,
-    "barcode": "8801062521241",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062521241.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데마가렛트12",
-    "name": "롯데)마가렛트176g(12)",
-    "category": "기타",
-    "price": 3400,
-    "saving": 1133,
-    "barcode": "8801062873418",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062873418.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데더블크런치바쿠앤크",
-    "name": "롯데)더블크런치바쿠앤크33g",
-    "category": "기타",
-    "price": 1300,
-    "saving": 433,
-    "barcode": "8801062878529",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062878529.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데짱셔요후르츠",
-    "name": "롯데)짱셔요후르츠51g",
-    "category": "기타",
-    "price": 1200,
-    "saving": 400,
-    "barcode": "8801062885404",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062885404.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데짱셔요콜라",
-    "name": "롯데)짱셔요콜라50g",
-    "category": "음료",
-    "price": 1200,
-    "saving": 400,
-    "barcode": "8801062885428",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801062885428.JPG"
-      }
-    }
-  },
-  {
     "id": "사조콤비네이션피자",
     "name": "사조)콤비네이션피자80g",
     "category": "기타",
@@ -90224,38 +91018,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801073216716.JPG"
-      }
-    }
-  },
-  {
-    "id": "삼양짱구",
-    "name": "삼양)짱구115g",
-    "category": "기타",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801073310698",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801073310698.JPG"
-      }
-    }
-  },
-  {
-    "id": "삼양맹구짱구12",
-    "name": "삼양)맹구짱구85g(12)",
-    "category": "기타",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8801073313064",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801073313064.JPG"
       }
     }
   },
@@ -90708,214 +91470,6 @@
     }
   },
   {
-    "id": "크라운빅파이딸기3200",
-    "name": "크라운)빅파이딸기3200",
-    "category": "기타",
-    "price": 3200,
-    "saving": 1067,
-    "barcode": "8801111180481",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111180481.JPG"
-      }
-    }
-  },
-  {
-    "id": "크라운카라멜콘땅콩150016",
-    "name": "크라운)카라멜콘&땅콩1500(16)",
-    "category": "스낵·과자",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801111180986",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111180986.JPG"
-      }
-    }
-  },
-  {
-    "id": "크라운콘초150018",
-    "name": "크라운)콘초1500(18)",
-    "category": "기타",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801111180993",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111180993.JPG"
-      }
-    }
-  },
-  {
-    "id": "크라운콘치150018",
-    "name": "크라운)콘치1500(18)",
-    "category": "기타",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801111183062",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111183062.JPG"
-      }
-    }
-  },
-  {
-    "id": "크라운못말리는신짱16",
-    "name": "크라운)못말리는신짱120g(16)",
-    "category": "기타",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801111185066",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111185066.JPG"
-      }
-    }
-  },
-  {
-    "id": "크라운참크래커w",
-    "name": "크라운)참크래커56g(W)",
-    "category": "스낵·과자",
-    "price": 1200,
-    "saving": 400,
-    "barcode": "8801111186582",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111186582.JPG"
-      }
-    }
-  },
-  {
-    "id": "크라운새콤달콤포도",
-    "name": "크라운)새콤달콤포도",
-    "category": "기타",
-    "price": 500,
-    "saving": 167,
-    "barcode": "8801111188012",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111188012.JPG"
-      }
-    }
-  },
-  {
-    "id": "크라운츄러스16",
-    "name": "크라운)츄러스84g(16)",
-    "category": "기타",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801111916479",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111916479.JPG"
-      }
-    }
-  },
-  {
-    "id": "크라운고소한땅콩샌드20",
-    "name": "크라운)고소한땅콩샌드93g(20)",
-    "category": "스낵·과자",
-    "price": 1600,
-    "saving": 533,
-    "barcode": "8801111954877",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111954877.JPG"
-      }
-    }
-  },
-  {
-    "id": "크라운콘칲초당옥수수16new",
-    "name": "크라운)콘칲초당옥수수70g(16)NEW",
-    "category": "기타",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8801111955454",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111955454.JPG"
-      }
-    }
-  },
-  {
-    "id": "크라운뽀또체다치즈버터12",
-    "name": "크라운)뽀또체다치즈버터139g(12)",
-    "category": "유제품",
-    "price": 3000,
-    "saving": 1000,
-    "barcode": "8801111964777",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111964777.JPG"
-      }
-    }
-  },
-  {
-    "id": "크라운뽀또레몬커스타드12",
-    "name": "크라운)뽀또레몬커스타드144g(12)",
-    "category": "기타",
-    "price": 3000,
-    "saving": 1000,
-    "barcode": "8801111964807",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111964807.JPG"
-      }
-    }
-  },
-  {
-    "id": "크라운빅콘캔털루프멜론16한정",
-    "name": "크라운)빅콘캔털루프멜론60g(16)한정",
-    "category": "기타",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8801111965231",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801111965231.JPG"
-      }
-    }
-  },
-  {
     "id": "서울올데이프룻오렌지",
     "name": "서울)올데이프룻오렌지250ml",
     "category": "기타",
@@ -91028,38 +91582,6 @@
     }
   },
   {
-    "id": "오리온에너지바미니",
-    "name": "오리온)에너지바미니200g",
-    "category": "스낵·과자",
-    "price": 6500,
-    "saving": 2167,
-    "barcode": "8801117442101",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117442101.JPG"
-      }
-    }
-  },
-  {
-    "id": "오리온단백질바미니202",
-    "name": "오리온)단백질바미니202.5g",
-    "category": "스낵·과자",
-    "price": 6500,
-    "saving": 2167,
-    "barcode": "8801117479305",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117479305.JPG"
-      }
-    }
-  },
-  {
     "id": "오리온포카칩오리지널3400중12",
     "name": "오리온)포카칩오리지널3400(중)(12)",
     "category": "스낵·과자",
@@ -91088,22 +91610,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117760403.JPG"
-      }
-    }
-  },
-  {
-    "id": "오리온오징어땅콩16",
-    "name": "오리온)오징어땅콩202g(16)",
-    "category": "스낵·과자",
-    "price": 3200,
-    "saving": 1067,
-    "barcode": "8801117761004",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117761004.JPG"
       }
     }
   },
@@ -91620,70 +92126,6 @@
     }
   },
   {
-    "id": "뽀니옥수수쫀득찰떡쿠키18",
-    "name": "뽀니)옥수수쫀득찰떡쿠키(18)",
-    "category": "스낵·과자",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8801204009644",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801204009644.JPG"
-      }
-    }
-  },
-  {
-    "id": "청우계란과자오리지널10",
-    "name": "청우)계란과자오리지널55g(10)",
-    "category": "스낵·과자",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801204009798",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801204009798.JPG"
-      }
-    }
-  },
-  {
-    "id": "청우계란과자치즈맛10",
-    "name": "청우)계란과자치즈맛55g(10)",
-    "category": "스낵·과자",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801204009804",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801204009804.JPG"
-      }
-    }
-  },
-  {
-    "id": "청우알파콘황치즈맛16",
-    "name": "청우)알파콘황치즈맛60g(16)",
-    "category": "유제품",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801204904895",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801204904895.JPG"
-      }
-    }
-  },
-  {
     "id": "파스퇴르쾌변사과요구르트",
     "name": "파스퇴르)쾌변사과요구르트150ml",
     "category": "유제품",
@@ -92004,22 +92446,6 @@
     }
   },
   {
-    "id": "cj바삭칩스팸맛12",
-    "name": "CJ)바삭칩스팸맛45g(12)",
-    "category": "스낵·과자",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "8801392149153",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392149153.JPG"
-      }
-    }
-  },
-  {
     "id": "cj오쌀미x햇반파로누룽지",
     "name": "CJ)오쌀미X햇반파로누룽지30g",
     "category": "기타",
@@ -92052,22 +92478,6 @@
     }
   },
   {
-    "id": "cj비비고오마이갓김치팝콘12",
-    "name": "CJ)비비고오마이갓김치팝콘80g(12)",
-    "category": "스낵·과자",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "8801392155307",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392155307.JPG"
-      }
-    }
-  },
-  {
     "id": "cj꾸덕납작누들숯불치킨맛",
     "name": "CJ)꾸덕납작누들숯불치킨맛",
     "category": "간편식",
@@ -92080,38 +92490,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392158391.JPG"
-      }
-    }
-  },
-  {
-    "id": "cj바삭팝콘스팸맛12",
-    "name": "CJ)바삭팝콘스팸맛55g(12)",
-    "category": "스낵·과자",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "8801392158940",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392158940.JPG"
-      }
-    }
-  },
-  {
-    "id": "cj바삭팝콘허브솔트맛12",
-    "name": "CJ)바삭팝콘허브솔트맛55g(12)",
-    "category": "스낵·과자",
-    "price": 1900,
-    "saving": 633,
-    "barcode": "8801392158964",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392158964.JPG"
       }
     }
   },
@@ -92144,38 +92522,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801492392886.JPG"
-      }
-    }
-  },
-  {
-    "id": "하림오늘단백스트로베리바",
-    "name": "하림)오늘단백스트로베리바48g",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801492393517",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801492393517.JPG"
-      }
-    }
-  },
-  {
-    "id": "하림오늘단백치즈케이크바",
-    "name": "하림)오늘단백치즈케이크바48g",
-    "category": "유제품",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801492393531",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801492393531.JPG"
       }
     }
   },
@@ -92240,70 +92586,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801858048259.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데짱셔요라임포도",
-    "name": "롯데)짱셔요라임포도48g",
-    "category": "기타",
-    "price": 1200,
-    "saving": 400,
-    "barcode": "8802259019763",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8802259019763.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데빈츠프리미엄말차20",
-    "name": "롯데)빈츠프리미엄말차102g(20)",
-    "category": "기타",
-    "price": 3500,
-    "saving": 1167,
-    "barcode": "8802259027522",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8802259027522.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데가나프리미엄쇼콜라립파이16",
-    "name": "롯데)가나프리미엄쇼콜라립파이88g(16)",
-    "category": "음료",
-    "price": 3900,
-    "saving": 1300,
-    "barcode": "8802259032434",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8802259032434.JPG"
-      }
-    }
-  },
-  {
-    "id": "롯데치토스us오리진치즈맛12",
-    "name": "롯데)치토스US오리진치즈맛72g(12)",
-    "category": "유제품",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8802259033004",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8802259033004.JPG"
       }
     }
   },
@@ -92468,22 +92750,6 @@
     }
   },
   {
-    "id": "크레이지치즈올치글30",
-    "name": "크레이지치즈)올치글50g(30)",
-    "category": "유제품",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8804294026522",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8804294026522.JPG"
-      }
-    }
-  },
-  {
     "id": "에스엠전통호두과자",
     "name": "에스엠)전통호두과자108g",
     "category": "스낵·과자",
@@ -92512,38 +92778,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8804888001553.JPG"
-      }
-    }
-  },
-  {
-    "id": "마즈스키틀즈젤리후르츠믹스42",
-    "name": "마즈)스키틀즈젤리후르츠믹스42.5g",
-    "category": "스낵·과자",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8804973311161",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8804973311161.JPG"
-      }
-    }
-  },
-  {
-    "id": "마즈스키틀즈젤리후르츠믹스요거트향42",
-    "name": "마즈)스키틀즈젤리후르츠믹스요거트향42.5g",
-    "category": "스낵·과자",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8804973311185",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8804973311185.JPG"
       }
     }
   },
@@ -92688,22 +92922,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806006501778.JPG"
-      }
-    }
-  },
-  {
-    "id": "동아박카스젤리",
-    "name": "동아)박카스젤리50g",
-    "category": "스낵·과자",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8806011435631",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806011435631.JPG"
       }
     }
   },
@@ -93316,38 +93534,6 @@
     }
   },
   {
-    "id": "프레첼갈릭버터",
-    "name": "프레첼갈릭버터85g",
-    "category": "유제품",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8809304881016",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809304881016.JPG"
-      }
-    }
-  },
-  {
-    "id": "프레첼체다치즈",
-    "name": "프레첼체다치즈85g",
-    "category": "유제품",
-    "price": 1700,
-    "saving": 567,
-    "barcode": "8809304881023",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809304881023.JPG"
-      }
-    }
-  },
-  {
     "id": "천지개벽제주한라봉스파클링캔",
     "name": "천지개벽)제주한라봉스파클링캔355ml",
     "category": "기타",
@@ -93604,38 +93790,6 @@
     }
   },
   {
-    "id": "화성당자연을담다고구마12",
-    "name": "화성당)자연을담다고구마100g(12)",
-    "category": "기타",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8809508780436",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809508780436.JPG"
-      }
-    }
-  },
-  {
-    "id": "화성당자연을담다양파12",
-    "name": "화성당)자연을담다양파100g(12)",
-    "category": "기타",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8809508780443",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809508780443.JPG"
-      }
-    }
-  },
-  {
     "id": "yozm플레인그릭요거트",
     "name": "YOZM)플레인그릭요거트100g",
     "category": "유제품",
@@ -93696,22 +93850,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809520491532.JPG"
-      }
-    }
-  },
-  {
-    "id": "히치스수수깡젤리코리아에디션",
-    "name": "히치스)수수깡젤리코리아에디션40g",
-    "category": "스낵·과자",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8809522040868",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809522040868.JPG"
       }
     }
   },
@@ -93796,102 +93934,6 @@
     }
   },
   {
-    "id": "시원무지개줄자젤리",
-    "name": "시원)무지개줄자젤리35g",
-    "category": "스낵·과자",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8809648260966",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809648260966.JPG"
-      }
-    }
-  },
-  {
-    "id": "시원스피너팝",
-    "name": "시원)스피너팝13g",
-    "category": "기타",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8809648261765",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809648261765.JPG"
-      }
-    }
-  },
-  {
-    "id": "시원녹음하는메세지캔디",
-    "name": "시원)녹음하는메세지캔디12g",
-    "category": "스낵·과자",
-    "price": 5000,
-    "saving": 1667,
-    "barcode": "8809648262724",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809648262724.JPG"
-      }
-    }
-  },
-  {
-    "id": "메이플스토리노래나오는캔디",
-    "name": "메이플스토리)노래나오는캔디12g",
-    "category": "스낵·과자",
-    "price": 4800,
-    "saving": 1600,
-    "barcode": "8809648262786",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809648262786.JPG"
-      }
-    }
-  },
-  {
-    "id": "시원노래나오는마이크캔디",
-    "name": "시원)노래나오는마이크캔디6g",
-    "category": "스낵·과자",
-    "price": 3500,
-    "saving": 1167,
-    "barcode": "8809648262809",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809648262809.JPG"
-      }
-    }
-  },
-  {
-    "id": "시원트렌스파워로보카딸기비타",
-    "name": "시원)트렌스파워로보카딸기비타15g",
-    "category": "기타",
-    "price": 5000,
-    "saving": 1667,
-    "barcode": "8809648262908",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809648262908.JPG"
-      }
-    }
-  },
-  {
     "id": "고단백치즈사각피자",
     "name": "고단백)치즈사각피자127g",
     "category": "유제품",
@@ -93920,22 +93962,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809674771184.JPG"
-      }
-    }
-  },
-  {
-    "id": "유앤스웨디시스타일젤리믹스",
-    "name": "유앤)스웨디시스타일젤리믹스80g",
-    "category": "스낵·과자",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8809714123591",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809714123591.JPG"
       }
     }
   },
@@ -94228,38 +94254,6 @@
     }
   },
   {
-    "id": "농심켈로그에너지바k레드베리",
-    "name": "농심)켈로그에너지바K레드베리35g",
-    "category": "스낵·과자",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8852756120431",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8852756120431.JPG"
-      }
-    }
-  },
-  {
-    "id": "농심켈로그에너지바k크런치넛",
-    "name": "농심)켈로그에너지바K크런치넛40g",
-    "category": "스낵·과자",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8852756120462",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8852756120462.JPG"
-      }
-    }
-  },
-  {
     "id": "애묘위스카스주니어참치",
     "name": "애묘)위스카스주니어참치80g",
     "category": "간편식",
@@ -94384,54 +94378,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8936217230140.JPG"
-      }
-    }
-  },
-  {
-    "id": "위스트후지야컨트리맘초코쿠키",
-    "name": "위스트)후지야컨트리맘초코쿠키",
-    "category": "스낵·과자",
-    "price": 1800,
-    "saving": 600,
-    "barcode": "8936235440156",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8936235440156.JPG"
-      }
-    }
-  },
-  {
-    "id": "위스트후지야컨트리맘딸기쿠키",
-    "name": "위스트)후지야컨트리맘딸기쿠키",
-    "category": "스낵·과자",
-    "price": 1800,
-    "saving": 600,
-    "barcode": "8936235440163",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8936235440163.JPG"
-      }
-    }
-  },
-  {
-    "id": "게메즈에낙라면스낵바베큐맛24",
-    "name": "게메즈에낙)라면스낵바베큐맛28g(24)",
-    "category": "라면",
-    "price": 800,
-    "saving": 267,
-    "barcode": "8994834010125",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8994834010125.JPG"
       }
     }
   },
