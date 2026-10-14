@@ -7885,7 +7885,7 @@
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809274516802.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809274516802_1.png"
       }
     }
   },
@@ -77358,6 +77358,22 @@
     }
   },
   {
+    "id": "크레이지치즈올치글30",
+    "name": "크레이지치즈)올치글50g(30)",
+    "category": "유제품",
+    "price": 2200,
+    "saving": 2200,
+    "barcode": "8804294026522",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8804294026522.JPG"
+      }
+    }
+  },
+  {
     "id": "위너스망고콘16",
     "name": "위너스)망고콘80g(16)",
     "category": "기타",
@@ -87434,22 +87450,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8802259033004.JPG"
-      }
-    }
-  },
-  {
-    "id": "크레이지치즈올치글30",
-    "name": "크레이지치즈)올치글50g(30)",
-    "category": "유제품",
-    "price": 2200,
-    "saving": 733,
-    "barcode": "8804294026522",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8804294026522.JPG"
       }
     }
   },
