@@ -55020,12 +55020,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8691216107731.JPG"
-      },
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8691216107731.JPG"
       }
     }
   },
@@ -77198,6 +77192,22 @@
     }
   },
   {
+    "id": "동화부채표소다활레몬라임펫",
+    "name": "동화)부채표소다활레몬라임펫500ml",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8806016187085",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806016187085.JPG"
+      }
+    }
+  },
+  {
     "id": "에스엠유니콘풉마쉬멜로",
     "name": "에스엠)유니콘풉마쉬멜로42g",
     "category": "기타",
@@ -77726,22 +77736,6 @@
     }
   },
   {
-    "id": "농심츄파춥스게코젤리",
-    "name": "농심)츄파춥스게코젤리90g",
-    "category": "스낵·과자",
-    "price": 2300,
-    "saving": 2300,
-    "barcode": "6925425474653",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6925425474653.JPG"
-      }
-    }
-  },
-  {
     "id": "옐로우맛있는군밤s",
     "name": "옐로우)맛있는군밤80g(S)",
     "category": "기타",
@@ -77834,22 +77828,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8410707007509.JPG"
-      }
-    }
-  },
-  {
-    "id": "하리보골드베어사우어",
-    "name": "하리보)골드베어사우어80g",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8691216099579",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8691216099579.JPG"
       }
     }
   },
@@ -77962,22 +77940,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800335704978.JPG"
-      }
-    }
-  },
-  {
-    "id": "sf제스프리썬골드키위4입팩",
-    "name": "SF)제스프리썬골드키위4입(팩)",
-    "category": "기타",
-    "price": 7280,
-    "saving": 7280,
-    "barcode": "8800348941698",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8800348941698.JPG"
       }
     }
   },
@@ -78602,22 +78564,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045751245.JPG"
-      }
-    }
-  },
-  {
-    "id": "오뚜기추라면",
-    "name": "오뚜기)추라면",
-    "category": "라면",
-    "price": 2000,
-    "saving": 2000,
-    "barcode": "8801045858241",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045858241.JPG"
       }
     }
   },
@@ -79354,22 +79300,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801051275179.JPG"
-      }
-    }
-  },
-  {
-    "id": "대상안주야직화무뼈닭발냉동",
-    "name": "대상)안주야직화무뼈닭발160g(냉동)",
-    "category": "기타",
-    "price": 9500,
-    "saving": 9500,
-    "barcode": "8801052043852",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801052043852.JPG"
       }
     }
   },
@@ -80554,22 +80484,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801114111161.JPG"
-      }
-    }
-  },
-  {
-    "id": "풀무원소가부침두부",
-    "name": "풀무원)소가부침두부290g",
-    "category": "기타",
-    "price": 1800,
-    "saving": 1800,
-    "barcode": "8801114119082",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801114119082.JPG"
       }
     }
   },
@@ -83326,38 +83240,6 @@
     }
   },
   {
-    "id": "26ss프리미엄쿨토시검정",
-    "name": "26SS)프리미엄쿨토시(검정)",
-    "category": "기타",
-    "price": 7500,
-    "saving": 7500,
-    "barcode": "8808994280291",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8808994280291.JPG"
-      }
-    }
-  },
-  {
-    "id": "26ss프리미엄쿨토시화이트",
-    "name": "26SS)프리미엄쿨토시화이트",
-    "category": "기타",
-    "price": 7500,
-    "saving": 7500,
-    "barcode": "8808994293000",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8808994293000.JPG"
-      }
-    }
-  },
-  {
     "id": "쏘피바디피트볼록맞춤12입오버",
     "name": "쏘피)바디피트볼록맞춤12입(오버)",
     "category": "생활용품",
@@ -85690,6 +85572,38 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8809949567399.JPG"
+      }
+    }
+  },
+  {
+    "id": "호올스xs레몬민트",
+    "name": "호올스XS)레몬민트15g",
+    "category": "기타",
+    "price": 2000,
+    "saving": 2000,
+    "barcode": "8850338019043",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8850338019043.JPG"
+      }
+    }
+  },
+  {
+    "id": "호올스xs멘토립토스",
+    "name": "호올스XS)멘토립토스15g",
+    "category": "기타",
+    "price": 2000,
+    "saving": 2000,
+    "barcode": "8850338019715",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8850338019715.JPG"
       }
     }
   },
@@ -90158,6 +90072,22 @@
     }
   },
   {
+    "id": "오뚜기추라면",
+    "name": "오뚜기)추라면",
+    "category": "라면",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8801045858241",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045858241.JPG"
+      }
+    }
+  },
+  {
     "id": "오뚜기컵밥참기름김치볶음밥",
     "name": "오뚜기)컵밥참기름김치볶음밥259g",
     "category": "간편식",
@@ -90410,6 +90340,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801052043845.JPG"
+      }
+    }
+  },
+  {
+    "id": "대상안주야직화무뼈닭발냉동",
+    "name": "대상)안주야직화무뼈닭발160g(냉동)",
+    "category": "기타",
+    "price": 9500,
+    "saving": 3167,
+    "barcode": "8801052043852",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801052043852.JPG"
       }
     }
   },
@@ -91006,6 +90952,22 @@
     }
   },
   {
+    "id": "삼양탱글갈릭오일파스타큰컵",
+    "name": "삼양)탱글갈릭오일파스타큰컵",
+    "category": "간편식",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "8801073216570",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801073216570.JPG"
+      }
+    }
+  },
+  {
     "id": "삼양까르보불닭납작당면큰컵",
     "name": "삼양)까르보불닭납작당면큰컵",
     "category": "라면",
@@ -91018,6 +90980,38 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801073216716.JPG"
+      }
+    }
+  },
+  {
+    "id": "삼양탱글바질토마토프로틴파스타큰컵",
+    "name": "삼양)탱글바질토마토프로틴파스타큰컵",
+    "category": "간편식",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "8801073217201",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801073217201.JPG"
+      }
+    }
+  },
+  {
+    "id": "삼양탱글갈릭쉬림프프로틴파스타큰컵",
+    "name": "삼양)탱글갈릭쉬림프프로틴파스타큰컵",
+    "category": "간편식",
+    "price": 2500,
+    "saving": 833,
+    "barcode": "8801073217294",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801073217294.JPG"
       }
     }
   },
@@ -91578,38 +91572,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117070007.JPG"
-      }
-    }
-  },
-  {
-    "id": "오리온포카칩오리지널3400중12",
-    "name": "오리온)포카칩오리지널3400(중)(12)",
-    "category": "스낵·과자",
-    "price": 3400,
-    "saving": 1133,
-    "barcode": "8801117760205",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117760205.JPG"
-      }
-    }
-  },
-  {
-    "id": "오리온포카칩어니언3400중12",
-    "name": "오리온)포카칩어니언3400(중)(12)",
-    "category": "스낵·과자",
-    "price": 3400,
-    "saving": 1133,
-    "barcode": "8801117760403",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801117760403.JPG"
       }
     }
   },
