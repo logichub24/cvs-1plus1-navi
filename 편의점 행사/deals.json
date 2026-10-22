@@ -8116,34 +8116,6 @@
     }
   },
   {
-    "id": "농심츄파춥스플러피판다",
-    "name": "농심)츄파춥스플러피판다",
-    "category": "기타",
-    "price": 1700,
-    "saving": 1700,
-    "barcode": "8801043047081",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801043047081.jpg"
-      },
-      "GS25": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_8801043047081_001.jpg"
-      },
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801043047081.jpg"
-      }
-    }
-  },
-  {
     "id": "동원한라봉제로아이스500",
     "name": "동원)한라봉제로아이스500",
     "category": "기타",
@@ -9672,28 +9644,6 @@
     }
   },
   {
-    "id": "라라스윗제주감귤제로바",
-    "name": "라라스윗)제주감귤제로바",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "8809599361682",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809599361682.jpg"
-      },
-      "GS25": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_8809599361682_001.jpg"
-      }
-    }
-  },
-  {
     "id": "라라스윗피치망고듬뿍바",
     "name": "라라스윗)피치망고듬뿍바",
     "category": "기타",
@@ -10964,22 +10914,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/6914973603189.jpg"
-      }
-    }
-  },
-  {
-    "id": "마즈엠앤엠피넛초콜릿",
-    "name": "마즈)엠앤엠피넛초콜릿37g",
-    "category": "스낵·과자",
-    "price": 1800,
-    "saving": 600,
-    "barcode": "6914973603202",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/6914973603202.png"
       }
     }
   },
@@ -13668,22 +13602,6 @@
     }
   },
   {
-    "id": "롯데거꾸로수박바",
-    "name": "롯데)거꾸로수박바",
-    "category": "기타",
-    "price": 1500,
-    "saving": 500,
-    "barcode": "8801062004720",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801062004720.jpg"
-      }
-    }
-  },
-  {
     "id": "오뚜기영양닭죽",
     "name": "오뚜기)영양닭죽285g",
     "category": "간편식",
@@ -15744,22 +15662,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801037092264_1.png"
-      }
-    }
-  },
-  {
-    "id": "유니벤앤쿠키도우파인",
-    "name": "유니)벤앤쿠키도우파인",
-    "category": "스낵·과자",
-    "price": 16900,
-    "saving": 5633,
-    "barcode": "0076840100583",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/0076840100583.png"
       }
     }
   },
@@ -19450,22 +19352,6 @@
     }
   },
   {
-    "id": "유니벤앤피넛버터파인트",
-    "name": "유니)벤앤피넛버터파인트",
-    "category": "유제품",
-    "price": 16900,
-    "saving": 5633,
-    "barcode": "0076840100811",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/0076840100811.jpg"
-      }
-    }
-  },
-  {
     "id": "농심카리야포크카레",
     "name": "농심)카리야포크카레",
     "category": "기타",
@@ -20254,22 +20140,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809599360692.jpg"
-      }
-    }
-  },
-  {
-    "id": "유니벤앤카라멜코어파인",
-    "name": "유니)벤앤카라멜코어파인",
-    "category": "기타",
-    "price": 16900,
-    "saving": 5633,
-    "barcode": "0076840101542",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/0076840101542.jpg"
       }
     }
   },
@@ -23422,22 +23292,6 @@
     }
   },
   {
-    "id": "동그린말차크림파르페",
-    "name": "동그린)말차크림파르페",
-    "category": "기타",
-    "price": 3500,
-    "saving": 1167,
-    "barcode": "8807203003164",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8807203003164.jpg"
-      }
-    }
-  },
-  {
     "id": "리뉴한손한끼밤라떼",
     "name": "리뉴)한손한끼밤라떼40g",
     "category": "음료",
@@ -24234,28 +24088,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801204009842.jpg"
-      }
-    }
-  },
-  {
-    "id": "서주헬로키티베리에이스",
-    "name": "서주)헬로키티베리에이스",
-    "category": "기타",
-    "price": 2000,
-    "saving": 667,
-    "barcode": "8809592641927",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809592641927.jpg"
-      },
-      "GS25": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://image.woodongs.com/imgsvr/item/GD_8809592641927_001.jpg"
       }
     }
   },
@@ -27040,22 +26872,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801045667720.JPG"
-      }
-    }
-  },
-  {
-    "id": "서주연유듬뿍팥빙수",
-    "name": "서주)연유듬뿍팥빙수",
-    "category": "기타",
-    "price": 3500,
-    "saving": 1167,
-    "barcode": "8801206007280",
-    "events": {
-      "CU": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801206007280.jpg"
       }
     }
   },
@@ -34538,6 +34354,22 @@
     }
   },
   {
+    "id": "라라스윗제주감귤제로바",
+    "name": "라라스윗)제주감귤제로바70ML",
+    "category": "기타",
+    "price": 2500,
+    "saving": 2500,
+    "barcode": "8809599361682",
+    "events": {
+      "GS25": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_8809599361682_001.jpg"
+      }
+    }
+  },
+  {
     "id": "흥선쫄깃한매콤편육",
     "name": "흥선)쫄깃한매콤편육150G",
     "category": "기타",
@@ -35604,6 +35436,28 @@
     }
   },
   {
+    "id": "농심츄파춥스플러피판다",
+    "name": "농심)츄파춥스플러피판다60G",
+    "category": "기타",
+    "price": 1700,
+    "saving": 1700,
+    "barcode": "8801043047081",
+    "events": {
+      "GS25": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_8801043047081_001.jpg"
+      },
+      "7-ELEVEN": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_8801043047081_001.jpg"
+      }
+    }
+  },
+  {
     "id": "리얼얼큰가쓰오우동",
     "name": "리얼)얼큰가쓰오우동213G",
     "category": "라면",
@@ -36168,6 +36022,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://image.woodongs.com/imgsvr/item/GD_8801166034609_001.jpg"
+      }
+    }
+  },
+  {
+    "id": "서주헬로키티베리에이스",
+    "name": "서주)헬로키티베리에이스42G",
+    "category": "기타",
+    "price": 2000,
+    "saving": 667,
+    "barcode": "8809592641927",
+    "events": {
+      "GS25": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://image.woodongs.com/imgsvr/item/GD_8809592641927_001.jpg"
       }
     }
   },
@@ -53148,8 +53018,8 @@
     "name": "대림)스노우크랩킹70g",
     "category": "간편식",
     "price": 3000,
-    "saving": 1000,
-    "barcode": "8801066055438",
+    "saving": 3000,
+    "barcode": "8801066056169",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -53437,7 +53307,7 @@
     "category": "기타",
     "price": 2100,
     "saving": 2100,
-    "barcode": "3073780886840",
+    "barcode": "8801056241506",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -53677,7 +53547,7 @@
     "category": "기타",
     "price": 1800,
     "saving": 1800,
-    "barcode": null,
+    "barcode": "3073780886840",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -54249,13 +54119,13 @@
     "category": "기타",
     "price": 1500,
     "saving": 1500,
-    "barcode": null,
+    "barcode": "3073780886840",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": ""
+        "image": "https://www.7-eleven.co.kr/upload/product/3073780/886840.1"
       }
     }
   },
@@ -54265,13 +54135,13 @@
     "category": "아이스크림",
     "price": 2500,
     "saving": 2500,
-    "barcode": null,
+    "barcode": "3073780886840",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": ""
+        "image": "https://www.7-eleven.co.kr/upload/product/3073780/886840.1"
       }
     }
   },
@@ -54281,13 +54151,13 @@
     "category": "스낵·과자",
     "price": 2500,
     "saving": 2500,
-    "barcode": null,
+    "barcode": "3073780886840",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": ""
+        "image": "https://www.7-eleven.co.kr/upload/product/3073780/886840.1"
       }
     }
   },
@@ -54297,13 +54167,13 @@
     "category": "기타",
     "price": 2600,
     "saving": 2600,
-    "barcode": null,
+    "barcode": "3073780886840",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": ""
+        "image": "https://www.7-eleven.co.kr/upload/product/3073780/886840.1"
       }
     }
   },
@@ -55371,7 +55241,7 @@
     "category": "음료",
     "price": 2300,
     "saving": 2300,
-    "barcode": "8801056175900",
+    "barcode": "8801056175955",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -60467,7 +60337,7 @@
     "category": "음료",
     "price": 2500,
     "saving": 2500,
-    "barcode": "8801056150013",
+    "barcode": "8801056193010",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -60579,7 +60449,7 @@
     "category": "음료",
     "price": 2600,
     "saving": 2600,
-    "barcode": "8801094083205",
+    "barcode": "8801094082604",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -61135,7 +61005,7 @@
     "category": "음료",
     "price": 2500,
     "saving": 2500,
-    "barcode": "8801056177645",
+    "barcode": "8801056177584",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -61342,8 +61212,8 @@
     "name": "칠성)잔치집식혜500ml",
     "category": "음료",
     "price": 2200,
-    "saving": 733,
-    "barcode": "8801056063245",
+    "saving": 2200,
+    "barcode": "8801056230630",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -66783,7 +66653,7 @@
     "category": "음료",
     "price": 5100,
     "saving": 1700,
-    "barcode": "8801074003896",
+    "barcode": "8801074003490",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74263,7 +74133,7 @@
     "category": "기타",
     "price": 1600,
     "saving": 533,
-    "barcode": "8801097481206",
+    "barcode": "8801097481015",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74279,7 +74149,7 @@
     "category": "음료",
     "price": 2800,
     "saving": 933,
-    "barcode": "8801056048150",
+    "barcode": "8801056018900",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74359,7 +74229,7 @@
     "category": "음료",
     "price": 2700,
     "saving": 900,
-    "barcode": "8801037064346",
+    "barcode": "8801037087543",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74375,7 +74245,7 @@
     "category": "음료",
     "price": 2700,
     "saving": 900,
-    "barcode": "8801037057843",
+    "barcode": "8801037087550",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74819,7 +74689,7 @@
     "category": "음료",
     "price": 1500,
     "saving": 500,
-    "barcode": "8801097235014",
+    "barcode": "8801097135215",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74835,7 +74705,7 @@
     "category": "기타",
     "price": 1100,
     "saving": 367,
-    "barcode": null,
+    "barcode": "8801056049881",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -75171,7 +75041,7 @@
     "category": "음료",
     "price": 2000,
     "saving": 667,
-    "barcode": "8801097136618",
+    "barcode": "8801097235670",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -75935,7 +75805,7 @@
     "category": "기타",
     "price": 8900,
     "saving": 2967,
-    "barcode": "8801007512259",
+    "barcode": "8801007512235",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
