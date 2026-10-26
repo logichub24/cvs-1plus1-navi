@@ -4800,38 +4800,6 @@
     }
   },
   {
-    "id": "박대리퇴근커피카라멜300",
-    "name": "박대리)퇴근커피카라멜300",
-    "category": "음료",
-    "price": 2600,
-    "saving": 2600,
-    "barcode": "8801104946261",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801104946261.jpg"
-      }
-    }
-  },
-  {
-    "id": "박대리출근커피바닐라300",
-    "name": "박대리)출근커피바닐라300",
-    "category": "음료",
-    "price": 2600,
-    "saving": 2600,
-    "barcode": "8801104946285",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801104946285.jpg"
-      }
-    }
-  },
-  {
     "id": "롯데펩시제로제로p",
     "name": "롯데)펩시제로제로P500ml",
     "category": "기타",
@@ -5548,22 +5516,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801047284642.jpg"
-      }
-    }
-  },
-  {
-    "id": "박대리맛점커피바나나300",
-    "name": "박대리)맛점커피바나나300",
-    "category": "음료",
-    "price": 2600,
-    "saving": 2600,
-    "barcode": "8801104948760",
-    "events": {
-      "CU": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801104948760.png"
       }
     }
   },
@@ -20761,7 +20713,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8806006501761.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8806006501761_1.png"
       },
       "7-ELEVEN": {
         "type": "2+1",
@@ -20783,7 +20735,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8806006501778.jpg"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8806006501778_1.png"
       },
       "7-ELEVEN": {
         "type": "2+1",
