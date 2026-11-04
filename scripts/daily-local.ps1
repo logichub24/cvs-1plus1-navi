@@ -10,8 +10,20 @@ function Write-Log($message) {
     Add-Content -Path $log -Value $line -Encoding utf8
 }
 
+function Restore-RemoteGeneratedData {
+    git rebase --abort 2>$null
+    git fetch --quiet origin
+    $changed = @(git diff --name-only origin/master..HEAD)
+    $unexpected = @($changed | Where-Object { $_ -notmatch '(deals\.json|crawl-status\.json|/stores/)' })
+    if ($unexpected.Count -gt 0) { throw "Cannot discard local code changes: $($unexpected -join ', ')" }
+    git reset --hard origin/master
+    if ($LASTEXITCODE -ne 0) { throw 'Could not restore remote generated data' }
+    Write-Log 'Discarded stale local generated data in favor of remote data'
+}
+
 try {
     Write-Log '=== Start ==='
+    if (git status --porcelain) { throw 'Working tree has local changes; updater will not overwrite them' }
 
     $envPath = Join-Path $repo '.env'
     if (Test-Path $envPath) {
@@ -21,7 +33,7 @@ try {
     }
 
     git pull --rebase --quiet
-    if ($LASTEXITCODE -ne 0) { throw 'git pull failed' }
+    if ($LASTEXITCODE -ne 0) { Restore-RemoteGeneratedData }
 
     Write-Log 'Crawl promotions started (about 9 minutes)'
     npm run crawl
@@ -42,8 +54,12 @@ try {
     } else {
         git commit -m "chore: local promotion data update $(Get-Date -Format 'yyyy-MM-dd')"
         git push
-        if ($LASTEXITCODE -ne 0) { throw 'git push failed' }
-        Write-Log 'Commit and push completed'
+        if ($LASTEXITCODE -ne 0) {
+            Restore-RemoteGeneratedData
+            Write-Log 'Remote changed before push; local data will be refreshed next run'
+        } else {
+            Write-Log 'Commit and push completed'
+        }
     }
 
     npm run check:crawl
