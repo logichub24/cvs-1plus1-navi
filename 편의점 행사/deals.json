@@ -75622,22 +75622,6 @@
     }
   },
   {
-    "id": "아띠포미토마토쥬스",
-    "name": "아띠)포미토마토쥬스200ml",
-    "category": "기타",
-    "price": 2000,
-    "saving": 2000,
-    "barcode": "8032793344803",
-    "events": {
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8032793344803.JPG"
-      }
-    }
-  },
-  {
     "id": "후버사과주스s",
     "name": "후버)사과주스200ml(S)",
     "category": "음료",
@@ -76095,7 +76079,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392191343.JPG"
       }
@@ -76111,7 +76095,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392191381.JPG"
       }
@@ -76127,7 +76111,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392191428.JPG"
       }
@@ -76223,7 +76207,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806371360611.JPG"
       }
@@ -76239,7 +76223,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8806371360628.JPG"
       }
@@ -76850,6 +76834,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/7622202342134.JPG"
+      }
+    }
+  },
+  {
+    "id": "아띠포미토마토쥬스",
+    "name": "아띠)포미토마토쥬스200ml",
+    "category": "기타",
+    "price": 2000,
+    "saving": 2000,
+    "barcode": "8032793344803",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8032793344803.JPG"
       }
     }
   },
@@ -84998,70 +84998,6 @@
     }
   },
   {
-    "id": "빙그레더단백초코",
-    "name": "빙그레)더단백초코250ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801104670876",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104670876.JPG"
-      }
-    }
-  },
-  {
-    "id": "빙그레더단백카라멜",
-    "name": "빙그레)더단백카라멜250ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801104673198",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104673198.JPG"
-      }
-    }
-  },
-  {
-    "id": "빙그레더단백커피",
-    "name": "빙그레)더단백커피250ml",
-    "category": "음료",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801104673211",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104673211.JPG"
-      }
-    }
-  },
-  {
-    "id": "빙그레더단백딸기",
-    "name": "빙그레)더단백딸기250ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801104942935",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104942935.JPG"
-      }
-    }
-  },
-  {
     "id": "빙그레아카페라아메리카노블랙",
     "name": "빙그레)아카페라아메리카노블랙240ml",
     "category": "음료",
@@ -85074,22 +85010,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104944625.JPG"
-      }
-    }
-  },
-  {
-    "id": "빙그레더단백멜론",
-    "name": "빙그레)더단백멜론250ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801104946179",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104946179.JPG"
       }
     }
   },
@@ -90214,6 +90134,70 @@
     }
   },
   {
+    "id": "빙그레더단백초코",
+    "name": "빙그레)더단백초코250ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801104670876",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104670876.JPG"
+      }
+    }
+  },
+  {
+    "id": "빙그레더단백카라멜",
+    "name": "빙그레)더단백카라멜250ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801104673198",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104673198.JPG"
+      }
+    }
+  },
+  {
+    "id": "빙그레더단백커피",
+    "name": "빙그레)더단백커피250ml",
+    "category": "음료",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801104673211",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104673211.JPG"
+      }
+    }
+  },
+  {
+    "id": "빙그레더단백딸기",
+    "name": "빙그레)더단백딸기250ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801104942935",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104942935.JPG"
+      }
+    }
+  },
+  {
     "id": "빙그레사이즈업벤티아메리카노펫",
     "name": "빙그레)사이즈업벤티아메리카노펫600ml",
     "category": "음료",
@@ -90242,6 +90226,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104944939.JPG"
+      }
+    }
+  },
+  {
+    "id": "빙그레더단백멜론",
+    "name": "빙그레)더단백멜론250ml",
+    "category": "기타",
+    "price": 2900,
+    "saving": 967,
+    "barcode": "8801104946179",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104946179.JPG"
       }
     }
   },
