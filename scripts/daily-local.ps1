@@ -39,15 +39,10 @@ try {
     npm run crawl
     if ($LASTEXITCODE -ne 0) { Write-Log 'Promotion crawl ended with errors; partial data may have been saved' }
 
-    Write-Log 'Store location sync started'
-    npm run sync:stores
-    if ($LASTEXITCODE -ne 0) { Write-Log 'Store location sync failed; keeping existing locations' }
-
     $deals = Get-ChildItem -Path $repo -Recurse -File -Filter 'deals.json' | Select-Object -First 1
     $status = Get-ChildItem -Path $repo -Recurse -File -Filter 'crawl-status.json' | Select-Object -First 1
-    $stores = Get-ChildItem -Path $repo -Recurse -Directory -Filter 'stores' | Select-Object -First 1
-    if (!$deals -or !$status -or !$stores) { throw 'Data files were not found' }
-    git add -- $deals.FullName $status.FullName $stores.FullName
+    if (!$deals -or !$status) { throw 'Promotion data files were not found' }
+    git add -- $deals.FullName $status.FullName
     git diff --cached --quiet
     if ($LASTEXITCODE -eq 0) {
         Write-Log 'No data changes; skipped commit'
