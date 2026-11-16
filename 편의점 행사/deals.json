@@ -4154,12 +4154,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115140016.png"
-      },
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
       }
     }
   },
@@ -4176,12 +4170,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801115140023.png"
-      },
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
       }
     }
   },
@@ -25671,12 +25659,6 @@
     "events": {
       "CU": {
         "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/4902181106679.jpg"
-      },
-      "7-ELEVEN": {
-        "type": "1+1",
         "isNew": false,
         "daysLeft": null,
         "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/4902181106679.jpg"
@@ -52701,7 +52683,7 @@
     "category": "기타",
     "price": 2100,
     "saving": 2100,
-    "barcode": "8809274510916",
+    "barcode": "8801056241506",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -52947,7 +52929,7 @@
     "category": "기타",
     "price": 1800,
     "saving": 1800,
-    "barcode": null,
+    "barcode": "8809274510916",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -53056,28 +53038,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8805584/224826.1.jpg"
-      }
-    }
-  },
-  {
-    "id": "덴마크하이요구르트",
-    "name": "덴마크)하이요구르트280ml",
-    "category": "유제품",
-    "price": 1700,
-    "saving": 1700,
-    "barcode": "8809274510916",
-    "events": {
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
-      },
-      "EMART24": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801155744502.JPG"
       }
     }
   },
@@ -53311,7 +53271,7 @@
     "category": "간편식",
     "price": 2400,
     "saving": 2400,
-    "barcode": "8801077384800",
+    "barcode": "8809274510916",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -53579,13 +53539,13 @@
     "category": "유제품",
     "price": 2600,
     "saving": 2600,
-    "barcode": null,
+    "barcode": "8809274510916",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": ""
+        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
       }
     }
   },
@@ -53938,54 +53898,6 @@
     }
   },
   {
-    "id": "롯데허쉬키세스쿠키앤크림",
-    "name": "롯데)허쉬키세스쿠키앤크림52g",
-    "category": "스낵·과자",
-    "price": 2700,
-    "saving": 2700,
-    "barcode": "8801062642021",
-    "events": {
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8801062/642021.1.jpg"
-      }
-    }
-  },
-  {
-    "id": "롯데허쉬키세스아몬드",
-    "name": "롯데)허쉬키세스아몬드52g",
-    "category": "스낵·과자",
-    "price": 2700,
-    "saving": 2700,
-    "barcode": "8801062641895",
-    "events": {
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8801062/641895.1.jpg"
-      }
-    }
-  },
-  {
-    "id": "롯데허쉬키세스밀크",
-    "name": "롯데)허쉬키세스밀크52g",
-    "category": "기타",
-    "price": 2700,
-    "saving": 2700,
-    "barcode": "8801062641826",
-    "events": {
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8801062/641826.1.jpg"
-      }
-    }
-  },
-  {
     "id": "삼경리콜라오리지널허브",
     "name": "삼경)리콜라오리지널허브40g",
     "category": "음료",
@@ -54021,22 +53933,6 @@
     "id": "에이스그릭요거트스타터",
     "name": "에이스)그릭요거트스타터2g",
     "category": "유제품",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": null,
-    "events": {
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": ""
-      }
-    }
-  },
-  {
-    "id": "삼경코로로포도맛",
-    "name": "삼경)코로로포도맛48g",
-    "category": "기타",
     "price": 2500,
     "saving": 2500,
     "barcode": null,
@@ -56185,7 +56081,7 @@
     "category": "음료",
     "price": 1800,
     "saving": 1800,
-    "barcode": "8801056175900",
+    "barcode": "8801056175955",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -56980,7 +56876,7 @@
     "name": "칠성)칠성사이다제로라임500ml",
     "category": "음료",
     "price": 2500,
-    "saving": 833,
+    "saving": 2500,
     "barcode": null,
     "events": {
       "7-ELEVEN": {
@@ -58352,7 +58248,7 @@
     "name": "칠성)칠성사이다제로유자500ml",
     "category": "음료",
     "price": 2500,
-    "saving": 833,
+    "saving": 2500,
     "barcode": null,
     "events": {
       "7-ELEVEN": {
@@ -59282,38 +59178,6 @@
     }
   },
   {
-    "id": "mz캐드버리데어리밀크헤이즐넛",
-    "name": "MZ)캐드버리데어리밀크(헤이즐넛",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": null,
-    "events": {
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": ""
-      }
-    }
-  },
-  {
-    "id": "mz캐드버리데어리밀크오리지널",
-    "name": "MZ)캐드버리데어리밀크(오리지널",
-    "category": "기타",
-    "price": 2200,
-    "saving": 2200,
-    "barcode": null,
-    "events": {
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": ""
-      }
-    }
-  },
-  {
     "id": "오뚜기찰현미밥",
     "name": "오뚜기)찰현미밥210g",
     "category": "기타",
@@ -59577,7 +59441,7 @@
     "category": "음료",
     "price": 2500,
     "saving": 2500,
-    "barcode": "8801056150013",
+    "barcode": "8801056193010",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -60008,8 +59872,8 @@
     "name": "칠성)칠성사이다제로500ml",
     "category": "음료",
     "price": 2500,
-    "saving": 833,
-    "barcode": "8801056177645",
+    "saving": 2500,
+    "barcode": "8801056177584",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -63664,22 +63528,6 @@
     }
   },
   {
-    "id": "삼경코로로샤인머스켓",
-    "name": "삼경)코로로샤인머스켓48g",
-    "category": "기타",
-    "price": 2500,
-    "saving": 2500,
-    "barcode": "4902750627222",
-    "events": {
-      "7-ELEVEN": {
-        "type": "1+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/4902750/627222.1.jpg"
-      }
-    }
-  },
-  {
     "id": "삼경리콜라레몬민트",
     "name": "삼경)리콜라레몬민트40g",
     "category": "음료",
@@ -64879,7 +64727,7 @@
     "category": "간편식",
     "price": 3000,
     "saving": 1000,
-    "barcode": "8801066055438",
+    "barcode": "8801066056169",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -64956,38 +64804,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007899923.JPG"
-      }
-    }
-  },
-  {
-    "id": "하림닭가슴살리얼바오리지널",
-    "name": "하림)닭가슴살리얼바오리지널70g",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801492375384",
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8801492/375384.1.jpg"
-      }
-    }
-  },
-  {
-    "id": "하림닭가슴살리얼바블랙페퍼",
-    "name": "하림)닭가슴살리얼바블랙페퍼70g",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801492377654",
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8801492/377654.1.jpg"
       }
     }
   },
@@ -66120,22 +65936,6 @@
     }
   },
   {
-    "id": "하림맛닭가슴살바베큐맛",
-    "name": "하림)맛닭가슴살바베큐맛100g",
-    "category": "기타",
-    "price": 5000,
-    "saving": 1667,
-    "barcode": null,
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": ""
-      }
-    }
-  },
-  {
     "id": "빙그레빵또아고구마케이크",
     "name": "빙그레)빵또아고구마케이크180ml",
     "category": "기타",
@@ -66729,13 +66529,13 @@
     "category": "기타",
     "price": 2500,
     "saving": 833,
-    "barcode": "8691216107113",
+    "barcode": null,
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8691216107113.JPG"
+        "image": ""
       }
     }
   },
@@ -70256,22 +70056,6 @@
     }
   },
   {
-    "id": "하림직화닭가슴살소금구이맛100",
-    "name": "하림)직화닭가슴살소금구이맛100",
-    "category": "기타",
-    "price": 5000,
-    "saving": 1667,
-    "barcode": null,
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": ""
-      }
-    }
-  },
-  {
     "id": "pb두햄빠한입버터갈릭바게트100",
     "name": "PB)두햄빠한입버터갈릭바게트100",
     "category": "유제품",
@@ -70293,38 +70077,6 @@
     "category": "라면",
     "price": 2300,
     "saving": 767,
-    "barcode": null,
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": ""
-      }
-    }
-  },
-  {
-    "id": "하림직화닭가슴살갈비구이맛100",
-    "name": "하림)직화닭가슴살갈비구이맛100",
-    "category": "간편식",
-    "price": 5000,
-    "saving": 1667,
-    "barcode": null,
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": ""
-      }
-    }
-  },
-  {
-    "id": "하림직화닭가슴살바베큐구이맛1",
-    "name": "하림)직화닭가슴살바베큐구이맛1",
-    "category": "기타",
-    "price": 5000,
-    "saving": 1667,
     "barcode": null,
     "events": {
       "7-ELEVEN": {
@@ -73141,7 +72893,7 @@
     "category": "음료",
     "price": 2800,
     "saving": 933,
-    "barcode": "8801056048150",
+    "barcode": "8801056018900",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -73205,7 +72957,7 @@
     "category": "음료",
     "price": 2700,
     "saving": 900,
-    "barcode": "8801037064346",
+    "barcode": "8801037087543",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -73221,7 +72973,7 @@
     "category": "음료",
     "price": 2700,
     "saving": 900,
-    "barcode": "8801037057843",
+    "barcode": "8801037087550",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -73591,7 +73343,7 @@
     "category": "음료",
     "price": 1500,
     "saving": 500,
-    "barcode": "8801097235014",
+    "barcode": "8801097135215",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -73607,7 +73359,7 @@
     "category": "기타",
     "price": 1100,
     "saving": 367,
-    "barcode": null,
+    "barcode": "8801056049881",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -73879,7 +73631,7 @@
     "category": "음료",
     "price": 2000,
     "saving": 667,
-    "barcode": "8801097136618",
+    "barcode": "8801097235670",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74521,7 +74273,7 @@
     "category": "기타",
     "price": 8900,
     "saving": 2967,
-    "barcode": "8801007512259",
+    "barcode": "8801007512235",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -75896,6 +75648,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801155735647.JPG"
+      }
+    }
+  },
+  {
+    "id": "덴마크하이요구르트",
+    "name": "덴마크)하이요구르트280ml",
+    "category": "유제품",
+    "price": 1700,
+    "saving": 1700,
+    "barcode": "8801155744502",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": false,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801155744502.JPG"
       }
     }
   },
