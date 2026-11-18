@@ -11397,7 +11397,7 @@
         "type": "2+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801047161592.png"
+        "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801047161592_1.png"
       }
     }
   },
@@ -89380,70 +89380,6 @@
     }
   },
   {
-    "id": "빙그레더단백초코",
-    "name": "빙그레)더단백초코250ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801104670876",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104670876.JPG"
-      }
-    }
-  },
-  {
-    "id": "빙그레더단백카라멜",
-    "name": "빙그레)더단백카라멜250ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801104673198",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104673198.JPG"
-      }
-    }
-  },
-  {
-    "id": "빙그레더단백커피",
-    "name": "빙그레)더단백커피250ml",
-    "category": "음료",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801104673211",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104673211.JPG"
-      }
-    }
-  },
-  {
-    "id": "빙그레더단백딸기",
-    "name": "빙그레)더단백딸기250ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801104942935",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104942935.JPG"
-      }
-    }
-  },
-  {
     "id": "빙그레사이즈업벤티아메리카노펫",
     "name": "빙그레)사이즈업벤티아메리카노펫600ml",
     "category": "음료",
@@ -89472,22 +89408,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104944939.JPG"
-      }
-    }
-  },
-  {
-    "id": "빙그레더단백멜론",
-    "name": "빙그레)더단백멜론250ml",
-    "category": "기타",
-    "price": 2900,
-    "saving": 967,
-    "barcode": "8801104946179",
-    "events": {
-      "EMART24": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801104946179.JPG"
       }
     }
   },
