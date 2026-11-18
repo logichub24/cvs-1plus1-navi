@@ -46621,12 +46621,6 @@
         "daysLeft": null,
         "image": "https://image.woodongs.com/imgsvr/item/GD_8801047161592_596.jpg"
       },
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8801047/161592.1.jpg"
-      },
       "EMART24": {
         "type": "2+1",
         "isNew": false,
@@ -52683,7 +52677,7 @@
     "category": "기타",
     "price": 2100,
     "saving": 2100,
-    "barcode": "8809274510916",
+    "barcode": "8801056241506",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -52929,7 +52923,7 @@
     "category": "기타",
     "price": 1800,
     "saving": 1800,
-    "barcode": null,
+    "barcode": "8809274510916",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -53271,7 +53265,7 @@
     "category": "간편식",
     "price": 2400,
     "saving": 2400,
-    "barcode": "8801077384800",
+    "barcode": "8809274510916",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -53507,13 +53501,13 @@
     "category": "생활용품",
     "price": 10900,
     "saving": 10900,
-    "barcode": "8809274510916",
+    "barcode": null,
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
+        "image": ""
       }
     }
   },
@@ -53523,13 +53517,13 @@
     "category": "생활용품",
     "price": 10900,
     "saving": 10900,
-    "barcode": "8809274510916",
+    "barcode": null,
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
+        "image": ""
       }
     }
   },
@@ -53539,13 +53533,13 @@
     "category": "유제품",
     "price": 2600,
     "saving": 2600,
-    "barcode": "8809274510916",
+    "barcode": null,
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8809274/510916.1"
+        "image": ""
       }
     }
   },
@@ -56081,7 +56075,7 @@
     "category": "음료",
     "price": 1800,
     "saving": 1800,
-    "barcode": "8801056175900",
+    "barcode": "8801056175955",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -56876,7 +56870,7 @@
     "name": "칠성)칠성사이다제로라임500ml",
     "category": "음료",
     "price": 2500,
-    "saving": 833,
+    "saving": 2500,
     "barcode": null,
     "events": {
       "7-ELEVEN": {
@@ -58248,7 +58242,7 @@
     "name": "칠성)칠성사이다제로유자500ml",
     "category": "음료",
     "price": 2500,
-    "saving": 833,
+    "saving": 2500,
     "barcode": null,
     "events": {
       "7-ELEVEN": {
@@ -59441,7 +59435,7 @@
     "category": "음료",
     "price": 2500,
     "saving": 2500,
-    "barcode": "8801056150013",
+    "barcode": "8801056193010",
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
@@ -59872,8 +59866,8 @@
     "name": "칠성)칠성사이다제로500ml",
     "category": "음료",
     "price": 2500,
-    "saving": 833,
-    "barcode": "8801056177645",
+    "saving": 2500,
+    "barcode": "8801056177584",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -62637,13 +62631,13 @@
     "category": "생활용품",
     "price": 14900,
     "saving": 14900,
-    "barcode": "8801101161537",
+    "barcode": null,
     "events": {
       "7-ELEVEN": {
         "type": "1+1",
         "isNew": false,
         "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8801101/161537.1.jpg"
+        "image": ""
       }
     }
   },
@@ -64727,7 +64721,7 @@
     "category": "간편식",
     "price": 3000,
     "saving": 1000,
-    "barcode": "8801066055438",
+    "barcode": "8801066056169",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -66268,38 +66262,6 @@
     }
   },
   {
-    "id": "하리보골든배렌젤리",
-    "name": "하리보)골든배렌젤리100g",
-    "category": "스낵·과자",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "9002975301558",
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/9002975/301558.1.jpg"
-      }
-    }
-  },
-  {
-    "id": "하리보해피콜라젤리",
-    "name": "하리보)해피콜라젤리100g",
-    "category": "스낵·과자",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "9002975323369",
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/9002975/323369.1.jpg"
-      }
-    }
-  },
-  {
     "id": "농심츄파춥스사워게코",
     "name": "농심)츄파춥스사워게코",
     "category": "기타",
@@ -66312,22 +66274,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/6925425/474653.1.jpg"
-      }
-    }
-  },
-  {
-    "id": "하리보푸르티부시젤리",
-    "name": "하리보)푸르티부시젤리100g",
-    "category": "스낵·과자",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "4001686375754",
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/4001686/375754.1.jpg"
       }
     }
   },
@@ -66376,22 +66322,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801062/521241.1.jpg"
-      }
-    }
-  },
-  {
-    "id": "하리보스타믹스젤리",
-    "name": "하리보)스타믹스젤리100g",
-    "category": "스낵·과자",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "9002975726481",
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/9002975/726481.1.jpg"
       }
     }
   },
@@ -66524,22 +66454,6 @@
     }
   },
   {
-    "id": "하리보애플후프사우어",
-    "name": "하리보)애플후프사우어80g",
-    "category": "기타",
-    "price": 2500,
-    "saving": 833,
-    "barcode": null,
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": ""
-      }
-    }
-  },
-  {
     "id": "mz홀스xs멘토립터스",
     "name": "MZ)홀스xs멘토립터스",
     "category": "기타",
@@ -66636,38 +66550,6 @@
     }
   },
   {
-    "id": "하리보해피콜라사우어",
-    "name": "하리보)해피콜라사우어",
-    "category": "음료",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8691216096370",
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8691216/096370.1.jpg"
-      }
-    }
-  },
-  {
-    "id": "하리보해피그레이프",
-    "name": "하리보)해피그레이프100g",
-    "category": "기타",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "9002975319003",
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/9002975/319003.1.jpg"
-      }
-    }
-  },
-  {
     "id": "오리온예감볶은양파",
     "name": "오리온)예감볶은양파64g",
     "category": "기타",
@@ -66728,22 +66610,6 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801111/922739.1.jpg"
-      }
-    }
-  },
-  {
-    "id": "하리보복숭아젤리피치",
-    "name": "하리보)복숭아젤리(피치)100g",
-    "category": "스낵·과자",
-    "price": 2500,
-    "saving": 833,
-    "barcode": "8691216098794",
-    "events": {
-      "7-ELEVEN": {
-        "type": "2+1",
-        "isNew": false,
-        "daysLeft": null,
-        "image": "https://www.7-eleven.co.kr/upload/product/8691216/098794.1.jpg"
       }
     }
   },
@@ -72893,7 +72759,7 @@
     "category": "음료",
     "price": 2800,
     "saving": 933,
-    "barcode": "8801056048150",
+    "barcode": "8801056018900",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -72957,7 +72823,7 @@
     "category": "음료",
     "price": 2700,
     "saving": 900,
-    "barcode": "8801037064346",
+    "barcode": "8801037087543",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -72973,7 +72839,7 @@
     "category": "음료",
     "price": 2700,
     "saving": 900,
-    "barcode": "8801037057843",
+    "barcode": "8801037087550",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -73343,7 +73209,7 @@
     "category": "음료",
     "price": 1500,
     "saving": 500,
-    "barcode": "8801097235014",
+    "barcode": "8801097135215",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -73359,7 +73225,7 @@
     "category": "기타",
     "price": 1100,
     "saving": 367,
-    "barcode": null,
+    "barcode": "8801056049881",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -73631,7 +73497,7 @@
     "category": "음료",
     "price": 2000,
     "saving": 667,
-    "barcode": "8801097136618",
+    "barcode": "8801097235670",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74273,7 +74139,7 @@
     "category": "기타",
     "price": 8900,
     "saving": 2967,
-    "barcode": "8801007512259",
+    "barcode": "8801007512235",
     "events": {
       "7-ELEVEN": {
         "type": "2+1",
@@ -74318,6 +74184,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://www.7-eleven.co.kr/upload/product/8801007/002989.1.jpg"
+      }
+    }
+  },
+  {
+    "id": "동원양반진한호박죽",
+    "name": "동원)양반진한호박죽285G",
+    "category": "간편식",
+    "price": 5200,
+    "saving": 1733,
+    "barcode": "8801047161592",
+    "events": {
+      "7-ELEVEN": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://www.7-eleven.co.kr/upload/product/8801047/161592.1.jpg"
       }
     }
   },
