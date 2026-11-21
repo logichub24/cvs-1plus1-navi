@@ -55,8 +55,12 @@ function loadRewardAd() {
 // (예: 상세에서 길찾기를 누르면 길찾기 광고와 상세 닫기 광고가 겹친다)
 // 광고가 떠 있는 동안 들어온 요청은 무시해 연달아 뜨는 일을 막는다.
 let interstitialShowing = false;
+// 첫 탐색을 막지 않는다. 앱을 연 직후 60초간은 어떤 경로에서도 전면광고를 띄우지 않는다.
+const FIRST_SESSION_AD_DELAY_MS = 30 * 1000;
+const sessionStartedAt = Date.now();
 
 function showInterstitial(onAfter) {
+  if (Date.now() - sessionStartedAt < FIRST_SESSION_AD_DELAY_MS) { if (onAfter) onAfter(); return false; }
   if (interstitialShowing) { if (onAfter) onAfter(); return false; }
   if (!interstitialReady) { if (onAfter) onAfter(); return false; }
 

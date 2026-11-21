@@ -1,4 +1,4 @@
-const CACHE = 'cvs-v4';
+const CACHE = 'cvs-v5';
 const PRECACHE = [
   './',
   './1_1.html',
@@ -93,11 +93,12 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // 나머지는 캐시 우선 → 없으면 네트워크
+  // 앱 셸은 네트워크 우선으로 갱신한다. 이전 캐시 우선 정책은 배포 후에도
+  // 사용자가 오래된 화면을 계속 보는 문제를 만들었다.
   e.respondWith(
-    caches.match(e.request).then(cached => cached || fetch(e.request).then(res => {
+    fetch(e.request).then(res => {
       if (res.ok) caches.open(CACHE).then(c => c.put(e.request, res.clone()));
       return res;
-    }))
+    }).catch(() => caches.match(e.request))
   );
 });

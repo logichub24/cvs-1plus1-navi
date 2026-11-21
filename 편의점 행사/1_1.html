@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
-        html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; background-color: #e5e7eb; display: flex; justify-content: center; align-items: center; }
+        html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; background-color: #e5e7eb; display: flex; justify-content: center; align-items: center; word-break: keep-all; overflow-wrap: break-word; }
         
         #app-container {
             width: 100%; height: 100%; margin: 0 auto;
@@ -107,6 +107,17 @@
         .need-finder-cta { animation: needGlow 2.8s ease-in-out infinite; }
         .need-finder-cta span { display:inline-block; animation: needBounce 2.8s ease-in-out infinite; }
         @media (prefers-reduced-motion: reduce) { .need-finder-cta, .need-finder-cta span { animation: none; } }
+
+        /* 상품 탐색을 첫 화면으로: 지도는 매장 확인 단계에서만 연다. */
+        .product-home { position:absolute; inset:0; z-index:1000; overflow-y:auto; background:#f8fafc; padding:16px 16px 90px; }
+        .product-home.hidden { display:none; }
+        .home-product-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:9px; }
+        .home-product-card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:9px; text-align:left; box-shadow:0 2px 7px rgba(15,23,42,.04); }
+        .home-product-card img { width:100%; height:72px; object-fit:contain; border-radius:10px; background:#f8fafc; }
+        .home-product-card h4 { font-size:12px; line-height:1.38; font-weight:800; color:#111827; margin:7px 0 4px; overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+        .home-product-price { font-size:13px; line-height:1.2; font-weight:900; color:#111827; margin:0; letter-spacing:-.02em; }
+        .home-product-unit { font-size:10px; line-height:1.35; font-weight:700; color:#2563eb; margin:3px 0 0; }
+        .home-status { font-size:11px; color:#6b7280; line-height:1.5; }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800 selection:bg-blue-100">
@@ -168,13 +179,12 @@
                 <i class="fa-solid fa-location-crosshairs text-lg"></i>
             </button>
             
-            <!-- Radius Selector (2×2 그리드 + 5km 리워드) -->
+            <!-- 거리 선택은 과도한 정밀도 대신 4개 단계만 제공한다. -->
             <div class="bg-white/95 backdrop-blur-md rounded-2xl shadow-md border border-gray-100 grid grid-cols-2 overflow-hidden pointer-events-auto w-[76px]">
-                <button onclick="setRadius(300)" id="rad300" class="text-[11px] font-black py-2 w-full border-b border-r border-gray-100 text-gray-500 hover:bg-gray-50 transition">300m</button>
-                <button onclick="setRadius(500)" id="rad500" class="text-[11px] font-black py-2 w-full border-b border-gray-100 text-blue-600 bg-blue-50 transition">500m</button>
-                <button onclick="setRadius(1000)" id="rad1000" class="text-[11px] font-black py-2 w-full border-b border-r border-gray-100 text-gray-500 hover:bg-gray-50 transition">1km</button>
-                <button onclick="setRadius(2000)" id="rad2000" class="text-[11px] font-black py-2 w-full border-b border-gray-100 text-gray-500 hover:bg-gray-50 transition">2km</button>
-                <button onclick="requestRadius5km()" id="rad5000" class="text-[11px] font-black py-2 w-full col-span-2 text-amber-600 hover:bg-amber-50 transition flex items-center justify-center gap-1"><i class="fa-solid fa-play text-[10px]"></i>5km</button>
+                <button onclick="setRadius(500)" id="rad500" class="text-[11px] font-black py-2 w-full border-b border-r border-gray-100 text-blue-600 bg-blue-50 transition">500m</button>
+                <button onclick="setRadius(1000)" id="rad1000" class="text-[11px] font-black py-2 w-full border-b border-gray-100 text-gray-500 hover:bg-gray-50 transition">1km</button>
+                <button onclick="setRadius(2000)" id="rad2000" class="text-[11px] font-black py-2 w-full border-b border-r border-gray-100 text-gray-500 hover:bg-gray-50 transition">2km</button>
+                <button onclick="requestRadius5km()" id="rad5000" class="text-[11px] font-black py-2 w-full text-amber-600 hover:bg-amber-50 transition flex items-center justify-center gap-1"><i class="fa-solid fa-play text-[10px]"></i>5km</button>
             </div>
         </div>
 
@@ -242,30 +252,62 @@
         <nav id="bottomNav" class="absolute left-3 right-3 h-[58px] bg-white rounded-[20px] border border-gray-100 z-[4000] flex justify-around items-center px-1 shadow-[0_6px_20px_rgba(0,0,0,0.14)]"
              style="bottom: calc(12px + env(safe-area-inset-bottom));">
             <button id="nav-home" onclick="goHome()" class="nav-btn flex flex-col items-center justify-center w-full h-full text-blue-600 transition">
-                <i class="fa-solid fa-map-location-dot text-[18px] mb-1"></i>
-                <span class="text-[11px] font-black tracking-tight">지도</span>
+                <i class="fa-solid fa-house text-[18px] mb-1"></i>
+                <span class="text-[11px] font-black tracking-tight">홈</span>
             </button>
             <button id="nav-search" onclick="openTabModal('searchModal', 'search')" class="nav-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-900 transition">
                 <i class="fa-solid fa-code-compare text-[18px] mb-1 text-indigo-500"></i>
-                <span class="text-[11px] font-bold tracking-tight text-indigo-600">행사검색</span>
+                <span class="text-[11px] font-bold tracking-tight text-indigo-600">상품찾기</span>
             </button>
-            <button id="nav-nearby" onclick="openTabModal('nearbyRankingModal', 'nearby')" class="nav-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-900 transition">
+            <button id="nav-nearby" onclick="openStoreFinder()" class="nav-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-900 transition">
                 <i class="fa-solid fa-store text-[18px] mb-1"></i>
-                <span class="text-[11px] font-bold tracking-tight">주변랭킹</span>
+                <span class="text-[11px] font-bold tracking-tight">매장찾기</span>
             </button>
             <button id="nav-wishlist" onclick="openTabModal('wishlistModal', 'wishlist')" class="nav-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-900 transition relative">
                 <i class="fa-solid fa-heart text-[18px] mb-1"></i>
-                <span class="text-[11px] font-bold tracking-tight">찜목록</span>
+                <span class="text-[11px] font-bold tracking-tight">찜</span>
                 <span id="wishBadge" class="absolute top-1.5 right-[15px] bg-rose-500 text-white text-[10px] font-bold w-3.5 h-3.5 flex items-center justify-center rounded-full hidden shadow-sm ring-1 ring-white">0</span>
             </button>
             <button id="nav-savings" onclick="openSavings()" class="nav-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-900 transition relative">
                 <i class="fa-solid fa-wallet text-[18px] mb-1"></i>
-                <span class="text-[11px] font-bold tracking-tight">내지갑</span>
+                <span class="text-[11px] font-bold tracking-tight">절약기록</span>
             </button>
         </nav>
 
         <!-- Map Container -->
         <div id="map"></div>
+
+        <!-- 상품 중심 홈: 위치 권한 없이도 행사 탐색을 시작할 수 있다. -->
+        <main id="productHome" class="product-home">
+            <header class="pt-1 mb-4 text-center">
+                <p class="text-[12px] font-black tracking-wide text-blue-600 mb-1">오늘의 편의점 행사</p>
+                <h1 class="text-[24px] leading-[1.28] font-black tracking-tight text-gray-950">오늘 살 것을 가장 싸고 가까운 곳에서<br>찾아보세요</h1>
+                <p class="text-[12px] text-gray-500 font-medium mt-2">CU · GS25 · 세븐일레븐 · 이마트24의 행사 가격을 비교해요</p>
+            </header>
+            <button onclick="openProductSearch()" class="w-full bg-white border border-gray-200 rounded-2xl shadow-sm px-4 py-3 flex items-center gap-3 text-left active:scale-[.99] transition">
+                <i class="fa-solid fa-magnifying-glass text-blue-600"></i><span class="text-[14px] text-gray-400 font-bold">상품명·카테고리·브랜드로 검색</span>
+            </button>
+            <div class="flex gap-2 mt-3 overflow-x-auto hide-scrollbar pb-1">
+                <button onclick="setHomePromoFilter(null)" id="homeFilterAll" class="home-filter shrink-0 rounded-full bg-gray-900 text-white px-3 py-2 text-[12px] font-black">전체</button>
+                <button onclick="setHomePromoFilter('1+1')" id="homeFilter1" class="home-filter shrink-0 rounded-full bg-white border border-gray-200 px-3 py-2 text-[12px] font-black">1+1</button>
+                <button onclick="setHomePromoFilter('2+1')" id="homeFilter2" class="home-filter shrink-0 rounded-full bg-white border border-gray-200 px-3 py-2 text-[12px] font-black">2+1</button>
+                <button onclick="openNeedFinder()" class="shrink-0 rounded-full bg-blue-50 border border-blue-200 text-blue-700 px-3 py-2 text-[12px] font-black">무엇이 필요하세요?</button>
+            </div>
+            <section class="mt-5">
+                <div class="flex items-center justify-between mb-2"><h2 class="font-black text-[17px] tracking-tight text-gray-900">오늘의 추천 행사</h2><button onclick="openProductSearch()" class="text-[12px] font-black text-blue-600">전체 보기</button></div>
+                <div id="homeProductState" class="home-status bg-white border border-gray-100 rounded-2xl p-4">행사 정보를 불러오는 중이에요.</div>
+                <div id="homeProductGrid" class="home-product-grid hidden"></div>
+            </section>
+            <section class="mt-3 bg-white border border-gray-100 rounded-2xl p-3 shadow-sm">
+                <p class="text-[12px] font-black text-gray-500"><i class="fa-solid fa-calculator text-blue-600 mr-1"></i>빠른 장보기</p>
+                <div class="grid grid-cols-2 gap-2 mt-2">
+                    <button onclick="startBudgetBasket()" class="rounded-xl bg-blue-600 text-white px-3 py-2.5 text-left active:scale-95 transition"><b class="block text-[13px]">만원으로 장보기</b><span class="text-[10px] text-blue-100">행사 조합 추천</span></button>
+                    <button onclick="openCart()" class="rounded-xl bg-gray-100 text-gray-900 px-3 py-2.5 text-left active:scale-95 transition"><b class="block text-[13px]">내 장바구니</b><span id="cartBadge" class="text-[10px] text-gray-500">비어 있어요</span></button>
+                </div>
+            </section>
+            <section class="mt-3 w-full rounded-2xl border border-blue-200 bg-blue-50 p-3 text-blue-700"><b class="block text-[14px]"><i class="fa-solid fa-location-dot mr-1"></i>내 주변 행사 보기</b><span class="text-[11px]">위치 사용 또는 지역명 검색으로 가까운 매장을 찾아요.</span><div class="grid grid-cols-2 gap-2 mt-2"><button onclick="openStoreFinder()" class="rounded-xl bg-blue-600 text-white py-2 text-[12px] font-black">현재 위치 사용</button><button onclick="openAreaSearch()" class="rounded-xl bg-white border border-blue-200 py-2 text-[12px] font-black">지역명으로 찾기</button></div></section>
+            <p id="dataFreshness" class="text-[12px] leading-relaxed text-gray-600 font-medium text-center mt-3">데이터 상태를 확인하는 중이에요.</p>
+        </main>
 
         <!-- 행사 데이터 로딩 실패 안내 (조용한 빈 화면 대신 재시도 제공) -->
         <div id="dataErrorBanner" class="hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5000] bg-white rounded-2xl shadow-xl border border-gray-200 px-5 py-4 w-[80%] max-w-xs text-center">
@@ -464,6 +506,22 @@
                     <button onclick="closeSavings()" class="w-full py-3.5 bg-gray-900 text-white font-bold rounded-xl shadow-md shrink-0 hover:bg-gray-800 active:scale-95 transition">확인 완료</button>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- 행사 계산·장바구니: 로그인 없이 이 기기에 저장된다. -->
+        <div id="cartModal" class="absolute inset-0 bg-black/60 ui-overlay hidden flex-col items-center justify-center p-4 z-[6100]">
+            <div class="bg-white rounded-[2rem] w-full max-w-sm max-h-[82vh] flex flex-col overflow-hidden shadow-2xl">
+                <div class="p-4 border-b border-gray-100 flex items-center justify-between"><div><h3 class="font-black text-lg">행사 장바구니</h3><p id="cartNotice" class="text-[11px] text-blue-700 font-bold">담은 상품의 행사 조건을 계산해요.</p></div><button onclick="closeCart()" class="p-2 text-gray-400"><i class="fa-solid fa-xmark text-xl"></i></button></div>
+                <div id="cartList" class="flex-1 overflow-y-auto p-3 space-y-2"></div>
+                <div id="cartSummary" class="p-4 bg-gray-50 border-t border-gray-100"></div>
+            </div>
+        </div>
+
+        <!-- 상품 상세: 행사 조건, 단가, 브랜드와 매장 이동을 한 곳에 제공한다. -->
+        <div id="productDetailModal" class="absolute inset-0 bg-black/60 ui-overlay hidden flex-col items-center justify-center p-4 z-[6100]">
+            <div class="bg-white rounded-[2rem] w-full max-w-sm max-h-[82vh] overflow-y-auto shadow-2xl">
+                <div id="productDetailContent"></div>
             </div>
         </div>
 
@@ -750,6 +808,7 @@
 
         let map, activeStore = null, activeCategory = 'ALL', storeIntentFilter = null, storeIntentLabel = '';
         let totalSavings = 0, likedItems = new Set(), purchasedHistory = [];
+        let cartItems = [], recentSearches = [], homePromoFilter = null, crawlStatus = null;
         window.purchasedHistory = purchasedHistory; // ads.js(보상형 광고)에서 최근 적립 내역을 참조하기 위해 노출 
         let storeMarkersData = [], mapMarkers = [];
         let isUserPanning = false, currentRadius = 500, searchCircle = null, dealTypeFilter = null;
@@ -779,8 +838,10 @@
         // 토스 안에서는 Analytics로 전송되고, 밖에서는 콘솔에만 남는다.
         let firstInteractionLogged = false;
 
-        function track(name, params) {
-            const payload = { ms: Math.round(performance.now()), ...params };
+        const appSessionId = sessionStorage.getItem('cvs_session') || `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+        sessionStorage.setItem('cvs_session', appSessionId);
+        function track(name, params = {}) {
+            const payload = { ms: Math.round(performance.now()), sessionId: appSessionId, appVersion: '2026.11-home', dataVersion: crawlStatus?.updatedAt || 'unknown', locationState: userCoords ? 'granted' : 'not_requested', ...params };
             if (typeof tossTrack === 'function') tossTrack(name, payload);
             else console.debug('[track]', name, payload);
         }
@@ -868,7 +929,7 @@
             loadSavedData();
             initTracking();
             startApp();
-            track('map_ready');   // 사용자가 첫 화면을 볼 수 있게 된 시점
+            track('app_open');
             loadRemoteData();
         });
 
@@ -895,14 +956,16 @@
         // 실제 매장 데이터는 사용자 위치에서 가장 가까운 시/도 파일만 불러온다(전국 통합 파일은 너무 큼).
         async function loadRemoteData() {
             const dayTag = new Date().toISOString().slice(0, 10).replace(/-/g, '');
-            const [deals, index] = await Promise.all([
+            const [deals, index, status] = await Promise.all([
                 fetch(DATA_BASE_URL + 'deals.json?v=' + dayTag + '_4').then(res => res.ok ? res.json() : null).catch(() => null),
                 fetch(DATA_BASE_URL + 'stores/index.json').then(res => res.ok ? res.json() : null).catch(() => null),
+                fetch(DATA_BASE_URL + 'crawl-status.json?v=' + dayTag).then(res => res.ok ? res.json() : null).catch(() => null),
             ]);
 
             if (!deals || deals.length === 0) { track('data_failed'); showDataError(); return; }
 
             MASTER_DB = deals;
+            crawlStatus = status;
             MASTER_DB.forEach(deal => {
                 if (/도시락김/.test(deal.name)) deal.category = '기타';
                 else if (HOUSEHOLD_NAME_PATTERN.test(deal.name)) deal.category = '생활용품';
@@ -916,6 +979,7 @@
             if (index && index.length > 0) STORE_INDEX = index;
 
             dataReady = true;
+            renderProductHome();
 
             // 위치 확정이 먼저 끝났으면 그 좌표를 쓴다.
             // 아직 응답 대기 중이면 여기서는 매장을 받지 않고 위치 콜백(성공/실패 양쪽)에 맡긴다.
@@ -951,10 +1015,13 @@
         function showDataError() {
             const box = document.getElementById('dataErrorBanner');
             if (box) box.classList.remove('hidden');
+            const state = document.getElementById('homeProductState');
+            if (state) state.innerHTML = `행사 정보를 불러오지 못했어요. <button onclick="retryLoadRemoteData()" class="ml-1 text-blue-600 font-black">다시 시도</button>`;
         }
 
         function retryLoadRemoteData() {
             document.getElementById('dataErrorBanner')?.classList.add('hidden');
+            document.getElementById('homeProductState').textContent = '행사 정보를 다시 불러오는 중이에요.';
             loadRemoteData();
         }
 
@@ -1082,6 +1149,10 @@
                 if(savedLikes) likedItems = new Set(JSON.parse(savedLikes));
                 const savedRecently = localStorage.getItem('cvs_recentlyViewed');
                 if(savedRecently) recentlyViewed = JSON.parse(savedRecently);
+                const savedCart = localStorage.getItem('cvs_cart');
+                if(savedCart) cartItems = JSON.parse(savedCart);
+                const savedSearches = localStorage.getItem('cvs_recentSearches');
+                if(savedSearches) recentSearches = JSON.parse(savedSearches);
 
                 document.getElementById('totalSaved').textContent = totalSavings.toLocaleString();
                 updateBadgeUI();
@@ -1093,6 +1164,8 @@
                 localStorage.setItem('cvs_totalSavings', totalSavings);
                 localStorage.setItem('cvs_history', JSON.stringify(purchasedHistory));
                 localStorage.setItem('cvs_likes', JSON.stringify([...likedItems]));
+                localStorage.setItem('cvs_cart', JSON.stringify(cartItems));
+                localStorage.setItem('cvs_recentSearches', JSON.stringify(recentSearches));
             } catch(e) {}
         }
 
@@ -1182,26 +1255,10 @@
                 }
             });
 
-            // 매장 파일은 위치가 확정된 뒤 그 시/도 것만 받는다.
-            // (예전엔 부팅 시 강남 좌표로 서울 파일을 먼저 받아서, 지방 사용자는
-            //  서울 데이터를 통째로 받은 뒤 자기 지역 파일을 또 받는 구조였다.)
-            geoPending = true;
-            requestUserLocation(
-                (lat, lng) => {
-                    geoPending = false;
-                    userCoords = { lat, lng };
-                    programmaticMove = true;
-                    map.setView([lat, lng], 16);
-                    searchCircle.setLatLng([lat, lng]);
-                    updateWeather(lat, lng);
-                    if (dataReady) applyStoresForLocation(lat, lng);
-                },
-                () => {
-                    geoPending = false;
-                    updateWeather(defaultCenter[0], defaultCenter[1]);
-                    if (dataReady) applyStoresForLocation(defaultCenter[0], defaultCenter[1]);
-                }
-            );
+            // 위치 권한은 사용자가 '내 주변 행사 보기'를 눌렀을 때만 요청한다.
+            // 첫 진입은 전국 행사 탐색이 우선이며, 권한 거부가 곧 이탈이 되지 않게 한다.
+            geoPending = false;
+            updateWeather(defaultCenter[0], defaultCenter[1]);
             setTimeout(() => { map.invalidateSize(); }, 300);
         }
 
@@ -1776,13 +1833,13 @@
                 return src ? `<div class="need-choice-photo mx-auto rounded-xl overflow-hidden bg-white"><img src="${escapeNeedText(src)}" alt="${category}" class="w-full h-full object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="hidden h-full items-center justify-center text-xl">${emoji}</span></div>` : `<div class="need-choice-photo mx-auto rounded-xl bg-white flex items-center justify-center text-xl">${emoji}</div>`;
             };
             document.getElementById('needFinderContent').innerHTML = `
-                <p class="text-sm font-black text-gray-800 mb-3">지금 편의점에서 찾는 것이 있나요?</p>
+                <p class="text-sm font-black text-gray-800 mb-3">무엇을 장볼까요?</p>
                 <div class="need-choice-grid">
-                    <button onclick="pickNeedFinder('아이스크림')" class="need-choice rounded-2xl bg-blue-50 border border-blue-100 p-1 text-center active:scale-[0.98] transition">${photo('아이스크림', '🍦')}<strong class="block text-sm mt-1">아이스크림</strong></button>
-                    <button onclick="pickNeedFinder('음료')" class="need-choice rounded-2xl bg-sky-50 border border-sky-100 p-1 text-center active:scale-[0.98] transition">${photo('음료', '🥤')}<strong class="block text-sm mt-1">음료수</strong></button>
-                    <button onclick="pickNeedFinderQuery('커피')" class="need-choice rounded-2xl bg-amber-50 border border-amber-100 p-1 text-center active:scale-[0.98] transition">${photo('음료', '☕', /커피|라떼|아메리카노/)}<strong class="block text-sm mt-1">커피</strong></button>
-                    <button onclick="pickNeedFinder('간편식')" class="need-choice rounded-2xl bg-amber-50 border border-amber-100 p-1 text-center active:scale-[0.98] transition">${photo('간편식', '🍱')}<strong class="block text-sm mt-1">도시락·간편식</strong></button>
-                    <button onclick="pickNeedFinder('스낵·과자')" class="need-choice rounded-2xl bg-rose-50 border border-rose-100 p-1 text-center active:scale-[0.98] transition">${photo('스낵·과자', '🍪')}<strong class="block text-sm mt-1">과자·스낵</strong></button>
+                    <button onclick="pickNeedFinder('간편식')" class="need-choice rounded-2xl bg-amber-50 border border-amber-100 p-1 text-center active:scale-[0.98] transition">${photo('간편식', '🍜')}<strong class="block text-sm mt-1">혼자 먹을 야식</strong></button>
+                    <button onclick="startBudgetFromFinder()" class="need-choice rounded-2xl bg-blue-50 border border-blue-100 p-1 text-center active:scale-[0.98] transition">${photo('음료', '🛒')}<strong class="block text-sm mt-1">만원으로 장보기</strong></button>
+                    <button onclick="pickNeedFinder('스낵·과자')" class="need-choice rounded-2xl bg-rose-50 border border-rose-100 p-1 text-center active:scale-[0.98] transition">${photo('스낵·과자', '🍪')}<strong class="block text-sm mt-1">회사 간식</strong></button>
+                    <button onclick="pickNeedFinder('아이스크림')" class="need-choice rounded-2xl bg-sky-50 border border-sky-100 p-1 text-center active:scale-[0.98] transition">${photo('아이스크림', '🍦')}<strong class="block text-sm mt-1">아이 간식</strong></button>
+                    <button onclick="pickNeedFinder('음료')" class="need-choice rounded-2xl bg-emerald-50 border border-emerald-100 p-1 text-center active:scale-[0.98] transition">${photo('음료', '🥤')}<strong class="block text-sm mt-1">여행 준비</strong></button>
                     <button onclick="document.getElementById('needFinderInput').focus()" class="need-choice rounded-2xl bg-gray-50 border border-gray-200 p-1 text-center flex flex-col items-center justify-center active:scale-[0.98] transition"><span class="need-choice-photo rounded-xl bg-white flex items-center justify-center text-xl">⌨️</span><strong class="block text-sm mt-1">직접 입력</strong></button>
                 </div>
                 <form onsubmit="submitNeedFinder(event)" class="mt-4 flex gap-2">
@@ -1796,6 +1853,11 @@
             needFinderQuery = '';
             track('need_finder_pick', { category });
             renderNeedFinderResults();
+        }
+
+        function startBudgetFromFinder() {
+            goHome();
+            startBudgetBasket();
         }
 
         function pickNeedFinderQuery(query) {
@@ -2007,6 +2069,91 @@
             loadStoresInRadius();
         }
 
+        function hideProductHome() { document.getElementById('productHome').classList.add('hidden'); }
+        function showProductHome() { document.getElementById('productHome').classList.remove('hidden'); }
+        function openProductSearch() { hideProductHome(); openTabModal('searchModal', 'search'); track('search_open', { source: 'home' }); }
+        function openStoreFinder() {
+            hideProductHome(); hideAllTabModals(); closeSheet(); setActiveNav('nearby');
+            // 매장이라는 명시적 행동 뒤에만 위치를 사용한다.
+            findMyLocation();
+            track('nearby_store_open');
+        }
+        function openAreaSearch() { hideProductHome(); hideAllTabModals(); closeSheet(); setActiveNav('nearby'); openLocationSearch(); track('nearby_store_open', { source: 'area_search' }); }
+        function setHomePromoFilter(type) {
+            homePromoFilter = type;
+            [['homeFilterAll', null], ['homeFilter1', '1+1'], ['homeFilter2', '2+1']].forEach(([id, value]) => {
+                const el = document.getElementById(id); const active = value === type;
+                el.classList.toggle('bg-gray-900', active); el.classList.toggle('text-white', active);
+                el.classList.toggle('bg-white', !active); el.classList.toggle('text-gray-800', !active);
+            });
+            renderProductHome(); track('home_filter', { type: type || 'all' });
+        }
+        function bestEvent(product) {
+            return Object.values(product.events || {}).sort((a, b) => (b?.saving || 0) - (a?.saving || 0))[0] || null;
+        }
+        function safeText(value) { return String(value || '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[c]); }
+        function renderProductHome() {
+            const state = document.getElementById('homeProductState'); const grid = document.getElementById('homeProductGrid');
+            if (!dataReady) { state.classList.remove('hidden'); grid.classList.add('hidden'); return; }
+            let products = MASTER_DB.filter(p => !homePromoFilter || Object.values(p.events || {}).some(e => e?.type === homePromoFilter));
+            products = products.sort((a,b) => (b.saving || 0) - (a.saving || 0));
+            // 같은 분류가 화면을 독점하지 않도록 서로 다른 카테고리 우선 3개를 선정한다.
+            const categories = new Set(); const selected = [];
+            products.forEach(p => { if (selected.length < 3 && !categories.has(p.category)) { selected.push(p); categories.add(p.category); } });
+            if (selected.length < 3) selected.push(...products.filter(p => !selected.includes(p)).slice(0, 3 - selected.length));
+            state.classList.add('hidden'); grid.classList.remove('hidden');
+            grid.innerHTML = selected.map(p => { const ev = bestEvent(p); const calc = promotionEstimate(p, 1); const image = ev?.image ? `<img src="${safeText(ev.image)}" alt="" loading="lazy">` : `<div class="h-[72px] flex items-center justify-center text-3xl">${EMOJI_MAP[p.category] || '🛍️'}</div>`; return `<button class="home-product-card" onclick="openProductDetail('${p.id}')">${image}<span class="inline-block mt-1 rounded bg-blue-50 px-1.5 py-0.5 text-[10px] font-black text-blue-700">${ev?.type || '행사'}</span><h4>${safeText(p.name)}</h4><p class="home-product-price">${Number(p.price || 0).toLocaleString()}원</p><p class="home-product-unit">행사 가격 · 개당 약 ${calc.unit.toLocaleString()}원</p></button>`; }).join('');
+            const updated = crawlStatus?.updatedAt || crawlStatus?.lastUpdated || crawlStatus?.timestamp;
+            document.getElementById('dataFreshness').textContent = updated ? `행사 정보 갱신: ${String(updated).replace('T', ' ').slice(0, 16)} · 실제 재고와 행사 적용 여부는 매장에 따라 다를 수 있어요.` : '행사 정보는 매일 갱신되지만 실제 재고와 행사 적용 여부는 매장에 따라 다를 수 있어요.';
+            const count = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+            const saving = cartItems.reduce((sum, item) => { const p = MASTER_DB.find(x => x.id === item.id); return sum + (p ? promotionEstimate(p, item.quantity).saving : 0); }, 0);
+            document.getElementById('cartBadge').textContent = count ? `상품 ${count}개 · 예상 절약 ${saving.toLocaleString()}원` : '상품을 담고 행사 혜택을 계산해보세요';
+            track('home_render_complete', { cards: selected.length });
+        }
+        function promotionEstimate(product, quantity = 1) {
+            const ev = bestEvent(product); const type = ev?.type || '';
+            const group = type === '1+1' ? 2 : type === '2+1' ? 3 : 1;
+            const payUnits = type === '1+1' ? 1 : type === '2+1' ? 2 : 1;
+            const recommended = group > 1 ? Math.ceil(quantity / group) * group : quantity;
+            const pay = Math.ceil(recommended / group) * payUnits * Number(product.price || 0);
+            const regular = recommended * Number(product.price || 0);
+            return { type, group, recommended, pay, saving: Math.max(0, regular - pay), unit: recommended ? Math.round(pay / recommended) : 0, extra: Math.max(0, recommended - quantity) };
+        }
+        function openProductDetail(id) {
+            const p = MASTER_DB.find(x => x.id === id); if (!p) return;
+            const ev = bestEvent(p); const calc = promotionEstimate(p, 1); const brands = Object.entries(p.events || {}).map(([brand, e]) => `<span class="inline-flex px-2 py-1 rounded-full bg-gray-100 text-[11px] font-black">${BRAND_INFO[brand]?.text || brand} ${e.type}</span>`).join(' ');
+            const image = ev?.image ? `<img src="${safeText(ev.image)}" alt="" class="w-28 h-28 object-contain bg-gray-50 rounded-2xl mx-auto">` : `<div class="text-6xl text-center">${EMOJI_MAP[p.category] || '🛍️'}</div>`;
+            document.getElementById('productDetailContent').innerHTML = `<div class="p-5"><div class="flex justify-between"><span class="text-xs font-black text-blue-600">${safeText(p.category)}</span><button onclick="closeProductDetail()" class="text-gray-400"><i class="fa-solid fa-xmark text-xl"></i></button></div>${image}<h3 class="text-lg font-black text-gray-900 mt-3">${safeText(p.name)}</h3><p class="text-sm font-black mt-1">행사 가격 ${Number(p.price || 0).toLocaleString()}원 <span class="text-blue-600 text-xs">${ev?.type || '행사'} · 개당 약 ${calc.unit.toLocaleString()}원</span></p><div class="mt-3 flex flex-wrap gap-1">${brands}</div><div class="mt-4 rounded-xl bg-blue-50 p-3 text-[12px] text-blue-900 font-bold">${calc.group > 1 ? `${calc.type} 기준 ${calc.recommended}개 구매 시 ${calc.pay.toLocaleString()}원 · ${calc.saving.toLocaleString()}원 절약` : '행사 조건을 확인해주세요.'}</div><p class="mt-3 text-[12px] leading-relaxed text-gray-600 font-medium">행사 정보는 매일 갱신되지만 실제 재고와 행사 적용 여부는 매장에 따라 다를 수 있어요.</p><div class="grid grid-cols-2 gap-2 mt-4"><button onclick="addToCart('${p.id}')" class="py-3 rounded-xl bg-gray-900 text-white text-sm font-black">장바구니 담기</button><button onclick="findProductStores('${p.id}')" class="py-3 rounded-xl bg-blue-600 text-white text-sm font-black">주변 매장 보기</button></div></div>`;
+            document.getElementById('productDetailModal').classList.remove('hidden'); document.getElementById('productDetailModal').classList.add('flex'); track('product_detail_open', { product: id });
+        }
+        function closeProductDetail() { const el = document.getElementById('productDetailModal'); el.classList.add('hidden'); el.classList.remove('flex'); }
+        function findProductStores(id) { closeProductDetail(); const p = MASTER_DB.find(x => x.id === id); storeIntentFilter = q => q.id === id; storeIntentLabel = p?.name || '선택 상품'; openStoreFinder(); }
+        function addToCart(id) { const item = cartItems.find(x => x.id === id); if (item) item.quantity++; else cartItems.push({ id, quantity: 1 }); saveLocalData(); renderProductHome(); showToast('장바구니에 담았어요.'); track('cart_add', { product: id }); }
+        function startBudgetBasket() {
+            const budget = 10000;
+            const candidates = MASTER_DB.map(product => ({ product, estimate: promotionEstimate(product, 1) }))
+                .filter(({ estimate }) => estimate.pay > 0 && estimate.pay <= budget * 0.4)
+                .sort((a, b) => (b.estimate.saving - a.estimate.saving) || (b.estimate.pay - a.estimate.pay));
+            const picks = [], categories = new Set(); let spent = 0;
+            // 서로 다른 상품군을 우선하되, 행사 결제액 합계가 1만원을 넘지 않게 담는다.
+            for (const item of candidates) {
+                if (picks.length === 4 || spent + item.estimate.pay > budget || categories.has(item.product.category)) continue;
+                picks.push(item); categories.add(item.product.category); spent += item.estimate.pay;
+            }
+            for (const item of candidates) {
+                if (picks.length === 4 || spent + item.estimate.pay > budget || picks.some(x => x.product.id === item.product.id)) continue;
+                picks.push(item); spent += item.estimate.pay;
+            }
+            if (!picks.length) { showToast('1만원 안에 담을 수 있는 행사 상품을 찾지 못했어요.'); return; }
+            cartItems = picks.map(({ product }) => ({ id: product.id, quantity: 1 }));
+            saveLocalData(); renderProductHome(); openCart(`만원 조합 ${picks.length}개 · 예상 결제 ${spent.toLocaleString()}원`);
+            track('budget_template_start', { items: picks.length, budget, spent });
+        }
+        function openCart(notice = '') { const modal = document.getElementById('cartModal'); document.getElementById('cartNotice').textContent = notice || (cartItems.length ? `상품 ${cartItems.length}종의 행사 조건을 계산했어요.` : '장바구니가 비어 있어요.'); modal.classList.remove('hidden'); modal.classList.add('flex'); renderCart(); track('cart_open'); }
+        function closeCart() { const el = document.getElementById('cartModal'); el.classList.add('hidden'); el.classList.remove('flex'); }
+        function changeCart(id, diff) { const item = cartItems.find(x => x.id === id); if (!item) return; item.quantity += diff; cartItems = cartItems.filter(x => x.quantity > 0); saveLocalData(); renderCart(); renderProductHome(); }
+        function renderCart() { const list = document.getElementById('cartList'); let pay = 0, saving = 0; const rows = cartItems.map(item => { const p = MASTER_DB.find(x => x.id === item.id); if (!p) return ''; const c = promotionEstimate(p, item.quantity); pay += c.pay; saving += c.saving; return `<div class="bg-gray-50 rounded-xl p-3"><div class="flex justify-between gap-2"><div><b class="text-sm">${safeText(p.name)}</b><p class="text-[11px] text-blue-600 font-bold">${c.type || '행사'} · ${c.recommended}개 결제 기준 ${c.pay.toLocaleString()}원</p></div><div class="flex items-center gap-2"><button onclick="changeCart('${p.id}',-1)" class="w-7 h-7 rounded-full bg-white border">−</button><b>${item.quantity}</b><button onclick="changeCart('${p.id}',1)" class="w-7 h-7 rounded-full bg-white border">+</button></div></div>${c.extra ? `<p class="text-[10px] text-orange-600 mt-1">행사 단위에 맞추면 ${c.extra}개가 추가돼요. 원치 않으면 수량을 조정하세요.</p>` : ''}</div>`; }).join(''); list.innerHTML = rows || `<div class="p-10 text-center text-gray-400 text-sm">장바구니가 비어 있어요.</div>`; document.getElementById('cartSummary').innerHTML = `<div class="flex justify-between text-sm"><b>예상 결제</b><b>${pay.toLocaleString()}원</b></div><div class="flex justify-between text-sm text-blue-600 mt-1"><b>행사 절약</b><b>${saving.toLocaleString()}원</b></div><p class="text-[10px] text-gray-500 mt-3">결제 전 행사 적용 조건과 매장 재고를 확인해주세요.</p>`; }
+
         function setActiveNav(tabId) {
             const btns = document.querySelectorAll('.nav-btn');
             btns.forEach(btn => {
@@ -2056,7 +2203,10 @@
         function goHome() {
             hideAllTabModals();
             closeSheet();
+            closeProductDetail();
+            showProductHome();
             setActiveNav('home');
+            renderProductHome();
         }
 
         // [개선 1 적용] 지도 오프셋 적용하여 마커와 바텀시트 공존
@@ -2233,6 +2383,10 @@
                     </div>
                 </div>
                 ${brandPillsHTML}
+                <div class="mt-2 flex gap-2">
+                    <button onclick="openProductDetail('${product.id}')" class="flex-1 rounded-lg bg-blue-50 text-blue-700 py-2 text-[11px] font-black active:scale-95">행사·단가 보기</button>
+                    <button onclick="addToCart('${product.id}')" class="rounded-lg bg-gray-900 text-white px-3 py-2 text-[11px] font-black active:scale-95">담기</button>
+                </div>
             </div>
             `;
         }
@@ -2270,6 +2424,11 @@
         }
 
         function quickSearch(kw) { document.getElementById('searchInput').value = kw; performSearch(); }
+        function saveRecentSearch(query) {
+            if (!query || query.length < 2) return;
+            recentSearches = [query, ...recentSearches.filter(x => x !== query)].slice(0, 5);
+            saveLocalData();
+        }
         
         // 초성 변환 테이블
         const CHOSUNG = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'];
@@ -2362,6 +2521,7 @@
 
             if (!query) { empty.classList.remove('hidden'); list.classList.add('hidden'); return; }
             empty.classList.add('hidden'); list.classList.remove('hidden');
+            saveRecentSearch(query);
 
             let matches = MASTER_DB.filter(p => matchSearch(p, query));
             if (searchBrandFilter) matches = matches.filter(p => p.events[searchBrandFilter]);
@@ -3191,7 +3351,6 @@
                 if (!document.hidden && map) {
                     const c = map.getCenter();
                     updateWeather(c.lat, c.lng);
-                    retryLocationOnReturn();
                 }
             });
         }
