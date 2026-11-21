@@ -2,6 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 const ENDPOINT = 'https://cu.bgfretail.com/event/plusAjax.do';
+const PAGE_TIMEOUT_MS = 10000;
 
 function parsePrice(text) {
   const n = parseInt(String(text).replace(/[^0-9]/g, ''), 10);
@@ -18,7 +19,7 @@ async function fetchPage(pageIndex) {
         'X-Requested-With': 'XMLHttpRequest',
         'User-Agent': 'Mozilla/5.0',
       },
-      timeout: 15000,
+      timeout: PAGE_TIMEOUT_MS,
     }
   );
   const $ = cheerio.load(data);
@@ -40,7 +41,16 @@ async function fetchPage(pageIndex) {
 async function crawlCU({ maxPages = 60, delayMs = 300 } = {}) {
   const all = [];
   for (let page = 1; page <= maxPages; page++) {
-    const items = await fetchPage(page);
+    let items = null;
+    for (let attempt = 1; attempt <= 2 && items === null; attempt++) {
+      try {
+        items = await fetchPage(page);
+      } catch (error) {
+        if (attempt < 2) await new Promise((r) => setTimeout(r, 1000));
+        else console.error(`CU: ${page}페이지 응답 지연으로 ${all.length}건만 저장합니다. (${error.message})`);
+      }
+    }
+    if (items === null) break;
     if (items.length === 0) break;
     all.push(...items);
     await new Promise((r) => setTimeout(r, delayMs));

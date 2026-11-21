@@ -116,7 +116,7 @@ function extractBrandItemsFromOldDB(oldMasterDB, brand) {
 }
 
 // 재시도 로직: 실패 시 delayMs 간격으로 최대 maxRetries회 재시도
-async function withRetry(fn, label, maxRetries = 3, delayMs = 3000) {
+async function withRetry(fn, label, maxRetries = 2, delayMs = 1000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const result = await fn();

@@ -7,8 +7,8 @@ const MORE_URL = `${BASE}/product/listMoreAjax.asp`;
 const DETAIL_URL = `${BASE}/product/presentView.asp`;
 const PAGE_SIZE = 13;
 // 15초로는 첫 페이지 응답(약 2초)에 비해 여유가 없어 간헐적으로 끊겼다.
-const PAGE_TIMEOUT_MS = 30000;
-const IMAGE_BUDGET_MS = 90000;
+const PAGE_TIMEOUT_MS = 12000;
+const IMAGE_BUDGET_MS = 30000;
 const HEADERS = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',

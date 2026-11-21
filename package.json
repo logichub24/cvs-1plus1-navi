@@ -24,8 +24,8 @@
     "tough-cookie": "^5.0.0"
   },
   "devDependencies": {
-    "@apps-in-toss/devtools": "^3.0.4",
-    "@apps-in-toss/web-framework": "^3.0.4",
+    "@apps-in-toss/devtools": "^3.10.0",
+    "@apps-in-toss/web-framework": "^3.10.0",
     "esbuild": "^0.28.2",
     "tailwindcss": "^3.4.19"
   }

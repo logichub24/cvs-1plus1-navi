@@ -3,6 +3,7 @@ const cheerio = require('cheerio');
 
 const LIST_URL = 'https://www.emart24.co.kr/goods/event';
 const PAGE_SIZE = 20;
+const PAGE_TIMEOUT_MS = 10000;
 
 function parsePrice(text) {
   const n = parseInt(String(text).replace(/[^0-9]/g, ''), 10);
@@ -19,7 +20,7 @@ async function fetchPage(page, categorySeq) {
   const { data } = await axios.get(LIST_URL, {
     params: { page, category_seq: categorySeq, search: '', align: '' },
     headers: { 'User-Agent': 'Mozilla/5.0' },
-    timeout: 15000,
+    timeout: PAGE_TIMEOUT_MS,
   });
   const $ = cheerio.load(data);
   const items = [];
@@ -46,7 +47,17 @@ async function crawlEmart24({ delayMs = 300 } = {}) {
     let page = 1;
     let totalPages = 1;
     do {
-      const { items, totalCount } = await fetchPage(page, categorySeq);
+      let result = null;
+      for (let attempt = 1; attempt <= 2 && result === null; attempt++) {
+        try {
+          result = await fetchPage(page, categorySeq);
+        } catch (error) {
+          if (attempt < 2) await new Promise((r) => setTimeout(r, 1000));
+          else console.error(`EMART24: ${categorySeq}행사 ${page}페이지 응답 지연으로 현재 ${all.length}건만 저장합니다. (${error.message})`);
+        }
+      }
+      if (result === null) break;
+      const { items, totalCount } = result;
       if (items.length === 0) break;
       all.push(...items);
       totalPages = Math.ceil(totalCount / PAGE_SIZE);
