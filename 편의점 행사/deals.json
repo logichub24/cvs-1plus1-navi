@@ -74984,6 +74984,22 @@
     }
   },
   {
+    "id": "종근당건강아임비타메가팩",
+    "name": "종근당건강)아임비타메가팩",
+    "category": "기타",
+    "price": 2900,
+    "saving": 2900,
+    "barcode": "8805915821014",
+    "events": {
+      "EMART24": {
+        "type": "1+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8805915821014.JPG"
+      }
+    }
+  },
+  {
     "id": "롯데데일리c레몬워터펫",
     "name": "롯데)데일리C레몬워터펫500ml",
     "category": "음료",
@@ -83460,6 +83476,22 @@
         "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8901138011413.JPG"
+      }
+    }
+  },
+  {
+    "id": "엘투봄날의그린티펫",
+    "name": "엘투)봄날의그린티펫500ml",
+    "category": "기타",
+    "price": 2200,
+    "saving": 733,
+    "barcode": "6974906992001",
+    "events": {
+      "EMART24": {
+        "type": "2+1",
+        "isNew": true,
+        "daysLeft": null,
+        "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6974906992001.JPG"
       }
     }
   },
