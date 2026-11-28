@@ -8073,8 +8073,8 @@
     "id": "풀무원우동사리면",
     "name": "풀무원)우동사리면210g",
     "category": "라면",
-    "price": 1000,
-    "saving": 1000,
+    "price": 2500,
+    "saving": 2500,
     "barcode": "8801114305645",
     "events": {
       "CU": {
@@ -74993,7 +74993,7 @@
     "events": {
       "EMART24": {
         "type": "1+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8805915821014.JPG"
       }
@@ -83489,7 +83489,7 @@
     "events": {
       "EMART24": {
         "type": "2+1",
-        "isNew": true,
+        "isNew": false,
         "daysLeft": null,
         "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/6974906992001.JPG"
       }
